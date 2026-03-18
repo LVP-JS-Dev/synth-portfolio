@@ -3701,7 +3701,7 @@
                   "name": "r",
                   "fill": "#FFF9FF",
                   "content": "Back Home",
-                  "fontFamily": "$font-display",
+                  "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -4287,7 +4287,7 @@
                       "id": "WaTZE",
                       "fill": "#111226",
                       "content": "Live Demo",
-                      "fontFamily": "$font-display",
+                      "fontFamily": "\\$font-display",
                       "fontSize": 14,
                       "fontWeight": "700"
                     },
@@ -4325,7 +4325,7 @@
                       "id": "gYkEt",
                       "fill": "#FFF9FF",
                       "content": "GitHub",
-                      "fontFamily": "$font-display",
+                      "fontFamily": "\\$font-display",
                       "fontSize": 14,
                       "fontWeight": "700"
                     },
@@ -4363,7 +4363,7 @@
                       "id": "rVcBe",
                       "fill": "#FFF9FF",
                       "content": "Architecture",
-                      "fontFamily": "$font-display",
+                      "fontFamily": "\\$font-display",
                       "fontSize": 14,
                       "fontWeight": "700"
                     },
@@ -6001,182 +6001,6 @@
         },
         {
           "type": "frame",
-          "id": "IeYzn",
-          "name": "mFooter",
-          "width": "fill_container",
-          "stroke": {
-            "thickness": {
-              "top": 1
-            },
-            "fill": "#3D3564"
-          },
-          "layout": "vertical",
-          "gap": 6,
-          "padding": [
-            10,
-            0,
-            0,
-            0
-          ],
-          "children": [
-            {
-              "type": "frame",
-              "id": "E7bpN",
-              "name": "hLegal1",
-              "fill": "#1F1736",
-              "cornerRadius": 999,
-              "stroke": {
-                "thickness": 1,
-                "fill": "#3D3564"
-              },
-              "gap": 6,
-              "padding": [
-                14,
-                16
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "D8iyK",
-                  "name": "hLegalShield",
-                  "width": 14,
-                  "height": 14,
-                  "iconFontName": "shield",
-                  "iconFontFamily": "lucide",
-                  "fill": "$accent-cyan"
-                },
-                {
-                  "type": "text",
-                  "id": "9e5j2",
-                  "fill": "$accent-cyan",
-                  "content": "Privacy Policy",
-                  "fontFamily": "$font-display",
-                  "fontSize": 12,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "XeuTq",
-              "name": "hLegal2",
-              "fill": "#1F1736",
-              "cornerRadius": 999,
-              "stroke": {
-                "thickness": 1,
-                "fill": "#3D3564"
-              },
-              "gap": 6,
-              "padding": [
-                14,
-                16
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "hk4UW",
-                  "name": "hLegalUser",
-                  "width": 14,
-                  "height": 14,
-                  "iconFontName": "user",
-                  "iconFontFamily": "lucide",
-                  "fill": "$accent-cyan"
-                },
-                {
-                  "type": "text",
-                  "id": "hJ1wc",
-                  "fill": "$accent-cyan",
-                  "content": "Personal Data Consent",
-                  "fontFamily": "$font-display",
-                  "fontSize": 12,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "mCWxd",
-              "name": "hLegal3",
-              "fill": "#1F1736",
-              "cornerRadius": 999,
-              "stroke": {
-                "thickness": 1,
-                "fill": "#3D3564"
-              },
-              "gap": 6,
-              "padding": [
-                14,
-                16
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "SGpfn",
-                  "name": "hLegalCookie",
-                  "width": 14,
-                  "height": 14,
-                  "iconFontName": "cookie",
-                  "iconFontFamily": "lucide",
-                  "fill": "$accent-cyan"
-                },
-                {
-                  "type": "text",
-                  "id": "hcITu",
-                  "fill": "$accent-cyan",
-                  "content": "Cookie Policy",
-                  "fontFamily": "$font-display",
-                  "fontSize": 12,
-                  "fontWeight": "normal"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "vByqS",
-          "type": "ref",
-          "ref": "ixV4l",
-          "width": "fill_container",
-          "name": "devHomeM",
-          "height": "fit_content",
-          "x": 20,
-          "y": 3094,
-          "descendants": {
-            "JHUOv": {
-              "width": "fit_content",
-              "height": "fit_content",
-              "x": 14,
-              "y": 14
-            },
-            "4pE9o": {
-              "x": 6,
-              "y": 6
-            },
-            "SlALH": {
-              "width": "fill_container",
-              "height": "fit_content",
-              "x": 44,
-              "y": 14
-            },
-            "2feQA": {
-              "content": "In Development · More Writing"
-            },
-            "AIXEj": {
-              "width": "fill_container",
-              "content": "Additional mobile-friendly content cards are coming soon.",
-              "y": 22
-            },
-            "RS5wR": {
-              "y": 60,
-              "content": "ETA: soon"
-            }
-          }
-        },
-        {
-          "type": "frame",
           "id": "zlQQb",
           "name": "mFullForm",
           "width": "fill_container",
@@ -6195,7 +6019,7 @@
               "id": "MKE1m",
               "name": "mFormTitle",
               "fill": "#FFF9FF",
-              "content": "Send a Message",
+              "content": "Request Contact",
               "fontFamily": "\\$font-display",
               "fontSize": 18,
               "fontWeight": "700"
@@ -6258,12 +6082,188 @@
               "y": 217,
               "descendants": {
                 "QMLXm": {
-                  "content": "Send Message",
-                  "x": 109.5
+                  "content": "Request Contact",
+                  "x": 101
                 }
               }
             }
           ]
+        },
+        {
+          "type": "frame",
+          "id": "IeYzn",
+          "name": "mFooter",
+          "width": "fill_container",
+          "stroke": {
+            "thickness": {
+              "top": 1
+            },
+            "fill": "#3D3564"
+          },
+          "layout": "vertical",
+          "gap": 6,
+          "padding": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "E7bpN",
+              "name": "hLegal1",
+              "fill": "#1F1736",
+              "cornerRadius": 999,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#3D3564"
+              },
+              "gap": 6,
+              "padding": [
+                14,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "D8iyK",
+                  "name": "hLegalShield",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "shield",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
+                {
+                  "type": "text",
+                  "id": "9e5j2",
+                  "fill": "$accent-cyan",
+                  "content": "Privacy Policy",
+                  "fontFamily": "\\$font-display",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "XeuTq",
+              "name": "hLegal2",
+              "fill": "#1F1736",
+              "cornerRadius": 999,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#3D3564"
+              },
+              "gap": 6,
+              "padding": [
+                14,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "hk4UW",
+                  "name": "hLegalUser",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "user",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
+                {
+                  "type": "text",
+                  "id": "hJ1wc",
+                  "fill": "$accent-cyan",
+                  "content": "Personal Data Consent",
+                  "fontFamily": "\\$font-display",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mCWxd",
+              "name": "hLegal3",
+              "fill": "#1F1736",
+              "cornerRadius": 999,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#3D3564"
+              },
+              "gap": 6,
+              "padding": [
+                14,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "SGpfn",
+                  "name": "hLegalCookie",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "cookie",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
+                {
+                  "type": "text",
+                  "id": "hcITu",
+                  "fill": "$accent-cyan",
+                  "content": "Cookie Policy",
+                  "fontFamily": "\\$font-display",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vByqS",
+          "type": "ref",
+          "ref": "ixV4l",
+          "width": "fill_container",
+          "name": "devHomeM",
+          "height": "fit_content",
+          "x": 20,
+          "y": 3094,
+          "descendants": {
+            "JHUOv": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 14,
+              "y": 14
+            },
+            "4pE9o": {
+              "x": 6,
+              "y": 6
+            },
+            "SlALH": {
+              "width": "fill_container",
+              "height": "fit_content",
+              "x": 44,
+              "y": 14
+            },
+            "2feQA": {
+              "content": "In Development · More Writing"
+            },
+            "AIXEj": {
+              "width": "fill_container",
+              "content": "Additional mobile-friendly content cards are coming soon.",
+              "y": 22
+            },
+            "RS5wR": {
+              "y": 60,
+              "content": "ETA: soon"
+            }
+          }
         }
       ]
     },
@@ -6339,7 +6339,7 @@
                   "id": "QG2y1",
                   "fill": "$accent-cyan",
                   "content": "Home",
-                  "fontFamily": "$font-display",
+                  "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -6848,7 +6848,7 @@
                   "id": "P5bGx",
                   "fill": "$accent-cyan",
                   "content": "Privacy Policy",
-                  "fontFamily": "$font-display",
+                  "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -6886,7 +6886,7 @@
                   "id": "dNsY6",
                   "fill": "$accent-cyan",
                   "content": "Personal Data Consent",
-                  "fontFamily": "$font-display",
+                  "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -6924,7 +6924,7 @@
                   "id": "1SFgt",
                   "fill": "$accent-cyan",
                   "content": "Cookie Policy",
-                  "fontFamily": "$font-display",
+                  "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -7046,7 +7046,7 @@
                   "id": "dLIf8",
                   "fill": "$accent-cyan",
                   "content": "Projects",
-                  "fontFamily": "$font-display",
+                  "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -7171,7 +7171,7 @@
                       "id": "7t72w",
                       "fill": "#111226",
                       "content": "Live",
-                      "fontFamily": "$font-display",
+                      "fontFamily": "\\$font-display",
                       "fontSize": 14,
                       "fontWeight": "700"
                     },
@@ -7209,7 +7209,7 @@
                       "id": "As6ur",
                       "fill": "#FFF9FF",
                       "content": "GitHub",
-                      "fontFamily": "$font-display",
+                      "fontFamily": "\\$font-display",
                       "fontSize": 14,
                       "fontWeight": "700"
                     },
@@ -7733,6 +7733,7 @@
                 "thickness": 1,
                 "fill": "#3D3564"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
@@ -7740,11 +7741,21 @@
               "alignItems": "center",
               "children": [
                 {
+                  "type": "icon_font",
+                  "id": "8yy5I",
+                  "name": "cfShield",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "shield",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
+                {
                   "type": "text",
                   "id": "CYequ",
                   "fill": "$accent-cyan",
                   "content": "Privacy Policy",
-                  "fontFamily": "$font-display",
+                  "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -7760,6 +7771,7 @@
                 "thickness": 1,
                 "fill": "#3D3564"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
@@ -7767,11 +7779,21 @@
               "alignItems": "center",
               "children": [
                 {
+                  "type": "icon_font",
+                  "id": "QyM4e",
+                  "name": "cfUser",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "user",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
+                {
                   "type": "text",
                   "id": "a1OC7",
                   "fill": "$accent-cyan",
                   "content": "Personal Data Consent",
-                  "fontFamily": "$font-display",
+                  "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -7787,6 +7809,7 @@
                 "thickness": 1,
                 "fill": "#3D3564"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
@@ -7794,11 +7817,21 @@
               "alignItems": "center",
               "children": [
                 {
+                  "type": "icon_font",
+                  "id": "zii2f",
+                  "name": "cfCookie",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "cookie",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
+                {
                   "type": "text",
                   "id": "u78mj",
                   "fill": "$accent-cyan",
                   "content": "Cookie Policy",
-                  "fontFamily": "$font-display",
+                  "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -7920,7 +7953,7 @@
                   "id": "sXaJ4",
                   "fill": "$accent-cyan",
                   "content": "Home",
-                  "fontFamily": "$font-display",
+                  "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }

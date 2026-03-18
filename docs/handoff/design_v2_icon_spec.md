@@ -31,8 +31,9 @@ Source: `design_v2.pen`
 - `GkHPL` (mobile projects back): `chevron-left`
 - `f7O7q` (mobile case back): `chevron-left`
 - `jgiSz` (mobile legal back): `chevron-left`
-- `KFOgw` (desktop case back to projects): `chevron-left`
-- `y1xGF` (desktop legal back): `chevron-left`
+- `ihaGP` (desktop case back to projects): `chevron-left`
+- `mBVeY` (desktop legal back): `chevron-left`
+- `WceB9`, `HSrAf`, `LSUHj`, `y4W8K`, `T985Z` (case-study CTA chevrons): `chevron-right`
 
 ### Legal / Compliance Chips
 
@@ -55,8 +56,8 @@ Source: `design_v2.pen`
 
 ### Contact / Form Context
 
-- `AI6FD` form field component includes a leading icon slot (`g2fIp`) for contextual overrides.
-- Contact form refs (`959j6`, `gecF3`) provide per-field icon override hooks via descendants.
+- `AI6FD` form field component includes a leading icon slot (`j3hri`) for contextual overrides.
+- `zlQQb` (`mFullForm`) uses `Ljsno` and `CL2sg` refs to override `j3hri` as `user` and `mail`.
 
 ## Implementation Notes
 

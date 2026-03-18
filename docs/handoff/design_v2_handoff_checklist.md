@@ -114,17 +114,21 @@ Acceptance criteria
 
 ## Implementation Verification Commands
 
+This repository is design-first and does not include an application `package.json` runtime manifest.
+Adapt the preview command and `BASE_URL` to the implementation repository before running the checks below.
+
 ```bash
 # 1) Run type/lint/tests
 npm run typecheck || npx tsc --noEmit
 npm run lint
 npm test
 
-# 2) Build and preview
+# 2) Build and preview (replace with your project's scripts if different)
 npm run build
 npm run preview
 
 # 3) Accessibility checks across critical routes/devices
+# Set BASE_URL to your actual preview URL/port.
 BASE_URL=http://localhost:3000
 for route in / /projects /projects/realtime-collaboration-suite /legal; do
   npx lighthouse "${BASE_URL}${route}" --emulated-form-factor=desktop --only-categories=accessibility --quiet
