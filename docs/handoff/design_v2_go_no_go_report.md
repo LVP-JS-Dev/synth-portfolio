@@ -11,7 +11,7 @@ Scope: Pre-implementation design handoff quality gate for `design_v2.pen` agains
 ## Closed Items (Design-Level)
 
 - All required top-level frames and reusable components are present in `design_v2.pen`.
-- Token normalization completed for typography (`$font-display`, `$font-body`) and color system.
+- Token normalization completed for typography (`--font-display`, `--font-body`) and color system.
 - Minimum text-size floor is enforced in design (`>= 12px`).
 - Core touch targets for primary controls are in safe range (mobile-oriented, mostly 44px+ containers).
 - Layout integrity is clean: no clipping/overlap issues on all top-level frames.

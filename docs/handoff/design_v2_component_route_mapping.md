@@ -53,5 +53,6 @@ Source: `design_v2.pen`
 
 - Use one shared content model per route and render Desktop/Mobile variants from the same data.
 - Keep reusable component contracts stable first (`Button`, `ProjectCard`, `MetricCard`, `FormField`, `CookieBanner`), then compose pages.
-- Preserve tokenized typography (`$font-display`, `$font-body`) and color usage in component APIs.
+- Preserve tokenized typography (`--font-display`, `--font-body`) and color usage in component APIs.
+- Token transformation reference: map `.pen` token names to CSS variables in your token source-of-truth (for example, `bg-base` -> `--bg-base`, `font-display` -> `--font-display`).
 - Treat `In Development` and legal notes as content flags, not permanent UI states.

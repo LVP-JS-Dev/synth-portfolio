@@ -12,7 +12,9 @@ Source: `design_v2.pen`
   - `--bg-base: #1A1630`
   - `--bg-surface: #221C3E`
   - `--bg-surface-2: #2C2550`
-  - `--text-primary: #F7F4FF` (theme-0/default in .pen) and `#FFF9FF` (theme-1 value)
+  - `--text-primary--theme-0: #F7F4FF`
+  - `--text-primary--theme-1: #FFF9FF`
+  - `--text-primary`: alias resolved by active theme mapping
   - `--text-secondary: #D7CCFF`
   - `--font-display: JetBrains Mono`
   - `--font-body: Inter`
@@ -102,14 +104,20 @@ Acceptance criteria
 
 ```bash
 # 1) Run type/lint/tests
-npm run lint && npm test
+npm run typecheck || npx tsc --noEmit
+npm run lint
+npm test
 
 # 2) Build and preview
 npm run build
 npm run preview
 
-# 3) Accessibility quick pass (example)
-npx lighthouse http://localhost:3000 --only-categories=accessibility
+# 3) Accessibility checks across critical routes/devices
+BASE_URL=http://localhost:3000
+for route in / /projects /projects/realtime-collaboration-suite /legal; do
+  npx lighthouse "${BASE_URL}${route}" --emulated-form-factor=desktop --only-categories=accessibility --quiet
+  npx lighthouse "${BASE_URL}${route}" --emulated-form-factor=mobile --only-categories=accessibility --quiet
+done
 ```
 
 ## Sign-off
