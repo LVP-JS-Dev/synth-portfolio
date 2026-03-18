@@ -4,14 +4,21 @@ type Params = {
   slug: string;
 };
 
-export async function generateMetadata({ params: { slug } }: { params: Params }) {
+type Props = {
+  params: Promise<Params>;
+};
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
   return buildMetadata(`/projects/${slug}`);
 }
 
-export default async function ProjectPage({ params }: { params: Params }) {
+export default async function ProjectPage({ params }: Props) {
+  const { slug } = await params;
+
   return (
     <main>
-      <h1>Project: {params.slug}</h1>
+      <h1>Project: {slug}</h1>
     </main>
   );
 }
