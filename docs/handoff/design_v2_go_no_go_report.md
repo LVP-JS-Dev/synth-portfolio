@@ -17,6 +17,7 @@ Scope: Pre-implementation design handoff quality gate for `design_v2.pen` agains
 - Layout integrity is clean: no clipping/overlap issues on all top-level frames.
 - Excessive dead-space from fixed heights is removed (frames are now content-driven).
 - Handoff checklist exists and is updated with P0/P1/P2 criteria and sign-off block.
+- Iconography pass completed with Lucide-based `icon_font` usage across back navigation, mobile menu, legal chips, cookie accept CTA, and metric callouts.
 
 ## Open Items (Implementation-Level)
 

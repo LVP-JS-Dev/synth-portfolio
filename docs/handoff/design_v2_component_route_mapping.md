@@ -17,7 +17,7 @@ Source: `design_v2.pen`
 ### `/` (Home)
 
 - Desktop (`7oH3p`): `tgLrQ` nav, `cXJxk` cookie, `EK2r6` hero, `P0Mf0` about header, `mFXGd` about, `r5ULi` exp header, `eT397` experience, `Sa0f4` projects header, `tN3lj` projects grid, `pZQFd` quality header, `PZ7i4` quality metrics, `gJFDq` quality details, `j29WJ` content header, `UcFVJ` content grid, `w6lzr` contact header, `9cI24` contact, `msStG` footer, `HZMgR` in-development
-- Mobile (`yfDUF`): `kOz1f` nav, `x7woU` cookie, `7g8eJ` hero, `g2cM4` about, `ZuAXZ` experience, `a43WO` projects, `tGQHu` quality, `W1uXG` contact, `V46Hp` content, `hn0PC` contact form, `IeYzn` footer, `vByqS` in-development
+- Mobile (`yfDUF`): `kOz1f` nav, `x7woU` cookie, `7g8eJ` hero, `g2cM4` about, `ZuAXZ` experience, `a43WO` projects, `tGQHu` quality, `W1uXG` contact, `V46Hp` content, `zlQQb` (`mFullForm`) contact form, `IeYzn` footer, `vByqS` in-development
 
 ### `/projects`
 
@@ -48,6 +48,15 @@ Source: `design_v2.pen`
 | `4AabH` | Component / Contact Form | Home contact CTA blocks |
 | `6fvkC` | Component / Cookie Banner | Consent banners |
 | `ixV4l` | Component / In Development | Placeholder/status content |
+
+## Iconography Mapping (Lucide)
+
+Canonical icon contract (node IDs, icon names, sizing, spacing, and QA checks) is maintained in `docs/handoff/design_v2_icon_spec.md`.
+
+Route-level iconography usage:
+- `/`: nav controls, consent actions, metric callouts, and contact/form affordances.
+- `/projects` and `/projects/[slug]`: back/navigation controls, case-study metric callouts, and footer/legal chips.
+- `/legal`: back navigation, legal document chips, and cookie consent actions.
 
 ## Implementation Notes
 

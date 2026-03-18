@@ -72,6 +72,7 @@ Acceptance criteria
 - [ ] Projects/Desktop and Projects/Mobile filter + list behavior is consistent.
 - [ ] Project Case/Desktop and Project Case/Mobile preserve tuned hierarchy (reduced card fatigue, readable glow).
 - [ ] Legal/Desktop and Legal/Mobile structure and copy blocks are complete.
+- [ ] Iconography parity is preserved across desktop/mobile for navigation, legal, consent, and metric callouts.
 
 Acceptance criteria
 - [ ] No section-level regressions after responsive breakpoints.
@@ -80,9 +81,20 @@ Acceptance criteria
 - [ ] Filters expose active state (`aria-pressed` where applicable).
 - [ ] Nav/back actions are semantic links or buttons with correct roles.
 - [ ] External links use `rel="noopener noreferrer"`.
+- [ ] Icons are decorative-only where appropriate (`aria-hidden="true"`) or have an accessible label when they are the only control cue.
+
+### 4) Iconography System
+- [ ] Use Lucide icon set consistently (24-grid stroke style) for all UI iconography in implementation.
+- [ ] Keep icon sizes consistent by context:
+  - `14px`: back/legal chips/cookie accept
+  - `16px`: compact nav controls (mobile menu)
+  - `20px`: metric callouts
+- [ ] Keep icon and label spacing consistent (`gap: 6` for compact controls, `gap: 8` for metric value groups).
+- [ ] Icon colors are tokenized or mapped to approved design accents.
 
 Acceptance criteria
 - [ ] Screen reader announces key regions and controls correctly.
+- [ ] Visual QA confirms icon alignment on `/`, `/projects`, `/projects/[slug]`, `/legal` for desktop + mobile.
 
 ## P2 (Polish and Production Readiness)
 
@@ -102,17 +114,21 @@ Acceptance criteria
 
 ## Implementation Verification Commands
 
+This repository is design-first and does not include the application runtime or its `package.json`.
+Run the commands below in your implementation repository (where `package.json` exists), and replace script names / `BASE_URL` with the equivalents used there.
+
 ```bash
 # 1) Run type/lint/tests
 npm run typecheck || npx tsc --noEmit
 npm run lint
 npm test
 
-# 2) Build and preview
+# 2) Build and preview (replace with your project's scripts if different)
 npm run build
 npm run preview
 
 # 3) Accessibility checks across critical routes/devices
+# Set BASE_URL to your implementation preview URL/port.
 BASE_URL=http://localhost:3000
 for route in / /projects /projects/realtime-collaboration-suite /legal; do
   npx lighthouse "${BASE_URL}${route}" --emulated-form-factor=desktop --only-categories=accessibility --quiet
