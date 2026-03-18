@@ -1,0 +1,4245 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "EGYwR",
+      "x": 920,
+      "y": 0,
+      "name": "Design System",
+      "width": 520,
+      "height": 2300,
+      "fill": "$bg-surface",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 24,
+      "children": [
+        {
+          "type": "text",
+          "id": "wsIVL",
+          "name": "dsTitle",
+          "fill": "$text-primary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Design System / Synth Portfolio",
+          "fontFamily": "$font-display",
+          "fontSize": 26,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "oNDTR",
+          "name": "Component / Button Primary",
+          "reusable": true,
+          "fill": "$accent-pink",
+          "cornerRadius": 999,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#52FFF6"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$glow-medium",
+            "blur": 16
+          },
+          "gap": 8,
+          "padding": [
+            12,
+            20
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "QMLXm",
+              "name": "btnTxt",
+              "fill": "#130D26",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#52FFF6BB",
+                "blur": 12
+              },
+              "content": "View Projects",
+              "fontFamily": "$font-display",
+              "fontSize": 14,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "RAwqq",
+          "name": "Component / Section Header",
+          "reusable": true,
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "YD1fN",
+              "name": "secEy",
+              "fill": "$accent-cyan",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#52FFF6CC",
+                "blur": 12
+              },
+              "content": "01. SECTION",
+              "fontFamily": "$font-display",
+              "fontSize": 12,
+              "fontWeight": "700",
+              "letterSpacing": 1.2
+            },
+            {
+              "type": "text",
+              "id": "4RNzL",
+              "name": "secTi",
+              "fill": "$text-primary",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#FF4FD8CC",
+                "blur": 26
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Section Title",
+              "fontFamily": "$font-display",
+              "fontSize": 36,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "xBLD5",
+              "name": "secSu",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Brief context for this section and why it matters.",
+              "lineHeight": 1.6,
+              "fontFamily": "$font-body",
+              "fontSize": 16
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "z0Nf5",
+          "name": "Component / Project Card",
+          "reusable": true,
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#433C69"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#52FFF655",
+            "blur": 14
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "8Ncq6",
+              "name": "Preview",
+              "width": "fill_container",
+              "height": 170,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 140,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#2C2550",
+                    "position": 0
+                  },
+                  {
+                    "color": "#4A3E88",
+                    "position": 0.55
+                  },
+                  {
+                    "color": "#FF7EDB",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 8
+            },
+            {
+              "type": "text",
+              "id": "NQUtb",
+              "name": "projTi",
+              "fill": "$text-primary",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#FF4FD8AA",
+                "blur": 14
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Realtime Collaboration Suite",
+              "fontFamily": "$font-display",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "yDfJz",
+              "name": "projDs",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Next.js platform with presence, comments, and optimistic updates.",
+              "lineHeight": 1.6,
+              "fontFamily": "$font-body",
+              "fontSize": 14
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tUNiC",
+          "name": "Component / Timeline Item",
+          "reusable": true,
+          "width": "fill_container",
+          "gap": 12,
+          "padding": [
+            12,
+            0
+          ],
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "dZfk4",
+              "name": "timeDot",
+              "fill": "$accent-cyan",
+              "width": 10,
+              "height": 10
+            },
+            {
+              "type": "frame",
+              "id": "rwtO5",
+              "name": "timeBody",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dePWe",
+                  "name": "timeRole",
+                  "fill": "$text-primary",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#52FFF699",
+                    "blur": 12
+                  },
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Senior Frontend Engineer · Company",
+                  "fontFamily": "$font-display",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "8RciF",
+                  "name": "timeMeta",
+                  "fill": "$accent-yellow",
+                  "content": "2022 — Present",
+                  "fontFamily": "$font-display",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "DgwRy",
+                  "name": "timeAch",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Improved LCP by 42% and reduced bundle size by 31%.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font-body",
+                  "fontSize": 14
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "eJ7Df",
+          "name": "Component / Metric Card",
+          "reusable": true,
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#433C69"
+          },
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "liT7j",
+              "name": "metricVal",
+              "fill": "$accent-pink",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#FF4FD8DD",
+                "blur": 20
+              },
+              "content": "+42%",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 30,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "zmp2j",
+              "name": "metricLbl",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "LCP Improvement",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "MAqDx",
+          "name": "Component / Content Card",
+          "reusable": true,
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#433C69"
+          },
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "mJZlc",
+              "name": "contentTi",
+              "fill": "$text-primary",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#52FFF6AA",
+                "blur": 12
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Article or Talk Title",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "8BCqC",
+              "name": "contentMeta",
+              "fill": "$accent-cyan",
+              "content": "Talk · 2025",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "7BSZ3",
+              "name": "contentDs",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Short description that fits in 2-3 lines for content previews.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "AI6FD",
+          "name": "Component / Form Field",
+          "reusable": true,
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 6,
+          "children": [
+            {
+              "type": "text",
+              "id": "hLxXp",
+              "name": "fieldLb",
+              "fill": "$text-secondary",
+              "content": "Your Email",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "ayQPu",
+              "name": "fieldIn",
+              "width": "fill_container",
+              "height": 48,
+              "fill": "#18122D",
+              "cornerRadius": 10,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#52FFF655",
+                "blur": 12
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jFmpi",
+                  "name": "fieldPl",
+                  "fill": "#7F76A6",
+                  "content": "name@company.com",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "4AabH",
+          "name": "Component / Contact Form",
+          "reusable": true,
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#433C69"
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "fkyNg",
+              "name": "contactHead",
+              "fill": "$text-primary",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#FF4FD8BB",
+                "blur": 14
+              },
+              "content": "Let's Build Something",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "id": "959j6",
+              "type": "ref",
+              "ref": "AI6FD",
+              "width": "fill_container",
+              "name": "contactField1",
+              "x": 16,
+              "y": 54,
+              "descendants": {
+                "ayQPu": {
+                  "width": "fill_container"
+                }
+              }
+            },
+            {
+              "id": "gecF3",
+              "type": "ref",
+              "ref": "AI6FD",
+              "width": "fill_container",
+              "name": "contactField2",
+              "x": 16,
+              "y": 136,
+              "descendants": {
+                "ayQPu": {
+                  "width": "fill_container"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "6fvkC",
+          "name": "Component / Cookie Banner",
+          "reusable": true,
+          "width": "fill_container",
+          "fill": "#16102A",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#52FFF655",
+            "blur": 14
+          },
+          "gap": 16,
+          "padding": [
+            12,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "hn5xG",
+              "name": "cookieTxt",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "We use cookies for analytics and better UX.",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "6RqJ8",
+              "name": "cookieBtn",
+              "fill": "$accent-cyan",
+              "cornerRadius": 999,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "7Am6i",
+                  "name": "cookieBtnTx",
+                  "fill": "#111226",
+                  "content": "Accept",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OaKIj",
+          "name": "Glow Presets & States",
+          "width": "fill_container",
+          "fill": "#18122D",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "EPoMJ",
+              "name": "glTi",
+              "fill": "$text-primary",
+              "content": "Glow Presets",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "p8UH6",
+              "name": "glDs",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Use these intensity modes for text glow and interaction states.",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "xOCQV",
+              "name": "sw",
+              "gap": 10,
+              "children": [
+                {
+                  "id": "MHXqE",
+                  "type": "ref",
+                  "ref": "oNDTR",
+                  "fill": "$bg-surface-2",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#4A3E88"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "$glow-soft",
+                    "blur": 8
+                  },
+                  "name": "soft",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "QMLXm": {
+                      "content": "Soft",
+                      "fill": "$text-primary"
+                    }
+                  }
+                },
+                {
+                  "id": "9fZ3H",
+                  "type": "ref",
+                  "ref": "oNDTR",
+                  "fill": "$accent-cyan",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "$glow-medium",
+                    "blur": 14
+                  },
+                  "name": "med",
+                  "x": 85,
+                  "y": 0,
+                  "descendants": {
+                    "QMLXm": {
+                      "content": "Medium",
+                      "fill": "#111226"
+                    }
+                  }
+                },
+                {
+                  "id": "P5E1u",
+                  "type": "ref",
+                  "ref": "oNDTR",
+                  "fill": "$accent-pink",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "$glow-hard",
+                    "blur": 24
+                  },
+                  "name": "hard",
+                  "x": 187,
+                  "y": 0,
+                  "descendants": {
+                    "QMLXm": {
+                      "content": "Hard",
+                      "fill": "#130D26"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zvO6Q",
+              "name": "statePanel",
+              "width": "fill_container",
+              "fill": "#1F1736",
+              "cornerRadius": 10,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#3C3562"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mMHIV",
+                  "name": "stTi",
+                  "fill": "$accent-cyan",
+                  "content": "State Effects (Intensified)",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "mOGVQ",
+                  "name": "st1",
+                  "fill": "$text-secondary",
+                  "content": "Hover: blur 16 + cyan glow",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "zQDLW",
+                  "name": "st2",
+                  "fill": "$text-secondary",
+                  "content": "Focus: blur 20 + yellow ring glow",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "FQNbG",
+                  "name": "st3",
+                  "fill": "$text-secondary",
+                  "content": "Active: blur 22 + pink burst",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "7oH3p",
+      "x": 1480,
+      "y": 0,
+      "name": "Home / Desktop",
+      "width": 1440,
+      "height": 4400,
+      "fill": "$bg-base",
+      "layout": "vertical",
+      "gap": 48,
+      "padding": [
+        24,
+        80,
+        64,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "tgLrQ",
+          "name": "Top Nav",
+          "width": "fill_container",
+          "padding": [
+            8,
+            0
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "J2bll",
+              "name": "brand",
+              "fill": "$accent-cyan",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#52FFF6CC",
+                "blur": 12
+              },
+              "content": "LEONID PETROV / SENIOR FRONTEND ENGINEER",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 13,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "qPTOM",
+              "name": "navRight",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VdfjF",
+                  "name": "navL1",
+                  "fill": "$text-secondary",
+                  "content": "About",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "jSSuy",
+                  "name": "navL2",
+                  "fill": "$text-secondary",
+                  "content": "Experience",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "fxzbU",
+                  "name": "navL3",
+                  "fill": "$text-secondary",
+                  "content": "Projects",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "5meEJ",
+                  "name": "navL4",
+                  "fill": "$text-secondary",
+                  "content": "Quality",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "HqtOd",
+                  "name": "navL5",
+                  "fill": "$text-secondary",
+                  "content": "Contact",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "uZCnf",
+                  "name": "lang",
+                  "fill": "$bg-surface-2",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#4A3E88"
+                  },
+                  "padding": [
+                    6,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7imgF",
+                      "name": "langTxt",
+                      "fill": "$text-primary",
+                      "content": "EN / RU",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "EK2r6",
+          "name": "Hero",
+          "width": "fill_container",
+          "fill": "$bg-surface",
+          "cornerRadius": 16,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#3C3562"
+          },
+          "gap": 32,
+          "padding": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "IVXKV",
+              "name": "heroLeft",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TWqgD",
+                  "name": "heroEy",
+                  "fill": "$accent-cyan",
+                  "content": "01. BUILDING FRONTEND SYSTEMS THAT SCALE",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "Ixr8N",
+                  "name": "heroTi",
+                  "fill": "$text-primary",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#FF4FD8CC",
+                    "blur": 28
+                  },
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Senior Frontend Engineer\nfor high-stakes product teams",
+                  "lineHeight": 1.1,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 58,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "qc0De",
+                  "name": "heroDs",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "I design resilient React and Next.js architectures, tune performance, enforce accessibility, and raise team DX through design systems, testing, and delivery discipline.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "rM86j",
+                  "name": "ctaRow",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "id": "cSxwW",
+                      "type": "ref",
+                      "ref": "oNDTR",
+                      "name": "cta1",
+                      "x": 0,
+                      "y": 0,
+                      "descendants": {
+                        "QMLXm": {
+                          "content": "View Projects"
+                        }
+                      }
+                    },
+                    {
+                      "id": "sPEOl",
+                      "type": "ref",
+                      "ref": "oNDTR",
+                      "fill": "$accent-cyan",
+                      "name": "cta2",
+                      "x": 162,
+                      "y": 0,
+                      "descendants": {
+                        "QMLXm": {
+                          "content": "Engineering Quality",
+                          "fill": "#111226"
+                        }
+                      }
+                    },
+                    {
+                      "id": "bcjUX",
+                      "type": "ref",
+                      "ref": "oNDTR",
+                      "fill": "$bg-surface-2",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#4A3E88"
+                      },
+                      "name": "cta3",
+                      "x": 375,
+                      "y": 0,
+                      "descendants": {
+                        "QMLXm": {
+                          "content": "Contact",
+                          "fill": "$text-primary"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZxBaA",
+              "name": "heroRight",
+              "width": 420,
+              "fill": "$bg-surface-2",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pEvbV",
+                  "name": "hrTi",
+                  "fill": "$text-primary",
+                  "content": "Current Focus",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "iucba",
+                  "name": "hrA",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Architecture & DX — shared UI platform and guardrails",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Cj7cx",
+                  "name": "hrB",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Performance & A11y — measurable Core Web Vitals and inclusive UX",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "XQUc9",
+                  "name": "hrC",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Mentoring — review culture, onboarding and engineering standards",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "P0Mf0",
+          "type": "ref",
+          "ref": "RAwqq",
+          "name": "aboutHead",
+          "width": "fill_container",
+          "x": 80,
+          "y": 642,
+          "descendants": {
+            "YD1fN": {
+              "content": "02. ABOUT / WHO I AM"
+            },
+            "4RNzL": {
+              "width": "fill_container",
+              "content": "I build durable frontend platforms"
+            },
+            "xBLD5": {
+              "width": "fill_container",
+              "content": "My focus is shipping measurable product outcomes while improving engineering leverage across teams."
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "mFXGd",
+          "name": "aboutWrap",
+          "width": "fill_container",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "DMZG2",
+              "name": "aboutText",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vhBQl",
+                  "name": "aP1",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "I specialize in React, TypeScript, and Next.js architectures for products that cannot afford unstable UX or regressions.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "uoMAB",
+                  "name": "aP2",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Across B2B SaaS, ecommerce, and internal platforms, I align product decisions with technical constraints, then codify those decisions into reusable system patterns.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "D8M6U",
+                  "name": "aP3",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "I mentor engineers, run architecture reviews, and keep teams shipping with confidence through strong DX and testing strategy.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uKDZn",
+              "name": "focusCard",
+              "width": 420,
+              "fill": "$bg-surface-2",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VfFGA",
+                  "name": "focusTi",
+                  "fill": "$text-primary",
+                  "content": "Areas of Focus",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "yKa9e",
+                  "name": "f1",
+                  "fill": "$accent-cyan",
+                  "content": "Architecture & DX",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "kgkAI",
+                  "name": "f2",
+                  "fill": "$accent-cyan",
+                  "content": "Performance & Accessibility",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "anPa8",
+                  "name": "f3",
+                  "fill": "$accent-cyan",
+                  "content": "Design Systems",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "vbX9u",
+                  "name": "f4",
+                  "fill": "$accent-cyan",
+                  "content": "Mentoring & Technical Leadership",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "r5ULi",
+          "type": "ref",
+          "ref": "RAwqq",
+          "name": "expHead",
+          "width": "fill_container",
+          "x": 80,
+          "y": 1037,
+          "descendants": {
+            "YD1fN": {
+              "content": "03. EXPERIENCE / WORK HISTORY"
+            },
+            "4RNzL": {
+              "width": "fill_container",
+              "content": "Roles, scope, and measurable outcomes"
+            },
+            "xBLD5": {
+              "width": "fill_container",
+              "content": "Timeline inspired by Brittany Chiang, with engineering metrics and impact."
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "eT397",
+          "name": "expWrap",
+          "width": "fill_container",
+          "stroke": {
+            "thickness": {
+              "left": 2
+            },
+            "fill": "#3D3564"
+          },
+          "layout": "vertical",
+          "gap": 10,
+          "padding": [
+            8,
+            0
+          ],
+          "children": [
+            {
+              "id": "jdrok",
+              "type": "ref",
+              "ref": "tUNiC",
+              "name": "exp1",
+              "width": "fill_container",
+              "x": 0,
+              "y": 8,
+              "descendants": {
+                "rwtO5": {
+                  "width": "fill_container"
+                },
+                "dePWe": {
+                  "width": "fill_container",
+                  "content": "Senior Frontend Engineer · FinTech Core Platform"
+                },
+                "8RciF": {
+                  "content": "2022 — Present"
+                },
+                "DgwRy": {
+                  "width": "fill_container",
+                  "content": "Cut p95 page load from 3.8s to 1.9s, implemented observability and a11y gates in CI."
+                }
+              }
+            },
+            {
+              "id": "yD32t",
+              "type": "ref",
+              "ref": "tUNiC",
+              "name": "exp2",
+              "width": "fill_container",
+              "x": 0,
+              "y": 120,
+              "descendants": {
+                "rwtO5": {
+                  "width": "fill_container"
+                },
+                "dePWe": {
+                  "width": "fill_container",
+                  "content": "Frontend Lead · Commerce Experience Team"
+                },
+                "8RciF": {
+                  "content": "2019 — 2022"
+                },
+                "DgwRy": {
+                  "width": "fill_container",
+                  "content": "Introduced design system adoption across 9 product squads and reduced UI defects by 37%."
+                }
+              }
+            },
+            {
+              "id": "ExgqZ",
+              "type": "ref",
+              "ref": "tUNiC",
+              "name": "exp3",
+              "width": "fill_container",
+              "x": 0,
+              "y": 232,
+              "descendants": {
+                "rwtO5": {
+                  "width": "fill_container"
+                },
+                "dePWe": {
+                  "width": "fill_container",
+                  "content": "Frontend Engineer · SaaS Analytics"
+                },
+                "8RciF": {
+                  "content": "2017 — 2019"
+                },
+                "DgwRy": {
+                  "width": "fill_container",
+                  "content": "Rebuilt dashboard rendering pipeline, improving interaction responsiveness by 55%."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "Sa0f4",
+          "type": "ref",
+          "ref": "RAwqq",
+          "name": "projHead",
+          "width": "fill_container",
+          "x": 80,
+          "y": 1588,
+          "descendants": {
+            "YD1fN": {
+              "content": "04. SELECTED PROJECTS"
+            },
+            "4RNzL": {
+              "width": "fill_container",
+              "content": "Case-driven frontend engineering"
+            },
+            "xBLD5": {
+              "width": "fill_container",
+              "content": "Each project maps a product problem to architecture decisions and measurable delivery impact."
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "tN3lj",
+          "name": "projGrid",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "UymUd",
+              "name": "row1",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "uxcZI",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "p1",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 120,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#2C2550",
+                            "position": 0
+                          },
+                          {
+                            "color": "#4F46A7",
+                            "position": 0.55
+                          },
+                          {
+                            "color": "#36F9F6",
+                            "position": 1
+                          }
+                        ]
+                      }
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Realtime Collaboration Suite"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "Problem → fragmented comments; Solution → CRDT + optimistic UI; Result → 2.1x faster collaboration."
+                    }
+                  }
+                },
+                {
+                  "id": "8DIaE",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "p2",
+                  "x": 648,
+                  "y": 0,
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 135,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#2C2550",
+                            "position": 0
+                          },
+                          {
+                            "color": "#5B2F9B",
+                            "position": 0.58
+                          },
+                          {
+                            "color": "#FF7EDB",
+                            "position": 1
+                          }
+                        ]
+                      }
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Ecommerce Edge Frontend"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "Problem → slow storefront; Solution → ISR + streaming SSR; Result → conversion +18%."
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "JRvaZ",
+              "name": "row2",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "fDqYQ",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "p3",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 150,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#2C2550",
+                            "position": 0
+                          },
+                          {
+                            "color": "#365A9A",
+                            "position": 0.6
+                          },
+                          {
+                            "color": "#FEDE5D",
+                            "position": 1
+                          }
+                        ]
+                      }
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Design System Federation"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "Problem → duplicated UI stacks; Solution → shared primitives + codemods; Result → release speed +34%."
+                    }
+                  }
+                },
+                {
+                  "id": "lD6pM",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "p4",
+                  "x": 648,
+                  "y": 0,
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 128,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#2C2550",
+                            "position": 0
+                          },
+                          {
+                            "color": "#3A5D74",
+                            "position": 0.55
+                          },
+                          {
+                            "color": "#36F9F6",
+                            "position": 1
+                          }
+                        ]
+                      }
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Observability Developer Portal"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "Problem → poor production visibility; Solution → Sentry + tracing dashboards; Result → MTTR -41%."
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YOwv1",
+              "name": "row3",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "iSH9f",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "p5",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 138,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#2C2550",
+                            "position": 0
+                          },
+                          {
+                            "color": "#4A3E88",
+                            "position": 0.55
+                          },
+                          {
+                            "color": "#36F9F6",
+                            "position": 1
+                          }
+                        ]
+                      }
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Accessibility Compliance Program"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "Problem → WCAG gaps; Solution → audits + component fixes; Result → accessibility score 98/100."
+                    }
+                  }
+                },
+                {
+                  "id": "q2CdW",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "p6",
+                  "x": 648,
+                  "y": 0,
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 142,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#2C2550",
+                            "position": 0
+                          },
+                          {
+                            "color": "#5C3E7C",
+                            "position": 0.58
+                          },
+                          {
+                            "color": "#FEDE5D",
+                            "position": 1
+                          }
+                        ]
+                      }
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Performance Budget CI"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "Problem → regressions after releases; Solution → Lighthouse CI thresholds; Result → stable 90+ scores."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pZQFd",
+          "type": "ref",
+          "ref": "RAwqq",
+          "name": "qualHead",
+          "width": "fill_container",
+          "x": 80,
+          "y": 2729,
+          "descendants": {
+            "YD1fN": {
+              "content": "05. ENGINEERING QUALITY"
+            },
+            "4RNzL": {
+              "width": "fill_container",
+              "content": "Performance, Accessibility, DX"
+            },
+            "xBLD5": {
+              "width": "fill_container",
+              "content": "A practical quality model: benchmark, enforce, observe, and iterate."
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "PZ7i4",
+          "name": "metricsRow",
+          "width": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "id": "w2arq",
+              "type": "ref",
+              "ref": "eJ7Df",
+              "width": "fill_container",
+              "name": "mx1",
+              "x": 0,
+              "y": 0,
+              "descendants": {
+                "liT7j": {
+                  "content": "-49%"
+                },
+                "zmp2j": {
+                  "width": "fill_container",
+                  "content": "JS bundle after architecture split"
+                }
+              }
+            },
+            {
+              "id": "QxeNa",
+              "type": "ref",
+              "ref": "eJ7Df",
+              "width": "fill_container",
+              "name": "mx2",
+              "x": 432,
+              "y": 0,
+              "descendants": {
+                "liT7j": {
+                  "content": "98/100"
+                },
+                "zmp2j": {
+                  "width": "fill_container",
+                  "content": "Accessibility score in production"
+                }
+              }
+            },
+            {
+              "id": "hvMJd",
+              "type": "ref",
+              "ref": "eJ7Df",
+              "width": "fill_container",
+              "name": "mx3",
+              "x": 864,
+              "y": 0,
+              "descendants": {
+                "liT7j": {
+                  "content": "-41%"
+                },
+                "zmp2j": {
+                  "width": "fill_container",
+                  "content": "Mean time to resolve frontend incidents"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gJFDq",
+          "name": "qualCases",
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 18,
+          "children": [
+            {
+              "type": "text",
+              "id": "JIqw1",
+              "name": "q1",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Lighthouse Budgeting: integrated CI checks with blocking thresholds for LCP, CLS, and TBT.",
+              "lineHeight": 1.55,
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "xk4zE",
+              "name": "q2",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "A11y Component Gates: Storybook and Playwright checks for keyboard flows, contrast, and semantic landmarks.",
+              "lineHeight": 1.55,
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "KeXj6",
+              "name": "q3",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Observability Loop: Sentry + custom RUM dashboards for release health and user impact trends.",
+              "lineHeight": 1.55,
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "6hP3A",
+              "name": "qTools",
+              "fill": "$accent-cyan",
+              "content": "Tooling: Lighthouse CI · Sentry · Vitest · Playwright · GitHub Actions",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "id": "j29WJ",
+          "type": "ref",
+          "ref": "RAwqq",
+          "name": "cntHead",
+          "width": "fill_container",
+          "x": 80,
+          "y": 3234,
+          "descendants": {
+            "YD1fN": {
+              "content": "06. CONTENT / WRITING / SPEAKING"
+            },
+            "4RNzL": {
+              "width": "fill_container",
+              "content": "Sharing lessons from production systems"
+            },
+            "xBLD5": {
+              "width": "fill_container",
+              "content": "Articles, talks, and practical notes on frontend architecture and quality."
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "UcFVJ",
+          "name": "cGrid",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "wmjPD",
+              "name": "cRow1",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "hWWDl",
+                  "type": "ref",
+                  "ref": "MAqDx",
+                  "width": "fill_container",
+                  "name": "c1",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "mJZlc": {
+                      "width": "fill_container",
+                      "content": "Designing for Keyboard-First Navigation"
+                    },
+                    "8BCqC": {
+                      "content": "Article · Jan 2026"
+                    },
+                    "7BSZ3": {
+                      "width": "fill_container",
+                      "content": "Patterns for focus management, semantics, and component APIs in large React apps."
+                    }
+                  }
+                },
+                {
+                  "id": "0iSBL",
+                  "type": "ref",
+                  "ref": "MAqDx",
+                  "width": "fill_container",
+                  "name": "c2",
+                  "x": 648,
+                  "y": 0,
+                  "descendants": {
+                    "mJZlc": {
+                      "width": "fill_container",
+                      "content": "Performance Budgets in CI/CD"
+                    },
+                    "8BCqC": {
+                      "content": "Talk · Frontend Conf"
+                    },
+                    "7BSZ3": {
+                      "width": "fill_container",
+                      "content": "A field guide to keeping Core Web Vitals stable while teams and features scale."
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "iLaJ1",
+              "name": "cRow2",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "E4LS2",
+                  "type": "ref",
+                  "ref": "MAqDx",
+                  "width": "fill_container",
+                  "name": "c3",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "mJZlc": {
+                      "width": "fill_container",
+                      "content": "Frontend Architecture Decision Records"
+                    },
+                    "8BCqC": {
+                      "content": "Article · Sep 2025"
+                    },
+                    "7BSZ3": {
+                      "width": "fill_container",
+                      "content": "How lightweight ADR workflows reduce churn and make cross-team decisions explicit."
+                    }
+                  }
+                },
+                {
+                  "id": "lmGtx",
+                  "type": "ref",
+                  "ref": "MAqDx",
+                  "width": "fill_container",
+                  "name": "c4",
+                  "x": 648,
+                  "y": 0,
+                  "descendants": {
+                    "mJZlc": {
+                      "width": "fill_container",
+                      "content": "Roadmap: Mentoring for Senior Engineers"
+                    },
+                    "8BCqC": {
+                      "content": "Upcoming · Q3 2026"
+                    },
+                    "7BSZ3": {
+                      "width": "fill_container",
+                      "content": "Planned content series on coaching, reviews, and technical leadership playbooks."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "w6lzr",
+          "type": "ref",
+          "ref": "RAwqq",
+          "name": "ctHead",
+          "width": "fill_container",
+          "x": 80,
+          "y": 3685,
+          "descendants": {
+            "YD1fN": {
+              "content": "07. CONTACT / CTA"
+            },
+            "4RNzL": {
+              "width": "fill_container",
+              "content": "Let's work together"
+            },
+            "xBLD5": {
+              "width": "fill_container",
+              "content": "Tell me what you are building and where frontend quality can unlock business impact."
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "9cI24",
+          "name": "ctWrap",
+          "width": "fill_container",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "6T7Wc",
+              "name": "ctLeft",
+              "width": "fill_container",
+              "fill": "$bg-surface-2",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GcmeJ",
+                  "name": "ctLead",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Open for senior frontend roles, architecture consulting, and technical audits.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Aztsb",
+                  "name": "ctMail",
+                  "fill": "$accent-cyan",
+                  "content": "Email: hello@leonid.dev",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "GBSAW",
+                  "name": "ctTg",
+                  "fill": "$accent-cyan",
+                  "content": "Telegram: @leonid_frontend",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "GGANX",
+                  "name": "ctGh",
+                  "fill": "$accent-cyan",
+                  "content": "GitHub: github.com/leonidpetrov",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "HmkGz",
+                  "name": "ctLi",
+                  "fill": "$accent-cyan",
+                  "content": "LinkedIn: linkedin.com/in/leonidpetrov",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "id": "BKCQO",
+                  "type": "ref",
+                  "ref": "oNDTR",
+                  "name": "cvBtn",
+                  "x": 20,
+                  "y": 176,
+                  "descendants": {
+                    "QMLXm": {
+                      "content": "Download CV"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "BbVPc",
+              "type": "ref",
+              "ref": "4AabH",
+              "width": 520,
+              "name": "ctForm",
+              "x": 760,
+              "y": 0,
+              "descendants": {
+                "fkyNg": {
+                  "content": "Send a Message"
+                },
+                "959j6": {
+                  "width": "fill_container"
+                },
+                "959j6/hLxXp": {
+                  "content": "Work Email"
+                },
+                "959j6/ayQPu": {
+                  "width": "fill_container"
+                },
+                "959j6/jFmpi": {
+                  "content": "name@company.com"
+                },
+                "gecF3": {
+                  "width": "fill_container"
+                },
+                "gecF3/hLxXp": {
+                  "content": "Project Brief"
+                },
+                "gecF3/ayQPu": {
+                  "width": "fill_container"
+                },
+                "gecF3/jFmpi": {
+                  "content": "Tell me about scope, timelines, and goals"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "msStG",
+          "name": "footer",
+          "width": "fill_container",
+          "stroke": {
+            "thickness": {
+              "top": 1
+            },
+            "fill": "#3D3564"
+          },
+          "padding": [
+            12,
+            0,
+            0,
+            0
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "4GXpB",
+              "name": "fLeft",
+              "fill": "$text-secondary",
+              "content": "© 2026 Leonid Petrov. Built with Next.js + Tamagui + Motion.",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "hcIjp",
+              "name": "fRight",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gTYV7",
+                  "name": "l1",
+                  "fill": "$text-secondary",
+                  "content": "Privacy Policy",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "k3xbT",
+                  "name": "l2",
+                  "fill": "$text-secondary",
+                  "content": "Personal Data Consent",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "uRFz8",
+                  "name": "l3",
+                  "fill": "$text-secondary",
+                  "content": "Cookie Policy",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cXJxk",
+          "type": "ref",
+          "ref": "6fvkC",
+          "width": 460,
+          "name": "cookie",
+          "x": 80,
+          "y": 4210,
+          "descendants": {
+            "hn5xG": {
+              "width": "fill_container",
+              "content": "Cookies are used for analytics and contact form reliability."
+            },
+            "6RqJ8": {
+              "x": 372
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "PDYt3",
+      "x": 2980,
+      "y": 0,
+      "name": "Projects / Desktop",
+      "width": 1440,
+      "height": 2800,
+      "fill": "$bg-base",
+      "layout": "vertical",
+      "gap": 40,
+      "padding": [
+        24,
+        80,
+        64,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "6tW9O",
+          "name": "pNav",
+          "width": "fill_container",
+          "padding": [
+            8,
+            0
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "dTuEQ",
+              "name": "pBrand",
+              "fill": "$accent-cyan",
+              "content": "PROJECTS / INDEX",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 13,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "HFw8g",
+              "name": "pBack",
+              "fill": "$bg-surface-2",
+              "cornerRadius": 999,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "padding": [
+                6,
+                10
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jRm3B",
+                  "name": "pBackTx",
+                  "fill": "$text-primary",
+                  "content": "← Back Home",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "MfDE5",
+          "name": "pHead",
+          "width": "fill_container",
+          "fill": "$bg-surface",
+          "cornerRadius": 14,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#3C3562"
+          },
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "eS998",
+              "name": "pTitle",
+              "fill": "$text-primary",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#52FFF6AA",
+                "blur": 20
+              },
+              "content": "Frontend Projects",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 48,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "A0Uin",
+              "name": "pIntro",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Selected product and platform projects with clear problem → solution → result stories.",
+              "lineHeight": 1.55,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lHDB6",
+          "name": "fltRow",
+          "gap": 10,
+          "children": [
+            {
+              "id": "LNWyp",
+              "type": "ref",
+              "ref": "oNDTR",
+              "fill": "$accent-cyan",
+              "name": "f0",
+              "x": 0,
+              "y": 0,
+              "descendants": {
+                "QMLXm": {
+                  "content": "All",
+                  "fill": "#111226"
+                }
+              }
+            },
+            {
+              "id": "PBRSm",
+              "type": "ref",
+              "ref": "oNDTR",
+              "fill": "$bg-surface-2",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "name": "f1",
+              "x": 76,
+              "y": 0,
+              "descendants": {
+                "QMLXm": {
+                  "content": "React",
+                  "fill": "$text-primary"
+                }
+              }
+            },
+            {
+              "id": "9JftT",
+              "type": "ref",
+              "ref": "oNDTR",
+              "fill": "$bg-surface-2",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "name": "f2",
+              "x": 169,
+              "y": 0,
+              "descendants": {
+                "QMLXm": {
+                  "content": "Next.js",
+                  "fill": "$text-primary"
+                }
+              }
+            },
+            {
+              "id": "iF8gK",
+              "type": "ref",
+              "ref": "oNDTR",
+              "fill": "$bg-surface-2",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "name": "f3",
+              "x": 279,
+              "y": 0,
+              "descendants": {
+                "QMLXm": {
+                  "content": "Performance",
+                  "fill": "$text-primary"
+                }
+              }
+            },
+            {
+              "id": "4Dofk",
+              "type": "ref",
+              "ref": "oNDTR",
+              "fill": "$bg-surface-2",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "name": "f4",
+              "x": 424,
+              "y": 0,
+              "descendants": {
+                "QMLXm": {
+                  "content": "A11y",
+                  "fill": "$text-primary"
+                }
+              }
+            },
+            {
+              "id": "llT5k",
+              "type": "ref",
+              "ref": "oNDTR",
+              "fill": "$bg-surface-2",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "name": "f5",
+              "x": 509,
+              "y": 0,
+              "descendants": {
+                "QMLXm": {
+                  "content": "Design Systems",
+                  "fill": "$text-primary"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "I59Uf",
+          "name": "pGrid",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "i1KRv",
+              "name": "pRow1",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "ZzUkC",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "pp1",
+                  "x": 0,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container"
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Realtime Collaboration Suite"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "CRDT-based collaboration app. Stack: Next.js, TypeScript, WebSocket, Redis."
+                    }
+                  }
+                },
+                {
+                  "id": "cQ37D",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "pp2",
+                  "x": 432,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container"
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Ecommerce Edge Frontend"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "High-performance storefront with edge rendering and observability-first rollout."
+                    }
+                  }
+                },
+                {
+                  "id": "4ZUtA",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "pp3",
+                  "height": "fit_content",
+                  "x": 864,
+                  "y": 0,
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container"
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Design System Federation"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "Cross-team UI primitives, codemods, and migration toolkit for consistent delivery."
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "LnMON",
+              "name": "pRow2",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "T2Ba4",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "pp4",
+                  "x": 0,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container"
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Observability Developer Portal"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "Self-service error monitoring and release health dashboards for product squads."
+                    }
+                  }
+                },
+                {
+                  "id": "th4im",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "pp5",
+                  "x": 432,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container"
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Accessibility Compliance Program"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "WCAG-focused platform improvements and automated accessibility governance."
+                    }
+                  }
+                },
+                {
+                  "id": "OLTqF",
+                  "type": "ref",
+                  "ref": "z0Nf5",
+                  "width": "fill_container",
+                  "name": "pp6",
+                  "height": "fit_content",
+                  "x": 864,
+                  "y": 0,
+                  "descendants": {
+                    "8Ncq6": {
+                      "width": "fill_container"
+                    },
+                    "NQUtb": {
+                      "width": "fill_container",
+                      "content": "Performance Budget CI"
+                    },
+                    "yDfJz": {
+                      "width": "fill_container",
+                      "content": "Automated performance regressions checks in CI with budget thresholds and alerts."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "i7rv1",
+          "name": "empty",
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "layout": "vertical",
+          "gap": 6,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "q9fqX",
+              "name": "emptyTi",
+              "fill": "$text-primary",
+              "content": "No projects found for selected filters",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "d2mNS",
+              "name": "emptyDs",
+              "fill": "$text-secondary",
+              "content": "Try resetting filters to view all case studies.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "RIFrn",
+          "name": "pager",
+          "gap": 10,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "35xpL",
+              "name": "pg1",
+              "fill": "$accent-cyan",
+              "content": "01",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "h25bP",
+              "name": "pg2",
+              "fill": "$text-secondary",
+              "content": "02",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "56KGL",
+              "name": "pg3",
+              "fill": "$text-secondary",
+              "content": "03",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "GUKCH",
+      "x": 4480,
+      "y": 0,
+      "name": "Project Case / Desktop",
+      "width": 1440,
+      "height": 3400,
+      "fill": "$bg-base",
+      "layout": "vertical",
+      "gap": 40,
+      "padding": [
+        24,
+        80,
+        64,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "zKZl9",
+          "name": "cNav",
+          "width": "fill_container",
+          "padding": [
+            8,
+            0
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "dtOkj",
+              "name": "cPath",
+              "fill": "$accent-cyan",
+              "content": "/projects / realtime-collaboration-suite",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "KFOgw",
+              "name": "cHome",
+              "fill": "$text-secondary",
+              "content": "← All Projects",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "eKF87",
+          "name": "hero",
+          "width": "fill_container",
+          "fill": "$bg-surface",
+          "cornerRadius": 14,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#3C3562"
+          },
+          "layout": "vertical",
+          "gap": 14,
+          "padding": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "JNlno",
+              "name": "heroTi",
+              "fill": "$text-primary",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#52FFF6AA",
+                "blur": 20
+              },
+              "content": "Realtime Collaboration Suite",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 50,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "usSO8",
+              "name": "heroMeta",
+              "fill": "$accent-yellow",
+              "content": "Role: Senior Frontend Engineer · Duration: 8 months · Team: 6 engineers",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "cWvuW",
+              "name": "heroTl",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "TL;DR: Re-architected collaborative editing with CRDT and streaming APIs, reducing conflict-related support incidents by 63% and improving interaction latency by 38%.",
+              "lineHeight": 1.55,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "94n32",
+              "name": "heroLinks",
+              "gap": 10,
+              "children": [
+                {
+                  "id": "ey51J",
+                  "type": "ref",
+                  "ref": "oNDTR",
+                  "fill": "$accent-cyan",
+                  "name": "liveBtn",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "QMLXm": {
+                      "content": "Live Demo",
+                      "fill": "#111226"
+                    }
+                  }
+                },
+                {
+                  "id": "jvoGR",
+                  "type": "ref",
+                  "ref": "oNDTR",
+                  "fill": "$bg-surface-2",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#4A3E88"
+                  },
+                  "name": "ghBtn",
+                  "x": 128,
+                  "y": 0,
+                  "descendants": {
+                    "QMLXm": {
+                      "content": "GitHub",
+                      "fill": "$text-primary"
+                    }
+                  }
+                },
+                {
+                  "id": "TstIN",
+                  "type": "ref",
+                  "ref": "oNDTR",
+                  "fill": "$bg-surface-2",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#4A3E88"
+                  },
+                  "name": "figBtn",
+                  "x": 230,
+                  "y": 0,
+                  "descendants": {
+                    "QMLXm": {
+                      "content": "Architecture",
+                      "fill": "$text-primary"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gOCh4",
+          "name": "metRow",
+          "width": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "id": "iTFoP",
+              "type": "ref",
+              "ref": "eJ7Df",
+              "width": "fill_container",
+              "name": "m1",
+              "x": 0,
+              "y": 0,
+              "descendants": {
+                "liT7j": {
+                  "content": "-38%"
+                },
+                "zmp2j": {
+                  "width": "fill_container",
+                  "content": "Editor interaction latency"
+                }
+              }
+            },
+            {
+              "id": "cyOFw",
+              "type": "ref",
+              "ref": "eJ7Df",
+              "width": "fill_container",
+              "name": "m2",
+              "x": 432,
+              "y": 0,
+              "descendants": {
+                "liT7j": {
+                  "content": "-63%"
+                },
+                "zmp2j": {
+                  "width": "fill_container",
+                  "content": "Conflict-related support incidents"
+                }
+              }
+            },
+            {
+              "id": "ACAZO",
+              "type": "ref",
+              "ref": "eJ7Df",
+              "width": "fill_container",
+              "name": "m3",
+              "x": 864,
+              "y": 0,
+              "descendants": {
+                "liT7j": {
+                  "content": "+21%"
+                },
+                "zmp2j": {
+                  "width": "fill_container",
+                  "content": "Weekly active collaboration sessions"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "2JPHn",
+          "name": "topSplit",
+          "width": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Ak4l4",
+              "name": "overview",
+              "width": "fill_container",
+              "fill": "$bg-surface-2",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2vR8t",
+                  "name": "ovTi",
+                  "fill": "$text-primary",
+                  "content": "Overview",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "wGAh3",
+                  "name": "ovTx",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "The product enabled distributed teams to edit and review complex documents in real time. Existing architecture could not guarantee consistency under unstable network conditions.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "njGMt",
+              "name": "context",
+              "width": "fill_container",
+              "fill": "$bg-surface-2",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dK4Nh",
+                  "name": "ctxTi",
+                  "fill": "$text-primary",
+                  "content": "Context & Problem",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Ck4NJ",
+                  "name": "ctxTx",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Business needed enterprise-scale collaboration with strict auditability. Legacy OT approach produced merge conflicts and support load spikes during peak usage.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ehvhQ",
+          "name": "arch",
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "BKNNt",
+              "name": "archTi",
+              "fill": "$text-primary",
+              "content": "Architecture",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "PWHSC",
+              "name": "archRow",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "jsoDC",
+                  "name": "a1",
+                  "width": "fill_container",
+                  "fill": "#1A1630",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#3C3562"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZdSQE",
+                      "name": "a1t",
+                      "fill": "$accent-cyan",
+                      "content": "Client",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "48UPa",
+                      "name": "a1d",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Next.js App Router + local CRDT store",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "8Nj7p",
+                  "name": "a2",
+                  "width": "fill_container",
+                  "fill": "#1A1630",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#3C3562"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jBQ2a",
+                      "name": "a2t",
+                      "fill": "$accent-cyan",
+                      "content": "Sync Layer",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "RahqF",
+                      "name": "a2d",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "WebSocket gateway + conflict resolution workers",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WlH8Z",
+                  "name": "a3",
+                  "width": "fill_container",
+                  "fill": "#1A1630",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#3C3562"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tAktq",
+                      "name": "a3t",
+                      "fill": "$accent-cyan",
+                      "content": "Platform",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "0dVHP",
+                      "name": "a3d",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Audit stream + analytics + Sentry traces",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "h6xUY",
+          "name": "impl",
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "4zHNj",
+              "name": "implTi",
+              "fill": "$text-primary",
+              "content": "Implementation Highlights",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "wa2hU",
+              "name": "impl1",
+              "fill": "$text-secondary",
+              "content": "1) Added operation batching and optimistic mutation rollback.",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "U6cbu",
+              "name": "impl2",
+              "fill": "$text-secondary",
+              "content": "2) Isolated rendering hotspots with memoized state selectors.",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "5hecd",
+              "name": "impl3",
+              "fill": "$text-secondary",
+              "content": "3) Migrated editor shell to streaming SSR for faster first paint.",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "X6Pwk",
+              "name": "impl4",
+              "fill": "$text-secondary",
+              "content": "4) Established release checks: Vitest, Playwright, Lighthouse CI.",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rjoNR",
+          "name": "results",
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "5S99X",
+              "name": "rTi",
+              "fill": "$text-primary",
+              "content": "Results & Lessons",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "gfUQ9",
+              "name": "r1",
+              "fill": "$text-secondary",
+              "content": "- Collaboration sessions grew by 21% after launch.",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "4X0bg",
+              "name": "r2",
+              "fill": "$text-secondary",
+              "content": "- Incident resolution time decreased by 41% with observability integration.",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "dYh13",
+              "name": "r3",
+              "fill": "$text-secondary",
+              "content": "- Team learned to codify conflict-handling as reusable design patterns.",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HAK5c",
+          "name": "stack",
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "fBD62",
+              "name": "sTi",
+              "fill": "$text-primary",
+              "content": "Stack & Links",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "qDJ9r",
+              "name": "sTags",
+              "fill": "$accent-cyan",
+              "content": "Next.js · TypeScript · React Query · WebSocket · Redis · Sentry",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "vltlj",
+              "name": "sL1",
+              "fill": "$text-secondary",
+              "content": "Case Study Repo: github.com/leonidpetrov/realtime-suite",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "Gp9xA",
+              "name": "sL2",
+              "fill": "$text-secondary",
+              "content": "Live Product: app.realtime-suite.dev",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "Z54ho",
+              "name": "sL3",
+              "fill": "$text-secondary",
+              "content": "Technical Notes: docs.realtime-suite.dev/architecture",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "X9jYR",
+      "x": 5980,
+      "y": 0,
+      "name": "Legal / Desktop",
+      "width": 1440,
+      "height": 2200,
+      "fill": "$bg-base",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        24,
+        80,
+        64,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "cxG6M",
+          "name": "lNav",
+          "width": "fill_container",
+          "padding": [
+            8,
+            0
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "GyuR1",
+              "name": "lBrand",
+              "fill": "$accent-cyan",
+              "content": "LEGAL / COMPLIANCE",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 13,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "y1xGF",
+              "name": "lBack",
+              "fill": "$text-secondary",
+              "content": "← Back Home",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "AjEYt",
+          "name": "lHead",
+          "width": "fill_container",
+          "fill": "$bg-surface",
+          "cornerRadius": 14,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#3C3562"
+          },
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "nWiQ6",
+              "name": "lTitle",
+              "fill": "$text-primary",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#FF4FD8AA",
+                "blur": 18
+              },
+              "content": "Privacy & Data Processing",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 42,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "lfFt3",
+              "name": "lIntro",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Mandatory legal pages for contact form data collection and analytics cookies compliance.",
+              "lineHeight": 1.55,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BLpQ9",
+          "name": "lGrid",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "children": [
+            {
+              "type": "frame",
+              "id": "F23NG",
+              "name": "d1",
+              "width": "fill_container",
+              "fill": "$bg-surface-2",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NFe6w",
+                  "name": "d1t",
+                  "fill": "$text-primary",
+                  "content": "Privacy Policy",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "iVUbq",
+                  "name": "d1d",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Describes what personal data is collected, lawful basis, retention period, third-party processors, and user rights under applicable law.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PedUK",
+              "name": "d2",
+              "width": "fill_container",
+              "fill": "$bg-surface-2",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "S2vrx",
+                  "name": "d2t",
+                  "fill": "$text-primary",
+                  "content": "Personal Data Processing Consent",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "R2rg6",
+                  "name": "d2d",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Standalone consent text for submitting contact details, with explicit acceptance, processing purpose, and withdrawal instructions.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zPQPx",
+              "name": "d3",
+              "width": "fill_container",
+              "fill": "$bg-surface-2",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#4A3E88"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dugOd",
+                  "name": "d3t",
+                  "fill": "$text-primary",
+                  "content": "Cookie Policy",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "wBKdG",
+                  "name": "d3d",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Explains cookie categories, analytics usage, consent options, and controls for opting out.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "VMdzi",
+          "name": "lNote",
+          "fill": "$accent-cyan",
+          "content": "Recommended implementation: visible cookie banner + checkbox consent in contact form.",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "yfDUF",
+      "x": 7480,
+      "y": 0,
+      "name": "Home / Mobile",
+      "width": 390,
+      "height": 5200,
+      "fill": "$bg-base",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        16,
+        20,
+        32,
+        20
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "kOz1f",
+          "name": "mNav",
+          "width": "fill_container",
+          "padding": [
+            6,
+            0
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "0BmpQ",
+              "name": "mBrand",
+              "fill": "$accent-cyan",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#52FFF6CC",
+                "blur": 12
+              },
+              "content": "LEONID / FE",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "DJxcx",
+              "name": "mMenu",
+              "fill": "$text-secondary",
+              "content": "MENU",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "7g8eJ",
+          "name": "mHero",
+          "width": "fill_container",
+          "fill": "$bg-surface",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#3C3562"
+          },
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 18,
+          "children": [
+            {
+              "type": "text",
+              "id": "21UNM",
+              "name": "mEy",
+              "fill": "$accent-cyan",
+              "content": "Senior Frontend Engineer",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "dZ9NB",
+              "name": "mTi",
+              "fill": "$text-primary",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#FF4FD8BB",
+                "blur": 20
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Engineering quality with product speed",
+              "lineHeight": 1.12,
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 34,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "bZIYO",
+              "name": "mDs",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "React, TypeScript, Next.js, performance, accessibility, design systems.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "id": "GEXn7",
+              "type": "ref",
+              "ref": "oNDTR",
+              "name": "mCta",
+              "x": 18,
+              "y": 224,
+              "descendants": {
+                "QMLXm": {
+                  "content": "View Projects"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "g2cM4",
+          "name": "mAbout",
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "kow8V",
+              "name": "maTi",
+              "fill": "$text-primary",
+              "content": "About",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "eT93C",
+              "name": "maTx",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "I design scalable frontend architectures and help teams ship confidently through robust DX and quality practices.",
+              "lineHeight": 1.55,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZuAXZ",
+          "name": "mExp",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 10,
+          "children": [
+            {
+              "type": "text",
+              "id": "xYKAn",
+              "name": "meTi",
+              "fill": "$text-primary",
+              "content": "Experience",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "id": "2mXNP",
+              "type": "ref",
+              "ref": "tUNiC",
+              "width": "fill_container",
+              "name": "me1",
+              "height": "fit_content",
+              "x": 0,
+              "y": 34,
+              "descendants": {
+                "rwtO5": {
+                  "width": "fill_container",
+                  "height": "fit_content"
+                },
+                "dePWe": {
+                  "width": "fill_container",
+                  "content": "Senior FE · FinTech"
+                },
+                "8RciF": {
+                  "y": 33,
+                  "content": "2022 — Present"
+                },
+                "DgwRy": {
+                  "width": "fill_container",
+                  "y": 57,
+                  "content": "LCP improved by 42%, bundle size reduced by 31%."
+                }
+              }
+            },
+            {
+              "id": "hHemD",
+              "type": "ref",
+              "ref": "tUNiC",
+              "width": "fill_container",
+              "name": "me2",
+              "height": "fit_content",
+              "x": 0,
+              "y": 146,
+              "descendants": {
+                "rwtO5": {
+                  "width": "fill_container",
+                  "height": "fit_content"
+                },
+                "dePWe": {
+                  "width": "fill_container",
+                  "content": "Frontend Lead · Commerce"
+                },
+                "8RciF": {
+                  "y": 33,
+                  "content": "2019 — 2022"
+                },
+                "DgwRy": {
+                  "width": "fill_container",
+                  "y": 57,
+                  "content": "Design system adoption across 9 teams."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "a43WO",
+          "name": "mProj",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 10,
+          "children": [
+            {
+              "type": "text",
+              "id": "d8HzE",
+              "name": "mpTi",
+              "fill": "$text-primary",
+              "content": "Selected Projects",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "id": "zUl2h",
+              "type": "ref",
+              "ref": "z0Nf5",
+              "width": "fill_container",
+              "name": "mp1",
+              "height": "fit_content",
+              "x": 0,
+              "y": 34,
+              "descendants": {
+                "8Ncq6": {
+                  "width": "fill_container"
+                },
+                "NQUtb": {
+                  "width": "fill_container",
+                  "content": "Realtime Collaboration Suite"
+                },
+                "yDfJz": {
+                  "width": "fill_container",
+                  "y": 270,
+                  "content": "CRDT + optimistic updates. Latency -38%."
+                }
+              }
+            },
+            {
+              "id": "Mc4jO",
+              "type": "ref",
+              "ref": "z0Nf5",
+              "width": "fill_container",
+              "name": "mp2",
+              "height": "fit_content",
+              "x": 0,
+              "y": 352,
+              "descendants": {
+                "8Ncq6": {
+                  "width": "fill_container"
+                },
+                "NQUtb": {
+                  "width": "fill_container",
+                  "content": "Accessibility Compliance Program"
+                },
+                "yDfJz": {
+                  "width": "fill_container",
+                  "y": 270,
+                  "content": "WCAG score to 98/100 across core flows."
+                }
+              }
+            },
+            {
+              "id": "7rZTK",
+              "type": "ref",
+              "ref": "z0Nf5",
+              "width": "fill_container",
+              "name": "mp3",
+              "height": "fit_content",
+              "x": 0,
+              "y": 670,
+              "descendants": {
+                "8Ncq6": {
+                  "width": "fill_container"
+                },
+                "NQUtb": {
+                  "width": "fill_container",
+                  "content": "Performance Budget CI"
+                },
+                "yDfJz": {
+                  "width": "fill_container",
+                  "y": 240,
+                  "content": "Automated Lighthouse thresholds in CI."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tGQHu",
+          "name": "mQual",
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "a3p2n",
+              "name": "mqTi",
+              "fill": "$text-primary",
+              "content": "Engineering Quality",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "XWURu",
+              "name": "mq1",
+              "fill": "$text-secondary",
+              "content": "Performance: Lighthouse 90+",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "sdfvE",
+              "name": "mq2",
+              "fill": "$text-secondary",
+              "content": "Accessibility: keyboard-first and semantic flows",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "cQX1H",
+              "name": "mq3",
+              "fill": "$text-secondary",
+              "content": "DX: Vitest + Playwright + CI gates",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "W1uXG",
+          "name": "mContact",
+          "width": "fill_container",
+          "fill": "$bg-surface-2",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#4A3E88"
+          },
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "ae2Yq",
+              "name": "mcTi",
+              "fill": "$text-primary",
+              "content": "Let's Work Together",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "JOa7q",
+              "name": "mcTx",
+              "fill": "$accent-cyan",
+              "content": "hello@leonid.dev · @leonid_frontend",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "id": "y7jVP",
+              "type": "ref",
+              "ref": "oNDTR",
+              "name": "mcBtn",
+              "x": 16,
+              "y": 73,
+              "descendants": {
+                "QMLXm": {
+                  "content": "Contact"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "x7woU",
+          "type": "ref",
+          "ref": "6fvkC",
+          "width": "fill_container",
+          "name": "mCookie",
+          "x": 20,
+          "y": 2152,
+          "descendants": {
+            "hn5xG": {
+              "width": "fill_container",
+              "y": 20,
+              "content": "We use cookies for analytics."
+            },
+            "6RqJ8": {
+              "x": 262
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "QMw9l",
+      "x": 7920,
+      "y": 0,
+      "name": "Projects / Mobile",
+      "width": 390,
+      "height": 3200,
+      "fill": "$bg-base",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": [
+        16,
+        20,
+        24,
+        20
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Uqn1U",
+      "x": 8360,
+      "y": 0,
+      "name": "Project Case / Mobile",
+      "width": 390,
+      "height": 3600,
+      "fill": "$bg-base",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": [
+        16,
+        20,
+        24,
+        20
+      ]
+    }
+  ],
+  "variables": {
+    "accent-cyan": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#36F9F6"
+        },
+        {
+          "value": "#52FFF6"
+        }
+      ]
+    },
+    "accent-pink": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FF7EDB"
+        },
+        {
+          "value": "#FF4FD8"
+        }
+      ]
+    },
+    "accent-yellow": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FEDE5D"
+        },
+        {
+          "value": "#FFE86F"
+        }
+      ]
+    },
+    "bg-base": {
+      "type": "color",
+      "value": "#1A1630"
+    },
+    "bg-surface": {
+      "type": "color",
+      "value": "#221C3E"
+    },
+    "bg-surface-2": {
+      "type": "color",
+      "value": "#2C2550"
+    },
+    "font-body": {
+      "type": "string",
+      "value": "IBM Plex Sans"
+    },
+    "font-display": {
+      "type": "string",
+      "value": "Space Mono"
+    },
+    "radius-lg": {
+      "type": "number",
+      "value": 16
+    },
+    "radius-md": {
+      "type": "number",
+      "value": 12
+    },
+    "radius-sm": {
+      "type": "number",
+      "value": 8
+    },
+    "space-10": {
+      "type": "number",
+      "value": 64
+    },
+    "space-2": {
+      "type": "number",
+      "value": 8
+    },
+    "space-3": {
+      "type": "number",
+      "value": 12
+    },
+    "space-4": {
+      "type": "number",
+      "value": 16
+    },
+    "space-5": {
+      "type": "number",
+      "value": 24
+    },
+    "space-6": {
+      "type": "number",
+      "value": 32
+    },
+    "space-8": {
+      "type": "number",
+      "value": 48
+    },
+    "state-error": {
+      "type": "color",
+      "value": "#FF4D6D"
+    },
+    "text-primary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F7F4FF"
+        },
+        {
+          "value": "#FFF9FF"
+        }
+      ]
+    },
+    "text-secondary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#B6AFCF"
+        },
+        {
+          "value": "#D7CCFF"
+        }
+      ]
+    },
+    "glow-blur-hard": {
+      "type": "number",
+      "value": 24
+    },
+    "glow-blur-medium": {
+      "type": "number",
+      "value": 14
+    },
+    "glow-blur-soft": {
+      "type": "number",
+      "value": 8
+    },
+    "glow-hard": {
+      "type": "color",
+      "value": "#FF4FD8CC"
+    },
+    "glow-medium": {
+      "type": "color",
+      "value": "#52FFF6AA"
+    },
+    "glow-pink": {
+      "type": "color",
+      "value": "#FF4FD8AA"
+    },
+    "glow-soft": {
+      "type": "color",
+      "value": "#52FFF666"
+    }
+  }
+}
