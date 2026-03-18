@@ -1,0 +1,2765 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Components",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "XSHte",
+      "x": 2581,
+      "y": -16,
+      "name": "Route / Home",
+      "width": 1440,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 180,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#0D0B1F",
+            "position": 0
+          },
+          {
+            "color": "#2A1B5A",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "I5xjp",
+          "name": "Top Nav",
+          "width": "fill_container",
+          "fill": "#120F2A",
+          "padding": [
+            24,
+            72
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "y3JjC",
+              "name": "brand",
+              "fill": "#F8FAFC",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#72F1B866",
+                "blur": 8
+              },
+              "content": "Leonid Petrov // Frontend",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "Os5ea",
+              "name": "navLinks",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cHonY",
+                  "name": "lnk1",
+                  "fill": "#72F1B8",
+                  "content": "Projects",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "fziYQ",
+                  "name": "lnk2",
+                  "fill": "#72F1B8",
+                  "content": "Quality",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "GVPzM",
+                  "name": "lnk3",
+                  "fill": "#72F1B8",
+                  "content": "About",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "M9sGb",
+                  "name": "lnk4",
+                  "fill": "#72F1B8",
+                  "content": "Contact",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "l8VU6",
+                  "name": "lang",
+                  "fill": "#22225A",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#36F9F666"
+                  },
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7pRaZ",
+                      "name": "langText",
+                      "fill": "#36F9F6",
+                      "content": "EN / RU",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NWYPX",
+          "name": "Hero",
+          "width": "fill_container",
+          "gap": 40,
+          "padding": [
+            76,
+            72,
+            84,
+            72
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "zX1cI",
+              "name": "heroLeft",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DUAFR",
+                  "name": "pre",
+                  "fill": "#36F9F6",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#36F9F688",
+                    "blur": 8
+                  },
+                  "content": "SENIOR FRONTEND ENGINEER",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "Ke41c",
+                  "name": "heroTitle",
+                  "fill": "#F8FAFC",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#36F9F655",
+                    "blur": 18
+                  },
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Building resilient React & Next.js products with measurable engineering quality.",
+                  "lineHeight": 0.95,
+                  "fontFamily": "Sora",
+                  "fontSize": 58,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "f2JaJ",
+                  "name": "heroDesc",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "I design architecture, performance budgets, accessibility systems and developer workflows that scale teams and products.",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "51y91",
+                  "name": "ctaRow",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "SaHq5",
+                      "name": "cta1",
+                      "fill": "#2AE8FF",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "efaWq",
+                          "name": "cta1t",
+                          "fill": "#05070F",
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "#72F1B855",
+                            "blur": 6
+                          },
+                          "content": "View Projects",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uhpoA",
+                      "name": "cta2",
+                      "fill": "#160F2B",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#FF5CDA66"
+                      },
+                      "padding": [
+                        12,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fJRhh",
+                          "name": "cta2t",
+                          "fill": "#FF7EDB",
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "#FF7EDB66",
+                            "blur": 6
+                          },
+                          "content": "Engineering Quality",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "U7f8p",
+                      "name": "cta3",
+                      "fill": "#0E1731",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#72F1B866"
+                      },
+                      "padding": [
+                        12,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "R9fTX",
+                          "name": "cta3t",
+                          "fill": "#7DF9FF",
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "#36F9F666",
+                            "blur": 6
+                          },
+                          "content": "Contact",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "4Iy2y",
+              "name": "heroRight",
+              "width": 460,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 145,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#2D1B69",
+                    "position": 0
+                  },
+                  {
+                    "color": "#1B174A",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 20,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FF5CDA66"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QC971",
+                  "name": "chip",
+                  "fill": "#FF5CDA",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Core stack: Next.js 14 · TypeScript · Tamagui · Motion",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "xmP9c",
+                  "name": "code",
+                  "fill": "#F9F871",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "// quality loop\nmeasure() -> decide() -> ship()\nLCP: 3.8s -> 1.6s\nA11y score: 78 -> 100\nCI: lint + typecheck + tests + e2e",
+                  "lineHeight": 1.45,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "aZx8t",
+          "name": "About",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 120,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#10233F",
+                "position": 0
+              },
+              {
+                "color": "#123B4A",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 18,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#72F1B855"
+          },
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            28,
+            40
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "xTRey",
+              "name": "aboutEyebrow",
+              "fill": "#72F1B8",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#72F1B888",
+                "blur": 8
+              },
+              "content": "WHO I AM",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "600",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "WoE6t",
+              "name": "aboutTitle",
+              "fill": "#F8FAFC",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#72F1B855",
+                "blur": 12
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "I turn product constraints into robust frontend systems.",
+              "lineHeight": 1.05,
+              "fontFamily": "Sora",
+              "fontSize": 36,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "jsCkH",
+              "name": "aboutBody",
+              "fill": "#B893FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "For 9+ years I have delivered complex interfaces in fintech, e-commerce and SaaS. My approach combines architecture, a11y and performance from day one. I build design systems on Tamagui, define quality gates in CI, and mentor teams on maintainable frontend practices.",
+              "lineHeight": 1.5,
+              "fontFamily": "Space Grotesk",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "UfKms",
+              "name": "focusRow",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KA5oj",
+                  "name": "f1",
+                  "fill": "#141B38",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#F9F87155"
+                  },
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iPvoH",
+                      "name": "f1t",
+                      "fill": "#72F1B8",
+                      "content": "Architecture & DX",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PHbuy",
+                  "name": "f2",
+                  "fill": "#241339",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FF5CDA66"
+                  },
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FHKXc",
+                      "name": "f2t",
+                      "fill": "#FF7EDB",
+                      "content": "Performance & Accessibility",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mx9dR",
+                  "name": "f3",
+                  "fill": "#132234",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#F9F87155"
+                  },
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MrHWw",
+                      "name": "f3t",
+                      "fill": "#72F1B8",
+                      "content": "Design Systems & Mentoring",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "muUCL",
+          "name": "Experience",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 120,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#2A1F3B",
+                "position": 0
+              },
+              {
+                "color": "#4A2A2A",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 18,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#F9F87155"
+          },
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            28,
+            40
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Vm75B",
+              "name": "expEyebrow",
+              "fill": "#F9F871",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#F9F87188",
+                "blur": 8
+              },
+              "content": "EXPERIENCE",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "600",
+              "letterSpacing": 2
+            },
+            {
+              "type": "frame",
+              "id": "vPF4U",
+              "name": "expWrap",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EyuWK",
+                  "name": "job1",
+                  "width": "fill_container",
+                  "fill": "#1A1A40",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#36F9F644"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PxD8R",
+                      "name": "job1t",
+                      "fill": "#F8FAFC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Lead Frontend Engineer · Fintech Platform · 2022 — Present",
+                      "fontFamily": "Sora",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Zyjqq",
+                      "name": "job1d",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "• Monorepo + design system migration across 6 products\n• LCP improved 56%, bundle size reduced by 38%\n• Accessibility score raised to 98+ across key funnels",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kQv3c",
+                  "name": "job2",
+                  "width": "fill_container",
+                  "fill": "#24124A",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FF7EDB55"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8wHl5",
+                      "name": "job2t",
+                      "fill": "#F8FAFC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Senior Frontend Engineer · E-commerce SaaS · 2019 — 2022",
+                      "fontFamily": "Sora",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OFw0C",
+                      "name": "job2d",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "• Built SSR storefront platform on Next.js\n• Introduced quality gates: lint, typecheck, tests, perf budgets\n• Mentored 5 engineers to mid/senior level",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DRGik",
+          "name": "Selected Projects",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 120,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#24133D",
+                "position": 0
+              },
+              {
+                "color": "#3D155F",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 18,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FF7EDB55"
+          },
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            28,
+            40
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "udmp6",
+              "name": "projEyebrow",
+              "fill": "#FF7EDB",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#FF7EDB88",
+                "blur": 8
+              },
+              "content": "SELECTED PROJECTS",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "600",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "BTmxq",
+              "name": "projTitle",
+              "fill": "#F8FAFC",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#FF7EDB66",
+                "blur": 12
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Problem-driven builds with measurable outcomes.",
+              "lineHeight": 1.1,
+              "fontFamily": "Sora",
+              "fontSize": 34,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "Gtt0y",
+              "name": "projGrid",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "bCY1K",
+                  "name": "card1",
+                  "width": "fill_container",
+                  "fill": "#1B1B3A",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#36F9F644"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "haffL",
+                      "name": "card1t",
+                      "fill": "#F8FAFC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Realtime Risk Monitor · Next.js + WebSockets",
+                      "fontFamily": "Sora",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "W1fcc",
+                      "name": "card1d",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Problem: fragmented fraud signals and slow analyst workflow.\nSolution: streaming UI with event prioritization and keyboard-first triage.\nResult: investigation time reduced by 41%.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "l80ek",
+                      "name": "card1f",
+                      "fill": "#FF5CDA",
+                      "content": "Stack: Next.js · Kafka · GraphQL · Playwright",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IgBgI",
+                  "name": "card2",
+                  "width": "fill_container",
+                  "fill": "#1A1430",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FF7EDB55"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uTAlw",
+                      "name": "card2t",
+                      "fill": "#F8FAFC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Design System Platform · Tamagui + Tokens",
+                      "fontFamily": "Sora",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Uc9QS",
+                      "name": "card2d",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Problem: inconsistent UI across web apps and squads.\nSolution: shared primitive system, semantic tokens, codemod migration.\nResult: release lead-time improved by 32%.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "8ipIM",
+                      "name": "card2f",
+                      "fill": "#FF5CDA",
+                      "content": "Stack: Tamagui · Storybook · TurboRepo · Vitest",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QB7HP",
+                  "name": "card3",
+                  "width": "fill_container",
+                  "fill": "#1B1B3A",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#36F9F644"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "k2uao",
+                      "name": "card3t",
+                      "fill": "#F8FAFC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Growth Experimentation Suite · Next.js",
+                      "fontFamily": "Sora",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JgyLU",
+                      "name": "card3d",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Problem: slow A/B experiment cycles and low confidence data.\nSolution: typed experiment config, guardrails, analytics dashboard.\nResult: experiment throughput doubled in 1 quarter.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "D7XaG",
+                      "name": "card3f",
+                      "fill": "#FF5CDA",
+                      "content": "Stack: Next.js · TypeScript · Amplitude · Sentry",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "IxGkg",
+          "name": "Engineering Quality",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 120,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#0E2D3A",
+                "position": 0
+              },
+              {
+                "color": "#1C345F",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 18,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#36F9F655"
+          },
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            28,
+            40
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "AqH1A",
+              "name": "eqEyebrow",
+              "fill": "#F9F871",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#F9F87188",
+                "blur": 8
+              },
+              "content": "ENGINEERING QUALITY",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "600",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "yuJ35",
+              "name": "eqTitle",
+              "fill": "#F8FAFC",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#36F9F666",
+                "blur": 12
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Performance, accessibility and DX as product features.",
+              "lineHeight": 1.1,
+              "fontFamily": "Sora",
+              "fontSize": 34,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "Ijs2b",
+              "name": "eqBody",
+              "fill": "#B893FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "I apply measurable quality workflows: baseline audits, budgets, CI gates and runtime monitoring. Teams get faster delivery without quality drift.",
+              "lineHeight": 1.45,
+              "fontFamily": "Space Grotesk",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "KaWP2",
+              "name": "miniRow",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "cE5T0",
+                  "name": "mini1",
+                  "width": "fill_container",
+                  "fill": "#1B1B3A",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#36F9F644"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OEuS4",
+                      "name": "mini1t",
+                      "fill": "#F8FAFC",
+                      "content": "Checkout Perf",
+                      "fontFamily": "Sora",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Lg6yk",
+                      "name": "mini1d",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "LCP 3.9s → 1.7s by route splitting, image strategy and server caching.",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k8sR9",
+                  "name": "mini2",
+                  "width": "fill_container",
+                  "fill": "#24124A",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FF7EDB55"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Pvkfl",
+                      "name": "mini2t",
+                      "fill": "#F8FAFC",
+                      "content": "Accessibility",
+                      "fontFamily": "Sora",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g04Ug",
+                      "name": "mini2d",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "A11y 76 → 100 with semantic patterns, keyboard map and screen-reader QA.",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IC6KG",
+                  "name": "mini3",
+                  "width": "fill_container",
+                  "fill": "#1B1B3A",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#36F9F644"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8CyG0",
+                      "name": "mini3t",
+                      "fill": "#F8FAFC",
+                      "content": "Developer Experience",
+                      "fontFamily": "Sora",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3HR9D",
+                      "name": "mini3d",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "PR cycle time -27% after strict typing, templates and test pyramids.",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LAexk",
+          "name": "Content",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 120,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#172A57",
+                "position": 0
+              },
+              {
+                "color": "#2E2E6D",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 18,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#A5B4FF55"
+          },
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            28,
+            40
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "4BFRp",
+              "name": "contentEyebrow",
+              "fill": "#A5B4FF",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#A5B4FF88",
+                "blur": 8
+              },
+              "content": "WRITING & SPEAKING",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "600",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "vTjIo",
+              "name": "contentTitle",
+              "fill": "#F8FAFC",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#A5B4FF66",
+                "blur": 12
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Sharing frontend engineering practices and case studies.",
+              "lineHeight": 1.1,
+              "fontFamily": "Sora",
+              "fontSize": 32,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "ERvvz",
+              "name": "contentGrid",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "t69Vg",
+                  "name": "article",
+                  "width": "fill_container",
+                  "fill": "#1A1A40",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#36F9F644"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 18,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "0dIzz",
+                      "name": "articleT",
+                      "fill": "#F8FAFC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Article: Performance Budgets for Product Teams",
+                      "fontFamily": "Sora",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Dq0Pl",
+                      "name": "articleD",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "How to combine Lighthouse budgets and CI to protect UX at scale.",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NAYdj",
+                  "name": "talk",
+                  "width": "fill_container",
+                  "fill": "#24124A",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FF7EDB55"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 18,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HV31b",
+                      "name": "talkT",
+                      "fill": "#F8FAFC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Talk: Accessibility as Team Culture",
+                      "fontFamily": "Sora",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "8WIlK",
+                      "name": "talkD",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Practical rituals for integrating a11y into sprint workflows.",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "D8rzz",
+                  "name": "roadmap",
+                  "width": "fill_container",
+                  "fill": "#1A1A40",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#36F9F644"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 18,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "0o3BA",
+                      "name": "roadmapT",
+                      "fill": "#F8FAFC",
+                      "content": "Roadmap",
+                      "fontFamily": "Sora",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "II2Rz",
+                      "name": "roadmapD",
+                      "fill": "#B893FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Monthly deep-dives: architecture notes, microfrontend failures, migration playbooks.",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Tetej",
+          "name": "Contact",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 150,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#2B1150",
+                "position": 0
+              },
+              {
+                "color": "#15204A",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 20,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FF5CDA66"
+          },
+          "gap": 22,
+          "padding": [
+            44,
+            72,
+            56,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "EXDvH",
+              "name": "contactLeft",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rbGNT",
+                  "name": "ctE",
+                  "fill": "#36F9F6",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#36F9F688",
+                    "blur": 8
+                  },
+                  "content": "LET'S WORK TOGETHER",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "ybUAJ",
+                  "name": "ctT",
+                  "fill": "#F8FAFC",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#FF5CDA66",
+                    "blur": 14
+                  },
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Need a senior frontend engineer for high-stakes product delivery?",
+                  "lineHeight": 1.1,
+                  "fontFamily": "Sora",
+                  "fontSize": 34,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "9IWrB",
+                  "name": "ctD",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Email: hello@example.dev\nTelegram: @frontend_lead\nGitHub: github.com/leonidpetrov\nLinkedIn: linkedin.com/in/leonidpetrov",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "LdKIh",
+                  "name": "cv",
+                  "fill": "#2AE8FF",
+                  "cornerRadius": 12,
+                  "padding": [
+                    12,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aRd9v",
+                      "name": "cvT",
+                      "fill": "#060915",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#72F1B844",
+                        "blur": 5
+                      },
+                      "content": "Download CV",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sdiU2",
+              "name": "form",
+              "width": 460,
+              "fill": "#1D1B4F",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#36F9F644"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Y1Dk3",
+                  "name": "fm1",
+                  "fill": "#36F9F6",
+                  "content": "Name",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "Fe5p9",
+                  "name": "fm1i",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#2A1F66",
+                  "cornerRadius": 10
+                },
+                {
+                  "type": "text",
+                  "id": "74gw4",
+                  "name": "fm2",
+                  "fill": "#36F9F6",
+                  "content": "Email",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "YCZXa",
+                  "name": "fm2i",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#2A1F66",
+                  "cornerRadius": 10
+                },
+                {
+                  "type": "text",
+                  "id": "VaqA3",
+                  "name": "fm3",
+                  "fill": "#36F9F6",
+                  "content": "Message",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "miezn",
+                  "name": "fm3i",
+                  "width": "fill_container",
+                  "height": 120,
+                  "fill": "#2A1F66",
+                  "cornerRadius": 10
+                },
+                {
+                  "type": "frame",
+                  "id": "DWEUA",
+                  "name": "submit",
+                  "fill": "#FF4FD8",
+                  "cornerRadius": 10,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "5EPpT",
+                      "name": "submitT",
+                      "fill": "#170014",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#FF5CDA66",
+                        "blur": 6
+                      },
+                      "content": "Send via /api/contact",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "a9k2F",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 90,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#16143A",
+                "position": 0
+              },
+              {
+                "color": "#2A1B52",
+                "position": 1
+              }
+            ]
+          },
+          "padding": [
+            20,
+            72
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "CuoEL",
+              "name": "footL",
+              "fill": "#A5B4FF",
+              "content": "© 2026 Leonid Petrov",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "DfJ2R",
+              "name": "footR",
+              "fill": "#A5B4FF",
+              "content": "Privacy · Cookie Policy · Personal Data",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "DXjXG",
+      "x": 4141,
+      "y": -16,
+      "name": "Route /projects",
+      "width": 1440,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 180,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#0C0B22",
+            "position": 0
+          },
+          {
+            "color": "#301754",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "rm4H5",
+          "name": "prHead",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 110,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#10213F",
+                "position": 0
+              },
+              {
+                "color": "#34234F",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 20,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#A5B4FF66"
+          },
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            36,
+            44
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Ta4CN",
+              "name": "prE",
+              "fill": "#72F1B8",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#72F1B888",
+                "blur": 8
+              },
+              "content": "/projects",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "RUQDa",
+              "name": "prT",
+              "fill": "#F9F871",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#F9F87177",
+                "blur": 14
+              },
+              "content": "All Projects",
+              "fontFamily": "Sora",
+              "fontSize": 48,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "ehPuw",
+              "name": "prD",
+              "fill": "#D2B8FF",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#A5B4FF66",
+                "blur": 8
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "A complete catalog of product and platform initiatives with case-study depth.",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lOU15",
+              "name": "filter",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wwoXC",
+                  "name": "fi1",
+                  "fill": "#2AE8FF",
+                  "cornerRadius": 999,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "0tVe7",
+                      "name": "fi1t",
+                      "fill": "#05070F",
+                      "content": "All",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kBmXW",
+                  "name": "fi2",
+                  "fill": "#1E2A5F",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#F9F87155"
+                  },
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CXjHk",
+                      "name": "fi2t",
+                      "fill": "#72F1B8",
+                      "content": "Architecture",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "1FosY",
+                  "name": "fi3",
+                  "fill": "#34125A",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FF7EDB55"
+                  },
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Wr9j4",
+                      "name": "fi3t",
+                      "fill": "#FF7EDB",
+                      "content": "Performance",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vmcg6",
+          "name": "list",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 120,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1A1F4A",
+                "position": 0
+              },
+              {
+                "color": "#25184A",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 20,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#36F9F655"
+          },
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            12,
+            44,
+            36,
+            44
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "OorP1",
+              "name": "item1",
+              "width": "fill_container",
+              "fill": "#1B1B3A",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#36F9F644"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yNfVq",
+                  "name": "item1t",
+                  "fill": "#36F9F6",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#36F9F666",
+                    "blur": 7
+                  },
+                  "content": "realtime-risk-monitor",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "uGoKu",
+                  "name": "item1d",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Streaming fraud intelligence UI with keyboard-first triage and case automation.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ayGTo",
+              "name": "item2",
+              "width": "fill_container",
+              "fill": "#1A1430",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FF7EDB55"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lpKxQ",
+                  "name": "item2t",
+                  "fill": "#FF5CDA",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#FF5CDA66",
+                    "blur": 7
+                  },
+                  "content": "tamagui-foundation-system",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "eVI70",
+                  "name": "item2d",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Unified tokens and component primitives for 6 squads with codemod rollout.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "d6YNl",
+              "name": "item3",
+              "width": "fill_container",
+              "fill": "#1B1B3A",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#36F9F644"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "0BKty",
+                  "name": "item3t",
+                  "fill": "#36F9F6",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#36F9F666",
+                    "blur": 7
+                  },
+                  "content": "checkout-core-web-vitals",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "KNpSs",
+                  "name": "item3d",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Checkout optimization program with performance budgets and alerting.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "7lIoP",
+      "x": 5701,
+      "y": -16,
+      "name": "Route /projects/[slug]",
+      "width": 1440,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 180,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#0D0C24",
+            "position": 0
+          },
+          {
+            "color": "#2D1A56",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "buYGg",
+          "name": "csHead",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 120,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1F1E5A",
+                "position": 0
+              },
+              {
+                "color": "#123D4A",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 20,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#72F1B866"
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            36,
+            44
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "TOIaU",
+              "name": "csE",
+              "fill": "#72F1B8",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#72F1B888",
+                "blur": 8
+              },
+              "content": "/projects/realtime-risk-monitor",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "IqkCg",
+              "name": "csT",
+              "fill": "#F9F871",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#F9F87177",
+                "blur": 14
+              },
+              "content": "Realtime Risk Monitor",
+              "fontFamily": "Sora",
+              "fontSize": 44,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "IY8hG",
+              "name": "csSub",
+              "fill": "#D2B8FF",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#A5B4FF66",
+                "blur": 8
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Overview: Led frontend architecture for realtime anti-fraud workflows.\nTL;DR: 41% faster investigations and +29 NPS for analysts.",
+              "lineHeight": 1.45,
+              "fontFamily": "Space Grotesk",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "3gRkn",
+          "name": "csBody",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 120,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1E1848",
+                "position": 0
+              },
+              {
+                "color": "#3A1D5A",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 20,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FF7EDB55"
+          },
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            8,
+            44,
+            36,
+            44
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "6vHZZ",
+              "name": "s1",
+              "width": "fill_container",
+              "fill": "#1A1A40",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#36F9F644"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YcNrs",
+                  "name": "s1t",
+                  "fill": "#F8FAFC",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#36F9F666",
+                    "blur": 7
+                  },
+                  "content": "Context & Problem",
+                  "fontFamily": "Sora",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Oy4u3",
+                  "name": "s1d",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Legacy console required manual cross-checks across 4 systems. Analysts missed high-priority incidents due to fragmented timeline context and delayed sync.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "A92eG",
+              "name": "s2",
+              "width": "fill_container",
+              "fill": "#24124A",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FF7EDB55"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "k6QAl",
+                  "name": "s2t",
+                  "fill": "#F8FAFC",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#FF7EDB66",
+                    "blur": 7
+                  },
+                  "content": "Architecture",
+                  "fontFamily": "Sora",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "CFk6F",
+                  "name": "s2d",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Event-driven UI on Next.js App Router: GraphQL edge, websocket stream layer, domain event store, resilient offline queue. Microfrontends separated by risk domain.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BsKWg",
+              "name": "s3",
+              "width": "fill_container",
+              "fill": "#1A1A40",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#36F9F644"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BoF0T",
+                  "name": "s3t",
+                  "fill": "#F8FAFC",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#36F9F666",
+                    "blur": 7
+                  },
+                  "content": "Implementation Highlights",
+                  "fontFamily": "Sora",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "1Aif1",
+                  "name": "s3d",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "• Typed event contracts with runtime validators\n• Virtualized timeline with keyboard shortcuts\n• Progressive enhancement for partial connectivity\n• End-to-end monitoring with Sentry traces",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "opJHN",
+              "name": "s4",
+              "width": "fill_container",
+              "fill": "#24124A",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FF7EDB55"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Bg8Gi",
+                  "name": "s4t",
+                  "fill": "#F8FAFC",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#FF7EDB66",
+                    "blur": 7
+                  },
+                  "content": "Results & Lessons",
+                  "fontFamily": "Sora",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "bSSfn",
+                  "name": "s4d",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Metrics: MTTR -41%, error-rate -36%, analyst NPS +29.\nLessons: domain boundaries must be explicit, and perf budgets need ownership per squad.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "R0ZXB",
+              "name": "s5",
+              "width": "fill_container",
+              "fill": "#1A1A40",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#36F9F644"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "r0qFT",
+                  "name": "s5t",
+                  "fill": "#F8FAFC",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#36F9F666",
+                    "blur": 7
+                  },
+                  "content": "Stack & Links",
+                  "fontFamily": "Sora",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "eGdym",
+                  "name": "s5d",
+                  "fill": "#F9F871",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Next.js · TypeScript · Tamagui · Motion · Playwright · Vercel\nLive Demo · GitHub · Architecture Notes",
+                  "lineHeight": 1.45,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "3IbJn",
+      "x": 7261,
+      "y": -16,
+      "name": "Route /legal + cookies",
+      "width": 1440,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 180,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#0B0C23",
+            "position": 0
+          },
+          {
+            "color": "#25235C",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "XEvkH",
+          "name": "lgHead",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 120,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1A244D",
+                "position": 0
+              },
+              {
+                "color": "#203565",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 20,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#36F9F666"
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            36,
+            44
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "hYJsm",
+              "name": "lgE",
+              "fill": "#72F1B8",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#72F1B888",
+                "blur": 8
+              },
+              "content": "/legal",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "j12Hr",
+              "name": "lgT",
+              "fill": "#F9F871",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#F9F87177",
+                "blur": 14
+              },
+              "content": "Privacy, Personal Data & Cookies",
+              "fontFamily": "Sora",
+              "fontSize": 40,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "dQJOQ",
+              "name": "lgD",
+              "fill": "#D2B8FF",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#A5B4FF66",
+                "blur": 8
+              },
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Required compliance pages for contact form data processing and cookie consent (RU law requirements considered).",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "reUnb",
+          "name": "lgGrid",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 120,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#23184F",
+                "position": 0
+              },
+              {
+                "color": "#2F1A66",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 20,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#A5B4FF66"
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            8,
+            44,
+            36,
+            44
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "GCNQG",
+              "name": "doc1",
+              "width": "fill_container",
+              "fill": "#1B1B3A",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#36F9F644"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "39Q8h",
+                  "name": "doc1t",
+                  "fill": "#36F9F6",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#36F9F666",
+                    "blur": 7
+                  },
+                  "content": "/privacy-policy",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "7VaSB",
+                  "name": "doc1d",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Defines data categories, storage period, user rights and controller contacts.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ceuIV",
+              "name": "doc2",
+              "width": "fill_container",
+              "fill": "#24124A",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FF7EDB55"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yBcc6",
+                  "name": "doc2t",
+                  "fill": "#FF5CDA",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#FF7EDB66",
+                    "blur": 7
+                  },
+                  "content": "/personal-data-consent",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "9lcGW",
+                  "name": "doc2d",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Consent capture before submit: checkbox + timestamp + policy version.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rk557",
+              "name": "doc3",
+              "width": "fill_container",
+              "fill": "#1B1B3A",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#36F9F644"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rChJA",
+                  "name": "doc3t",
+                  "fill": "#36F9F6",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#36F9F666",
+                    "blur": 7
+                  },
+                  "content": "/cookie-policy",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "m2ME6",
+                  "name": "doc3d",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Cookie categories, retention and consent manager entry point.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QwXkt",
+              "name": "banner",
+              "width": "fill_container",
+              "fill": "#1D1B4F",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#F9F87155"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "E8Hwy",
+                  "name": "bannerT",
+                  "fill": "#F8FAFC",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#A5B4FF66",
+                    "blur": 7
+                  },
+                  "content": "Cookie Banner Spec",
+                  "fontFamily": "Sora",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "CknpO",
+                  "name": "bannerD",
+                  "fill": "#B893FF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Buttons: Accept all, Reject non-essential, Settings.\nDefault: only essential cookies active.\nTrack consent event with locale + version.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
