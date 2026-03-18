@@ -325,20 +325,39 @@
           "padding": 16,
           "children": [
             {
-              "type": "text",
+              "type": "frame",
               "id": "liT7j",
-              "name": "metricVal",
-              "fill": "#FF4FD8",
-              "effect": {
-                "type": "shadow",
-                "shadowType": "outer",
-                "color": "#52FFF6AA",
-                "blur": 10
-              },
-              "content": "+42%",
-              "fontFamily": "\\$font-display",
-              "fontSize": 30,
-              "fontWeight": "700"
+              "name": "metricValWrap",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "mIcn",
+                  "name": "metricIcon",
+                  "width": 20,
+                  "height": 20,
+                  "iconFontName": "activity",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FF4FD8"
+                },
+                {
+                  "type": "text",
+                  "id": "metricVal",
+                  "name": "metricVal",
+                  "fill": "#FF4FD8",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#52FFF6AA",
+                    "blur": 10
+                  },
+                  "content": "+42%",
+                  "fontFamily": "\\$font-display",
+                  "fontSize": 30,
+                  "fontWeight": "700"
+                }
+              ]
             },
             {
               "type": "text",
@@ -2932,38 +2951,11 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
-                "liT7j": {
-                  "type": "frame",
-                  "id": "eyHGH",
-                  "name": "mx1",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "KWv9v",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "zap",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FF4FD8"
-                    },
-                    {
-                      "type": "text",
-                      "id": "TQxlR",
-                      "fill": "#FF4FD8",
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "color": "#52FFF6AA",
-                        "blur": 10
-                      },
-                      "content": "-49%",
-                      "fontFamily": "\\$font-display",
-                      "fontSize": 30,
-                      "fontWeight": "700"
-                    }
-                  ]
+                "mIcn": {
+                  "iconFontName": "zap"
+                },
+                "metricVal": {
+                  "content": "-49%"
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -2983,38 +2975,11 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
-                "liT7j": {
-                  "type": "frame",
-                  "id": "eovaj",
-                  "name": "mx2",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "HwWLb",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "shield-check",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FF4FD8"
-                    },
-                    {
-                      "type": "text",
-                      "id": "EJavf",
-                      "fill": "#FF4FD8",
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "color": "#52FFF6AA",
-                        "blur": 10
-                      },
-                      "content": "98/100",
-                      "fontFamily": "\\$font-display",
-                      "fontSize": 30,
-                      "fontWeight": "700"
-                    }
-                  ]
+                "mIcn": {
+                  "iconFontName": "shield-check"
+                },
+                "metricVal": {
+                  "content": "98/100"
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -3034,38 +2999,11 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
-                "liT7j": {
-                  "type": "frame",
-                  "id": "awTTr",
-                  "name": "mx3",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "tKSOD",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "activity",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FF4FD8"
-                    },
-                    {
-                      "type": "text",
-                      "id": "ixwHj",
-                      "fill": "#FF4FD8",
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "color": "#52FFF6AA",
-                        "blur": 10
-                      },
-                      "content": "-41%",
-                      "fontFamily": "\\$font-display",
-                      "fontSize": 30,
-                      "fontWeight": "700"
-                    }
-                  ]
+                "mIcn": {
+                  "iconFontName": "activity"
+                },
+                "metricVal": {
+                  "content": "-41%"
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -4399,38 +4337,11 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
-                "liT7j": {
-                  "type": "frame",
-                  "id": "486M3",
-                  "name": "m1",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "U6aYO",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "timer",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FF4FD8"
-                    },
-                    {
-                      "type": "text",
-                      "id": "G97Vv",
-                      "fill": "#FF4FD8",
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "color": "#52FFF6AA",
-                        "blur": 10
-                      },
-                      "content": "-38%",
-                      "fontFamily": "\\$font-display",
-                      "fontSize": 30,
-                      "fontWeight": "700"
-                    }
-                  ]
+                "mIcn": {
+                  "iconFontName": "timer"
+                },
+                "metricVal": {
+                  "content": "-38%"
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -4450,38 +4361,11 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
-                "liT7j": {
-                  "type": "frame",
-                  "id": "ICkuV",
-                  "name": "m2",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "m7tq8",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "shield",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FF4FD8"
-                    },
-                    {
-                      "type": "text",
-                      "id": "lfVLg",
-                      "fill": "#FF4FD8",
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "color": "#52FFF6AA",
-                        "blur": 10
-                      },
-                      "content": "-63%",
-                      "fontFamily": "\\$font-display",
-                      "fontSize": 30,
-                      "fontWeight": "700"
-                    }
-                  ]
+                "mIcn": {
+                  "iconFontName": "shield"
+                },
+                "metricVal": {
+                  "content": "-63%"
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -4501,38 +4385,11 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
-                "liT7j": {
-                  "type": "frame",
-                  "id": "NKYLH",
-                  "name": "m3",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "doLem",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "users",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FF4FD8"
-                    },
-                    {
-                      "type": "text",
-                      "id": "PMDYP",
-                      "fill": "#FF4FD8",
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "color": "#52FFF6AA",
-                        "blur": 10
-                      },
-                      "content": "+21%",
-                      "fontFamily": "\\$font-display",
-                      "fontSize": 30,
-                      "fontWeight": "700"
-                    }
-                  ]
+                "mIcn": {
+                  "iconFontName": "users"
+                },
+                "metricVal": {
+                  "content": "+21%"
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -7256,38 +7113,11 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
-                "liT7j": {
-                  "type": "frame",
-                  "id": "w7h1o",
-                  "name": "cm1",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "X0iwp",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "timer",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FF4FD8"
-                    },
-                    {
-                      "type": "text",
-                      "id": "F2NEj",
-                      "fill": "#FF4FD8",
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "color": "#52FFF6AA",
-                        "blur": 10
-                      },
-                      "content": "-38%",
-                      "fontFamily": "\\$font-display",
-                      "fontSize": 30,
-                      "fontWeight": "700"
-                    }
-                  ]
+                "mIcn": {
+                  "iconFontName": "timer"
+                },
+                "metricVal": {
+                  "content": "-38%"
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -7307,38 +7137,11 @@
               "y": 108,
               "height": "fit_content",
               "descendants": {
-                "liT7j": {
-                  "type": "frame",
-                  "id": "AYCet",
-                  "name": "cm2",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "jRPzX",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "shield",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FF4FD8"
-                    },
-                    {
-                      "type": "text",
-                      "id": "Q8nhh",
-                      "fill": "#FF4FD8",
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "color": "#52FFF6AA",
-                        "blur": 10
-                      },
-                      "content": "-63%",
-                      "fontFamily": "\\$font-display",
-                      "fontSize": 30,
-                      "fontWeight": "700"
-                    }
-                  ]
+                "mIcn": {
+                  "iconFontName": "shield"
+                },
+                "metricVal": {
+                  "content": "-63%"
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -7358,38 +7161,11 @@
               "y": 216,
               "height": "fit_content",
               "descendants": {
-                "liT7j": {
-                  "type": "frame",
-                  "id": "Qvra0",
-                  "name": "cm3",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "lzeh0",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "users",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FF4FD8"
-                    },
-                    {
-                      "type": "text",
-                      "id": "nkgBL",
-                      "fill": "#FF4FD8",
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "color": "#52FFF6AA",
-                        "blur": 10
-                      },
-                      "content": "+21%",
-                      "fontFamily": "\\$font-display",
-                      "fontSize": 30,
-                      "fontWeight": "700"
-                    }
-                  ]
+                "mIcn": {
+                  "iconFontName": "users"
+                },
+                "metricVal": {
+                  "content": "+21%"
                 },
                 "zmp2j": {
                   "width": "fill_container",
