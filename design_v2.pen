@@ -450,12 +450,23 @@
                 "color": "#52FFF655",
                 "blur": 12
               },
+              "gap": 8,
               "padding": [
                 0,
                 12
               ],
               "alignItems": "center",
               "children": [
+                {
+                  "type": "icon_font",
+                  "id": "j3hri",
+                  "name": "fieldIc",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "mail",
+                  "iconFontFamily": "lucide",
+                  "fill": "#D7CCFF"
+                },
                 {
                   "type": "text",
                   "id": "jFmpi",
@@ -512,33 +523,22 @@
               "y": 55,
               "height": "fit_content",
               "descendants": {
+                "hLxXp": {
+                  "content": "Your Email"
+                },
                 "ayQPu": {
                   "width": "fill_container",
                   "y": 22
                 },
-                "jFmpi": {
+                "j3hri": {
                   "x": 12,
-                  "y": 14.5
-                }
-              }
-            },
-            {
-              "id": "gecF3",
-              "type": "ref",
-              "ref": "AI6FD",
-              "width": "fill_container",
-              "name": "contactField2",
-              "x": 16,
-              "y": 137,
-              "height": "fit_content",
-              "descendants": {
-                "ayQPu": {
-                  "width": "fill_container",
-                  "y": 22
+                  "y": 17,
+                  "fill": "#D7CCFF"
                 },
                 "jFmpi": {
-                  "x": 12,
-                  "y": 14.5
+                  "x": 34,
+                  "y": 14.5,
+                  "content": "name@company.com"
                 }
               }
             },
@@ -549,11 +549,13 @@
               "width": "fill_container",
               "name": "button",
               "x": 16,
-              "y": 219,
+              "y": 137,
+              "height": "fit_content",
               "descendants": {
                 "QMLXm": {
                   "x": 170.5,
-                  "content": "Send Message"
+                  "content": "Send Message",
+                  "y": 14
                 }
               }
             }
@@ -603,11 +605,23 @@
               "name": "cookieBtn",
               "fill": "#52FFF6",
               "cornerRadius": 999,
+              "gap": 6,
               "padding": [
                 14,
                 16
               ],
+              "alignItems": "center",
               "children": [
+                {
+                  "type": "icon_font",
+                  "id": "8lCPg",
+                  "name": "cookieIc",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "check",
+                  "iconFontFamily": "lucide",
+                  "fill": "#111226"
+                },
                 {
                   "type": "text",
                   "id": "7Am6i",
@@ -862,11 +876,13 @@
                           "name": "defBtn",
                           "x": 8,
                           "y": 30,
+                          "height": "fit_content",
                           "descendants": {
                             "QMLXm": {
                               "x": 16.5,
                               "content": "Button",
-                              "fill": "#FFF9FF"
+                              "fill": "#FFF9FF",
+                              "y": 14
                             }
                           }
                         }
@@ -912,11 +928,13 @@
                           "name": "hovBtn",
                           "x": 8,
                           "y": 30,
+                          "height": "fit_content",
                           "descendants": {
                             "QMLXm": {
                               "x": 16.5,
                               "content": "Button",
-                              "fill": "#111226"
+                              "fill": "#111226",
+                              "y": 14
                             }
                           }
                         }
@@ -966,11 +984,13 @@
                           "name": "focBtn",
                           "x": 8,
                           "y": 30,
+                          "height": "fit_content",
                           "descendants": {
                             "QMLXm": {
                               "x": 16.5,
                               "content": "Button",
-                              "fill": "#FFF9FF"
+                              "fill": "#FFF9FF",
+                              "y": 14
                             }
                           }
                         }
@@ -1016,11 +1036,13 @@
                           "name": "actBtn",
                           "x": 8,
                           "y": 30,
+                          "height": "fit_content",
                           "descendants": {
                             "QMLXm": {
                               "x": 16.5,
                               "content": "Button",
-                              "fill": "#130D26"
+                              "fill": "#130D26",
+                              "y": 14
                             }
                           }
                         }
@@ -1096,20 +1118,6 @@
                                   "fontFamily": "\\$font-display",
                                   "fontSize": 12,
                                   "fontWeight": "normal"
-                                },
-                                {
-                                  "id": "hTLbK",
-                                  "type": "ref",
-                                  "ref": "AI6FD",
-                                  "width": "fill_container",
-                                  "name": "inpDef",
-                                  "x": 0,
-                                  "y": 20,
-                                  "descendants": {
-                                    "ayQPu": {
-                                      "width": "fill_container"
-                                    }
-                                  }
                                 }
                               ]
                             },
@@ -1130,36 +1138,6 @@
                                   "fontFamily": "\\$font-display",
                                   "fontSize": 12,
                                   "fontWeight": "normal"
-                                },
-                                {
-                                  "id": "jIZxY",
-                                  "type": "ref",
-                                  "ref": "AI6FD",
-                                  "width": "fill_container",
-                                  "name": "inpFocus",
-                                  "x": 0,
-                                  "y": 20,
-                                  "descendants": {
-                                    "hLxXp": {
-                                      "content": "Focused field"
-                                    },
-                                    "ayQPu": {
-                                      "stroke": {
-                                        "thickness": 2,
-                                        "fill": "#FFE86F"
-                                      },
-                                      "effect": {
-                                        "type": "shadow",
-                                        "shadowType": "outer",
-                                        "color": "#FFE86FCC",
-                                        "blur": 20
-                                      },
-                                      "width": "fill_container"
-                                    },
-                                    "jFmpi": {
-                                      "content": "Type here..."
-                                    }
-                                  }
                                 }
                               ]
                             },
@@ -1180,38 +1158,6 @@
                                   "fontFamily": "\\$font-display",
                                   "fontSize": 12,
                                   "fontWeight": "normal"
-                                },
-                                {
-                                  "id": "ZD2Nr",
-                                  "type": "ref",
-                                  "ref": "AI6FD",
-                                  "width": "fill_container",
-                                  "name": "inpErr",
-                                  "x": 0,
-                                  "y": 20,
-                                  "descendants": {
-                                    "hLxXp": {
-                                      "content": "Invalid email",
-                                      "fill": "#FF4D6D"
-                                    },
-                                    "ayQPu": {
-                                      "stroke": {
-                                        "thickness": 2,
-                                        "fill": "#FF4D6D"
-                                      },
-                                      "effect": {
-                                        "type": "shadow",
-                                        "shadowType": "outer",
-                                        "color": "#FF4D6DBB",
-                                        "blur": 16
-                                      },
-                                      "width": "fill_container"
-                                    },
-                                    "jFmpi": {
-                                      "content": "wrong@",
-                                      "fill": "#FF4D6D"
-                                    }
-                                  }
                                 }
                               ]
                             }
@@ -1286,16 +1232,21 @@
                                   "height": "fit_content",
                                   "descendants": {
                                     "8Ncq6": {
-                                      "width": "fill_container"
+                                      "width": "fill_container",
+                                      "x": 16,
+                                      "y": 16
                                     },
                                     "NQUtb": {
                                       "content": "Card default",
-                                      "width": "fill_container"
+                                      "width": "fill_container",
+                                      "x": 16,
+                                      "y": 198
                                     },
                                     "yDfJz": {
                                       "content": "Baseline state",
                                       "width": "fill_container",
-                                      "y": 237
+                                      "y": 237,
+                                      "x": 16
                                     }
                                   }
                                 }
@@ -1340,16 +1291,21 @@
                                   "height": "fit_content",
                                   "descendants": {
                                     "8Ncq6": {
-                                      "width": "fill_container"
+                                      "width": "fill_container",
+                                      "x": 16,
+                                      "y": 16
                                     },
                                     "NQUtb": {
                                       "content": "Card hover",
-                                      "width": "fill_container"
+                                      "width": "fill_container",
+                                      "x": 16,
+                                      "y": 198
                                     },
                                     "yDfJz": {
                                       "content": "Intensified glow",
                                       "width": "fill_container",
-                                      "y": 237
+                                      "y": 237,
+                                      "x": 16
                                     }
                                   }
                                 }
@@ -1440,11 +1396,13 @@
                           "name": "is1Btn",
                           "x": 0,
                           "y": 20,
+                          "height": "fit_content",
                           "descendants": {
                             "QMLXm": {
                               "x": 42.16666666666667,
                               "content": "Button",
-                              "fill": "#111226"
+                              "fill": "#111226",
+                              "y": 14
                             }
                           }
                         }
@@ -1494,11 +1452,13 @@
                           "name": "is2Btn",
                           "x": 0,
                           "y": 20,
+                          "height": "fit_content",
                           "descendants": {
                             "QMLXm": {
                               "x": 42.16666666666667,
                               "content": "Button",
-                              "fill": "#111226"
+                              "fill": "#111226",
+                              "y": 14
                             }
                           }
                         }
@@ -1537,11 +1497,13 @@
                           "name": "is3Btn",
                           "x": 0,
                           "y": 20,
+                          "height": "fit_content",
                           "descendants": {
                             "QMLXm": {
                               "x": 42.16666666666667,
                               "content": "Button",
-                              "fill": "#111226"
+                              "fill": "#111226",
+                              "y": 14
                             }
                           }
                         }
@@ -2016,16 +1978,22 @@
               "width": "fill_container",
               "content": "Cookies are used for analytics and contact form reliability.",
               "x": 16,
-              "y": 16
+              "y": 16,
+              "name": "cookieTxt"
             },
             "6RqJ8": {
-              "x": 371,
+              "x": 351,
               "width": "fit_content",
               "height": "fit_content",
-              "y": 12
+              "y": 12,
+              "enabled": true
+            },
+            "8lCPg": {
+              "x": 16,
+              "y": 15
             },
             "7Am6i": {
-              "x": 16,
+              "x": 36,
               "y": 14
             }
           }
@@ -2403,7 +2371,8 @@
             "xBLD5": {
               "width": "fill_container",
               "content": "Timeline inspired by Brittany Chiang, with engineering metrics and impact.",
-              "y": 81
+              "y": 81,
+              "name": "secSu"
             }
           }
         },
@@ -2437,7 +2406,8 @@
               "descendants": {
                 "KJlgJ": {
                   "x": 0,
-                  "y": 12
+                  "y": 12,
+                  "height": "fit_content"
                 },
                 "1jXey": {
                   "x": 6,
@@ -2476,7 +2446,8 @@
               "descendants": {
                 "KJlgJ": {
                   "x": 0,
-                  "y": 12
+                  "y": 12,
+                  "height": "fit_content"
                 },
                 "1jXey": {
                   "x": 6,
@@ -2515,7 +2486,8 @@
               "descendants": {
                 "KJlgJ": {
                   "x": 0,
-                  "y": 12
+                  "y": 12,
+                  "height": "fit_content"
                 },
                 "1jXey": {
                   "x": 6,
@@ -2961,9 +2933,37 @@
               "height": "fit_content",
               "descendants": {
                 "liT7j": {
-                  "content": "-49%",
-                  "x": 16,
-                  "y": 16
+                  "type": "frame",
+                  "id": "eyHGH",
+                  "name": "mx1",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "KWv9v",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "zap",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FF4FD8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TQxlR",
+                      "fill": "#FF4FD8",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#52FFF6AA",
+                        "blur": 10
+                      },
+                      "content": "-49%",
+                      "fontFamily": "\\$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -2984,9 +2984,37 @@
               "height": "fit_content",
               "descendants": {
                 "liT7j": {
-                  "content": "98/100",
-                  "x": 16,
-                  "y": 16
+                  "type": "frame",
+                  "id": "eovaj",
+                  "name": "mx2",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "HwWLb",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "shield-check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FF4FD8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EJavf",
+                      "fill": "#FF4FD8",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#52FFF6AA",
+                        "blur": 10
+                      },
+                      "content": "98/100",
+                      "fontFamily": "\\$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -3007,9 +3035,37 @@
               "height": "fit_content",
               "descendants": {
                 "liT7j": {
-                  "content": "-41%",
-                  "x": 16,
-                  "y": 16
+                  "type": "frame",
+                  "id": "awTTr",
+                  "name": "mx3",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "tKSOD",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "activity",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FF4FD8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ixwHj",
+                      "fill": "#FF4FD8",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#52FFF6AA",
+                        "blur": 10
+                      },
+                      "content": "-41%",
+                      "fontFamily": "\\$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -3416,45 +3472,28 @@
                 },
                 "959j6": {
                   "width": "fill_container",
-                  "height": "fit_content",
-                  "y": 55
-                },
-                "959j6/hLxXp": {
-                  "content": "Work Email"
+                  "height": "fit_content"
                 },
                 "959j6/ayQPu": {
-                  "width": "fill_container",
-                  "y": 22
+                  "width": "fill_container"
+                },
+                "959j6/j3hri": {
+                  "x": 12,
+                  "y": 17,
+                  "fill": "#D7CCFF"
                 },
                 "959j6/jFmpi": {
-                  "content": "name@company.com",
-                  "x": 12,
-                  "y": 14.5
-                },
-                "gecF3": {
-                  "width": "fill_container",
-                  "height": "fit_content",
-                  "y": 137
-                },
-                "gecF3/hLxXp": {
-                  "content": "Project Brief"
-                },
-                "gecF3/ayQPu": {
-                  "width": "fill_container",
-                  "y": 22
-                },
-                "gecF3/jFmpi": {
-                  "content": "Tell me about scope, timelines, and goals",
-                  "x": 12,
-                  "y": 14.5
+                  "x": 34,
+                  "y": 14.5,
+                  "content": "name@company.com"
                 },
                 "hjG6N": {
                   "width": "fill_container",
-                  "x": 16,
-                  "y": 219
+                  "height": "fit_content"
                 },
                 "hjG6N/QMLXm": {
-                  "x": 194.5
+                  "x": 194.5,
+                  "y": 14
                 }
               }
             }
@@ -3555,20 +3594,36 @@
           "width": "fill_container",
           "name": "devDesk",
           "x": 80,
-          "y": 4274,
+          "y": 4239,
+          "height": "fit_content",
           "descendants": {
+            "JHUOv": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 14,
+              "y": 14
+            },
+            "4pE9o": {
+              "x": 6,
+              "y": 6
+            },
             "SlALH": {
-              "width": "fill_container"
+              "width": "fill_container",
+              "height": "fit_content",
+              "x": 44,
+              "y": 14
             },
             "2feQA": {
               "content": "In Development · Content Archive"
             },
             "AIXEj": {
               "width": "fill_container",
-              "content": "More talks, articles, and podcast notes are being prepared."
+              "content": "More talks, articles, and podcast notes are being prepared.",
+              "y": 22
             },
             "RS5wR": {
-              "content": "Next drop: monthly"
+              "content": "Next drop: monthly",
+              "y": 43
             }
           }
         }
@@ -3623,18 +3678,30 @@
                 "thickness": 1,
                 "fill": "#4A3E88"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
               ],
+              "alignItems": "center",
               "children": [
                 {
+                  "type": "icon_font",
+                  "id": "uT8ZU",
+                  "name": "backDeskIc",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "chevron-left",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FFF9FF"
+                },
+                {
                   "type": "text",
-                  "id": "jRm3B",
-                  "name": "pBackTx",
+                  "id": "VDj1Z",
+                  "name": "r",
                   "fill": "#FFF9FF",
-                  "content": "← Back Home",
-                  "fontFamily": "\\$font-display",
+                  "content": "Back Home",
+                  "fontFamily": "$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -4113,14 +4180,31 @@
               "fontWeight": "normal"
             },
             {
-              "type": "text",
-              "id": "KFOgw",
-              "name": "cHome",
-              "fill": "#D7CCFF",
-              "content": "← All Projects",
-              "fontFamily": "\\$font-display",
-              "fontSize": 12,
-              "fontWeight": "normal"
+              "type": "frame",
+              "id": "ihaGP",
+              "name": "caseBack",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "LkNqU",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "chevron-left",
+                  "iconFontFamily": "lucide",
+                  "fill": "#D7CCFF"
+                },
+                {
+                  "type": "text",
+                  "id": "5gGI1",
+                  "fill": "#D7CCFF",
+                  "content": "All Projects",
+                  "fontFamily": "\\$font-display",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
             }
           ]
         },
@@ -4180,74 +4264,119 @@
             },
             {
               "type": "frame",
-              "id": "94n32",
+              "id": "CulDs",
               "name": "heroLinks",
               "gap": 10,
               "children": [
                 {
-                  "id": "ey51J",
-                  "type": "ref",
-                  "ref": "oNDTR",
-                  "fill": "#52FFF6",
+                  "type": "frame",
+                  "id": "NabGt",
                   "name": "liveBtn",
-                  "x": 0,
-                  "y": 0,
-                  "width": "fit_content",
-                  "height": "fit_content",
-                  "descendants": {
-                    "QMLXm": {
-                      "content": "Live Demo",
+                  "fill": "#52FFF6",
+                  "cornerRadius": 999,
+                  "gap": 6,
+                  "padding": [
+                    14,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WaTZE",
                       "fill": "#111226",
-                      "x": 20,
-                      "y": 14
+                      "content": "Live Demo",
+                      "fontFamily": "$font-display",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "WceB9",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#111226"
                     }
-                  }
+                  ]
                 },
                 {
-                  "id": "jvoGR",
-                  "type": "ref",
-                  "ref": "oNDTR",
-                  "fill": "#2C2550",
-                  "stroke": {
-                    "thickness": 1,
-                    "fill": "#4A3E88"
-                  },
+                  "type": "frame",
+                  "id": "S1weD",
                   "name": "ghBtn",
-                  "x": 124,
-                  "y": 0,
-                  "width": "fit_content",
-                  "height": "fit_content",
-                  "descendants": {
-                    "QMLXm": {
-                      "content": "GitHub",
-                      "fill": "#FFF9FF",
-                      "x": 20,
-                      "y": 14
-                    }
-                  }
-                },
-                {
-                  "id": "TstIN",
-                  "type": "ref",
-                  "ref": "oNDTR",
                   "fill": "#2C2550",
+                  "cornerRadius": 999,
                   "stroke": {
                     "thickness": 1,
                     "fill": "#4A3E88"
                   },
-                  "name": "figBtn",
-                  "x": 224,
-                  "y": 0,
-                  "width": "fit_content",
-                  "height": "fit_content",
-                  "descendants": {
-                    "QMLXm": {
-                      "content": "Architecture",
+                  "gap": 6,
+                  "padding": [
+                    14,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gYkEt",
                       "fill": "#FFF9FF",
-                      "x": 20,
-                      "y": 14
+                      "content": "GitHub",
+                      "fontFamily": "$font-display",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "HSrAf",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFF9FF"
                     }
-                  }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VNbDT",
+                  "name": "figBtn",
+                  "fill": "#2C2550",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#4A3E88"
+                  },
+                  "gap": 6,
+                  "padding": [
+                    14,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rVcBe",
+                      "fill": "#FFF9FF",
+                      "content": "Architecture",
+                      "fontFamily": "$font-display",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "LSUHj",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFF9FF"
+                    }
+                  ]
                 }
               ]
             }
@@ -4271,9 +4400,37 @@
               "height": "fit_content",
               "descendants": {
                 "liT7j": {
-                  "content": "-38%",
-                  "x": 16,
-                  "y": 16
+                  "type": "frame",
+                  "id": "486M3",
+                  "name": "m1",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "U6aYO",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "timer",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FF4FD8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "G97Vv",
+                      "fill": "#FF4FD8",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#52FFF6AA",
+                        "blur": 10
+                      },
+                      "content": "-38%",
+                      "fontFamily": "\\$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -4294,9 +4451,37 @@
               "height": "fit_content",
               "descendants": {
                 "liT7j": {
-                  "content": "-63%",
-                  "x": 16,
-                  "y": 16
+                  "type": "frame",
+                  "id": "ICkuV",
+                  "name": "m2",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "m7tq8",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "shield",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FF4FD8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lfVLg",
+                      "fill": "#FF4FD8",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#52FFF6AA",
+                        "blur": 10
+                      },
+                      "content": "-63%",
+                      "fontFamily": "\\$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -4317,9 +4502,37 @@
               "height": "fit_content",
               "descendants": {
                 "liT7j": {
-                  "content": "+21%",
-                  "x": 16,
-                  "y": 16
+                  "type": "frame",
+                  "id": "NKYLH",
+                  "name": "m3",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "doLem",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "users",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FF4FD8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PMDYP",
+                      "fill": "#FF4FD8",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#52FFF6AA",
+                        "blur": 10
+                      },
+                      "content": "+21%",
+                      "fontFamily": "\\$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -4812,14 +5025,31 @@
               "fontWeight": "700"
             },
             {
-              "type": "text",
-              "id": "y1xGF",
-              "name": "lBack",
-              "fill": "#D7CCFF",
-              "content": "← Back Home",
-              "fontFamily": "\\$font-display",
-              "fontSize": 12,
-              "fontWeight": "normal"
+              "type": "frame",
+              "id": "mBVeY",
+              "name": "legalBack",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "1fOiq",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "chevron-left",
+                  "iconFontFamily": "lucide",
+                  "fill": "#D7CCFF"
+                },
+                {
+                  "type": "text",
+                  "id": "cvOdR",
+                  "fill": "#D7CCFF",
+                  "content": "Back Home",
+                  "fontFamily": "\\$font-display",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
             }
           ]
         },
@@ -5065,6 +5295,7 @@
                 "thickness": 1,
                 "fill": "#4A3E88"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
@@ -5072,6 +5303,16 @@
               "justifyContent": "center",
               "alignItems": "center",
               "children": [
+                {
+                  "type": "icon_font",
+                  "id": "9fmgi",
+                  "name": "menuIc",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "menu",
+                  "iconFontFamily": "lucide",
+                  "fill": "#D7CCFF"
+                },
                 {
                   "type": "text",
                   "id": "0wXsD",
@@ -5129,13 +5370,17 @@
               "x": 16
             },
             "6RqJ8": {
-              "x": 261,
+              "x": 241,
               "width": "fit_content",
               "height": "fit_content",
               "y": 12
             },
-            "7Am6i": {
+            "8lCPg": {
               "x": 16,
+              "y": 15
+            },
+            "7Am6i": {
+              "x": 36,
               "y": 14
             }
           }
@@ -5286,7 +5531,8 @@
               "descendants": {
                 "KJlgJ": {
                   "x": 0,
-                  "y": 12
+                  "y": 12,
+                  "height": "fit_content"
                 },
                 "1jXey": {
                   "x": 6,
@@ -5325,7 +5571,8 @@
               "descendants": {
                 "KJlgJ": {
                   "x": 0,
-                  "y": 12
+                  "y": 12,
+                  "height": "fit_content"
                 },
                 "1jXey": {
                   "x": 6,
@@ -5364,7 +5611,8 @@
               "descendants": {
                 "KJlgJ": {
                   "x": 0,
-                  "y": 12
+                  "y": 12,
+                  "height": "fit_content"
                 },
                 "1jXey": {
                   "x": 6,
@@ -5373,7 +5621,8 @@
                 "rwtO5": {
                   "width": "fill_container",
                   "height": "fit_content",
-                  "x": 32
+                  "x": 32,
+                  "y": 12
                 },
                 "dePWe": {
                   "width": "fill_container",
@@ -5504,9 +5753,13 @@
               "name": "mProjBtn",
               "x": 0,
               "y": 917,
+              "width": "fit_content",
+              "height": "fit_content",
               "descendants": {
                 "QMLXm": {
-                  "content": "View All Projects"
+                  "content": "View All Projects",
+                  "x": 20,
+                  "y": 14
                 }
               }
             }
@@ -5669,14 +5922,20 @@
               "descendants": {
                 "mJZlc": {
                   "width": "fill_container",
-                  "content": "Keyboard-First Product UX"
+                  "content": "Keyboard-First Product UX",
+                  "x": 16,
+                  "y": 16
                 },
                 "8BCqC": {
-                  "content": "Article · 6 min"
+                  "content": "Article · 6 min",
+                  "x": 16,
+                  "y": 51
                 },
                 "7BSZ3": {
                   "width": "fill_container",
-                  "content": "Practical a11y patterns for real product flows."
+                  "content": "Practical a11y patterns for real product flows.",
+                  "x": 16,
+                  "y": 77
                 }
               }
             },
@@ -5692,14 +5951,20 @@
               "descendants": {
                 "mJZlc": {
                   "width": "fill_container",
-                  "content": "CI Performance Budgets"
+                  "content": "CI Performance Budgets",
+                  "x": 16,
+                  "y": 16
                 },
                 "8BCqC": {
-                  "content": "Talk · 18 min"
+                  "content": "Talk · 18 min",
+                  "x": 16,
+                  "y": 51
                 },
                 "7BSZ3": {
                   "width": "fill_container",
-                  "content": "How to keep Core Web Vitals stable over time."
+                  "content": "How to keep Core Web Vitals stable over time.",
+                  "x": 16,
+                  "y": 77
                 }
               }
             },
@@ -5715,65 +5980,24 @@
               "descendants": {
                 "mJZlc": {
                   "width": "fill_container",
-                  "content": "Mentoring Senior Engineers"
+                  "content": "Mentoring Senior Engineers",
+                  "x": 16,
+                  "y": 16
                 },
                 "8BCqC": {
-                  "content": "Roadmap · Q3"
+                  "content": "Roadmap · Q3",
+                  "x": 16,
+                  "y": 51
                 },
                 "7BSZ3": {
                   "width": "fill_container",
-                  "content": "A playbook for code reviews and technical growth."
+                  "content": "A playbook for code reviews and technical growth.",
+                  "x": 16,
+                  "y": 77
                 }
               }
             }
           ]
-        },
-        {
-          "id": "hn0PC",
-          "type": "ref",
-          "ref": "4AabH",
-          "width": "fill_container",
-          "name": "mForm",
-          "x": 20,
-          "y": 2908,
-          "height": "fit_content",
-          "descendants": {
-            "fkyNg": {
-              "content": "Send a Message"
-            },
-            "959j6": {
-              "width": "fill_container"
-            },
-            "959j6/hLxXp": {
-              "content": "Work Email"
-            },
-            "959j6/ayQPu": {
-              "width": "fill_container"
-            },
-            "959j6/jFmpi": {
-              "content": "you@company.com"
-            },
-            "gecF3": {
-              "width": "fill_container"
-            },
-            "gecF3/hLxXp": {
-              "content": "Project Brief"
-            },
-            "gecF3/ayQPu": {
-              "width": "fill_container"
-            },
-            "gecF3/jFmpi": {
-              "content": "Scope, timeline, goals"
-            },
-            "hjG6N": {
-              "width": "fill_container",
-              "x": 16,
-              "y": 219
-            },
-            "hjG6N/QMLXm": {
-              "x": 109.5
-            }
-          }
         },
         {
           "type": "frame",
@@ -5805,12 +6029,23 @@
                 "thickness": 1,
                 "fill": "#3D3564"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
               ],
               "alignItems": "center",
               "children": [
+                {
+                  "type": "icon_font",
+                  "id": "D8iyK",
+                  "name": "hLegalShield",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "shield",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
                 {
                   "type": "text",
                   "id": "9e5j2",
@@ -5832,12 +6067,23 @@
                 "thickness": 1,
                 "fill": "#3D3564"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
               ],
               "alignItems": "center",
               "children": [
+                {
+                  "type": "icon_font",
+                  "id": "hk4UW",
+                  "name": "hLegalUser",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "user",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
                 {
                   "type": "text",
                   "id": "hJ1wc",
@@ -5859,12 +6105,23 @@
                 "thickness": 1,
                 "fill": "#3D3564"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
               ],
               "alignItems": "center",
               "children": [
+                {
+                  "type": "icon_font",
+                  "id": "SGpfn",
+                  "name": "hLegalCookie",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "cookie",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
                 {
                   "type": "text",
                   "id": "hcITu",
@@ -5886,24 +6143,127 @@
           "name": "devHomeM",
           "height": "fit_content",
           "x": 20,
-          "y": 3408,
+          "y": 3094,
           "descendants": {
+            "JHUOv": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 14,
+              "y": 14
+            },
+            "4pE9o": {
+              "x": 6,
+              "y": 6
+            },
             "SlALH": {
               "width": "fill_container",
-              "height": "fit_content"
+              "height": "fit_content",
+              "x": 44,
+              "y": 14
             },
             "2feQA": {
               "content": "In Development · More Writing"
             },
             "AIXEj": {
               "width": "fill_container",
-              "content": "Additional mobile-friendly content cards are coming soon."
+              "content": "Additional mobile-friendly content cards are coming soon.",
+              "y": 22
             },
             "RS5wR": {
               "y": 60,
               "content": "ETA: soon"
             }
           }
+        },
+        {
+          "type": "frame",
+          "id": "zlQQb",
+          "name": "mFullForm",
+          "width": "fill_container",
+          "fill": "#2C2550",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#433C69"
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "MKE1m",
+              "name": "mFormTitle",
+              "fill": "#FFF9FF",
+              "content": "Send a Message",
+              "fontFamily": "\\$font-display",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "id": "Ljsno",
+              "type": "ref",
+              "ref": "AI6FD",
+              "width": "fill_container",
+              "name": "mFieldName",
+              "x": 16,
+              "y": 53,
+              "descendants": {
+                "hLxXp": {
+                  "content": "Your Name"
+                },
+                "ayQPu": {
+                  "width": "fill_container"
+                },
+                "j3hri": {
+                  "iconFontName": "user",
+                  "fill": "#D7CCFF"
+                },
+                "jFmpi": {
+                  "content": "Your name"
+                }
+              }
+            },
+            {
+              "id": "CL2sg",
+              "type": "ref",
+              "ref": "AI6FD",
+              "width": "fill_container",
+              "name": "mFieldEmail",
+              "x": 16,
+              "y": 135,
+              "descendants": {
+                "hLxXp": {
+                  "content": "Your Email"
+                },
+                "ayQPu": {
+                  "width": "fill_container"
+                },
+                "j3hri": {
+                  "iconFontName": "mail",
+                  "fill": "#D7CCFF"
+                },
+                "jFmpi": {
+                  "content": "name@company.com"
+                }
+              }
+            },
+            {
+              "id": "b1RQw",
+              "type": "ref",
+              "ref": "oNDTR",
+              "width": "fill_container",
+              "name": "mSendBtn",
+              "x": 16,
+              "y": 217,
+              "descendants": {
+                "QMLXm": {
+                  "content": "Send Message",
+                  "x": 109.5
+                }
+              }
+            }
+          ]
         }
       ]
     },
@@ -5956,6 +6316,7 @@
                 "thickness": 1,
                 "fill": "#4A3E88"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
@@ -5964,10 +6325,20 @@
               "alignItems": "center",
               "children": [
                 {
+                  "type": "icon_font",
+                  "id": "RxPmq",
+                  "name": "backProjIc",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "chevron-left",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
+                {
                   "type": "text",
                   "id": "QG2y1",
                   "fill": "$accent-cyan",
-                  "content": "← Home",
+                  "content": "Home",
                   "fontFamily": "$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
@@ -6042,11 +6413,13 @@
               "x": 0,
               "y": 0,
               "width": "fill_container",
+              "height": "fit_content",
               "descendants": {
                 "QMLXm": {
                   "content": "All",
                   "fill": "#111226",
-                  "x": 46.166666666666664
+                  "x": 46.16666666666667,
+                  "y": 14
                 }
               }
             },
@@ -6063,11 +6436,13 @@
               "x": 119.33333333333333,
               "y": 0,
               "width": "fill_container",
+              "height": "fit_content",
               "descendants": {
                 "QMLXm": {
                   "content": "React",
                   "fill": "#FFF9FF",
-                  "x": 35.666666666666664
+                  "x": 35.66666666666667,
+                  "y": 14
                 }
               }
             },
@@ -6084,11 +6459,13 @@
               "x": 238.66666666666666,
               "y": 0,
               "width": "fill_container",
+              "height": "fit_content",
               "descendants": {
                 "QMLXm": {
                   "content": "Next.js",
                   "fill": "#FFF9FF",
-                  "x": 31.166666666666664
+                  "x": 31.166666666666668,
+                  "y": 14
                 }
               }
             }
@@ -6114,10 +6491,13 @@
               "x": 0,
               "y": 0,
               "width": "fill_container",
+              "height": "fit_content",
               "descendants": {
                 "QMLXm": {
                   "content": "Performance",
-                  "fill": "#FFF9FF"
+                  "fill": "#FFF9FF",
+                  "x": 10.166666666666664,
+                  "y": 14
                 }
               }
             },
@@ -6134,11 +6514,13 @@
               "x": 119.33333333333333,
               "y": 0,
               "width": "fill_container",
+              "height": "fit_content",
               "descendants": {
                 "QMLXm": {
                   "content": "A11y",
                   "fill": "#FFF9FF",
-                  "x": 38.66666666666667
+                  "x": 38.666666666666664,
+                  "y": 14
                 }
               }
             },
@@ -6155,12 +6537,14 @@
               "x": 238.66666666666666,
               "y": 0,
               "width": "fill_container",
+              "height": "fit_content",
               "descendants": {
                 "QMLXm": {
                   "content": "Systems",
                   "fill": "#FFF9FF",
                   "fontSize": 12,
-                  "x": 30.666666666666664
+                  "x": 30.666666666666668,
+                  "y": 14
                 }
               }
             }
@@ -6185,16 +6569,21 @@
               "y": 0,
               "descendants": {
                 "8Ncq6": {
-                  "width": "fill_container"
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
                 },
                 "NQUtb": {
                   "width": "fill_container",
-                  "content": "Realtime Collaboration Suite"
+                  "content": "Realtime Collaboration Suite",
+                  "x": 16,
+                  "y": 198
                 },
                 "yDfJz": {
                   "width": "fill_container",
                   "y": 237,
-                  "content": "CRDT + optimistic updates. Case Study →"
+                  "content": "CRDT + optimistic updates. Case Study →",
+                  "x": 16
                 }
               }
             },
@@ -6209,16 +6598,21 @@
               "y": 286,
               "descendants": {
                 "8Ncq6": {
-                  "width": "fill_container"
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
                 },
                 "NQUtb": {
                   "width": "fill_container",
-                  "content": "Ecommerce Edge Frontend"
+                  "content": "Ecommerce Edge Frontend",
+                  "x": 16,
+                  "y": 198
                 },
                 "yDfJz": {
                   "width": "fill_container",
                   "y": 237,
-                  "content": "Streaming SSR and edge caching. Case Study →"
+                  "content": "Streaming SSR and edge caching. Case Study →",
+                  "x": 16
                 }
               }
             },
@@ -6233,16 +6627,21 @@
               "y": 572,
               "descendants": {
                 "8Ncq6": {
-                  "width": "fill_container"
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
                 },
                 "NQUtb": {
                   "width": "fill_container",
-                  "content": "Design System Federation"
+                  "content": "Design System Federation",
+                  "x": 16,
+                  "y": 198
                 },
                 "yDfJz": {
                   "width": "fill_container",
                   "y": 237,
-                  "content": "Shared primitives across squads. Case Study →"
+                  "content": "Shared primitives across squads. Case Study →",
+                  "x": 16
                 }
               }
             },
@@ -6257,16 +6656,21 @@
               "y": 858,
               "descendants": {
                 "8Ncq6": {
-                  "width": "fill_container"
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
                 },
                 "NQUtb": {
                   "width": "fill_container",
-                  "content": "Observability Dev Portal"
+                  "content": "Observability Dev Portal",
+                  "x": 16,
+                  "y": 198
                 },
                 "yDfJz": {
                   "width": "fill_container",
                   "y": 237,
-                  "content": "Sentry + RUM dashboards for teams. Case Study →"
+                  "content": "Sentry + RUM dashboards for teams. Case Study →",
+                  "x": 16
                 }
               }
             },
@@ -6281,16 +6685,21 @@
               "y": 1165,
               "descendants": {
                 "8Ncq6": {
-                  "width": "fill_container"
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
                 },
                 "NQUtb": {
                   "width": "fill_container",
-                  "content": "Accessibility Program"
+                  "content": "Accessibility Program",
+                  "x": 16,
+                  "y": 198
                 },
                 "yDfJz": {
                   "width": "fill_container",
                   "y": 237,
-                  "content": "WCAG 2.2 improvements and audits. Case Study →"
+                  "content": "WCAG 2.2 improvements and audits. Case Study →",
+                  "x": 16
                 }
               }
             },
@@ -6305,16 +6714,21 @@
               "y": 1472,
               "descendants": {
                 "8Ncq6": {
-                  "width": "fill_container"
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
                 },
                 "NQUtb": {
                   "width": "fill_container",
-                  "content": "Performance Budget CI"
+                  "content": "Performance Budget CI",
+                  "x": 16,
+                  "y": 198
                 },
                 "yDfJz": {
                   "width": "fill_container",
                   "y": 237,
-                  "content": "Automated thresholds in CI pipeline. Case Study →"
+                  "content": "Automated thresholds in CI pipeline. Case Study →",
+                  "x": 16
                 }
               }
             }
@@ -6369,10 +6783,14 @@
               "name": "qReset",
               "x": 72,
               "y": 0,
+              "width": "fit_content",
+              "height": "fit_content",
               "descendants": {
                 "QMLXm": {
                   "content": "Reset Filters",
-                  "fill": "#FFF9FF"
+                  "fill": "#FFF9FF",
+                  "x": 20,
+                  "y": 14
                 }
               }
             }
@@ -6408,12 +6826,23 @@
                 "thickness": 1,
                 "fill": "#3D3564"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
               ],
               "alignItems": "center",
               "children": [
+                {
+                  "type": "icon_font",
+                  "id": "fO6g4",
+                  "name": "qLegalShield",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "shield",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
                 {
                   "type": "text",
                   "id": "P5bGx",
@@ -6435,12 +6864,23 @@
                 "thickness": 1,
                 "fill": "#3D3564"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
               ],
               "alignItems": "center",
               "children": [
+                {
+                  "type": "icon_font",
+                  "id": "DCs5J",
+                  "name": "qLegalUser",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "user",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
                 {
                   "type": "text",
                   "id": "dNsY6",
@@ -6462,12 +6902,23 @@
                 "thickness": 1,
                 "fill": "#3D3564"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
               ],
               "alignItems": "center",
               "children": [
+                {
+                  "type": "icon_font",
+                  "id": "fUyM5",
+                  "name": "qLegalCookie",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "cookie",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
                 {
                   "type": "text",
                   "id": "1SFgt",
@@ -6491,16 +6942,29 @@
           "x": 20,
           "y": 2446,
           "descendants": {
+            "JHUOv": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 14,
+              "y": 14
+            },
+            "4pE9o": {
+              "x": 6,
+              "y": 6
+            },
             "SlALH": {
               "width": "fill_container",
-              "height": "fit_content"
+              "height": "fit_content",
+              "x": 44,
+              "y": 14
             },
             "2feQA": {
               "content": "In Development · New Case Studies"
             },
             "AIXEj": {
               "width": "fill_container",
-              "content": "More projects are being polished for publication."
+              "content": "More projects are being polished for publication.",
+              "y": 22
             },
             "RS5wR": {
               "y": 43,
@@ -6559,6 +7023,7 @@
                 "thickness": 1,
                 "fill": "#4A3E88"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
@@ -6567,10 +7032,20 @@
               "alignItems": "center",
               "children": [
                 {
+                  "type": "icon_font",
+                  "id": "XmrLi",
+                  "name": "backCaseIc",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "chevron-left",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
+                {
                   "type": "text",
                   "id": "dLIf8",
                   "fill": "$accent-cyan",
-                  "content": "← Projects",
+                  "content": "Projects",
                   "fontFamily": "$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
@@ -6587,13 +7062,26 @@
           "name": "cCaseCookie",
           "x": 20,
           "y": 96,
+          "height": "fit_content",
           "descendants": {
             "hn5xG": {
               "width": "fill_container",
-              "y": 16
+              "y": 16,
+              "x": 16
             },
             "6RqJ8": {
-              "x": 261
+              "x": 241,
+              "width": "fit_content",
+              "height": "fit_content",
+              "y": 12
+            },
+            "8lCPg": {
+              "x": 16,
+              "y": 15
+            },
+            "7Am6i": {
+              "x": 36,
+              "y": 14
             }
           }
         },
@@ -6660,44 +7148,81 @@
             },
             {
               "type": "frame",
-              "id": "zW0n4",
+              "id": "tdESV",
               "name": "cLinksM",
-              "width": "fill_container",
               "gap": 8,
               "children": [
                 {
-                  "id": "SUsex",
-                  "type": "ref",
-                  "ref": "oNDTR",
-                  "fill": "#52FFF6",
+                  "type": "frame",
+                  "id": "yXwq1",
                   "name": "cl1",
-                  "x": 0,
-                  "y": 0,
-                  "descendants": {
-                    "QMLXm": {
+                  "fill": "#52FFF6",
+                  "cornerRadius": 999,
+                  "gap": 6,
+                  "padding": [
+                    14,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7t72w",
+                      "fill": "#111226",
                       "content": "Live",
+                      "fontFamily": "$font-display",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "y4W8K",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
                       "fill": "#111226"
                     }
-                  }
+                  ]
                 },
                 {
-                  "id": "kNAlC",
-                  "type": "ref",
-                  "ref": "oNDTR",
+                  "type": "frame",
+                  "id": "jPLGQ",
+                  "name": "cl2",
                   "fill": "#2C2550",
+                  "cornerRadius": 999,
                   "stroke": {
                     "thickness": 1,
                     "fill": "#4A3E88"
                   },
-                  "name": "cl2",
-                  "x": 77,
-                  "y": 0,
-                  "descendants": {
-                    "QMLXm": {
+                  "gap": 6,
+                  "padding": [
+                    14,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "As6ur",
+                      "fill": "#FFF9FF",
                       "content": "GitHub",
+                      "fontFamily": "$font-display",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "T985Z",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
                       "fill": "#FFF9FF"
                     }
-                  }
+                  ]
                 }
               ]
             }
@@ -6729,13 +7254,46 @@
               "name": "cm1",
               "x": 0,
               "y": 0,
+              "height": "fit_content",
               "descendants": {
                 "liT7j": {
-                  "content": "-38%"
+                  "type": "frame",
+                  "id": "w7h1o",
+                  "name": "cm1",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "X0iwp",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "timer",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FF4FD8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "F2NEj",
+                      "fill": "#FF4FD8",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#52FFF6AA",
+                        "blur": 10
+                      },
+                      "content": "-38%",
+                      "fontFamily": "\\$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 "zmp2j": {
                   "width": "fill_container",
-                  "content": "Interaction latency"
+                  "content": "Interaction latency",
+                  "x": 16,
+                  "y": 65
                 }
               }
             },
@@ -6747,13 +7305,46 @@
               "name": "cm2",
               "x": 0,
               "y": 108,
+              "height": "fit_content",
               "descendants": {
                 "liT7j": {
-                  "content": "-63%"
+                  "type": "frame",
+                  "id": "AYCet",
+                  "name": "cm2",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "jRPzX",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "shield",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FF4FD8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Q8nhh",
+                      "fill": "#FF4FD8",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#52FFF6AA",
+                        "blur": 10
+                      },
+                      "content": "-63%",
+                      "fontFamily": "\\$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 "zmp2j": {
                   "width": "fill_container",
-                  "content": "Conflict support tickets"
+                  "content": "Conflict support tickets",
+                  "x": 16,
+                  "y": 65
                 }
               }
             },
@@ -6765,13 +7356,46 @@
               "name": "cm3",
               "x": 0,
               "y": 216,
+              "height": "fit_content",
               "descendants": {
                 "liT7j": {
-                  "content": "+21%"
+                  "type": "frame",
+                  "id": "Qvra0",
+                  "name": "cm3",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "lzeh0",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "users",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FF4FD8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "nkgBL",
+                      "fill": "#FF4FD8",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#52FFF6AA",
+                        "blur": 10
+                      },
+                      "content": "+21%",
+                      "fontFamily": "\\$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 "zmp2j": {
                   "width": "fill_container",
-                  "content": "Weekly collaboration sessions"
+                  "content": "Weekly collaboration sessions",
+                  "x": 16,
+                  "y": 65
                 }
               }
             }
@@ -7190,18 +7814,31 @@
           "name": "devCaseM",
           "height": "fit_content",
           "x": 20,
-          "y": 1707,
+          "y": 1706,
           "descendants": {
+            "JHUOv": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 14,
+              "y": 14
+            },
+            "4pE9o": {
+              "x": 6,
+              "y": 6
+            },
             "SlALH": {
               "width": "fill_container",
-              "height": "fit_content"
+              "height": "fit_content",
+              "x": 44,
+              "y": 14
             },
             "2feQA": {
               "content": "In Development · Deep Dives"
             },
             "AIXEj": {
               "width": "fill_container",
-              "content": "Architecture diagrams and implementation notes are in progress."
+              "content": "Architecture diagrams and implementation notes are in progress.",
+              "y": 22
             },
             "RS5wR": {
               "y": 60,
@@ -7260,6 +7897,7 @@
                 "thickness": 1,
                 "fill": "#4A3E88"
               },
+              "gap": 6,
               "padding": [
                 14,
                 16
@@ -7268,10 +7906,20 @@
               "alignItems": "center",
               "children": [
                 {
+                  "type": "icon_font",
+                  "id": "viBKA",
+                  "name": "backLegalIc",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "chevron-left",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-cyan"
+                },
+                {
                   "type": "text",
                   "id": "sXaJ4",
                   "fill": "$accent-cyan",
-                  "content": "← Home",
+                  "content": "Home",
                   "fontFamily": "$font-display",
                   "fontSize": 12,
                   "fontWeight": "normal"
@@ -7447,13 +8095,26 @@
           "name": "lCookie",
           "x": 20,
           "y": 588,
+          "height": "fit_content",
           "descendants": {
             "hn5xG": {
               "width": "fill_container",
-              "y": 16
+              "y": 16,
+              "x": 16
             },
             "6RqJ8": {
-              "x": 261
+              "x": 241,
+              "width": "fit_content",
+              "height": "fit_content",
+              "y": 12
+            },
+            "8lCPg": {
+              "x": 16,
+              "y": 15
+            },
+            "7Am6i": {
+              "x": 36,
+              "y": 14
             }
           }
         },
