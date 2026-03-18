@@ -16,18 +16,18 @@ Source: `design_v2.pen`
 
 ### `/` (Home)
 
-- Desktop (`7oH3p`): `tgLrQ` nav, `cXJxk` cookie, `EK2r6` hero, `mFXGd` about, `eT397` experience, `tN3lj` projects grid, `PZ7i4` quality metrics, `UcFVJ` content grid, `9cI24` contact, `msStG` footer
-- Mobile (`yfDUF`): `kOz1f` nav, `x7woU` cookie, `7g8eJ` hero, `g2cM4` about, `ZuAXZ` experience, `a43WO` projects, `tGQHu` quality, `W1uXG` contact, `V46Hp` content, `IeYzn` footer
+- Desktop (`7oH3p`): `tgLrQ` nav, `cXJxk` cookie, `EK2r6` hero, `P0Mf0` about header, `mFXGd` about, `r5ULi` exp header, `eT397` experience, `Sa0f4` projects header, `tN3lj` projects grid, `pZQFd` quality header, `PZ7i4` quality metrics, `gJFDq` quality details, `j29WJ` content header, `UcFVJ` content grid, `w6lzr` contact header, `9cI24` contact, `msStG` footer, `HZMgR` in-development
+- Mobile (`yfDUF`): `kOz1f` nav, `x7woU` cookie, `7g8eJ` hero, `g2cM4` about, `ZuAXZ` experience, `a43WO` projects, `tGQHu` quality, `W1uXG` contact, `V46Hp` content, `hn0PC` contact form, `IeYzn` footer, `vByqS` in-development
 
 ### `/projects`
 
 - Desktop (`PDYt3`): `6tW9O` nav, `MfDE5` header, `lHDB6` filters, `I59Uf` grid, `RIFrn` pager
-- Mobile (`QMw9l`): `HEnEl` nav, `XuDPb` header, `DlgvS`/`UIrWH` filters, `FlcMR` grid, `i325E` pager, `WzL64` footer
+- Mobile (`QMw9l`): `HEnEl` nav, `XuDPb` header, `oMf1x` hint, `DlgvS`/`UIrWH` filters, `FlcMR` grid, `i325E` pager, `WzL64` footer, `7Joju` in-development
 
 ### `/projects/[slug]`
 
 - Desktop (`GUKCH`): `zKZl9` nav, `eKF87` hero, `gOCh4` metrics, `2JPHn` context split, `ehvhQ` architecture, `h6xUY` implementation, `rjoNR` results, `HAK5c` stack
-- Mobile (`Uqn1U`): `J4W2O` nav, `gqeyh` cookie, `8Q9cP` hero, `zXLcE` metrics, `S12wz` overview, `ElVp8` context, `vB7Td` architecture, `VHKcv` implementation, `lZRK3` results, `1t682` stack, `HumN6` footer
+- Mobile (`Uqn1U`): `J4W2O` nav, `gqeyh` cookie, `8Q9cP` hero, `mWWoz` metrics title, `zXLcE` metrics, `S12wz` overview, `ElVp8` context, `vB7Td` architecture, `VHKcv` implementation, `lZRK3` results, `1t682` stack, `HumN6` footer, `9VcXT` in-development
 
 ### `/legal`
 
