@@ -51,22 +51,12 @@ Source: `design_v2.pen`
 
 ## Iconography Mapping (Lucide)
 
-Icon source: `https://lucide.dev/` (free, ISC license)
+Canonical icon contract (node IDs, icon names, sizing, spacing, and QA checks) is maintained in `docs/handoff/design_v2_icon_spec.md`.
 
-| Context | Node IDs | Icon Set | Notes |
-|---|---|---|---|
-| Mobile menu control | `XbQS2` | `menu` | Added leading icon for compact nav affordance. |
-| Desktop/mobile back controls | `HFw8g`, `GkHPL`, `f7O7q`, `jgiSz`, `ihaGP`, `mBVeY` | `chevron-left` | Replaced text arrows with icon + text pattern. |
-| Cookie accept action | `6RqJ8` | `check` | Added confirmation cue in consent CTA. |
-| Legal chips (mobile + projects mobile) | `E7bpN`, `XeuTq`, `mCWxd`, `VfzOW`, `fTtIs`, `0giTJ` | `shield`, `user`, `cookie` | Semantic icon hints for legal document types. |
-| Metric value groups (desktop + case/mobile) | `w2arq`, `QxeNa`, `hvMJd`, `iTFoP`, `cyOFw`, `ACAZO`, `2iWx0`, `4b6lQ`, `nGfNo` | `zap`, `shield-check`, `activity`, `timer`, `shield`, `users` | Added icon+value grouping for faster scanning. |
-
-### Icon sizing and spacing conventions
-
-- `14px` for compact controls and legal chips.
-- `16px` for mobile nav menu control.
-- `20px` for metric callouts.
-- `gap: 6` for compact controls/chips; `gap: 8` for metric value groups.
+Route-level iconography usage:
+- `/`: nav controls, consent actions, metric callouts, and contact/form affordances.
+- `/projects` and `/projects/[slug]`: back/navigation controls, case-study metric callouts, and footer/legal chips.
+- `/legal`: back navigation, legal document chips, and cookie consent actions.
 
 ## Implementation Notes
 
