@@ -1,0 +1,41 @@
+:root {
+  /* Colors */
+  --bg-base: #1A1630;
+  --bg-surface: #221C3E;
+  --bg-surface-2: #2C2550;
+  --text-primary: #F7F4FF;
+  --text-secondary: #D7CCFF;
+  --accent-cyan: #36F9F6;
+  --accent-pink: #FF7EDB;
+  --accent-yellow: #FEDE5D;
+  --state-error: #FF4D6D;
+
+  /* Glow (with opacity) */
+  --glow-soft: #52FFF666;
+  --glow-medium: #52FFF6AA;
+  --glow-hard: #FF4FD8CC;
+  --glow-pink: #FF4FD8AA;
+
+  /* Typography */
+  --font-display: var(--font-geist-mono), monospace;
+  --font-body: var(--font-geist-sans), sans-serif;
+
+  /* Spacing */
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --space-10: 64px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Glow blur */
+  --glow-blur-soft: 8px;
+  --glow-blur-medium: 14px;
+  --glow-blur-hard: 24px;
+}
