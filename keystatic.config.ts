@@ -1,7 +1,10 @@
 import { collection, config, fields, singleton } from "@keystatic/core";
 
-export const showAdminUI =
-  process.env.NODE_ENV === "development" || process.env.KEYSTATIC_ENABLE_ADMIN_UI === "true";
+export const isDevelopment = process.env.NODE_ENV === "development";
+export const allowAdminUIFromEnv =
+  process.env.KEYSTATIC_ENABLE_ADMIN_UI === "true" &&
+  process.env.KEYSTATIC_ALLOW_PROD_ADMIN === "true";
+export const showAdminUI = isDevelopment || allowAdminUIFromEnv;
 
 export default config({
   storage: {
