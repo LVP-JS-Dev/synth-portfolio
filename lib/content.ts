@@ -145,7 +145,8 @@ export async function getAllProjects() {
 }
 
 export async function getProjectSlugs(): Promise<string[]> {
-  return readProjectSlugs();
+  const slugs = await readProjectSlugs();
+  return [...slugs];
 }
 
 export async function getProjectBySlug(slug: string) {

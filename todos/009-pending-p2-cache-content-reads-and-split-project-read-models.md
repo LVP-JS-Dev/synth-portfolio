@@ -91,10 +91,10 @@ Current route implementations read content multiple times per request/render pat
 
 ## Acceptance Criteria
 
-- [ ] Metadata and page rendering reuse cached reads where possible.
-- [ ] `generateStaticParams` uses a slug-focused reader function.
-- [ ] No behavior regressions in content rendering.
-- [ ] Build/test/lint/typecheck stay green.
+- [x] Metadata and page rendering reuse cached reads where possible.
+- [x] `generateStaticParams` uses a slug-focused reader function.
+- [x] No behavior regressions in content rendering.
+- [x] Build/test/lint/typecheck stay green.
 
 ## Work Log
 
