@@ -7,12 +7,12 @@ describe("Button", () => {
   test("renders default primary variant", () => {
     render(<Button>Primary</Button>);
 
-    expect(screen.getByRole("button").textContent).toBe("Primary");
+    expect(screen.getByRole("button")).toHaveTextContent("Primary");
   });
 
   test("supports icon slot", () => {
     render(<Button iconSlot={<ArrowRight data-testid="icon" />}>With Icon</Button>);
 
-    expect(screen.getByTestId("icon")).toBeTruthy();
+    expect(screen.getByTestId("icon")).toBeInTheDocument();
   });
 });

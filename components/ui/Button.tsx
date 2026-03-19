@@ -9,10 +9,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = (
-  { variant = "primary", iconSlot, children, className, ...rest }: ButtonProps,
+  { variant = "primary", iconSlot, children, className, type = "button", ...rest }: ButtonProps,
 ) => (
   <button
-    type={rest.type ?? "button"}
+    type={type}
     className={
       [styles.button, styles[variant], className].filter(Boolean).join(" ")
     }

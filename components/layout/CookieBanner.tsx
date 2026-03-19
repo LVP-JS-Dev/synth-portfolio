@@ -1,51 +1,34 @@
 "use client";
 
-import { ReactElement, useCallback, useState } from "react";
+import { ReactElement, useCallback, useSyncExternalStore } from "react";
 import styles from "./CookieBanner.module.css";
+import {
+  getConsentSnapshot,
+  notifyConsentChange,
+  subscribeToConsent,
+  writeConsent,
+} from "./consentService";
 
 interface CookieBannerProps {
   onAccept?: () => void;
   onDismiss?: () => void;
 }
 
-const CONSENT_KEY = "cookie-consent";
-
-type ConsentValue = "accepted" | "dismissed" | null;
-
-const readConsent = (): ConsentValue => {
-  if (typeof window === "undefined") {
-    return null;
-  }
-
-  return (localStorage.getItem(CONSENT_KEY) as ConsentValue) ?? null;
-};
-
-const writeConsent = (value: ConsentValue) => {
-  if (typeof window === "undefined") {
-    return;
-  }
-
-  if (value === null) {
-    localStorage.removeItem(CONSENT_KEY);
-  } else {
-    localStorage.setItem(CONSENT_KEY, value);
-  }
-};
-
 export const CookieBanner = ({ onAccept, onDismiss }: CookieBannerProps): ReactElement | null => {
-  const [consent, setConsent] = useState<ConsentValue>(() => readConsent());
+  const consent = useSyncExternalStore(subscribeToConsent, getConsentSnapshot, getConsentSnapshot);
 
   const visible = consent === null;
 
   const handleAccept = useCallback(() => {
     writeConsent("accepted");
-    setConsent("accepted");
+    notifyConsentChange();
     onAccept?.();
   }, [onAccept]);
 
   const handleDismiss = useCallback(() => {
+    // Dismissal is intentionally treated as non-consent; it leaves cookies disabled while hiding the banner.
     writeConsent("dismissed");
-    setConsent("dismissed");
+    notifyConsentChange();
     onDismiss?.();
   }, [onDismiss]);
 
@@ -54,8 +37,8 @@ export const CookieBanner = ({ onAccept, onDismiss }: CookieBannerProps): ReactE
   }
 
   return (
-    <div className={styles.banner} role="status" aria-live="polite">
-      <p className={styles.message}>
+    <div className={styles.banner} role="region" aria-label="Cookie consent">
+      <p className={styles.message} aria-live="polite">
         Мы используем куки для улучшения опыта использования сайта. Примите или отклоните их, чтобы продолжить.
       </p>
       <div className={styles.actions}>

@@ -27,8 +27,11 @@ const createLocalStorage = () => {
   };
 };
 
-globalThis.localStorage = createLocalStorage();
+const mockedLocalStorage = createLocalStorage();
+
+globalThis.localStorage = mockedLocalStorage;
 
 afterEach(() => {
   cleanup();
+  mockedLocalStorage.clear();
 });

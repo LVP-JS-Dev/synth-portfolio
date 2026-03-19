@@ -106,6 +106,7 @@ Acceptance criteria
 - [ ] Replace placeholder/in-development copy where ready.
 - [ ] Keep ETA labels configurable (not hardcoded in multiple components).
 - [ ] Final legal text reviewed before publication.
+ - [ ] CSP policy staging note: report-only for now while object-src/base-uri tightened, enforcement after rollout.
 
 ### 3) Performance/Observability
 - [ ] Lighthouse budgets enforced in CI.

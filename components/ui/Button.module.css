@@ -5,7 +5,7 @@
   gap: var(--space-2);
   padding: var(--space-2) var(--space-5);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   border-radius: var(--radius-md);
   text-decoration: none;
   border: none;
@@ -36,8 +36,10 @@
   border: 1px solid var(--text-secondary);
 }
 
-.ghost:hover {
-  background-color: color-mix(in srgb, var(--text-primary) 4%, transparent);
+@media (hover: hover) {
+  .ghost:hover {
+    background-color: color-mix(in srgb, var(--text-primary) 4%, transparent);
+  }
 }
 
 .iconSlot {
