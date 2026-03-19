@@ -20,6 +20,9 @@
   --font-display: var(--font-geist-mono), monospace;
   --font-body: var(--font-geist-sans), sans-serif;
 
+  /* Font sizes */
+  --font-size-sm: 14px;
+
   /* Spacing */
   --space-2: 8px;
   --space-3: 12px;
