@@ -5,7 +5,11 @@ const FALLBACK_ORIGIN_RU = "https://example.ru";
 
 export function buildMetadata(
   path: string,
-  locale: "en" | "ru" = "en"
+  locale: "en" | "ru" = "en",
+  overrides?: {
+    title?: string;
+    description?: string;
+  }
 ): Metadata {
   const originEn = process.env.SITE_ORIGIN_EN ?? FALLBACK_ORIGIN_EN;
   const originRu = process.env.SITE_ORIGIN_RU ?? FALLBACK_ORIGIN_RU;
@@ -13,6 +17,8 @@ export function buildMetadata(
   const canonical = locale === "ru" ? `${originRu}${path}` : `${originEn}${path}`;
 
   return {
+    title: overrides?.title,
+    description: overrides?.description,
     alternates: {
       canonical,
       languages: {

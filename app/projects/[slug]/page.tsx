@@ -1,4 +1,6 @@
 import { buildMetadata } from "@/lib/metadata";
+import { getAllProjects, getProjectBySlug } from "@/lib/content";
+import { notFound } from "next/navigation";
 
 type Params = {
   slug: string;
@@ -10,15 +12,33 @@ type Props = {
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  return buildMetadata(`/projects/${slug}`);
+  const project = await getProjectBySlug(slug);
+
+  return buildMetadata(`/projects/${slug}`, "en", {
+    title: project?.titleEn ?? slug,
+    description: project?.summaryEn,
+  });
+}
+
+export async function generateStaticParams() {
+  const projects = await getAllProjects();
+  return projects.map((project) => ({ slug: project.slug }));
 }
 
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
+  const project = await getProjectBySlug(slug);
+
+  if (!project) {
+    notFound();
+  }
 
   return (
     <main>
-      <h1>Project: {slug}</h1>
+      <h1>{project.titleEn}</h1>
+      <p>{project.summaryEn}</p>
+      <p>Year: {project.year}</p>
+      <p>Stack: {project.stack.join(", ")}</p>
     </main>
   );
 }
