@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { CookieBanner } from "@/components/layout/CookieBanner";
+import { NextTamaguiProvider } from "./NextTamaguiProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,10 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        {children}
-        <CookieBanner />
+        <NextTamaguiProvider>
+          {children}
+          <CookieBanner />
+        </NextTamaguiProvider>
       </body>
     </html>
   );
