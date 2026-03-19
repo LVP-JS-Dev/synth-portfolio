@@ -13,7 +13,9 @@ export const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
     { id, label, error, honeypotName, wrapperClassName, ...inputProps },
     ref,
   ): ReactElement => {
-    const describedBy = error ? `${id}-error` : undefined;
+    const errorId = `${id}-error`;
+    const describedBy =
+      [inputProps["aria-describedby"], error ? errorId : undefined].filter(Boolean).join(" ") || undefined;
     const hasError = Boolean(error);
 
     return (
@@ -30,14 +32,14 @@ export const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
           />
         )}
         <input
+          {...inputProps}
           id={id}
-          aria-invalid={hasError ? "true" : undefined}
+          aria-invalid={hasError ? "true" : inputProps["aria-invalid"]}
           aria-describedby={describedBy}
           ref={ref}
-          {...inputProps}
         />
         {error && (
-          <span id={describedBy} role="alert">
+          <span id={errorId} role="alert">
             {error}
           </span>
         )}

@@ -66,9 +66,42 @@ Completed staged hardening for this PR: keep report-only mode while strengthenin
 
 ## Acceptance Criteria
 
-- [ ] CSP hardening path documented with explicit stage gates.
-- [ ] Violation monitoring defined before enforcement.
-- [ ] Rollback steps for CSP enforcement documented.
+- [x] CSP hardening path documented with explicit stage gates.
+- [x] Violation monitoring defined before enforcement.
+- [x] Rollback steps for CSP enforcement documented.
+
+### Stage Gates (Report-Only → Enforced)
+
+1. **Gate 1 (Baseline Collection):** Run `Content-Security-Policy-Report-Only` in production for 14 days.
+2. **Gate 2 (Triage & Allowlist):** Classify violations by source/path, remediate first-party issues, and approve every third-party source explicitly.
+3. **Gate 3 (Go/No-Go):** Security owner + frontend owner sign off when all conditions are met:
+   - no unexplained high-severity violations during the last 7 days;
+   - violation rate is ≤ 0.1% of requests over the same 7-day window;
+   - violation trend is stable or decreasing;
+   - required third-party sources are documented in the allowlist record.
+4. **Gate 4 (Enforcement Rollout):** Switch from report-only to enforced `Content-Security-Policy` in traffic stages: 10% → 50% → 100%.
+
+### Monitoring Method
+
+- Owner: Security (primary) + Frontend (secondary).
+- Collect CSP reports via report endpoint/Sentry ingestion and aggregate by directive, route, and user agent.
+- Review metrics daily during rollout; publish weekly summary in security worklog.
+- Trigger alert on:
+  - any new blocked first-party script/style source;
+  - any spike above 0.1% violation rate over 24h;
+  - any high-severity violation pattern on critical routes.
+
+### Rollback Triggers and Actions
+
+- Immediate rollback triggers:
+  - critical user flow breakage attributable to CSP;
+  - sustained violation rate > 0.1% for 24h after enforcement stage change;
+  - newly introduced high-severity violations without approved mitigation.
+- Rollback action:
+  - revert header to `Content-Security-Policy-Report-Only` using last-known-good policy (`object-src 'none'`, `base-uri 'self'` retained);
+  - notify security + frontend stakeholders and incident channel.
+- Post-rollback requirement:
+  - file incident follow-up with root cause, policy diff, and re-entry criteria before next enforcement attempt.
 
 ## Work Log
 
