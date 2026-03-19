@@ -1,5 +1,6 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getHomeContent } from "@/lib/content";
+import { HeroSection } from "@/components/modules/HeroSection";
 
 export async function generateMetadata() {
   const home = await getHomeContent("en");
@@ -15,8 +16,9 @@ export default async function Home() {
 
   return (
     <main>
-      <h1>{home.title}</h1>
-      <p>{home.intro}</p>
+      <div style={{ padding: '24px 20px', gap: '32px' }}>
+        <HeroSection />
+      </div>
     </main>
   );
 }

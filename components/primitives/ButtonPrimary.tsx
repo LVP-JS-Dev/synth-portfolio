@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ReactNode } from 'react';
 import { motion, HTMLMotionProps } from 'framer-motion';
 import { styled } from 'tamagui';

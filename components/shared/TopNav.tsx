@@ -1,3 +1,5 @@
+"use client";
+
 import { XStack, Text, styled } from 'tamagui'
 import { Menu } from 'lucide-react'
 

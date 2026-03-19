@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { CookieBanner } from "@/components/layout/CookieBanner";
+import { TopNav } from "@/components/shared/TopNav";
 import { NextTamaguiProvider } from "./NextTamaguiProvider";
 import "./globals.css";
 
@@ -26,8 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>
+      <body style={{ backgroundColor: '#1A1630', color: '#FFF9FF', margin: 0, padding: 0 }}>
         <NextTamaguiProvider>
+          <TopNav />
           {children}
           <CookieBanner />
         </NextTamaguiProvider>
