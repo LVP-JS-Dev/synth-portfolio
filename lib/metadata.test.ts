@@ -33,6 +33,16 @@ describe("buildMetadata", () => {
     });
   });
 
+  it("applies metadata overrides", () => {
+    const metadata = buildMetadata("/projects", "en", {
+      title: "Projects",
+      description: "Case studies",
+    });
+
+    expect(metadata.title).toBe("Projects");
+    expect(metadata.description).toBe("Case studies");
+  });
+
   it("falls back when SITE_ORIGIN_EN is missing", () => {
     delete process.env.SITE_ORIGIN_EN;
     const metadata = buildMetadata("/projects");
