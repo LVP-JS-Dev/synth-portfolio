@@ -1,8 +1,14 @@
+import { timingSafeEqual } from "crypto";
 import { NextRequest } from "next/server";
 
 const TOKEN = process.env.CONTENT_OPS_TOKEN;
 const IS_DEV = process.env.NODE_ENV === "development";
 const ALLOW_INSECURE_DEV = process.env.CONTENT_OPS_ALLOW_INSECURE_DEV === "true";
+
+function safeCompare(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(Buffer.from(a), Buffer.from(b));
+}
 
 export function authenticateContentOps(request: NextRequest) {
   if (IS_DEV && ALLOW_INSECURE_DEV) {
@@ -19,7 +25,7 @@ export function authenticateContentOps(request: NextRequest) {
   }
 
   const provided = authHeader.slice(7).trim();
-  if (provided !== TOKEN) {
+  if (!safeCompare(provided, TOKEN)) {
     return { status: 403, message: "Invalid authorization token" };
   }
 

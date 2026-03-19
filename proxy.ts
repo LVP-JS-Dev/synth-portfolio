@@ -1,3 +1,4 @@
+import { timingSafeEqual } from "crypto";
 import { Buffer } from "buffer";
 import { isDevelopment } from "@/keystatic.config";
 import { NextRequest, NextResponse } from "next/server";
@@ -40,9 +41,16 @@ const hasValidCredentials = (authHeader: string | null) => {
   const user = credentials.slice(0, separatorIndex);
   const password = credentials.slice(separatorIndex + 1);
 
+  const expectedUser = process.env.KEYSTATIC_ADMIN_USER ?? "";
+  const expectedPassword = process.env.KEYSTATIC_ADMIN_PASSWORD ?? "";
+
+  if (user.length !== expectedUser.length || password.length !== expectedPassword.length) {
+    return false;
+  }
+
   return (
-    user === process.env.KEYSTATIC_ADMIN_USER &&
-    password === process.env.KEYSTATIC_ADMIN_PASSWORD
+    timingSafeEqual(Buffer.from(user), Buffer.from(expectedUser)) &&
+    timingSafeEqual(Buffer.from(password), Buffer.from(expectedPassword))
   );
 };
 
