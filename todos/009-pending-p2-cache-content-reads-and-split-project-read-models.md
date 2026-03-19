@@ -1,5 +1,5 @@
 ---
-status: pending
+status: complete
 priority: p2
 issue_id: "009"
 tags: [code-review, performance, architecture, nextjs]
@@ -74,7 +74,7 @@ Current route implementations read content multiple times per request/render pat
 
 ## Recommended Action
 
-**To be filled during triage.**
+**Option 1 selected.** Added `getProjectSlugs()` backed by `reader.collections.projects.list()` with `cache()` wrapping. `generateStaticParams` now uses this lightweight reader instead of `getAllProjects()`.
 
 ## Technical Details
 
@@ -91,10 +91,10 @@ Current route implementations read content multiple times per request/render pat
 
 ## Acceptance Criteria
 
-- [ ] Metadata and page rendering reuse cached reads where possible.
-- [ ] `generateStaticParams` uses a slug-focused reader function.
-- [ ] No behavior regressions in content rendering.
-- [ ] Build/test/lint/typecheck stay green.
+- [x] Metadata and page rendering reuse cached reads where possible.
+- [x] `generateStaticParams` uses a slug-focused reader function.
+- [x] No behavior regressions in content rendering.
+- [x] Build/test/lint/typecheck stay green.
 
 ## Work Log
 

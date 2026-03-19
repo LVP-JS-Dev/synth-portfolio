@@ -1,5 +1,5 @@
 ---
-status: pending
+status: complete
 priority: p2
 issue_id: "008"
 tags: [code-review, security, csp, operations]
@@ -71,7 +71,7 @@ The Keystatic route header profile currently weakens security directives compare
 
 ## Recommended Action
 
-**To be filled during triage.**
+**Option 1 selected.** Keystatic routes now inherit all shared SECURITY_HEADERS and only override X-Frame-Options (SAMEORIGIN) and CSP (adding unsafe-eval + blob: img-src). Rationale documented inline in `next.config.ts`.
 
 ## Technical Details
 

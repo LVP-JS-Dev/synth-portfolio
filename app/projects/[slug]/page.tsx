@@ -1,5 +1,5 @@
 import { buildMetadata } from "@/lib/metadata";
-import { getAllProjects, getProjectBySlug } from "@/lib/content";
+import { getProjectSlugs, getProjectBySlug } from "@/lib/content";
 import { notFound } from "next/navigation";
 
 type Params = {
@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-  const projects = await getAllProjects();
-  return projects.map((project) => ({ slug: project.slug }));
+  const slugs = await getProjectSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export default async function ProjectPage({ params }: Props) {
