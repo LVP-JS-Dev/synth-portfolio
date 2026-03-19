@@ -14,10 +14,16 @@ const SECURITY_HEADERS = [
   },
 ];
 
-const KEYSTATIC_HEADERS = [
+// Keystatic admin overrides — only headers that DIFFER from the baseline.
+// All other SECURITY_HEADERS (HSTS, Permissions-Policy, nosniff, Referrer-Policy)
+// are inherited automatically because both source patterns match.
+// Justification:
+//   X-Frame-Options SAMEORIGIN — Keystatic editor uses iframes for field panels.
+//   unsafe-eval — Keystatic's admin bundle requires runtime eval.
+//   blob: in img-src — image preview thumbnails use blob URLs.
+//   frame-ancestors 'self' — matches SAMEORIGIN intent for CSP-level framing.
+const KEYSTATIC_CSP_OVERRIDES = [
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
-  { key: "X-Content-Type-Options", value: "nosniff" },
-  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   {
     key: "Content-Security-Policy-Report-Only",
     value:
@@ -34,11 +40,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/keystatic/:path*",
-        headers: KEYSTATIC_HEADERS,
+        headers: KEYSTATIC_CSP_OVERRIDES,
       },
       {
         source: "/api/keystatic/:path*",
-        headers: KEYSTATIC_HEADERS,
+        headers: KEYSTATIC_CSP_OVERRIDES,
       },
     ];
   },

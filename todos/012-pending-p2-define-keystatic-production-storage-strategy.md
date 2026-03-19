@@ -1,5 +1,5 @@
 ---
-status: pending
+status: complete
 priority: p2
 issue_id: "012"
 tags: [code-review, operations, architecture, cms]
@@ -69,7 +69,7 @@ Keystatic is currently configured with `storage.kind = "local"`, which is accept
 
 ## Recommended Action
 
-**To be filled during triage.**
+**Option 1 selected.** Local mode explicitly documented as dev-only in `keystatic.config.ts` with inline comment explaining serverless limitation and linking to GitHub mode migration docs.
 
 ## Technical Details
 

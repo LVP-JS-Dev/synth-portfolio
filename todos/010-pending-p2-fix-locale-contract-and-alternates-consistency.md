@@ -1,5 +1,5 @@
 ---
-status: pending
+status: complete
 priority: p2
 issue_id: "010"
 tags: [code-review, architecture, i18n, seo, quality]
@@ -70,7 +70,7 @@ The app currently renders EN content while metadata alternates publish RU links 
 
 ## Recommended Action
 
-**To be filled during triage.**
+**Option 1 selected.** Removed RU alternate from `buildMetadata()` — only EN and x-default are emitted. RU alternate commented with re-enablement guidance for when locale routing is implemented. Test updated to assert no `ru` key.
 
 ## Technical Details
 

@@ -1,5 +1,5 @@
 ---
-status: pending
+status: complete
 priority: p3
 issue_id: "013"
 tags: [code-review, typescript, quality, metadata]
@@ -54,7 +54,7 @@ dependencies: []
 
 ## Recommended Action
 
-**To be filled during triage.**
+**Option 1 selected.** `buildMetadata()` now uses conditional spread — `title` and `description` keys are only present when overrides provide them. New test asserts absence when overrides omitted.
 
 ## Technical Details
 

@@ -144,6 +144,10 @@ export async function getAllProjects() {
   return projects.map((project) => ({ ...project, stack: [...project.stack] }));
 }
 
+export async function getProjectSlugs(): Promise<string[]> {
+  return readProjectSlugs();
+}
+
 export async function getProjectBySlug(slug: string) {
   return readProjectBySlug(slug);
 }
@@ -168,6 +172,14 @@ const readAllProjects = cache(async () => {
     return safeProjects.map((project) =>
       normalizeProjectEntry(project?.entry as unknown, project?.slug ?? ""),
     );
+  } catch {
+    return [];
+  }
+});
+
+const readProjectSlugs = cache(async (): Promise<string[]> => {
+  try {
+    return await reader.collections.projects.list();
   } catch {
     return [];
   }

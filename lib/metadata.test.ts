@@ -24,13 +24,13 @@ describe("buildMetadata", () => {
     expect(metadata.alternates?.canonical).toBe("https://example.ru/projects");
   });
 
-  it("includes expected hreflang entries", () => {
+  it("includes expected hreflang entries without RU", () => {
     const metadata = buildMetadata("/projects");
     expect(metadata.alternates?.languages).toEqual({
       en: "https://example.com/projects",
-      ru: "https://example.ru/projects",
       "x-default": "https://example.com/projects",
     });
+    expect(metadata.alternates?.languages).not.toHaveProperty("ru");
   });
 
   it("applies metadata overrides", () => {
@@ -41,6 +41,12 @@ describe("buildMetadata", () => {
 
     expect(metadata.title).toBe("Projects");
     expect(metadata.description).toBe("Case studies");
+  });
+
+  it("omits title and description when overrides are absent", () => {
+    const metadata = buildMetadata("/projects");
+    expect(metadata).not.toHaveProperty("title");
+    expect(metadata).not.toHaveProperty("description");
   });
 
   it("falls back when SITE_ORIGIN_EN is missing", () => {

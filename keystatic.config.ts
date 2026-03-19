@@ -7,6 +7,10 @@ export const allowAdminUIFromEnv =
 export const showAdminUI = isDevelopment || allowAdminUIFromEnv;
 
 export default config({
+  // Local mode: reads/writes content to the filesystem.
+  // Suitable for development only — not persistent on serverless (e.g. Vercel).
+  // Production strategy: migrate to GitHub mode with a GitHub App for
+  // git-backed editing. See: https://keystatic.com/docs/github-mode
   storage: {
     kind: "local",
   },

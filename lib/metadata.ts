@@ -17,13 +17,14 @@ export function buildMetadata(
   const canonical = locale === "ru" ? `${originRu}${path}` : `${originEn}${path}`;
 
   return {
-    title: overrides?.title,
-    description: overrides?.description,
+    ...(overrides?.title !== undefined && { title: overrides.title }),
+    ...(overrides?.description !== undefined && { description: overrides.description }),
     alternates: {
       canonical,
       languages: {
         en: `${originEn}${path}`,
-        ru: `${originRu}${path}`,
+        // RU alternate omitted until locale routing is implemented.
+        // Re-enable when RU routes are served: ru: `${originRu}${path}`,
         "x-default": `${originEn}${path}`,
       },
     },
