@@ -1,3 +1,5 @@
+import KeystaticApp from "../keystatic";
+
 export default function KeystaticPage() {
-  return null;
+  return <KeystaticApp />;
 }
