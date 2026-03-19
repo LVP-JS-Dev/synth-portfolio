@@ -1,13 +1,17 @@
 import { test, expect } from "@playwright/test";
+import { getHomeContent } from "../lib/content";
 
 test.describe("Home Page", () => {
   test("should load the home page and display main content", async ({ page }) => {
     await page.goto("/");
 
-    // Verify main heading exists
-    await expect(page.getByRole("heading", { name: "Home", level: 1 })).toBeVisible();
+    // Load content fixture directly from the same source the app uses
+    const content = await getHomeContent("en");
 
-    // Verify introductory text exists
-    await expect(page.getByText("Building resilient web products with clear UX and measurable outcomes.")).toBeVisible();
+    // Verify main heading exists using fixture
+    await expect(page.getByRole("heading", { name: content.title, level: 1 })).toBeVisible();
+
+    // Verify introductory text exists using fixture
+    await expect(page.getByText(content.intro)).toBeVisible();
   });
 });

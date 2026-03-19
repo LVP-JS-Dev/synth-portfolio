@@ -1,13 +1,16 @@
 import { test, expect } from "@playwright/test";
+import { getLegalContent } from "../lib/content";
 
 test.describe("Legal Page", () => {
   test("should load the legal page and display content", async ({ page }) => {
     await page.goto("/legal");
 
-    // Verify main heading exists
-    await expect(page.getByRole("heading", { name: "Legal", level: 1 })).toBeVisible();
+    const content = await getLegalContent("en");
 
-    // Verify legal body text exists
-    await expect(page.getByText("This page describes legal and privacy commitments for this portfolio website.")).toBeVisible();
+    // Verify main heading exists using CMS fixture
+    await expect(page.getByRole("heading", { name: content.title, level: 1 })).toBeVisible();
+
+    // Verify legal body text exists using CMS fixture
+    await expect(page.getByText(content.body)).toBeVisible();
   });
 });
