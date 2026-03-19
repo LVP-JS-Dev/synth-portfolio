@@ -17,8 +17,8 @@
   --glow-pink: #FF4FD8AA;
 
   /* Typography */
-  --font-display: 'JetBrains Mono', monospace;
-  --font-body: 'Inter', sans-serif;
+  --font-display: var(--font-geist-mono), monospace;
+  --font-body: var(--font-geist-sans), sans-serif;
 
   /* Spacing */
   --space-2: 8px;

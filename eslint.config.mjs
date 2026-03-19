@@ -8,12 +8,6 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   {
-    files: ["tokens.css", "tokens.ts"],
-    rules: {
-      "no-restricted-syntax": "off",
-    },
-  },
-  {
     files: ["**/*.{ts,tsx}"],
     rules: {
       "no-restricted-syntax": [
