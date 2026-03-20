@@ -12,7 +12,11 @@ export interface ProjectCardProps {
   onPress?: () => void;
 }
 
-const DEFAULT_GRADIENT: [string, string, string] = ["#2C2550", "#4A3E88", "#FF7EDB"];
+const DEFAULT_GRADIENT: [string, string, string] = [
+  "var(--color-bgSurface2)",
+  "var(--color-accentCyan)",
+  "var(--color-accentPink)",
+];
 
 export function ProjectCard({
   title,
@@ -34,22 +38,26 @@ export function ProjectCard({
       whileTap={{ scale: 0.995, transition: { duration: 0.12, ease: "easeOut" } }}
       style={{ width: "100%" }}
     >
-      <YStack
-        backgroundColor="$bgSurface2"
-        borderRadius={12}
-        borderWidth={1}
-        borderColor="#433C69"
-        gap={12}
-        padding={16}
-        cursor={onPress ? "pointer" : undefined}
-        onPress={onPress}
-        style={{ boxShadow: "0 0 14px rgba(82, 255, 246, 0.35)" }}
-      >
+        <YStack
+          backgroundColor="$bgSurface2"
+          borderRadius={12}
+          borderWidth={1}
+          borderColor="$bgSurface"
+          gap={12}
+          padding={16}
+          cursor={onPress ? "pointer" : undefined}
+          onPress={onPress}
+          style={{ boxShadow: "0 0 14px var(--color-glowSoft)" }}
+        >
         <YStack
           height={170}
           width="100%"
           borderRadius={8}
-          style={{ backgroundImage: gradient }}
+          backgroundColor="$bgBase"
+          style={{
+            backgroundImage: gradient,
+            boxShadow: "0 0 14px var(--color-glowSoft)",
+          }}
         />
 
         <Text

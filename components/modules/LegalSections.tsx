@@ -33,7 +33,7 @@ export function LegalSections({ title, description, body }: LegalSectionsProps) 
         backgroundColor="$bgSurface"
         borderRadius={14}
         borderWidth={1}
-        borderColor="#3C3562"
+        borderColor="$bgSurface2"
         padding={16}
         gap={8}
       >
@@ -51,7 +51,7 @@ export function LegalSections({ title, description, body }: LegalSectionsProps) 
           backgroundColor="$bgSurface2"
           borderRadius={12}
           borderWidth={1}
-          borderColor="#4A3E88"
+          borderColor="$accentCyan"
           padding={16}
           gap={8}
         >

@@ -26,15 +26,15 @@ function BlockTitle({ children }: { children: string }) {
 export function ProjectCaseSection({ title, summary, year, stack, metrics, links, highlights, results }: ProjectCaseSectionProps) {
   return (
     <YStack gap={14}>
-      <YStack
-        backgroundColor="$bgSurface"
-        borderRadius={14}
-        borderWidth={1}
-        borderColor="#3C3562"
-        padding={16}
-        gap={10}
-        $sm={{ padding: 14 }}
-      >
+        <YStack
+          backgroundColor="$bgSurface"
+          borderRadius={14}
+          borderWidth={1}
+          borderColor="$bgSurface2"
+          padding={16}
+          gap={10}
+          $sm={{ padding: 14 }}
+        >
         <Text
           color="$textPrimary"
           fontFamily="$heading"
@@ -98,17 +98,17 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
             ["Sync Layer", "WebSocket gateway + conflict resolution workers"],
             ["Platform", "Audit stream + analytics + Sentry traces"],
           ].map(([name, desc]) => (
-            <YStack
-              key={name}
-              flex={1}
-              minWidth={220}
-              backgroundColor="#1A1630"
-              borderRadius={10}
-              borderWidth={1}
-              borderColor="#3C3562"
-              padding={14}
-              gap={6}
-            >
+              <YStack
+                key={name}
+                flex={1}
+                minWidth={220}
+                backgroundColor="$bgBase"
+                borderRadius={10}
+                borderWidth={1}
+                borderColor="$bgSurface2"
+                padding={14}
+                gap={6}
+              >
               <Text color="$accentCyan" fontFamily="$heading" fontSize={12}>
                 {name}
               </Text>

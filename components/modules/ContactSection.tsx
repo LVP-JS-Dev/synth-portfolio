@@ -21,22 +21,22 @@ function ContactField({
   const Icon = icon === "user" ? User : Mail;
 
   return (
-    <YStack gap={6}>
-      <Text color="$textSecondary" fontFamily="$heading" fontSize={12} fontWeight="500">
-        {label}
-      </Text>
-      <XStack
-        height={48}
-        backgroundColor="#18122D"
-        borderRadius={10}
-        borderWidth={1}
-        borderColor="#4A3E88"
-        alignItems="center"
-        gap={8}
-        paddingHorizontal={12}
-        style={{ boxShadow: "0 0 12px rgba(82, 255, 246, 0.35)" }}
-      >
-        <Icon size={14} color="#D7CCFF" />
+      <YStack gap={6}>
+        <Text color="$textSecondary" fontFamily="$heading" fontSize={12} fontWeight="500">
+          {label}
+        </Text>
+        <XStack
+          height={48}
+          backgroundColor="$bgBase"
+          borderRadius={10}
+          borderWidth={1}
+          borderColor="$accentCyan"
+          alignItems="center"
+          gap={8}
+          paddingHorizontal={12}
+          style={{ boxShadow: "0 0 12px var(--color-glowSoft)" }}
+        >
+        <Icon size={14} color="var(--color-textSecondary)" />
         <Input
           name={name}
           type={type}
@@ -77,16 +77,16 @@ export function ContactSection() {
       </YStack>
 
       <XStack gap={24} flexWrap="wrap" $sm={{ flexDirection: "column", gap: 16 }}>
-        <YStack
-          flex={1}
-          minWidth={300}
-          backgroundColor="$bgSurface2"
-          borderRadius={12}
-          borderWidth={1}
-          borderColor="#4A3E88"
-          padding={20}
-          gap={12}
-        >
+          <YStack
+            flex={1}
+            minWidth={300}
+            backgroundColor="$bgSurface2"
+            borderRadius={12}
+            borderWidth={1}
+            borderColor="$accentCyan"
+            padding={20}
+            gap={12}
+          >
           <Text color="$textSecondary" fontFamily="$body" fontSize={18} lineHeight={28}>
             Open for senior frontend roles, architecture consulting, and technical audits.
           </Text>
@@ -113,16 +113,16 @@ export function ContactSection() {
           </XStack>
         </YStack>
 
-        <YStack
-          width={520}
-          $sm={{ width: "100%" }}
-          backgroundColor="$bgSurface2"
-          borderRadius={12}
-          borderWidth={1}
-          borderColor="#433C69"
-          padding={16}
-          gap={12}
-        >
+          <YStack
+            width={520}
+            $sm={{ width: "100%" }}
+            backgroundColor="$bgSurface2"
+            borderRadius={12}
+            borderWidth={1}
+            borderColor="$bgSurface"
+            padding={16}
+            gap={12}
+          >
           <form
             onSubmit={handleSubmit}
             style={{ display: "flex", flexDirection: "column", gap: 12 }}

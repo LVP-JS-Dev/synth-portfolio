@@ -32,11 +32,11 @@ const StyledButton = styled(Button, {
 });
 
 const tokens = {
-  bgSurface2: '#2C2550',
-  accentCyan: '#52FFF6',
-  accentPink: '#FF4FD8',
-  accentYellow: '#FFE86F',
-  textPrimary: '#FFF9FF',
+  bgSurface2: 'var(--color-bgSurface2)',
+  accentCyan: 'var(--color-accentCyan)',
+  accentPink: 'var(--color-accentPink)',
+  accentYellow: 'var(--color-accentYellow)',
+  textPrimary: 'var(--color-textPrimary)',
   glowSoft: 'rgba(82, 255, 246, 0.4)',
   glowMedium: 'rgba(82, 255, 246, 0.66)',
   glowHard: 'rgba(255, 79, 216, 0.8)',
@@ -121,7 +121,7 @@ export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
         whileFocus="focus"
         whileTap="tap"
         variants={variants}
-        onClick={(e: any) => {
+        onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
           if (onPress) onPress();
           if (onClick) onClick(e);
         }}

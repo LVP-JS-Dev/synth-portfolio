@@ -11,21 +11,25 @@ const jetBrainsFont = createFont({
   letterSpacing: { 1: 0, 2: 1, 3: 1.2 }
 })
 
+/* eslint-disable no-restricted-syntax */
+const colorTokens = {
+  bgBase: '#1A1630',
+  bgSurface: '#221C3E',
+  bgSurface2: '#2C2550',
+  accentCyan: '#52FFF6',
+  accentPink: '#FF4FD8',
+  accentYellow: '#FFE86F',
+  textPrimary: '#FFF9FF',
+  textSecondary: '#D7CCFF',
+  glowSoft: 'rgba(82, 255, 246, 0.4)',
+  glowMedium: 'rgba(82, 255, 246, 0.66)',
+  glowHard: 'rgba(255, 79, 216, 0.8)',
+  glowPink: 'rgba(255, 79, 216, 0.66)',
+}
+/* eslint-enable no-restricted-syntax */
+
 const tokens = createTokens({
-  color: {
-    bgBase: '#1A1630',
-    bgSurface: '#221C3E',
-    bgSurface2: '#2C2550',
-    accentCyan: '#52FFF6',
-    accentPink: '#FF4FD8',
-    accentYellow: '#FFE86F',
-    textPrimary: '#FFF9FF',
-    textSecondary: '#D7CCFF',
-    glowSoft: 'rgba(82, 255, 246, 0.4)',
-    glowMedium: 'rgba(82, 255, 246, 0.66)',
-    glowHard: 'rgba(255, 79, 216, 0.8)',
-    glowPink: 'rgba(255, 79, 216, 0.66)',
-  },
+  color: colorTokens,
   space: {
     2: 8, 3: 12, 4: 16, 5: 24, 6: 32, 8: 48, 10: 64,
     true: 16,
@@ -76,6 +80,8 @@ export const config = createTamagui({
 
 export type AppConfig = typeof config
 declare module 'tamagui' {
+  /* eslint-disable @typescript-eslint/no-empty-object-type */
   interface TamaguiCustomConfig extends AppConfig {}
+  /* eslint-enable @typescript-eslint/no-empty-object-type */
 }
 export default config

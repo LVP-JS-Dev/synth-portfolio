@@ -27,8 +27,8 @@ export function MetricCard({
   iconName = "activity",
   value,
   label,
-  iconColor = "#FF4FD8",
-  valueColor = "#FF4FD8",
+  iconColor = "var(--color-accentPink)",
+  valueColor = "var(--color-accentPink)",
 }: MetricCardProps) {
   const Icon = icon ?? ICONS[iconName];
 
@@ -40,15 +40,15 @@ export function MetricCard({
       }}
       style={{ width: "100%" }}
     >
-      <YStack
-        backgroundColor="$bgSurface2"
-        borderRadius={12}
-        borderWidth={1}
-        borderColor="#433C69"
-        gap={8}
-        padding={16}
-        style={{ boxShadow: "0 0 10px rgba(82, 255, 246, 0.3)" }}
-      >
+        <YStack
+          backgroundColor="$bgSurface2"
+          borderRadius={12}
+          borderWidth={1}
+          borderColor="$bgSurface"
+          gap={8}
+          padding={16}
+          style={{ boxShadow: "0 0 10px var(--color-glowSoft)" }}
+        >
         <XStack gap={8} alignItems="center">
           <Icon size={20} color={iconColor} />
           <Text

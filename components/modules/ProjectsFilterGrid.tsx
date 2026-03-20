@@ -47,22 +47,22 @@ export function ProjectsFilterGrid({ projects }: { projects: ProjectItem[] }) {
     <>
       <section style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
         {FILTERS.map((chip) => (
-          <ButtonPrimary
-            key={chip}
-            preset={chip === activeFilter ? "medium" : "soft"}
-            onPress={() => setActiveFilter(chip)}
-            aria-pressed={chip === activeFilter}
-          >
-            {chip}
-          </ButtonPrimary>
-        ))}
-      </section>
+            <ButtonPrimary
+              key={chip}
+              preset={chip === activeFilter ? "medium" : "soft"}
+              onPress={() => setActiveFilter(chip)}
+              aria-pressed={chip === activeFilter}
+            >
+              {chip}
+            </ButtonPrimary>
+          ))}
+        </section>
 
-      <section
-        style={{
-          display: "grid",
-          gap: 12,
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+        <section
+          style={{
+            display: "grid",
+            gap: 12,
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
         }}
       >
         {filteredProjects.map((project, index) => (
@@ -74,28 +74,40 @@ export function ProjectsFilterGrid({ projects }: { projects: ProjectItem[] }) {
               gradientRotation={130 + ((index % 3) * 10)}
               gradientColors={
                 index % 3 === 0
-                  ? ["#2C2550", "#4F46A7", "#36F9F6"]
+                  ? [
+                    "var(--color-bgSurface2)",
+                    "var(--color-accentCyan)",
+                    "var(--color-accentYellow)",
+                  ]
                   : index % 3 === 1
-                    ? ["#2C2550", "#5B2F9B", "#FF7EDB"]
-                    : ["#2C2550", "#365A9A", "#FEDE5D"]
+                    ? [
+                      "var(--color-bgSurface2)",
+                      "var(--color-accentPink)",
+                      "var(--color-accentCyan)",
+                    ]
+                    : [
+                      "var(--color-bgSurface2)",
+                      "var(--color-accentCyan)",
+                      "var(--color-accentYellow)",
+                    ]
               }
             />
           </Link>
         ))}
 
         {filteredProjects.length === 0 ? (
-          <div
-            style={{
-              gridColumn: "1 / -1",
-              padding: 16,
-              border: "1px solid #3C3562",
-              borderRadius: 10,
-              background: "#20183A",
-              color: "#D7CCFF",
-              fontFamily: "var(--font-geist-mono)",
-              fontSize: 13,
-            }}
-          >
+        <div
+          style={{
+            gridColumn: "1 / -1",
+            padding: 16,
+            border: "1px solid var(--color-bgSurface2)",
+            borderRadius: 10,
+            background: "var(--color-bgBase)",
+            color: "var(--color-textSecondary)",
+            fontFamily: "var(--font-geist-mono)",
+            fontSize: 13,
+          }}
+        >
             No projects for the selected filter yet.
           </div>
         ) : null}

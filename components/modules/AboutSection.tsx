@@ -45,7 +45,7 @@ export function AboutSection() {
           backgroundColor="$bgSurface2"
           borderRadius={12}
           borderWidth={1}
-          borderColor="#4A3E88"
+          borderColor="$accentCyan"
           padding={18}
           gap={10}
         >

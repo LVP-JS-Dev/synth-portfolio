@@ -41,11 +41,11 @@ export default async function ProjectsPage() {
           <h1
             style={{
               margin: 0,
-              color: "#FFF9FF",
+              color: "var(--color-textPrimary)",
               fontFamily: "var(--font-geist-mono)",
               fontSize: "clamp(30px, 6vw, 48px)",
               fontWeight: 700,
-              textShadow: "0 0 10px rgba(255,79,216,0.8)",
+              textShadow: "0 0 10px var(--color-glowHard)",
             }}
           >
             {page.title}
@@ -53,7 +53,7 @@ export default async function ProjectsPage() {
           <p
             style={{
               margin: 0,
-              color: "#D7CCFF",
+              color: "var(--color-textSecondary)",
               fontSize: "clamp(14px, 2.5vw, 18px)",
               lineHeight: 1.55,
             }}
@@ -79,7 +79,7 @@ export default async function ProjectsPage() {
             <span
               key={pageItem.value}
               style={{
-                color: pageItem.active ? "#52FFF6" : "#D7CCFF",
+                color: pageItem.active ? "var(--color-accentCyan)" : "var(--color-textSecondary)",
                 fontFamily: "var(--font-geist-mono)",
                 fontSize: 12,
                 fontWeight: pageItem.active ? 700 : 400,
