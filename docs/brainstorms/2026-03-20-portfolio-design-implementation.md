@@ -22,7 +22,7 @@ This approach aligns perfectly with the design's stated constraints (found in th
 - **Styling**: Tamagui will be used as the primary styling solution to encapsulate design tokens (colors, blur radius, strokes).
 - **Animation**: Motion (formerly Framer Motion) will be used for state transitions (hover springs, focus fades).
 - **Design System Translation**: The `Variables` block from the `.pen` file will be translated 1:1 into a `tamagui.config.ts` theme.
-- **Components**: Reusable components from the `.pen` file (Button Primary, Project Card, Metric Card, Timeline Item, Content Card, Form Field) will be built as Tamagui styled components.
+- **Components**: Reusable components from the `.pen` file (Button Primary, Project Card, Metric Card, Timeline Item, Content Card, Form Field) will be built as Tamagui-styled components.
 
 ## Open Questions
 - Is the content for the Legal pages and Project Case study static, or should it be hooked up to Keystatic/Markdoc right away?

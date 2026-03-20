@@ -115,6 +115,7 @@ export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   return (
     <StyledButton asChild>
       <MotionButton
+        type={rest.type ?? "button"}
         initial="initial"
         whileHover="hover"
         whileFocus="focus"

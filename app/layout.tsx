@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body style={{ backgroundColor: '#1A1630', color: '#FFF9FF', margin: 0, padding: 0 }}>
+      <body style={{ backgroundColor: 'var(--bg-base)', color: 'var(--text-primary)', margin: 0, padding: 0 }}>
         <NextTamaguiProvider>
           <TopNav />
           {children}

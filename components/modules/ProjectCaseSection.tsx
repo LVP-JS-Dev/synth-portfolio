@@ -52,8 +52,15 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
           TL;DR: {summary}
         </Text>
         <XStack gap={8} flexWrap="wrap">
-          <ButtonPrimary preset="medium">Live Demo</ButtonPrimary>
-          <ButtonPrimary preset="soft">GitHub</ButtonPrimary>
+          {links.map((link, idx) => (
+            <ButtonPrimary
+              key={link.url}
+              preset={idx === 0 ? "medium" : "soft"}
+              onPress={() => window.open(link.url, "_blank", "noopener,noreferrer")}
+            >
+              {link.label}
+            </ButtonPrimary>
+          ))}
           <ButtonPrimary preset="soft">Architecture</ButtonPrimary>
         </XStack>
       </YStack>
@@ -136,14 +143,22 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
         <Text color="$accentCyan" fontFamily="$heading" fontSize={13}>
           {stack.join(" · ")}
         </Text>
-        <Text color="$accentCyan" fontFamily="$body" fontSize={15}>
-          {stack.join(" · ")}
-        </Text>
-        {links.map((link) => (
-          <Text key={link.url} color="$accentCyan" fontFamily="$body" fontSize={15}>
-            <a href={link.url}>{link.label}</a>
-          </Text>
-        ))}
+        {links.map((link) => {
+          const isSafe =
+            link.url.startsWith("http://") ||
+            link.url.startsWith("https://") ||
+            link.url.startsWith("mailto:") ||
+            link.url.startsWith("tel:");
+          const safeUrl = isSafe ? link.url : "#";
+
+          return (
+            <Text key={link.url} color="$accentCyan" fontFamily="$body" fontSize={15}>
+              <a href={safeUrl} target="_blank" rel="noopener noreferrer">
+                {link.label}: {link.url}
+              </a>
+            </Text>
+          );
+        })}
       </YStack>
     </YStack>
   );

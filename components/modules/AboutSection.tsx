@@ -17,7 +17,7 @@ const FOCUS_AREAS = [
 
 export function AboutSection() {
   return (
-    <YStack gap={16}>
+    <YStack gap={16} id="about">
       <YStack gap={8}>
         <Text color="$accentCyan" fontFamily="$heading" fontSize={12} fontWeight="700" letterSpacing={1}>
           02. ABOUT / WHO I AM

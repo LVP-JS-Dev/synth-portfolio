@@ -13,7 +13,7 @@ export const NextTamaguiProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useRootTheme()
 
   useServerInsertedHTML(() => {
-    // @ts-ignore
+    // @ts-expect-error StyleSheet.getSheet() is not in RN types but exists in react-native-web
     const rnwStyle = StyleSheet.getSheet()
     return (
       <>
@@ -34,7 +34,7 @@ export const NextTamaguiProvider = ({ children }: { children: ReactNode }) => {
     <NextThemeProvider
       skipNextHead
       onChangeTheme={(next) => {
-        setTheme(next as any)
+        setTheme(next as 'light' | 'dark')
       }}
     >
       <TamaguiProvider config={tamaguiConfig} disableRootThemeClass defaultTheme={theme || 'dark'}>

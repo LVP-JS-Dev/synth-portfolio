@@ -40,21 +40,21 @@ export default async function Home() {
       title: "Realtime Collaboration Suite",
       description:
         "Problem → fragmented comments; Solution → CRDT + optimistic UI; Result → 2.1x faster collaboration.",
-      gradientColors: ["#2C2550", "#4F46A7", "#36F9F6"] as [string, string, string],
+      gradientColors: ["$bgSurface2", "#4F46A7", "$accentCyan"] as [string, string, string],
       gradientRotation: 120,
     },
     {
       title: "Ecommerce Edge Frontend",
       description:
         "Problem → slow storefront; Solution → ISR + streaming SSR; Result → conversion +18%.",
-      gradientColors: ["#2C2550", "#5B2F9B", "#FF7EDB"] as [string, string, string],
+      gradientColors: ["$bgSurface2", "#5B2F9B", "$accentPink"] as [string, string, string],
       gradientRotation: 135,
     },
     {
       title: "Design System Federation",
       description:
         "Problem → duplicated UI stacks; Solution → shared primitives + codemods; Result → release speed +34%.",
-      gradientColors: ["#2C2550", "#365A9A", "#FEDE5D"] as [string, string, string],
+      gradientColors: ["$bgSurface2", "#365A9A", "$accentYellow"] as [string, string, string],
       gradientRotation: 150,
     },
   ] as const;
@@ -90,7 +90,7 @@ export default async function Home() {
 
         <AboutSection />
 
-        <section style={{ display: "grid", gap: 16 }}>
+        <section id="experience" style={{ display: "grid", gap: 16 }}>
           <h2
             style={{
               margin: 0,
@@ -123,7 +123,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section style={{ display: "grid", gap: 16 }}>
+        <section id="quality" style={{ display: "grid", gap: 16 }}>
           <h2
             style={{
               margin: 0,
@@ -154,7 +154,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section style={{ display: "grid", gap: 16 }}>
+        <section id="projects" style={{ display: "grid", gap: 16 }}>
           <h2
             style={{
               margin: 0,

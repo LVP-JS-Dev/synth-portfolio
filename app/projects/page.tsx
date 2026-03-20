@@ -30,8 +30,8 @@ export default async function ProjectsPage() {
       >
         <section
           style={{
-            background: "#221C3E",
-            border: "1px solid #3C3562",
+            background: "var(--bg-surface)",
+            border: "1px solid var(--bg-surface-2)",
             borderRadius: 14,
             padding: "16px",
             display: "grid",

@@ -63,7 +63,7 @@ export function ContactSection() {
   };
 
   return (
-    <YStack gap={16}>
+    <YStack gap={16} id="contact">
       <YStack gap={8}>
         <Text color="$accentCyan" fontFamily="$heading" fontSize={12} fontWeight="700" letterSpacing={1}>
           07. CONTACT / CTA
@@ -126,7 +126,6 @@ export function ContactSection() {
           <form
             onSubmit={handleSubmit}
             style={{ display: "flex", flexDirection: "column", gap: 12 }}
-            noValidate
           >
             <Text color="$textPrimary" fontFamily="$heading" fontSize={20} fontWeight="700">
               Send a Message
