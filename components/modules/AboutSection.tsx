@@ -3,9 +3,9 @@
 import { Text, XStack, YStack } from "tamagui";
 
 const ABOUT_PARAGRAPHS = [
-  "I specialize in React, TypeScript, and Next.js architectures for products that cannot afford unstable UX or regressions.",
-  "Across B2B SaaS, ecommerce, and internal platforms, I align product decisions with technical constraints, then codify those decisions into reusable system patterns.",
-  "I mentor engineers, run architecture reviews, and keep teams shipping with confidence through strong DX and testing strategy.",
+  "I specialize in React, TypeScript, and Next.js architectures for high‑stakes products where UX stability and performance are non‑negotiable.",
+  "In fintech and B2B teams, I ship end‑to‑end flows (WebView, KYC, admin tools), build UI platforms, and turn requirements into reusable system patterns.",
+  "I mentor engineers, lead architecture reviews, and keep delivery predictable through testing strategy and performance budgets.",
 ] as const;
 
 const FOCUS_AREAS = [
@@ -26,7 +26,7 @@ export function AboutSection() {
           I build durable frontend platforms
         </Text>
         <Text color="$textSecondary" fontFamily="$body" fontSize={16} lineHeight={26} $sm={{ fontSize: 14 }}>
-          My focus is shipping measurable product outcomes while improving engineering leverage across teams.
+          5+ years building web products with measurable outcomes: faster builds, lower latency, and higher verification success.
         </Text>
       </YStack>
 

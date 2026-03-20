@@ -29,40 +29,40 @@ export default async function Home() {
   const metrics = [
     {
       iconName: "zap" as const,
-      value: "-49%",
-      label: "JS bundle after architecture split",
+      value: "95%+",
+      label: "Successful KYC/liveness verifications after UX tuning",
     },
     {
       iconName: "shield-check" as const,
-      value: "98/100",
-      label: "Accessibility score in production",
+      value: "-40%",
+      label: "Lower real-time video latency via WebSocket optimizations",
     },
     {
       iconName: "activity" as const,
-      value: "-41%",
-      label: "Mean time to resolve frontend incidents",
+      value: "95+",
+      label: "Mobile PageSpeed for AI audio cleanup platform",
     },
   ] as const;
 
   const projects = [
     {
-      title: "Realtime Collaboration Suite",
+      title: "KYC Liveness Verification Widget",
       description:
-        "Problem → fragmented comments; Solution → CRDT + optimistic UI; Result → 2.1x faster collaboration.",
+        "Cross‑browser iframe widget with getUserMedia and UX guidance; 95%+ verification success and 40% lower latency.",
       gradientColors: ["$bgSurface2", "#4F46A7", "$accentCyan"] as [string, string, string],
       gradientRotation: 120,
     },
     {
-      title: "Ecommerce Edge Frontend",
+      title: "AI Audio Cleanup Platform",
       description:
-        "Problem → slow storefront; Solution → ISR + streaming SSR; Result → conversion +18%.",
+        "Next.js marketing site with 95+ mobile PageSpeed and interactive before/after waveform player.",
       gradientColors: ["$bgSurface2", "#5B2F9B", "$accentPink"] as [string, string, string],
       gradientRotation: 135,
     },
     {
-      title: "Design System Federation",
+      title: "Mobile Credit Application Flow",
       description:
-        "Problem → duplicated UI stacks; Solution → shared primitives + codemods; Result → release speed +34%.",
+        "React/TypeScript WebView flow plus internal UI library (12+ components) and faster builds.",
       gradientColors: ["$bgSurface2", "#365A9A", "$accentYellow"] as [string, string, string],
       gradientRotation: 150,
     },
@@ -70,24 +70,38 @@ export default async function Home() {
 
   const timeline = [
     {
-      role: "Senior Frontend Engineer · FinTech Core Platform",
-      period: "2022 — Present",
+      role: "Senior Fullstack Developer · Void0",
+      period: "Dec 2024 — Present",
       achievement:
-        "Cut p95 page load from 3.8s to 1.9s, implemented observability and a11y gates in CI.",
+        "Built KYC/liveness verification widget (95%+ success) and reduced real‑time video latency by 40% via WebSocket optimizations.",
       highlight: true,
     },
     {
-      role: "Frontend Lead · Commerce Experience Team",
-      period: "2019 — 2022",
+      role: "Senior Frontend Developer · Selecty",
+      period: "Dec 2022 — Nov 2024",
       achievement:
-        "Introduced design system adoption across 9 product squads and reduced UI defects by 37%.",
+        "Delivered mobile credit application flow for WebView and built an internal UI library (12+ components).",
+      highlight: true,
+    },
+    {
+      role: "Lead Engineer · Sber",
+      period: "Sep 2021 — Oct 2022",
+      achievement:
+        "Led a 3‑engineer frontend team; shipped unified web/mobile UX on React/React Native and admin tools.",
       highlight: false,
     },
     {
-      role: "Frontend Engineer · SaaS Analytics",
-      period: "2017 — 2019",
+      role: "JavaScript Developer · EPAM",
+      period: "Dec 2020 — Aug 2021",
       achievement:
-        "Rebuilt dashboard rendering pipeline, improving interaction responsiveness by 55%.",
+        "Implemented B2B onboarding flows on React/Redux‑Saga and improved initial load by 40% with code splitting.",
+      highlight: false,
+    },
+    {
+      role: "Fullstack Developer · LATOKEN",
+      period: "Aug 2020 — Dec 2020",
+      achievement:
+        "Built CRM dashboards and a Node.js/Express BFF layer; introduced cross‑team code review practice.",
       highlight: false,
     },
   ] as const;
