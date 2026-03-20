@@ -8,25 +8,25 @@ interface LegalSectionsProps {
   body?: string;
 }
 
-export function LegalSections({ title, description, body }: LegalSectionsProps) {
-  const blocks = [
-    {
-      title: "Privacy Policy",
-      description:
-        "Describes what personal data is collected, lawful basis, retention period, third-party processors, and user rights under applicable law.",
-    },
-    {
-      title: "Personal Data Processing Consent",
-      description:
-        "Standalone consent text for submitting contact details, with explicit acceptance, processing purpose, and withdrawal instructions.",
-    },
-    {
-      title: "Cookie Policy",
-      description:
-        "Explains cookie categories, analytics usage, consent options, and controls for opting out.",
-    },
-  ] as const;
+const LEGAL_BLOCKS = [
+  {
+    title: "Privacy Policy",
+    description:
+      "Describes what personal data is collected, lawful basis, retention period, third-party processors, and user rights under applicable law.",
+  },
+  {
+    title: "Personal Data Processing Consent",
+    description:
+      "Standalone consent text for submitting contact details, with explicit acceptance, processing purpose, and withdrawal instructions.",
+  },
+  {
+    title: "Cookie Policy",
+    description:
+      "Explains cookie categories, analytics usage, consent options, and controls for opting out.",
+  },
+] as const;
 
+export function LegalSections({ title, description, body }: LegalSectionsProps) {
   return (
     <YStack gap={12}>
       <YStack
@@ -45,7 +45,7 @@ export function LegalSections({ title, description, body }: LegalSectionsProps) 
         </Text>
       </YStack>
 
-      {blocks.map((block) => (
+      {LEGAL_BLOCKS.map((block) => (
         <YStack
           key={block.title}
           backgroundColor="$bgSurface2"

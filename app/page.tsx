@@ -1,3 +1,4 @@
+import React from "react";
 import { buildMetadata } from "@/lib/metadata";
 import { getHomeContent } from "@/lib/content";
 import { HeroSection } from "@/components/modules/HeroSection";
@@ -15,6 +16,14 @@ export async function generateMetadata() {
     description: home.description,
   });
 }
+
+const SECTION_TITLE_STYLE: React.CSSProperties = {
+  margin: 0,
+  color: "#FFF9FF",
+  fontFamily: "var(--font-geist-mono)",
+  fontSize: 28,
+  fontWeight: 700,
+};
 
 export default async function Home() {
   const metrics = [
@@ -91,15 +100,7 @@ export default async function Home() {
         <AboutSection />
 
         <section id="experience" style={{ display: "grid", gap: 16 }}>
-          <h2
-            style={{
-              margin: 0,
-              color: "#FFF9FF",
-              fontFamily: "var(--font-geist-mono)",
-              fontSize: 28,
-              fontWeight: 700,
-            }}
-          >
+          <h2 style={SECTION_TITLE_STYLE}>
             Experience
           </h2>
 
@@ -124,15 +125,7 @@ export default async function Home() {
         </section>
 
         <section id="quality" style={{ display: "grid", gap: 16 }}>
-          <h2
-            style={{
-              margin: 0,
-              color: "#FFF9FF",
-              fontFamily: "var(--font-geist-mono)",
-              fontSize: 28,
-              fontWeight: 700,
-            }}
-          >
+          <h2 style={SECTION_TITLE_STYLE}>
             Engineering Quality
           </h2>
 
@@ -155,15 +148,7 @@ export default async function Home() {
         </section>
 
         <section id="projects" style={{ display: "grid", gap: 16 }}>
-          <h2
-            style={{
-              margin: 0,
-              color: "#FFF9FF",
-              fontFamily: "var(--font-geist-mono)",
-              fontSize: 28,
-              fontWeight: 700,
-            }}
-          >
+          <h2 style={SECTION_TITLE_STYLE}>
             Selected Projects
           </h2>
 

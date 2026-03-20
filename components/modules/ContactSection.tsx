@@ -21,21 +21,21 @@ function ContactField({
   const Icon = icon === "user" ? User : Mail;
 
   return (
-      <YStack gap={6}>
-        <Text color="$textSecondary" fontFamily="$heading" fontSize={12} fontWeight="500">
-          {label}
-        </Text>
-        <XStack
-          height={48}
-          backgroundColor="$bgBase"
-          borderRadius={10}
-          borderWidth={1}
-          borderColor="$accentCyan"
-          alignItems="center"
-          gap={8}
-          paddingHorizontal={12}
-          style={{ boxShadow: "0 0 12px var(--color-glowSoft)" }}
-        >
+    <YStack gap={6}>
+      <Text color="$textSecondary" fontFamily="$heading" fontSize={12} fontWeight="500">
+        {label}
+      </Text>
+      <XStack
+        height={48}
+        backgroundColor="$bgBase"
+        borderRadius={10}
+        borderWidth={1}
+        borderColor="$accentCyan"
+        alignItems="center"
+        gap={8}
+        paddingHorizontal={12}
+        style={{ boxShadow: "0 0 12px var(--color-glowSoft)" }}
+      >
         <Icon size={14} color="var(--color-textSecondary)" />
         <Input
           name={name}
@@ -54,6 +54,29 @@ function ContactField({
     </YStack>
   );
 }
+
+const CONTACT_LINKS = [
+  {
+    label: "Email",
+    href: "mailto:hello@leonid.dev",
+    display: "hello@leonid.dev",
+  },
+  {
+    label: "Telegram",
+    href: "https://t.me/leonid_frontend",
+    display: "@leonid_frontend",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/leonidpetrov",
+    display: "github.com/leonidpetrov",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/leonidpetrov",
+    display: "linkedin.com/in/leonidpetrov",
+  },
+] as const;
 
 export function ContactSection() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -91,20 +114,22 @@ export function ContactSection() {
             Open for senior frontend roles, architecture consulting, and technical audits.
           </Text>
 
-          {[
-            "Email: hello@leonid.dev",
-            "Telegram: @leonid_frontend",
-            "GitHub: github.com/leonidpetrov",
-            "LinkedIn: linkedin.com/in/leonidpetrov",
-          ].map((line) => (
+          {CONTACT_LINKS.map((link) => (
             <Text
-              key={line}
+              key={link.label}
               color="$accentCyan"
               fontFamily="$heading"
               fontSize={13}
               style={{ textShadow: "0 0 8px rgba(82, 255, 246, 0.53)" }}
             >
-              {line}
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                {link.label}: {link.display}
+              </a>
             </Text>
           ))}
 
