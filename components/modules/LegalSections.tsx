@@ -28,14 +28,14 @@ export function LegalSections({ title, description, body }: LegalSectionsProps) 
   ] as const;
 
   return (
-    <YStack gap={14}>
+    <YStack gap={12}>
       <YStack
         backgroundColor="$bgSurface"
         borderRadius={14}
         borderWidth={1}
         borderColor="#3C3562"
-        padding={24}
-        gap={10}
+        padding={16}
+        gap={8}
       >
         <Text color="$textPrimary" fontFamily="$heading" fontSize={42} fontWeight="700" $sm={{ fontSize: 28 }}>
           {title}
@@ -52,7 +52,7 @@ export function LegalSections({ title, description, body }: LegalSectionsProps) 
           borderRadius={12}
           borderWidth={1}
           borderColor="#4A3E88"
-          padding={20}
+          padding={16}
           gap={8}
         >
           <Text color="$textPrimary" fontFamily="$heading" fontSize={20} fontWeight="700">

@@ -21,39 +21,40 @@ function BlockTitle({ children }: { children: string }) {
 
 export function ProjectCaseSection({ title, summary, year, stack }: ProjectCaseSectionProps) {
   return (
-    <YStack gap={16}>
+    <YStack gap={14}>
       <YStack
         backgroundColor="$bgSurface"
         borderRadius={14}
         borderWidth={1}
         borderColor="#3C3562"
-        padding={28}
-        gap={14}
+        padding={16}
+        gap={10}
+        $sm={{ padding: 14 }}
       >
         <Text
           color="$textPrimary"
           fontFamily="$heading"
           fontSize={50}
           fontWeight="700"
-          $sm={{ fontSize: 32 }}
+          $sm={{ fontSize: 30, lineHeight: 34 }}
           style={{ textShadow: "0 0 10px rgba(255, 79, 216, 0.8)" }}
         >
           {title}
         </Text>
-        <Text color="$accentYellow" fontFamily="$heading" fontSize={13}>
+        <Text color="$accentYellow" fontFamily="$heading" fontSize={13} $sm={{ fontSize: 12 }}>
           Role: Senior Frontend Engineer · Duration: 8 months · Team: 6 engineers · Year: {year}
         </Text>
-        <Text color="$textSecondary" fontFamily="$body" fontSize={18} lineHeight={28} $sm={{ fontSize: 14 }}>
+        <Text color="$textSecondary" fontFamily="$body" fontSize={18} lineHeight={28} $sm={{ fontSize: 14, lineHeight: 22 }}>
           TL;DR: {summary}
         </Text>
-        <XStack gap={10} flexWrap="wrap">
+        <XStack gap={8} flexWrap="wrap">
           <ButtonPrimary preset="medium">Live Demo</ButtonPrimary>
           <ButtonPrimary preset="soft">GitHub</ButtonPrimary>
           <ButtonPrimary preset="soft">Architecture</ButtonPrimary>
         </XStack>
       </YStack>
 
-      <XStack gap={16} flexWrap="wrap" $sm={{ flexDirection: "column" }}>
+      <XStack gap={12} flexWrap="wrap" $sm={{ flexDirection: "column" }}>
         <YStack flex={1} minWidth={220}>
           <MetricCard iconName="activity" value="-38%" label="Editor interaction latency" />
         </YStack>
@@ -65,17 +66,17 @@ export function ProjectCaseSection({ title, summary, year, stack }: ProjectCaseS
         </YStack>
       </XStack>
 
-      <XStack gap={16} flexWrap="wrap" $sm={{ flexDirection: "column" }}>
+      <XStack gap={12} flexWrap="wrap" $sm={{ flexDirection: "column" }}>
         <YStack flex={1} minWidth={320} gap={14}>
           <BlockTitle>Overview</BlockTitle>
-          <Text color="$textSecondary" fontFamily="$body" fontSize={15} lineHeight={24}>
+          <Text color="$textSecondary" fontFamily="$body" fontSize={15} lineHeight={24} $sm={{ fontSize: 14, lineHeight: 22 }}>
             The product enabled distributed teams to edit and review complex documents in real time.
             Existing architecture could not guarantee consistency under unstable network conditions.
           </Text>
         </YStack>
         <YStack flex={1} minWidth={320} gap={14}>
           <BlockTitle>Context & Problem</BlockTitle>
-          <Text color="$textSecondary" fontFamily="$body" fontSize={15} lineHeight={24}>
+          <Text color="$textSecondary" fontFamily="$body" fontSize={15} lineHeight={24} $sm={{ fontSize: 14, lineHeight: 22 }}>
             Business needed enterprise-scale collaboration with strict auditability. Legacy OT approach
             produced merge conflicts and support load spikes during peak usage.
           </Text>

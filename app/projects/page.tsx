@@ -1,8 +1,6 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getAllProjects, getProjectsPageContent } from "@/lib/content";
-import Link from "next/link";
-import { ProjectCard } from "@/components/modules/ProjectCard";
-import { ButtonPrimary } from "@/components/primitives/ButtonPrimary";
+import { ProjectsFilterGrid } from "@/components/modules/ProjectsFilterGrid";
 
 export async function generateMetadata() {
   const page = await getProjectsPageContent("en");
@@ -16,20 +14,28 @@ export async function generateMetadata() {
 export default async function ProjectsPage() {
   const page = await getProjectsPageContent("en");
   const projects = await getAllProjects();
-
-  const chips = ["All", "React", "Next.js", "Performance", "A11y", "Design Systems"] as const;
+  const cardsCount = Math.max(projects.length, 1);
+  const pagesCount = Math.max(1, Math.ceil(cardsCount / 6));
 
   return (
     <main>
-      <div style={{ padding: "24px 20px", display: "grid", gap: 24 }}>
+      <div
+        style={{
+          padding: "16px 20px 24px",
+          display: "grid",
+          gap: 20,
+          maxWidth: 1440,
+          margin: "0 auto",
+        }}
+      >
         <section
           style={{
             background: "#221C3E",
             border: "1px solid #3C3562",
             borderRadius: 14,
-            padding: 24,
+            padding: "16px",
             display: "grid",
-            gap: 10,
+            gap: 8,
           }}
         >
           <h1
@@ -37,7 +43,7 @@ export default async function ProjectsPage() {
               margin: 0,
               color: "#FFF9FF",
               fontFamily: "var(--font-geist-mono)",
-              fontSize: 48,
+              fontSize: "clamp(30px, 6vw, 48px)",
               fontWeight: 700,
               textShadow: "0 0 10px rgba(255,79,216,0.8)",
             }}
@@ -48,7 +54,7 @@ export default async function ProjectsPage() {
             style={{
               margin: 0,
               color: "#D7CCFF",
-              fontSize: 18,
+              fontSize: "clamp(14px, 2.5vw, 18px)",
               lineHeight: 1.55,
             }}
           >
@@ -56,50 +62,20 @@ export default async function ProjectsPage() {
           </p>
         </section>
 
-        <section style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-          {chips.map((chip, index) => (
-            <ButtonPrimary key={chip} preset={index === 0 ? "medium" : "soft"}>
-              {chip}
-            </ButtonPrimary>
-          ))}
-        </section>
+        <ProjectsFilterGrid
+          projects={projects.map((project) => ({
+            slug: project.slug,
+            title: project.titleEn,
+            description: project.summaryEn,
+            tags: project.stack,
+          }))}
+        />
 
-        <section
-          style={{
-            display: "grid",
-            gap: 16,
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-          }}
-        >
-          {projects.map((project, index) => (
-            <Link
-              key={project.slug}
-              href={`/projects/${project.slug}`}
-              style={{ textDecoration: "none" }}
-            >
-              <ProjectCard
-                title={project.titleEn}
-                description={project.summaryEn}
-                ctaLabel="Case Study →"
-                gradientRotation={130 + ((index % 3) * 10)}
-                gradientColors={
-                  index % 3 === 0
-                    ? ["#2C2550", "#4F46A7", "#36F9F6"]
-                    : index % 3 === 1
-                      ? ["#2C2550", "#5B2F9B", "#FF7EDB"]
-                      : ["#2C2550", "#365A9A", "#FEDE5D"]
-                }
-              />
-            </Link>
-          ))}
-        </section>
-
-        <section style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          {[
-            { value: "01", active: true },
-            { value: "02", active: false },
-            { value: "03", active: false },
-          ].map((pageItem) => (
+        <section style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+          {Array.from({ length: pagesCount }, (_, index) => ({
+            value: String(index + 1).padStart(2, "0"),
+            active: index === 0,
+          })).map((pageItem) => (
             <span
               key={pageItem.value}
               style={{
