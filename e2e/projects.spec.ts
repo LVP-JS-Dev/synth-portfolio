@@ -37,6 +37,6 @@ test.describe("Projects Page", () => {
     await page.getByRole("link", { name: firstProject.titleEn }).click();
 
     // Wait for navigation and verify URL contains the expected slug
-    await expect(page).toHaveURL(`**/projects/${firstProject.slug}`);
+    await expect(page).toHaveURL(new RegExp(`/projects/${firstProject.slug}$`));
   });
 });
