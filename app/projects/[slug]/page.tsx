@@ -1,6 +1,7 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getProjectSlugs, getProjectBySlug } from "@/lib/content";
 import { notFound } from "next/navigation";
+import { ProjectCaseSection } from "@/components/modules/ProjectCaseSection";
 
 type Params = {
   slug: string;
@@ -35,10 +36,14 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <main>
-      <h1>{project.titleEn}</h1>
-      <p>{project.summaryEn}</p>
-      <p>Year: {project.year}</p>
-      <p>Stack: {project.stack.join(", ")}</p>
+      <div style={{ padding: "24px 20px", display: "grid", gap: 24 }}>
+        <ProjectCaseSection
+          title={project.titleEn}
+          summary={project.summaryEn}
+          year={project.year}
+          stack={project.stack}
+        />
+      </div>
     </main>
   );
 }
