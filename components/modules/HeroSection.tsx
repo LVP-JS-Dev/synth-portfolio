@@ -26,7 +26,7 @@ export function HeroSection() {
           fontWeight="700"
           letterSpacing={1}
         >
-          01. BUILDING FRONTEND SYSTEMS THAT SCALE
+          01. FRONTEND ARCHITECTURE & DELIVERY
         </Text>
 
         <Text
@@ -39,7 +39,7 @@ export function HeroSection() {
           $sm={{ fontSize: 34, lineHeight: 40 }}
           fontWeight="700"
         >
-          Senior Frontend Engineer{'\n'}for high-stakes product teams
+          Senior Frontend Engineer{'\n'}for fintech & B2B product teams
         </Text>
 
         <Text
@@ -49,7 +49,7 @@ export function HeroSection() {
           $sm={{ fontSize: 15 }}
           lineHeight={28}
         >
-          I design resilient React and Next.js architectures, tune performance, enforce accessibility, and raise team DX through design systems, testing, and delivery discipline.
+          I build React and Next.js platforms that scale: architecture, performance, accessibility, and design systems backed by measurable outcomes.
         </Text>
 
         <XStack flexWrap="wrap" gap={10} marginTop={10}>
@@ -75,13 +75,13 @@ export function HeroSection() {
         </Text>
         <YStack gap={8}>
           <Text color="$textSecondary" fontFamily="$body" fontSize={14} lineHeight={21}>
-            Architecture & DX — shared UI platform and guardrails
+            Product architecture — shared UI platform, DX guardrails
           </Text>
           <Text color="$textSecondary" fontFamily="$body" fontSize={14} lineHeight={21}>
-            Performance & A11y — measurable Core Web Vitals and inclusive UX
+            Performance & A11y — Core Web Vitals and inclusive UX
           </Text>
           <Text color="$textSecondary" fontFamily="$body" fontSize={14} lineHeight={21}>
-            Mentoring — review culture, onboarding and engineering standards
+            Verification UX — KYC/liveness flows with high success rates
           </Text>
         </YStack>
       </YStack>

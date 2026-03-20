@@ -58,23 +58,18 @@ function ContactField({
 const CONTACT_LINKS = [
   {
     label: "Email",
-    href: "mailto:hello@leonid.dev",
-    display: "hello@leonid.dev",
+    href: "mailto:lvpjsdev@gmail.com",
+    display: "lvpjsdev@gmail.com",
   },
   {
     label: "Telegram",
-    href: "https://t.me/leonid_frontend",
-    display: "@leonid_frontend",
+    href: "https://t.me/lvpjsdev",
+    display: "@lvpjsdev",
   },
   {
     label: "GitHub",
     href: "https://github.com/leonidpetrov",
     display: "github.com/leonidpetrov",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://linkedin.com/in/leonidpetrov",
-    display: "linkedin.com/in/leonidpetrov",
   },
 ] as const;
 
@@ -95,7 +90,7 @@ export function ContactSection() {
           Let&apos;s work together
         </Text>
         <Text color="$textSecondary" fontFamily="$body" fontSize={16} lineHeight={26} $sm={{ fontSize: 14 }}>
-          Tell me what you are building and where frontend quality can unlock business impact.
+          Tell me about your product and where frontend quality can unlock business impact.
         </Text>
       </YStack>
 
@@ -111,7 +106,7 @@ export function ContactSection() {
             gap={12}
           >
           <Text color="$textSecondary" fontFamily="$body" fontSize={18} lineHeight={28}>
-            Open for senior frontend roles, architecture consulting, and technical audits.
+            Open for senior frontend roles, platform architecture, and performance audits.
           </Text>
 
           {CONTACT_LINKS.map((link) => (
