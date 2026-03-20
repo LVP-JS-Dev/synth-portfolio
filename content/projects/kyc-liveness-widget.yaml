@@ -1,0 +1,13 @@
+slug: kyc-liveness-widget
+titleEn: KYC Liveness Verification Widget
+titleRu: Виджет KYC/Liveness‑верификации
+summaryEn: Built a cross‑browser iframe verification widget (Safari, Firefox, Chrome, Edge) with getUserMedia; reduced video latency by 40% and pushed successful verifications above 95% through UX guidance and lighting checks.
+summaryRu: Реализовал кроссбраузерный iframe‑виджет верификации (Safari, Firefox, Chrome, Edge) на getUserMedia; снизил задержку видео на 40% и довёл успешные проверки выше 95% за счёт UX‑подсказок и детектора освещения.
+year: 2025
+stack:
+  - React
+  - TypeScript
+  - WebSocket
+  - MediaStream API
+  - PostMessage API
+featured: true
