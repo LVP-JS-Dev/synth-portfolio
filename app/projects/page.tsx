@@ -1,6 +1,6 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getAllProjects, getProjectsPageContent } from "@/lib/content";
-import Link from "next/link";
+import { ProjectsFilterGrid } from "@/components/modules/ProjectsFilterGrid";
 
 export async function generateMetadata() {
   const page = await getProjectsPageContent("en");
@@ -14,18 +14,82 @@ export async function generateMetadata() {
 export default async function ProjectsPage() {
   const page = await getProjectsPageContent("en");
   const projects = await getAllProjects();
+  const cardsCount = Math.max(projects.length, 1);
+  const pagesCount = Math.max(1, Math.ceil(cardsCount / 6));
 
   return (
     <main>
-      <h1>{page.title}</h1>
-      <p>{page.description}</p>
-      <ul>
-        {projects.map((project) => (
-          <li key={project.slug}>
-            <Link href={`/projects/${project.slug}`}>{project.titleEn}</Link>
-          </li>
-        ))}
-      </ul>
+      <div
+        style={{
+          padding: "16px 20px 24px",
+          display: "grid",
+          gap: 20,
+          maxWidth: 1440,
+          margin: "0 auto",
+        }}
+      >
+        <section
+          style={{
+            background: "var(--bg-surface)",
+            border: "1px solid var(--bg-surface-2)",
+            borderRadius: 14,
+            padding: "16px",
+            display: "grid",
+            gap: 8,
+          }}
+        >
+          <h1
+            style={{
+              margin: 0,
+              color: "var(--color-textPrimary)",
+              fontFamily: "var(--font-geist-mono)",
+              fontSize: "clamp(30px, 6vw, 48px)",
+              fontWeight: 700,
+              textShadow: "0 0 10px var(--color-glowHard)",
+            }}
+          >
+            {page.title}
+          </h1>
+          <p
+            style={{
+              margin: 0,
+              color: "var(--color-textSecondary)",
+              fontSize: "clamp(14px, 2.5vw, 18px)",
+              lineHeight: 1.55,
+            }}
+          >
+            {page.description}
+          </p>
+        </section>
+
+        <ProjectsFilterGrid
+          projects={projects.map((project) => ({
+            slug: project.slug,
+            title: project.titleEn,
+            description: project.summaryEn,
+            tags: project.stack,
+          }))}
+        />
+
+        <section style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+          {Array.from({ length: pagesCount }, (_, index) => ({
+            value: String(index + 1).padStart(2, "0"),
+            active: index === 0,
+          })).map((pageItem) => (
+            <span
+              key={pageItem.value}
+              style={{
+                color: pageItem.active ? "var(--color-accentCyan)" : "var(--color-textSecondary)",
+                fontFamily: "var(--font-geist-mono)",
+                fontSize: 12,
+                fontWeight: pageItem.active ? 700 : 400,
+              }}
+            >
+              {pageItem.value}
+            </span>
+          ))}
+        </section>
+      </div>
     </main>
   );
 }

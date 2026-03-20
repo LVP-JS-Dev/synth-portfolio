@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+import { withTamagui } from '@tamagui/next-plugin';
+
 const SECURITY_HEADERS = [
   { key: "X-Frame-Options", value: "DENY" },
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -53,4 +55,11 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+const tamaguiPlugin = withTamagui({
+  config: './tamagui.config.ts',
+  components: ['tamagui'],
+  appDir: true,
+  disableExtraction: process.env.NODE_ENV === 'development',
+});
+
+export default tamaguiPlugin(nextConfig);
