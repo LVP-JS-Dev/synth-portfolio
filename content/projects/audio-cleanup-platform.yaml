@@ -1,0 +1,12 @@
+slug: audio-cleanup-platform
+titleEn: AI Audio Cleanup Platform
+titleRu: Платформа очистки аудио на базе AI
+summaryEn: Delivered a responsive Next.js marketing site with 95+ mobile PageSpeed and a waveform A/B player to compare before/after audio; set up CI/CD for automated production deploys.
+summaryRu: Сделал адаптивный сайт на Next.js с PageSpeed 95+ на мобильных и интерактивным A/B‑плеером с waveform; настроил CI/CD для автоматических деплоев в продакшн.
+year: 2025
+stack:
+  - Next.js
+  - TypeScript
+  - Tailwind CSS
+  - CI/CD
+featured: true

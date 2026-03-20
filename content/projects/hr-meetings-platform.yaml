@@ -1,0 +1,16 @@
+slug: hr-meetings-platform
+titleEn: HR Meetings Analytics Platform
+titleRu: HR‑платформа для аналитики встреч
+summaryEn: Led a small frontend team to deliver a unified React/React Native UX for web and mobile; integrated the service into the mobile app and shipped an admin panel on Node.js/Express/Vue with 80% test coverage.
+summaryRu: Руководил небольшой frontend‑командой и создал единый UX для web и mobile на React/React Native; интегрировал сервис в мобильное приложение и сделал админ‑панель на Node.js/Express/Vue с покрытием тестами ~80%.
+year: 2022
+stack:
+  - React
+  - React Native
+  - TypeScript
+  - Redux
+  - Jest
+  - Node.js
+  - Express
+  - Vue
+featured: false
