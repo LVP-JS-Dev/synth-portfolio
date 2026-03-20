@@ -35,9 +35,9 @@ export function HeroSection() {
           textShadowRadius={14}
           fontFamily="$heading"
           fontSize={58}
-          $sm={{ fontSize: 34 }}
+          lineHeight={64}
+          $sm={{ fontSize: 34, lineHeight: 40 }}
           fontWeight="700"
-          lineHeight={1.1}
         >
           Senior Frontend Engineer{'\n'}for high-stakes product teams
         </Text>
@@ -47,7 +47,7 @@ export function HeroSection() {
           fontFamily="$body"
           fontSize={18}
           $sm={{ fontSize: 15 }}
-          lineHeight={1.55}
+          lineHeight={28}
         >
           I design resilient React and Next.js architectures, tune performance, enforce accessibility, and raise team DX through design systems, testing, and delivery discipline.
         </Text>
@@ -74,13 +74,13 @@ export function HeroSection() {
           Current Focus
         </Text>
         <YStack gap={8}>
-          <Text color="$textSecondary" fontFamily="$body" fontSize={14} lineHeight={1.5}>
+          <Text color="$textSecondary" fontFamily="$body" fontSize={14} lineHeight={21}>
             Architecture & DX — shared UI platform and guardrails
           </Text>
-          <Text color="$textSecondary" fontFamily="$body" fontSize={14} lineHeight={1.5}>
+          <Text color="$textSecondary" fontFamily="$body" fontSize={14} lineHeight={21}>
             Performance & A11y — measurable Core Web Vitals and inclusive UX
           </Text>
-          <Text color="$textSecondary" fontFamily="$body" fontSize={14} lineHeight={1.5}>
+          <Text color="$textSecondary" fontFamily="$body" fontSize={14} lineHeight={21}>
             Mentoring — review culture, onboarding and engineering standards
           </Text>
         </YStack>
