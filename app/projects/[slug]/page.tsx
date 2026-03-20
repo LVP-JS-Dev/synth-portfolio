@@ -42,6 +42,26 @@ export default async function ProjectPage({ params }: Props) {
           summary={project.summaryEn}
           year={project.year}
           stack={project.stack}
+          metrics={[
+            { iconName: "activity", value: "-38%", label: "Editor interaction latency" },
+            { iconName: "shield-check", value: "-63%", label: "Conflict support tickets" },
+            { iconName: "zap", value: "+21%", label: "Weekly active sessions" },
+          ]}
+          links={[
+            { label: "Live Demo", url: "#" },
+            { label: "GitHub", url: "#" },
+          ]}
+          highlights={[
+            "Added operation batching and optimistic mutation rollback.",
+            "Isolated rendering hotspots with memoized state selectors.",
+            "Migrated editor shell to streaming SSR for faster first paint.",
+            "Established release checks: Vitest, Playwright, Lighthouse CI.",
+          ]}
+          results={[
+            "Collaboration sessions grew by 21% after launch.",
+            "Incident resolution time decreased by 41% with observability integration.",
+            "Team learned to codify conflict-handling as reusable design patterns.",
+          ]}
         />
       </div>
     </main>

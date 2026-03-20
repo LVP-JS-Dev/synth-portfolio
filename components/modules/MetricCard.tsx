@@ -5,7 +5,7 @@ import { Activity, ShieldCheck, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { Text, XStack, YStack } from "tamagui";
 
-type MetricIconName = "activity" | "zap" | "shield-check";
+export type MetricIconName = "activity" | "zap" | "shield-check";
 
 export interface MetricCardProps {
   icon?: LucideIcon;

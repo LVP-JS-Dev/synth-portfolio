@@ -1,7 +1,7 @@
 "use client";
 
 import { ButtonPrimary } from "@/components/primitives/ButtonPrimary";
-import { MetricCard } from "@/components/modules/MetricCard";
+import { MetricCard, MetricIconName } from "@/components/modules/MetricCard";
 import { Text, XStack, YStack } from "tamagui";
 
 interface ProjectCaseSectionProps {
@@ -9,6 +9,10 @@ interface ProjectCaseSectionProps {
   summary: string;
   year: number;
   stack: string[];
+  metrics: Array<{ label: string; value: string; iconName: MetricIconName }>;
+  links: Array<{ label: string; url: string }>;
+  highlights: string[];
+  results: string[];
 }
 
 function BlockTitle({ children }: { children: string }) {
@@ -19,7 +23,7 @@ function BlockTitle({ children }: { children: string }) {
   );
 }
 
-export function ProjectCaseSection({ title, summary, year, stack }: ProjectCaseSectionProps) {
+export function ProjectCaseSection({ title, summary, year, stack, metrics, links, highlights, results }: ProjectCaseSectionProps) {
   return (
     <YStack gap={14}>
       <YStack
@@ -55,15 +59,11 @@ export function ProjectCaseSection({ title, summary, year, stack }: ProjectCaseS
       </YStack>
 
       <XStack gap={12} flexWrap="wrap" $sm={{ flexDirection: "column" }}>
-        <YStack flex={1} minWidth={220}>
-          <MetricCard iconName="activity" value="-38%" label="Editor interaction latency" />
-        </YStack>
-        <YStack flex={1} minWidth={220}>
-          <MetricCard iconName="shield-check" value="-63%" label="Conflict-related support incidents" />
-        </YStack>
-        <YStack flex={1} minWidth={220}>
-          <MetricCard iconName="zap" value="+21%" label="Weekly collaboration sessions" />
-        </YStack>
+        {metrics.map((metric) => (
+          <YStack key={metric.label} flex={1} minWidth={220}>
+            <MetricCard iconName={metric.iconName} value={metric.value} label={metric.label} />
+          </YStack>
+        ))}
       </XStack>
 
       <XStack gap={12} flexWrap="wrap" $sm={{ flexDirection: "column" }}>
@@ -115,12 +115,7 @@ export function ProjectCaseSection({ title, summary, year, stack }: ProjectCaseS
 
       <YStack gap={14}>
         <BlockTitle>Implementation Highlights</BlockTitle>
-        {[
-          "1) Added operation batching and optimistic mutation rollback.",
-          "2) Isolated rendering hotspots with memoized state selectors.",
-          "3) Migrated editor shell to streaming SSR for faster first paint.",
-          "4) Established release checks: Vitest, Playwright, Lighthouse CI.",
-        ].map((line) => (
+        {highlights.map((line) => (
           <Text key={line} color="$textSecondary" fontFamily="$body" fontSize={15}>
             {line}
           </Text>
@@ -129,11 +124,7 @@ export function ProjectCaseSection({ title, summary, year, stack }: ProjectCaseS
 
       <YStack gap={14}>
         <BlockTitle>Results & Lessons</BlockTitle>
-        {[
-          "- Collaboration sessions grew by 21% after launch.",
-          "- Incident resolution time decreased by 41% with observability integration.",
-          "- Team learned to codify conflict-handling as reusable design patterns.",
-        ].map((line) => (
+        {results.map((line) => (
           <Text key={line} color="$textSecondary" fontFamily="$body" fontSize={15}>
             {line}
           </Text>
@@ -146,11 +137,13 @@ export function ProjectCaseSection({ title, summary, year, stack }: ProjectCaseS
           {stack.join(" · ")}
         </Text>
         <Text color="$accentCyan" fontFamily="$body" fontSize={15}>
-          Case Study Repo: github.com/leonidpetrov/realtime-suite
+          {stack.join(" · ")}
         </Text>
-        <Text color="$accentCyan" fontFamily="$body" fontSize={15}>
-          Technical Notes: docs.realtime-suite.dev/architecture
-        </Text>
+        {links.map((link) => (
+          <Text key={link.url} color="$accentCyan" fontFamily="$body" fontSize={15}>
+            <a href={link.url}>{link.label}</a>
+          </Text>
+        ))}
       </YStack>
     </YStack>
   );

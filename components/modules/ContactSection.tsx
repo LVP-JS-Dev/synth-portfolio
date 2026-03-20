@@ -2,15 +2,20 @@
 
 import { ButtonPrimary } from "@/components/primitives/ButtonPrimary";
 import { Mail, User } from "lucide-react";
-import { Text, XStack, YStack } from "tamagui";
+import { FormEvent } from "react";
+import { Input, Text, XStack, YStack } from "tamagui";
 
-function InputPlaceholder({
+function ContactField({
   label,
+  name,
   placeholder,
+  type = "text",
   icon,
 }: {
   label: string;
+  name: string;
   placeholder: string;
+  type?: string;
   icon: "user" | "mail";
 }) {
   const Icon = icon === "user" ? User : Mail;
@@ -32,15 +37,31 @@ function InputPlaceholder({
         style={{ boxShadow: "0 0 12px rgba(82, 255, 246, 0.35)" }}
       >
         <Icon size={14} color="#D7CCFF" />
-        <Text color="$textSecondary" fontFamily="$body" fontSize={14}>
-          {placeholder}
-        </Text>
+        <Input
+          name={name}
+          type={type}
+          required
+          placeholder={placeholder}
+          color="$textSecondary"
+          fontFamily="$body"
+          fontSize={14}
+          borderWidth={0}
+          backgroundColor="transparent"
+          flexGrow={1}
+          focusStyle={{ borderColor: "$accentCyan" }}
+        />
       </XStack>
     </YStack>
   );
 }
 
 export function ContactSection() {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    console.log("contact form submitted", Object.fromEntries(formData.entries()));
+  };
+
   return (
     <YStack gap={16}>
       <YStack gap={8}>
@@ -102,18 +123,30 @@ export function ContactSection() {
           padding={16}
           gap={12}
         >
-          <Text color="$textPrimary" fontFamily="$heading" fontSize={20} fontWeight="700">
-            Send a Message
-          </Text>
+          <form
+            onSubmit={handleSubmit}
+            style={{ display: "flex", flexDirection: "column", gap: 12 }}
+            noValidate
+          >
+            <Text color="$textPrimary" fontFamily="$heading" fontSize={20} fontWeight="700">
+              Send a Message
+            </Text>
 
-          <InputPlaceholder label="Your Name" placeholder="Your name" icon="user" />
-          <InputPlaceholder label="Your Email" placeholder="name@company.com" icon="mail" />
+            <ContactField label="Your Name" name="name" placeholder="Your name" icon="user" />
+            <ContactField
+              label="Your Email"
+              name="email"
+              placeholder="name@company.com"
+              type="email"
+              icon="mail"
+            />
 
-          <YStack marginTop={4} width="100%">
-            <ButtonPrimary preset="medium" style={{ width: "100%" }}>
-              Send Message
-            </ButtonPrimary>
-          </YStack>
+            <YStack marginTop={4} width="100%">
+              <ButtonPrimary preset="medium" style={{ width: "100%" }} type="submit">
+                Send Message
+              </ButtonPrimary>
+            </YStack>
+          </form>
         </YStack>
       </XStack>
     </YStack>

@@ -17,8 +17,6 @@ export async function generateMetadata() {
 }
 
 export default async function Home() {
-  await getHomeContent("en");
-
   const metrics = [
     {
       iconName: "zap" as const,

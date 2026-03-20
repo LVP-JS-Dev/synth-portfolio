@@ -1,9 +1,10 @@
 "use client";
 
+import Link from 'next/link'
 import { XStack, Text, styled } from 'tamagui'
 import { Menu } from 'lucide-react'
 
-const NavLink = styled(Text, {
+const NavLinkText = styled(Text, {
   color: '$textSecondary',
   fontFamily: '$heading',
   fontSize: 12,
@@ -38,63 +39,75 @@ const PillText = styled(Text, {
 
 export function TopNav() {
   return (
-    <XStack
-      justifyContent="space-between"
-      alignItems="center"
-      paddingVertical={8}
-      paddingHorizontal={24}
-      $sm={{ paddingHorizontal: 16 }}
-      width="100%"
-    >
-      {/* Left side: Desktop */}
-      <Text
-        color="$accentCyan"
-        textShadowColor="$glowSoft"
-        textShadowRadius={12}
-        fontFamily="$heading"
-        fontSize={13}
-        fontWeight="700"
-        $sm={{ display: 'none' }}
+    <nav aria-label="Main navigation">
+      <XStack
+        justifyContent="space-between"
+        alignItems="center"
+        paddingVertical={8}
+        paddingHorizontal={24}
+        $sm={{ paddingHorizontal: 16 }}
+        width="100%"
       >
-        LEONID PETROV / SENIOR FRONTEND ENGINEER
-      </Text>
-      
-      {/* Left side: Mobile */}
-      <Text
-        color="$accentCyan"
-        textShadowColor="$glowSoft"
-        textShadowRadius={12}
-        fontFamily="$heading"
-        fontSize={13}
-        fontWeight="700"
-        display="none"
-        $sm={{ display: 'flex' }}
-      >
-        LEONID / FE
-      </Text>
+        {/* Left side: Desktop */}
+        <Text
+          color="$accentCyan"
+          textShadowColor="$glowSoft"
+          textShadowRadius={12}
+          fontFamily="$heading"
+          fontSize={13}
+          fontWeight="700"
+          $sm={{ display: 'none' }}
+        >
+          LEONID PETROV / SENIOR FRONTEND ENGINEER
+        </Text>
+        
+        {/* Left side: Mobile */}
+        <Text
+          color="$accentCyan"
+          textShadowColor="$glowSoft"
+          textShadowRadius={12}
+          fontFamily="$heading"
+          fontSize={13}
+          fontWeight="700"
+          display="none"
+          $sm={{ display: 'flex' }}
+        >
+          LEONID / FE
+        </Text>
 
-      {/* Right side */}
-      <XStack gap={16} alignItems="center">
-        {/* Desktop Links */}
-        <XStack gap={16} alignItems="center" $sm={{ display: 'none' }}>
-          <NavLink>About</NavLink>
-          <NavLink>Experience</NavLink>
-          <NavLink>Projects</NavLink>
-          <NavLink>Quality</NavLink>
-          <NavLink>Contact</NavLink>
+        {/* Right side */}
+        <XStack gap={16} alignItems="center">
+          {/* Desktop Links */}
+          <XStack gap={16} alignItems="center" $sm={{ display: 'none' }}>
+            <Link href="/#about">
+              <NavLinkText>About</NavLinkText>
+            </Link>
+            <Link href="/#experience">
+              <NavLinkText>Experience</NavLinkText>
+            </Link>
+            <Link href="/projects">
+              <NavLinkText>Projects</NavLinkText>
+            </Link>
+            <Link href="/#quality">
+              <NavLinkText>Quality</NavLinkText>
+            </Link>
+            <Link href="/#contact">
+              <NavLinkText>Contact</NavLinkText>
+            </Link>
+          </XStack>
+
+          {/* Mobile Menu Button */}
+          <PillButton display="none" $sm={{ display: 'flex' }} aria-label="Open navigation menu">
+            <Menu size={16} color="#FFF9FF" />
+            <PillText>MENU</PillText>
+          </PillButton>
+
+          {/* Language Switcher */}
+          <PillButton aria-label="Switch language">
+            <PillText>EN / RU</PillText>
+          </PillButton>
         </XStack>
-
-        {/* Mobile Menu Button */}
-        <PillButton display="none" $sm={{ display: 'flex' }}>
-          <Menu size={16} color="#FFF9FF" />
-          <PillText>MENU</PillText>
-        </PillButton>
-
-        {/* Language Switcher */}
-        <PillButton>
-          <PillText>EN / RU</PillText>
-        </PillButton>
       </XStack>
-    </XStack>
+    </nav>
   )
 }

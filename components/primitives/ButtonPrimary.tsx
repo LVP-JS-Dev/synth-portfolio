@@ -2,19 +2,19 @@
 
 import React, { ReactNode } from 'react';
 import { motion, HTMLMotionProps } from 'framer-motion';
-import { styled } from 'tamagui';
+import { Button, styled } from 'tamagui';
 import { LucideIcon } from 'lucide-react';
 
 export type ButtonPreset = 'soft' | 'medium' | 'hard';
 
-export interface ButtonPrimaryProps extends Omit<HTMLMotionProps<"button">, "children"> {
+export interface ButtonPrimaryProps extends Omit<HTMLMotionProps<'button'>, 'children'> {
   preset?: ButtonPreset;
   children: ReactNode;
   onPress?: () => void;
   iconRight?: LucideIcon;
 }
 
-const StyledButton = styled(motion.button, {
+const StyledButton = styled(Button, {
   name: 'ButtonPrimary',
   flexDirection: 'row',
   alignItems: 'center',
@@ -24,10 +24,7 @@ const StyledButton = styled(motion.button, {
   paddingVertical: '$3',
   borderRadius: 12,
   cursor: 'pointer',
-  // @ts-ignore
-  fontFamily: '$heading',
-  fontSize: 14,
-  fontWeight: '700',
+  // font styling intentionally inherited from Tamagui theme
   outlineWidth: 0,
   borderWidth: 1,
   borderStyle: 'solid',
@@ -74,6 +71,8 @@ const getPresetStyles = (preset: ButtonPreset) => {
   }
 };
 
+const MotionButton = motion.button;
+
 export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   preset = 'soft',
   children,
@@ -114,21 +113,22 @@ export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   };
 
   return (
-    // @ts-ignore
-    <StyledButton
-      initial="initial"
-      whileHover="hover"
-      whileFocus="focus"
-      whileTap="tap"
-      variants={variants}
-      onClick={(e: any) => {
-        if (onPress) onPress();
-        if (onClick) onClick(e);
-      }}
-      {...rest}
-    >
-      {children}
-      {IconRight && <IconRight size={16} strokeWidth={2.5} />}
+    <StyledButton asChild>
+      <MotionButton
+        initial="initial"
+        whileHover="hover"
+        whileFocus="focus"
+        whileTap="tap"
+        variants={variants}
+        onClick={(e: any) => {
+          if (onPress) onPress();
+          if (onClick) onClick(e);
+        }}
+        {...rest}
+      >
+        {children}
+        {IconRight && <IconRight size={16} strokeWidth={2.5} />}
+      </MotionButton>
     </StyledButton>
   );
 };
