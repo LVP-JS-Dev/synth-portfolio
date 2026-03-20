@@ -7,7 +7,9 @@
     "build": "next build --webpack",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@keystatic/core": "^0.5.48",
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "@tamagui/font-inter": "^2.0.0-rc.26",
+    "@playwright/test": "^1.58.2",
     "@testing-library/jest-dom": "^6",
     "@testing-library/react": "^16",
     "@testing-library/user-event": "^14",
