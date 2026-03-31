@@ -108,6 +108,7 @@ export default async function Home() {
         <AboutSection />
 
         <section id="experience" style={{ display: "grid", gap: 16 }}>
+          <h2 className="sr-only">Experience</h2>
           <SectionHeader
             kicker="03. EXPERIENCE / WORK HISTORY"
             title="Roles, scope, and measurable outcomes"
