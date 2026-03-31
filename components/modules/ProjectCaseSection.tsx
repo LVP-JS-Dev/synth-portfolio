@@ -24,6 +24,20 @@ function BlockTitle({ children }: { children: string }) {
 }
 
 export function ProjectCaseSection({ title, summary, year, stack, metrics, links, highlights, results }: ProjectCaseSectionProps) {
+  const openLinkSafely = (rawUrl: string) => {
+    const isSafe =
+      rawUrl.startsWith("http://") ||
+      rawUrl.startsWith("https://") ||
+      rawUrl.startsWith("mailto:") ||
+      rawUrl.startsWith("tel:");
+
+    if (!isSafe) {
+      return;
+    }
+
+    window.open(rawUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <YStack gap={14}>
       <YStack
@@ -56,7 +70,7 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
             <ButtonPrimary
               key={`${link.label}-${idx}`}
               preset={idx === 0 ? "medium" : "soft"}
-              onClick={() => window.open(link.url, "_blank", "noopener,noreferrer")}
+              onClick={() => openLinkSafely(link.url)}
             >
               {link.label}
             </ButtonPrimary>

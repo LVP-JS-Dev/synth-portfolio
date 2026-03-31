@@ -145,7 +145,7 @@ export default async function Home() {
             style={{
               display: "grid",
               gap: 16,
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
             }}
           >
             {projects.map((project) => (

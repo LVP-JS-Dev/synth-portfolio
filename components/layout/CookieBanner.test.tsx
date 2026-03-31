@@ -52,6 +52,17 @@ describe("CookieBanner", () => {
     expect(screen.queryByRole("region", { name: /cookie consent/i })).toBeNull();
   });
 
+  test("reject button stores dismissed and runs callback", () => {
+    const onDismiss = vi.fn();
+    render(<CookieBanner onDismiss={onDismiss} />);
+
+    fireEvent.click(screen.getByRole("button", { name: /reject/i }));
+
+    expect(localStorage.getItem(CONSENT_KEY)).toBe("dismissed");
+    expect(onDismiss).toHaveBeenCalled();
+    expect(screen.queryByRole("region", { name: /cookie consent/i })).toBeNull();
+  });
+
   test("service is hydration-safe when window is undefined", () => {
     const originalWindow = globalThis.window;
     // @ts-expect-error - deleting for hydration simulation

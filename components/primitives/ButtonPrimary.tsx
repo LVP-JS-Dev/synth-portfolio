@@ -25,9 +25,17 @@ export const ButtonPrimary = forwardRef<HTMLButtonElement, ButtonPrimaryProps>(f
 
   return (
     <button ref={ref} className={mergedClassName} type={type ?? "button"} {...rest}>
-      {IconLeft ? <IconLeft size={16} strokeWidth={2.5} /> : null}
+      {IconLeft ? (
+        <span aria-hidden="true">
+          <IconLeft size={16} strokeWidth={2.5} focusable="false" />
+        </span>
+      ) : null}
       {children}
-      {IconRight ? <IconRight size={16} strokeWidth={2.5} /> : null}
+      {IconRight ? (
+        <span aria-hidden="true">
+          <IconRight size={16} strokeWidth={2.5} focusable="false" />
+        </span>
+      ) : null}
     </button>
   );
 });

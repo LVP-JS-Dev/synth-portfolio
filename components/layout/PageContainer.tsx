@@ -7,7 +7,7 @@ type PageContainerProps = {
 };
 
 export function PageContainer({ children, gap }: PageContainerProps) {
-  const style = gap
+  const style = gap !== undefined
     ? ({ ["--page-gap" as unknown as keyof CSSProperties]: `${gap}px` } as CSSProperties)
     : undefined;
 

@@ -59,3 +59,14 @@
 .button:active:not(:disabled) {
   transform: translateY(0px);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .button:hover:not(:disabled),
+  .button:active:not(:disabled) {
+    transform: none;
+  }
+}
