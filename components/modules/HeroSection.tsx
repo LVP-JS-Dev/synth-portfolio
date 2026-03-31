@@ -38,8 +38,11 @@ export function HeroSection() {
           lineHeight={64}
           $sm={{ fontSize: 34, lineHeight: 40 }}
           fontWeight="700"
+          asChild
         >
-          Senior Frontend Engineer{'\n'}for fintech & B2B product teams
+          <h1 style={{ margin: 0 }}>
+            Senior Frontend Engineer{"\n"}for fintech & B2B product teams
+          </h1>
         </Text>
 
         <Text
