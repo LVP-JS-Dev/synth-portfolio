@@ -1,3 +1,5 @@
+"use client";
+
 import { Text, YStack } from "tamagui";
 
 type SectionHeaderProps = {
