@@ -9,13 +9,12 @@ export interface ProjectCardProps {
   gradientColors?: [string, string, string];
   gradientRotation?: number;
   ctaLabel?: string;
-  onPress?: () => void;
 }
 
 const DEFAULT_GRADIENT: [string, string, string] = [
-  "var(--color-bgSurface2)",
-  "var(--color-accentCyan)",
-  "var(--color-accentPink)",
+  "var(--bg-surface-2)",
+  "var(--accent-cyan)",
+  "var(--accent-pink)",
 ];
 
 export function ProjectCard({
@@ -24,7 +23,6 @@ export function ProjectCard({
   gradientColors = DEFAULT_GRADIENT,
   gradientRotation = 140,
   ctaLabel,
-  onPress,
 }: ProjectCardProps) {
   const gradient = `linear-gradient(${gradientRotation}deg, ${gradientColors[0]} 0%, ${gradientColors[1]} 55%, ${gradientColors[2]} 100%)`;
 
@@ -38,17 +36,15 @@ export function ProjectCard({
       whileTap={{ scale: 0.995, transition: { duration: 0.12, ease: "easeOut" } }}
       style={{ width: "100%" }}
     >
-        <YStack
-          backgroundColor="$bgSurface2"
-          borderRadius={12}
-          borderWidth={1}
-          borderColor="$bgSurface"
-          gap={12}
-          padding={16}
-          cursor={onPress ? "pointer" : undefined}
-          onPress={onPress}
-          style={{ boxShadow: "0 0 14px var(--color-glowSoft)" }}
-        >
+      <YStack
+        backgroundColor="$bgSurface2"
+        borderRadius={12}
+        borderWidth={1}
+        borderColor="#433C69"
+        gap={12}
+        padding={16}
+        style={{ boxShadow: "0 0 14px rgba(82, 255, 246, 0.33)" }}
+      >
         <YStack
           height={170}
           width="100%"
@@ -56,7 +52,7 @@ export function ProjectCard({
           backgroundColor="$bgBase"
           style={{
             backgroundImage: gradient,
-            boxShadow: "0 0 14px var(--color-glowSoft)",
+            boxShadow: "0 0 14px rgba(82, 255, 246, 0.33)",
           }}
         />
 

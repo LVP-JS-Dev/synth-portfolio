@@ -9,7 +9,7 @@ export function HeroSection() {
     <XStack
       backgroundColor="$bgSurface"
       borderRadius={16}
-      borderColor="$bgSurface2"
+      borderColor="#3C3562"
       borderWidth={1}
       padding={32}
       gap={32}
@@ -68,7 +68,7 @@ export function HeroSection() {
         $sm={{ width: '100%' }}
         backgroundColor="$bgSurface2"
         borderRadius={12}
-        borderColor="$accentCyan"
+        borderColor="#4A3E88"
         borderWidth={1}
         padding={16}
         gap={12}

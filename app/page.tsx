@@ -7,6 +7,8 @@ import { ProjectCard } from "@/components/modules/ProjectCard";
 import { TimelineItem } from "@/components/modules/TimelineItem";
 import { AboutSection } from "@/components/modules/AboutSection";
 import { ContactSection } from "@/components/modules/ContactSection";
+import { PageContainer } from "@/components/layout/PageContainer";
+import { SectionHeader } from "@/components/modules/SectionHeader";
 
 export async function generateMetadata() {
   const home = await getHomeContent("en");
@@ -16,14 +18,6 @@ export async function generateMetadata() {
     description: home.description,
   });
 }
-
-const SECTION_TITLE_STYLE: React.CSSProperties = {
-  margin: 0,
-  color: "#FFF9FF",
-  fontFamily: "var(--font-geist-mono)",
-  fontSize: 28,
-  fontWeight: 700,
-};
 
 export default async function Home() {
   const metrics = [
@@ -49,21 +43,21 @@ export default async function Home() {
       title: "KYC Liveness Verification Widget",
       description:
         "Cross‑browser iframe widget with getUserMedia and UX guidance; 95%+ verification success and 40% lower latency.",
-      gradientColors: ["$bgSurface2", "#4F46A7", "$accentCyan"] as [string, string, string],
+      gradientColors: ["var(--bg-surface-2)", "#4F46A7", "var(--accent-cyan)"] as [string, string, string],
       gradientRotation: 120,
     },
     {
       title: "AI Audio Cleanup Platform",
       description:
         "Next.js marketing site with 95+ mobile PageSpeed and interactive before/after waveform player.",
-      gradientColors: ["$bgSurface2", "#5B2F9B", "$accentPink"] as [string, string, string],
+      gradientColors: ["var(--bg-surface-2)", "#5B2F9B", "var(--accent-pink)"] as [string, string, string],
       gradientRotation: 135,
     },
     {
       title: "Mobile Credit Application Flow",
       description:
         "React/TypeScript WebView flow plus internal UI library (12+ components) and faster builds.",
-      gradientColors: ["$bgSurface2", "#365A9A", "$accentYellow"] as [string, string, string],
+      gradientColors: ["var(--bg-surface-2)", "#365A9A", "var(--accent-yellow)"] as [string, string, string],
       gradientRotation: 150,
     },
   ] as const;
@@ -108,15 +102,18 @@ export default async function Home() {
 
   return (
     <main>
-      <div style={{ padding: "24px 20px", display: "grid", gap: 32 }}>
+      <PageContainer gap={48}>
         <HeroSection />
 
         <AboutSection />
 
         <section id="experience" style={{ display: "grid", gap: 16 }}>
-          <h2 style={SECTION_TITLE_STYLE}>
-            Experience
-          </h2>
+          <h2 className="sr-only">Experience</h2>
+          <SectionHeader
+            kicker="03. EXPERIENCE / WORK HISTORY"
+            title="Roles, scope, and measurable outcomes"
+            subtitle="Roles, scope, and measurable outcomes from fintech and B2B teams."
+          />
 
           <div
             style={{
@@ -138,10 +135,39 @@ export default async function Home() {
           </div>
         </section>
 
+        <section id="projects" style={{ display: "grid", gap: 16 }}>
+          <SectionHeader
+            kicker="04. SELECTED PROJECTS"
+            title="Case-driven frontend engineering"
+            subtitle="Each project maps a product problem to architecture decisions and measurable delivery impact."
+          />
+
+          <div
+            style={{
+              display: "grid",
+              gap: 16,
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
+            }}
+          >
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                gradientColors={project.gradientColors}
+                gradientRotation={project.gradientRotation}
+                ctaLabel="Case Study →"
+              />
+            ))}
+          </div>
+        </section>
+
         <section id="quality" style={{ display: "grid", gap: 16 }}>
-          <h2 style={SECTION_TITLE_STYLE}>
-            Engineering Quality
-          </h2>
+          <SectionHeader
+            kicker="05. ENGINEERING QUALITY"
+            title="Performance, Accessibility, DX"
+            subtitle="A practical quality model: benchmark, enforce, observe, and iterate."
+          />
 
           <div
             style={{
@@ -161,33 +187,8 @@ export default async function Home() {
           </div>
         </section>
 
-        <section id="projects" style={{ display: "grid", gap: 16 }}>
-          <h2 style={SECTION_TITLE_STYLE}>
-            Selected Projects
-          </h2>
-
-          <div
-            style={{
-              display: "grid",
-              gap: 16,
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            }}
-          >
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                gradientColors={project.gradientColors}
-                gradientRotation={project.gradientRotation}
-                ctaLabel="Case Study →"
-              />
-            ))}
-          </div>
-        </section>
-
         <ContactSection />
-      </div>
+      </PageContainer>
     </main>
   );
 }

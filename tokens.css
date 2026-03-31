@@ -3,11 +3,11 @@
   --bg-base: #1A1630;
   --bg-surface: #221C3E;
   --bg-surface-2: #2C2550;
-  --text-primary: #F7F4FF;
+  --text-primary: #FFF9FF;
   --text-secondary: #D7CCFF;
-  --accent-cyan: #36F9F6;
-  --accent-pink: #FF7EDB;
-  --accent-yellow: #FEDE5D;
+  --accent-cyan: #52FFF6;
+  --accent-pink: #FF4FD8;
+  --accent-yellow: #FFE86F;
   --state-error: #FF4D6D;
 
   /* Glow (with opacity) */
@@ -17,8 +17,8 @@
   --glow-pink: #FF4FD8AA;
 
   /* Typography */
-  --font-display: var(--font-geist-mono), monospace;
-  --font-body: var(--font-geist-sans), sans-serif;
+  --font-display: "JetBrains Mono", monospace;
+  --font-body: "Inter", -apple-system, system-ui, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
 
   /* Font sizes */
   --font-size-sm: 14px;
@@ -41,4 +41,17 @@
   --glow-blur-soft: 8px;
   --glow-blur-medium: 14px;
   --glow-blur-hard: 24px;
+
+  /* Back-compat aliases used by some inline styles */
+  --color-bgBase: var(--bg-base);
+  --color-bgSurface: var(--bg-surface);
+  --color-bgSurface2: var(--bg-surface-2);
+  --color-textPrimary: var(--text-primary);
+  --color-textSecondary: var(--text-secondary);
+  --color-accentCyan: var(--accent-cyan);
+  --color-accentPink: var(--accent-pink);
+  --color-accentYellow: var(--accent-yellow);
+  --color-glowSoft: var(--glow-soft);
+  --color-glowMedium: var(--glow-medium);
+  --color-glowHard: var(--glow-hard);
 }

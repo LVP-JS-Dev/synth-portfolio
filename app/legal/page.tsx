@@ -1,6 +1,7 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getLegalContent } from "@/lib/content";
 import { LegalSections } from "@/components/modules/LegalSections";
+import { PageContainer } from "@/components/layout/PageContainer";
 
 export async function generateMetadata() {
   const legal = await getLegalContent("en");
@@ -16,9 +17,9 @@ export default async function LegalPage() {
 
   return (
     <main>
-      <div style={{ padding: "24px 20px", display: "grid", gap: 24 }}>
+      <PageContainer gap={32}>
         <LegalSections title={legal.title} description={legal.description} body={legal.body} />
-      </div>
+      </PageContainer>
     </main>
   );
 }

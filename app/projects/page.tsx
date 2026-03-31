@@ -1,6 +1,7 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getAllProjects, getProjectsPageContent } from "@/lib/content";
 import { ProjectsFilterGrid } from "@/components/modules/ProjectsFilterGrid";
+import { PageContainer } from "@/components/layout/PageContainer";
 
 export async function generateMetadata() {
   const page = await getProjectsPageContent("en");
@@ -19,21 +20,13 @@ export default async function ProjectsPage() {
 
   return (
     <main>
-      <div
-        style={{
-          padding: "16px 20px 24px",
-          display: "grid",
-          gap: 20,
-          maxWidth: 1440,
-          margin: "0 auto",
-        }}
-      >
+      <PageContainer gap={40}>
         <section
           style={{
             background: "var(--bg-surface)",
-            border: "1px solid var(--bg-surface-2)",
+            border: "1px solid #3C3562",
             borderRadius: 14,
-            padding: "16px",
+            padding: "24px",
             display: "grid",
             gap: 8,
           }}
@@ -41,11 +34,11 @@ export default async function ProjectsPage() {
           <h1
             style={{
               margin: 0,
-              color: "var(--color-textPrimary)",
-              fontFamily: "var(--font-geist-mono)",
+              color: "var(--text-primary)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(30px, 6vw, 48px)",
               fontWeight: 700,
-              textShadow: "0 0 10px var(--color-glowHard)",
+              textShadow: "0 0 10px var(--glow-hard)",
             }}
           >
             {page.title}
@@ -53,7 +46,7 @@ export default async function ProjectsPage() {
           <p
             style={{
               margin: 0,
-              color: "var(--color-textSecondary)",
+              color: "var(--text-secondary)",
               fontSize: "clamp(14px, 2.5vw, 18px)",
               lineHeight: 1.55,
             }}
@@ -79,8 +72,8 @@ export default async function ProjectsPage() {
             <span
               key={pageItem.value}
               style={{
-                color: pageItem.active ? "var(--color-accentCyan)" : "var(--color-textSecondary)",
-                fontFamily: "var(--font-geist-mono)",
+                color: pageItem.active ? "var(--accent-cyan)" : "var(--text-secondary)",
+                fontFamily: "var(--font-display)",
                 fontSize: 12,
                 fontWeight: pageItem.active ? 700 : 400,
               }}
@@ -89,7 +82,7 @@ export default async function ProjectsPage() {
             </span>
           ))}
         </section>
-      </div>
+      </PageContainer>
     </main>
   );
 }
