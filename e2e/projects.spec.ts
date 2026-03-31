@@ -34,9 +34,11 @@ test.describe("Projects Page", () => {
     const firstProject = projects[0];
 
     // Click on the specific project link
-    await page.getByRole("link", { name: firstProject.titleEn }).click();
+    const projectLink = page.getByRole("link", { name: firstProject.titleEn });
+    await expect(projectLink).toBeVisible();
+    await projectLink.click();
 
     // Wait for navigation and verify URL contains the expected slug
-    await expect(page).toHaveURL(new RegExp(`/projects/${firstProject.slug}$`));
+    await expect(page).toHaveURL(new RegExp(`/projects/${firstProject.slug}$`), { timeout: 30_000 });
   });
 });

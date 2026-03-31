@@ -2,6 +2,7 @@
   "name": "synth-portfolio",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.30.3",
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
@@ -18,6 +19,7 @@
     "@tamagui/core": "^2.0.0-rc.26",
     "@tamagui/next-plugin": "^2.0.0-rc.26",
     "@tamagui/next-theme": "^2.0.0-rc.26",
+    "@tamagui/web": "^2.0.0-rc.26",
     "framer-motion": "^12.38.0",
     "lucide-react": "^0.577.0",
     "next": "16.2.0",
@@ -42,5 +44,11 @@
     "jsdom": "^22",
     "typescript": "^5",
     "vitest": "^3.2.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "unrs-resolver"
+    ]
   }
 }
