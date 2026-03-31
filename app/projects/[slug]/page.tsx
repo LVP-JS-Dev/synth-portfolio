@@ -2,6 +2,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { getProjectSlugs, getProjectBySlug } from "@/lib/content";
 import { notFound } from "next/navigation";
 import { ProjectCaseSection } from "@/components/modules/ProjectCaseSection";
+import { PageContainer } from "@/components/layout/PageContainer";
 
 type Params = {
   slug: string;
@@ -36,7 +37,7 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <main>
-      <div style={{ padding: "24px 20px", display: "grid", gap: 24 }}>
+      <PageContainer gap={40}>
         <ProjectCaseSection
           title={project.titleEn}
           summary={project.summaryEn}
@@ -63,7 +64,7 @@ export default async function ProjectPage({ params }: Props) {
             "Team learned to codify conflict-handling as reusable design patterns.",
           ]}
         />
-      </div>
+      </PageContainer>
     </main>
   );
 }

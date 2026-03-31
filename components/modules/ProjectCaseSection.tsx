@@ -26,15 +26,15 @@ function BlockTitle({ children }: { children: string }) {
 export function ProjectCaseSection({ title, summary, year, stack, metrics, links, highlights, results }: ProjectCaseSectionProps) {
   return (
     <YStack gap={14}>
-        <YStack
-          backgroundColor="$bgSurface"
-          borderRadius={14}
-          borderWidth={1}
-          borderColor="$bgSurface2"
-          padding={16}
-          gap={10}
-          $sm={{ padding: 14 }}
-        >
+      <YStack
+        backgroundColor="$bgSurface"
+        borderRadius={14}
+        borderWidth={1}
+        borderColor="#3C3562"
+        padding={28}
+        gap={14}
+        $sm={{ padding: 16 }}
+      >
         <Text
           color="$textPrimary"
           fontFamily="$heading"
@@ -54,9 +54,9 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
         <XStack gap={8} flexWrap="wrap">
           {links.map((link, idx) => (
             <ButtonPrimary
-              key={link.url}
+              key={`${link.label}-${idx}`}
               preset={idx === 0 ? "medium" : "soft"}
-              onPress={() => window.open(link.url, "_blank", "noopener,noreferrer")}
+              onClick={() => window.open(link.url, "_blank", "noopener,noreferrer")}
             >
               {link.label}
             </ButtonPrimary>
@@ -143,7 +143,7 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
         <Text color="$accentCyan" fontFamily="$heading" fontSize={13}>
           {stack.join(" · ")}
         </Text>
-        {links.map((link) => {
+        {links.map((link, idx) => {
           const isSafe =
             link.url.startsWith("http://") ||
             link.url.startsWith("https://") ||
@@ -152,7 +152,7 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
           const safeUrl = isSafe ? link.url : "#";
 
           return (
-            <Text key={link.url} color="$accentCyan" fontFamily="$body" fontSize={15}>
+            <Text key={`${link.label}-${idx}`} color="$accentCyan" fontFamily="$body" fontSize={15}>
               <a href={safeUrl} target="_blank" rel="noopener noreferrer">
                 {link.label}: {link.url}
               </a>

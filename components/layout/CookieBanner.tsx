@@ -1,7 +1,9 @@
 "use client";
 
 import { ReactElement, useCallback, useSyncExternalStore } from "react";
+import { Check } from "lucide-react";
 import styles from "./CookieBanner.module.css";
+import { ButtonPrimary } from "@/components/primitives/ButtonPrimary";
 import {
   getConsentSnapshot,
   notifyConsentChange,
@@ -11,10 +13,9 @@ import {
 
 interface CookieBannerProps {
   onAccept?: () => void;
-  onDismiss?: () => void;
 }
 
-export const CookieBanner = ({ onAccept, onDismiss }: CookieBannerProps): ReactElement | null => {
+export const CookieBanner = ({ onAccept }: CookieBannerProps): ReactElement | null => {
   const consent = useSyncExternalStore(subscribeToConsent, getConsentSnapshot, getConsentSnapshot);
 
   const visible = consent === null;
@@ -25,13 +26,6 @@ export const CookieBanner = ({ onAccept, onDismiss }: CookieBannerProps): ReactE
     onAccept?.();
   }, [onAccept]);
 
-  const handleDismiss = useCallback(() => {
-    // Dismissal is intentionally treated as non-consent; it leaves cookies disabled while hiding the banner.
-    writeConsent("dismissed");
-    notifyConsentChange();
-    onDismiss?.();
-  }, [onDismiss]);
-
   if (!visible) {
     return null;
   }
@@ -39,16 +33,11 @@ export const CookieBanner = ({ onAccept, onDismiss }: CookieBannerProps): ReactE
   return (
     <div className={styles.banner} role="region" aria-label="Cookie consent">
       <p className={styles.message} aria-live="polite">
-        Мы используем куки для улучшения опыта использования сайта. Примите или отклоните их, чтобы продолжить.
+        Cookies are used for analytics and contact form reliability.
       </p>
-      <div className={styles.actions}>
-        <button className={styles.ghost} onClick={handleDismiss} type="button">
-          Отказаться
-        </button>
-        <button className={styles.primary} onClick={handleAccept} type="button">
-          Принять
-        </button>
-      </div>
+      <ButtonPrimary preset="medium" onClick={handleAccept} iconLeft={Check}>
+        Accept
+      </ButtonPrimary>
     </div>
   );
 };

@@ -33,8 +33,8 @@ export function LegalSections({ title, description, body }: LegalSectionsProps) 
         backgroundColor="$bgSurface"
         borderRadius={14}
         borderWidth={1}
-        borderColor="$bgSurface2"
-        padding={16}
+        borderColor="#3C3562"
+        padding={24}
         gap={8}
       >
         <Text
@@ -58,14 +58,14 @@ export function LegalSections({ title, description, body }: LegalSectionsProps) 
           backgroundColor="$bgSurface2"
           borderRadius={12}
           borderWidth={1}
-          borderColor="$accentCyan"
+          borderColor="#4A3E88"
           padding={16}
-          gap={8}
+          gap={6}
         >
           <Text color="$textPrimary" fontFamily="$heading" fontSize={20} fontWeight="700">
             {block.title}
           </Text>
-          <Text color="$textSecondary" fontFamily="$body" fontSize={15} lineHeight={24}>
+          <Text color="$textSecondary" fontFamily="$body" fontSize={13} lineHeight={20}>
             {block.description}
           </Text>
         </YStack>
