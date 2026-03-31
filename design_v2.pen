@@ -2044,7 +2044,7 @@
                   "id": "TWqgD",
                   "name": "heroEy",
                   "fill": "#52FFF6",
-                  "content": "01. BUILDING FRONTEND SYSTEMS THAT SCALE",
+                  "content": "01. FRONTEND ARCHITECTURE & DELIVERY",
                   "fontFamily": "\\$font-display",
                   "fontSize": 12,
                   "fontWeight": "700",
@@ -2063,7 +2063,7 @@
                   },
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "Senior Frontend Engineer\nfor high-stakes product teams",
+                  "content": "Senior Frontend Engineer\nfor fintech & B2B product teams",
                   "lineHeight": 1.1,
                   "fontFamily": "\\$font-display",
                   "fontSize": 58,
@@ -2076,7 +2076,7 @@
                   "fill": "#D7CCFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "I design resilient React and Next.js architectures, tune performance, enforce accessibility, and raise team DX through design systems, testing, and delivery discipline.",
+                  "content": "I build React and Next.js platforms that scale: architecture, performance, accessibility, and design systems backed by measurable outcomes.",
                   "lineHeight": 1.55,
                   "fontFamily": "\\$font-body",
                   "fontSize": 18,
@@ -2183,7 +2183,7 @@
                   "fill": "#D7CCFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "Architecture & DX — shared UI platform and guardrails",
+                  "content": "Product architecture — shared UI platform, DX guardrails",
                   "lineHeight": 1.5,
                   "fontFamily": "\\$font-body",
                   "fontSize": 14,
@@ -2196,7 +2196,7 @@
                   "fill": "#D7CCFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "Performance & A11y — measurable Core Web Vitals and inclusive UX",
+                  "content": "Performance & A11y — Core Web Vitals and inclusive UX",
                   "lineHeight": 1.5,
                   "fontFamily": "\\$font-body",
                   "fontSize": 14,
@@ -2209,7 +2209,7 @@
                   "fill": "#D7CCFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "Mentoring — review culture, onboarding and engineering standards",
+                  "content": "Verification UX — KYC/liveness flows with high success rates",
                   "lineHeight": 1.5,
                   "fontFamily": "\\$font-body",
                   "fontSize": 14,
@@ -2239,7 +2239,7 @@
             },
             "xBLD5": {
               "width": "fill_container",
-              "content": "My focus is shipping measurable product outcomes while improving engineering leverage across teams.",
+              "content": "5+ years building web products with measurable outcomes: faster builds, lower latency, and higher verification success.",
               "y": 81
             }
           }
@@ -2266,7 +2266,7 @@
                   "fill": "#D7CCFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "I specialize in React, TypeScript, and Next.js architectures for products that cannot afford unstable UX or regressions.",
+                  "content": "I specialize in React, TypeScript, and Next.js architectures for high‑stakes products where UX stability and performance are non‑negotiable.",
                   "lineHeight": 1.6,
                   "fontFamily": "\\$font-body",
                   "fontSize": 17,
@@ -2279,7 +2279,7 @@
                   "fill": "#D7CCFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "Across B2B SaaS, ecommerce, and internal platforms, I align product decisions with technical constraints, then codify those decisions into reusable system patterns.",
+                  "content": "In fintech and B2B teams, I ship end‑to‑end flows (WebView, KYC, admin tools), build UI platforms, and turn requirements into reusable system patterns.",
                   "lineHeight": 1.6,
                   "fontFamily": "\\$font-body",
                   "fontSize": 17,
@@ -2292,7 +2292,7 @@
                   "fill": "#D7CCFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "I mentor engineers, run architecture reviews, and keep teams shipping with confidence through strong DX and testing strategy.",
+                  "content": "I mentor engineers, lead architecture reviews, and keep delivery predictable through testing strategy and performance budgets.",
                   "lineHeight": 1.6,
                   "fontFamily": "\\$font-body",
                   "fontSize": 17,
@@ -2389,7 +2389,7 @@
             },
             "xBLD5": {
               "width": "fill_container",
-              "content": "Timeline inspired by Brittany Chiang, with engineering metrics and impact.",
+              "content": "Roles, scope, and measurable outcomes from fintech and B2B teams.",
               "y": 81,
               "name": "secSu"
             }
@@ -2440,15 +2440,15 @@
                 },
                 "dePWe": {
                   "width": "fill_container",
-                  "content": "Senior Frontend Engineer · FinTech Core Platform"
+                  "content": "Senior Fullstack Developer · Void0"
                 },
                 "8RciF": {
-                  "content": "2022 — Present",
+                  "content": "Dec 2024 — Present",
                   "y": 31
                 },
                 "DgwRy": {
                   "width": "fill_container",
-                  "content": "Cut p95 page load from 3.8s to 1.9s, implemented observability and a11y gates in CI.",
+                  "content": "Built KYC/liveness verification widget (95%+ success) and reduced real‑time video latency by 40% via WebSocket optimizations.",
                   "y": 53
                 }
               }
@@ -2480,15 +2480,15 @@
                 },
                 "dePWe": {
                   "width": "fill_container",
-                  "content": "Frontend Lead · Commerce Experience Team"
+                  "content": "Senior Frontend Developer · Selecty"
                 },
                 "8RciF": {
-                  "content": "2019 — 2022",
+                  "content": "Dec 2022 — Nov 2024",
                   "y": 31
                 },
                 "DgwRy": {
                   "width": "fill_container",
-                  "content": "Introduced design system adoption across 9 product squads and reduced UI defects by 37%.",
+                  "content": "Delivered mobile credit application flow for WebView and built an internal UI library (12+ components).",
                   "y": 53
                 }
               }
@@ -2520,15 +2520,95 @@
                 },
                 "dePWe": {
                   "width": "fill_container",
-                  "content": "Frontend Engineer · SaaS Analytics"
+                  "content": "Lead Engineer · Sber"
                 },
                 "8RciF": {
-                  "content": "2017 — 2019",
+                  "content": "Sep 2021 — Oct 2022",
                   "y": 31
                 },
                 "DgwRy": {
                   "width": "fill_container",
-                  "content": "Rebuilt dashboard rendering pipeline, improving interaction responsiveness by 55%.",
+                  "content": "Led a 3‑engineer frontend team; shipped unified web/mobile UX on React/React Native and admin tools.",
+                  "y": 53
+                }
+              }
+            },
+            {
+              "id": "Sbn92",
+              "type": "ref",
+              "ref": "tUNiC",
+              "name": "exp4",
+              "width": "fill_container",
+              "x": 0,
+              "y": 332,
+              "height": "fit_content",
+              "descendants": {
+                "KJlgJ": {
+                  "x": 0,
+                  "y": 12,
+                  "height": "fit_content"
+                },
+                "1jXey": {
+                  "x": 6,
+                  "y": 4
+                },
+                "rwtO5": {
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "x": 32,
+                  "y": 12
+                },
+                "dePWe": {
+                  "content": "JavaScript Developer · EPAM",
+                  "width": "fill_container"
+                },
+                "8RciF": {
+                  "content": "Dec 2020 — Aug 2021",
+                  "y": 31
+                },
+                "DgwRy": {
+                  "content": "Implemented B2B onboarding flows on React/Redux‑Saga and improved initial load by 40% with code splitting.",
+                  "width": "fill_container",
+                  "y": 53
+                }
+              }
+            },
+            {
+              "id": "QMayc",
+              "type": "ref",
+              "ref": "tUNiC",
+              "name": "exp5",
+              "width": "fill_container",
+              "x": 0,
+              "y": 440,
+              "height": "fit_content",
+              "descendants": {
+                "KJlgJ": {
+                  "x": 0,
+                  "y": 12,
+                  "height": "fit_content"
+                },
+                "1jXey": {
+                  "x": 6,
+                  "y": 4
+                },
+                "rwtO5": {
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "x": 32,
+                  "y": 12
+                },
+                "dePWe": {
+                  "content": "Fullstack Developer · LATOKEN",
+                  "width": "fill_container"
+                },
+                "8RciF": {
+                  "content": "Aug 2020 — Dec 2020",
+                  "y": 31
+                },
+                "DgwRy": {
+                  "content": "Built CRM dashboards and a Node.js/Express BFF layer; introduced cross‑team code review practice.",
+                  "width": "fill_container",
                   "y": 53
                 }
               }
@@ -2542,7 +2622,7 @@
           "name": "projHead",
           "width": "fill_container",
           "x": 80,
-          "y": 1635,
+          "y": 1851,
           "height": "fit_content",
           "descendants": {
             "YD1fN": {
@@ -2916,7 +2996,7 @@
           "name": "qualHead",
           "width": "fill_container",
           "x": 80,
-          "y": 2764,
+          "y": 2980,
           "height": "fit_content",
           "descendants": {
             "YD1fN": {
@@ -2951,15 +3031,23 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
+                "liT7j": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 16
+                },
                 "mIcn": {
-                  "iconFontName": "zap"
+                  "iconFontName": "zap",
+                  "y": 10.5
                 },
                 "metricVal": {
-                  "content": "-49%"
+                  "content": "95%+",
+                  "x": 28
                 },
                 "zmp2j": {
                   "width": "fill_container",
-                  "content": "JS bundle after architecture split",
+                  "content": "Successful KYC/liveness verifications after UX tuning",
                   "x": 16,
                   "y": 65
                 }
@@ -2975,15 +3063,23 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
+                "liT7j": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 16
+                },
                 "mIcn": {
-                  "iconFontName": "shield-check"
+                  "iconFontName": "shield-check",
+                  "y": 10.5
                 },
                 "metricVal": {
-                  "content": "98/100"
+                  "content": "-40%",
+                  "x": 28
                 },
                 "zmp2j": {
                   "width": "fill_container",
-                  "content": "Accessibility score in production",
+                  "content": "Lower real-time video latency via WebSocket optimizations",
                   "x": 16,
                   "y": 65
                 }
@@ -2999,15 +3095,23 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
+                "liT7j": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 16
+                },
                 "mIcn": {
-                  "iconFontName": "activity"
+                  "iconFontName": "activity",
+                  "y": 10.5
                 },
                 "metricVal": {
-                  "content": "-41%"
+                  "content": "95+",
+                  "x": 28
                 },
                 "zmp2j": {
                   "width": "fill_container",
-                  "content": "Mean time to resolve frontend incidents",
+                  "content": "Mobile PageSpeed for AI audio cleanup platform",
                   "x": 16,
                   "y": 65
                 }
@@ -3088,7 +3192,7 @@
           "name": "cntHead",
           "width": "fill_container",
           "x": 80,
-          "y": 3266,
+          "y": 3501,
           "height": "fit_content",
           "descendants": {
             "YD1fN": {
@@ -3257,7 +3361,7 @@
           "name": "ctHead",
           "width": "fill_container",
           "x": 80,
-          "y": 3713,
+          "y": 3948,
           "height": "fit_content",
           "descendants": {
             "YD1fN": {
@@ -3270,7 +3374,7 @@
             },
             "xBLD5": {
               "width": "fill_container",
-              "content": "Tell me what you are building and where frontend quality can unlock business impact.",
+              "content": "Tell me about your product and where frontend quality can unlock business impact.",
               "y": 81
             }
           }
@@ -3304,7 +3408,7 @@
                   "fill": "#D7CCFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "Open for senior frontend roles, architecture consulting, and technical audits.",
+                  "content": "Open for senior frontend roles, platform architecture, and performance audits.",
                   "lineHeight": 1.55,
                   "fontFamily": "\\$font-body",
                   "fontSize": 18,
@@ -3321,7 +3425,7 @@
                     "color": "#52FFF688",
                     "blur": 8
                   },
-                  "content": "Email: hello@leonid.dev",
+                  "content": "Email: lvpjsdev@gmail.com",
                   "fontFamily": "\\$font-display",
                   "fontSize": 13,
                   "fontWeight": "normal"
@@ -3337,7 +3441,7 @@
                     "color": "#52FFF688",
                     "blur": 8
                   },
-                  "content": "Telegram: @leonid_frontend",
+                  "content": "Telegram: @lvpjsdev",
                   "fontFamily": "\\$font-display",
                   "fontSize": 13,
                   "fontWeight": "normal"
@@ -3361,7 +3465,10 @@
                 {
                   "type": "text",
                   "id": "HmkGz",
+                  "x": 20,
+                  "y": 150,
                   "name": "ctLi",
+                  "enabled": false,
                   "fill": "#52FFF6",
                   "effect": {
                     "type": "shadow",
@@ -3380,7 +3487,7 @@
                   "ref": "oNDTR",
                   "name": "cvBtn",
                   "x": 20,
-                  "y": 180,
+                  "y": 150,
                   "width": "fit_content",
                   "height": "fit_content",
                   "descendants": {
@@ -3532,7 +3639,7 @@
           "width": "fill_container",
           "name": "devDesk",
           "x": 80,
-          "y": 4239,
+          "y": 4444,
           "height": "fit_content",
           "descendants": {
             "JHUOv": {
@@ -4337,11 +4444,19 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
+                "liT7j": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 16
+                },
                 "mIcn": {
-                  "iconFontName": "timer"
+                  "iconFontName": "timer",
+                  "y": 10.5
                 },
                 "metricVal": {
-                  "content": "-38%"
+                  "content": "-38%",
+                  "x": 28
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -4361,11 +4476,19 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
+                "liT7j": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 16
+                },
                 "mIcn": {
-                  "iconFontName": "shield"
+                  "iconFontName": "shield",
+                  "y": 10.5
                 },
                 "metricVal": {
-                  "content": "-63%"
+                  "content": "-63%",
+                  "x": 28
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -4385,11 +4508,19 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
+                "liT7j": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 16
+                },
                 "mIcn": {
-                  "iconFontName": "users"
+                  "iconFontName": "users",
+                  "y": 10.5
                 },
                 "metricVal": {
-                  "content": "+21%"
+                  "content": "+21%",
+                  "x": 28
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -5889,19 +6020,25 @@
               "name": "mFieldName",
               "x": 16,
               "y": 53,
+              "height": "fit_content",
               "descendants": {
                 "hLxXp": {
                   "content": "Your Name"
                 },
                 "ayQPu": {
-                  "width": "fill_container"
+                  "width": "fill_container",
+                  "y": 22
                 },
                 "j3hri": {
                   "iconFontName": "user",
-                  "fill": "#D7CCFF"
+                  "fill": "#D7CCFF",
+                  "x": 12,
+                  "y": 17
                 },
                 "jFmpi": {
-                  "content": "Your name"
+                  "content": "Your name",
+                  "x": 34,
+                  "y": 14.5
                 }
               }
             },
@@ -5913,19 +6050,25 @@
               "name": "mFieldEmail",
               "x": 16,
               "y": 135,
+              "height": "fit_content",
               "descendants": {
                 "hLxXp": {
                   "content": "Your Email"
                 },
                 "ayQPu": {
-                  "width": "fill_container"
+                  "width": "fill_container",
+                  "y": 22
                 },
                 "j3hri": {
                   "iconFontName": "mail",
-                  "fill": "#D7CCFF"
+                  "fill": "#D7CCFF",
+                  "x": 12,
+                  "y": 17
                 },
                 "jFmpi": {
-                  "content": "name@company.com"
+                  "content": "name@company.com",
+                  "x": 34,
+                  "y": 14.5
                 }
               }
             },
@@ -5937,10 +6080,12 @@
               "name": "mSendBtn",
               "x": 16,
               "y": 217,
+              "height": "fit_content",
               "descendants": {
                 "QMLXm": {
                   "content": "Request Contact",
-                  "x": 101
+                  "x": 101,
+                  "y": 14
                 }
               }
             }
@@ -6090,7 +6235,7 @@
           "name": "devHomeM",
           "height": "fit_content",
           "x": 20,
-          "y": 3094,
+          "y": 3406,
           "descendants": {
             "JHUOv": {
               "width": "fit_content",
@@ -7113,11 +7258,19 @@
               "y": 0,
               "height": "fit_content",
               "descendants": {
+                "liT7j": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 16
+                },
                 "mIcn": {
-                  "iconFontName": "timer"
+                  "iconFontName": "timer",
+                  "y": 10.5
                 },
                 "metricVal": {
-                  "content": "-38%"
+                  "content": "-38%",
+                  "x": 28
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -7137,11 +7290,19 @@
               "y": 108,
               "height": "fit_content",
               "descendants": {
+                "liT7j": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 16
+                },
                 "mIcn": {
-                  "iconFontName": "shield"
+                  "iconFontName": "shield",
+                  "y": 10.5
                 },
                 "metricVal": {
-                  "content": "-63%"
+                  "content": "-63%",
+                  "x": 28
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -7161,11 +7322,19 @@
               "y": 216,
               "height": "fit_content",
               "descendants": {
+                "liT7j": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 16
+                },
                 "mIcn": {
-                  "iconFontName": "users"
+                  "iconFontName": "users",
+                  "y": 10.5
                 },
                 "metricVal": {
-                  "content": "+21%"
+                  "content": "+21%",
+                  "x": 28
                 },
                 "zmp2j": {
                   "width": "fill_container",
@@ -7623,7 +7792,7 @@
           "name": "devCaseM",
           "height": "fit_content",
           "x": 20,
-          "y": 1706,
+          "y": 1707,
           "descendants": {
             "JHUOv": {
               "width": "fit_content",
