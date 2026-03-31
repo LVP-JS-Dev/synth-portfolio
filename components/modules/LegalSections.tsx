@@ -37,8 +37,15 @@ export function LegalSections({ title, description, body }: LegalSectionsProps) 
         padding={16}
         gap={8}
       >
-        <Text color="$textPrimary" fontFamily="$heading" fontSize={42} fontWeight="700" $sm={{ fontSize: 28 }}>
-          {title}
+        <Text
+          color="$textPrimary"
+          fontFamily="$heading"
+          fontSize={42}
+          fontWeight="700"
+          $sm={{ fontSize: 28 }}
+          asChild
+        >
+          <h1 style={{ margin: 0 }}>{title}</h1>
         </Text>
         <Text color="$textSecondary" fontFamily="$body" fontSize={18} lineHeight={28} $sm={{ fontSize: 14 }}>
           {description}

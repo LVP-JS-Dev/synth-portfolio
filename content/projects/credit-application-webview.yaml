@@ -1,0 +1,14 @@
+slug: credit-application-webview
+titleEn: Mobile Credit Application Flow
+titleRu: Мобильный флоу кредитной заявки
+summaryEn: Built a React/TypeScript credit application flow for iOS/Android WebView; grew an internal UI library to 12+ reusable components and cut production build time from 4.5 to 2.1 minutes.
+summaryRu: Реализовал флоу кредитной заявки на React/TypeScript для WebView iOS/Android; развил внутреннюю UI‑библиотеку до 12+ компонентов и сократил время прод‑сборки с 4.5 до 2.1 минут.
+year: 2023
+stack:
+  - React
+  - TypeScript
+  - Redux
+  - Jest
+  - React Testing Library
+  - Webpack
+featured: true
