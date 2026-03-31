@@ -59,7 +59,7 @@ This project uses **Vitest** for unit testing and **Playwright** for End-to-End 
 To run the unit test suite:
 
 ```bash
-npm run test
+pnpm test
 ```
 
 ### Running E2E Tests (Playwright)
@@ -67,13 +67,13 @@ npm run test
 Before running E2E tests for the first time, you must install the required browser binaries:
 
 ```bash
-npx playwright install
+pnpm exec playwright install
 ```
 
 Once installed, you can run the full E2E test suite in headless mode:
 
 ```bash
-npm run test:e2e
+pnpm run test:e2e
 ```
 
 **Note:** The E2E tests will automatically start the Next.js development server (`next dev`) on port 3000 if it isn't already running.
@@ -83,7 +83,7 @@ npm run test:e2e
 Playwright comes with a built-in UI mode that is excellent for debugging, stepping through tests, and inspecting the DOM at every step:
 
 ```bash
-npm run test:e2e:ui
+pnpm run test:e2e:ui
 ```
 
 This will open a browser window with the Playwright inspector, allowing you to run individual tests, see traces, and view network requests.
