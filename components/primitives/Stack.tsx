@@ -6,7 +6,7 @@ export type StackDirection = "row" | "column";
 
 export type StackProps = Omit<HTMLAttributes<HTMLDivElement>, "style"> & {
   direction?: StackDirection;
-  gap?: number;
+  gap?: CSSProperties["gap"];
   wrap?: boolean;
   align?: CSSProperties["alignItems"];
   justify?: CSSProperties["justifyContent"];

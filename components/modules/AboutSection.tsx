@@ -37,12 +37,14 @@ export function AboutSection() {
         </div>
 
         <aside className={styles.focusCard} aria-label="Areas of focus">
-          <p className={styles.focusTitle}>Areas of Focus</p>
-          {FOCUS_AREAS.map((area) => (
-            <p key={area} className={styles.focusItem}>
-              {area}
-            </p>
-          ))}
+          <h3 className={styles.focusTitle}>Areas of Focus</h3>
+          <ul className={styles.focusList}>
+            {FOCUS_AREAS.map((area) => (
+              <li key={area} className={styles.focusItem}>
+                {area}
+              </li>
+            ))}
+          </ul>
         </aside>
       </div>
     </section>

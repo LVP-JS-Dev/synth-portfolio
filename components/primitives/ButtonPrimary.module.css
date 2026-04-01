@@ -28,7 +28,7 @@
 
 .soft {
   background: var(--bg-surface-2);
-  border-color: #4A3E88;
+  border-color: var(--stroke-2);
   color: var(--text-primary);
   box-shadow: 0 0 8px rgba(82, 255, 246, 0.4);
 }

@@ -42,6 +42,12 @@
   --glow-blur-medium: 14px;
   --glow-blur-hard: 24px;
 
+  /* Strokes / surfaces (UI-specific) */
+  --stroke-1: #3C3562;
+  --stroke-2: #4A3E88;
+  --stroke-3: #433C69;
+  --bg-deep: #20183A;
+
   /* Back-compat aliases used by some inline styles */
   --color-bgBase: var(--bg-base);
   --color-bgSurface: var(--bg-surface);

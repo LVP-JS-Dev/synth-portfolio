@@ -38,12 +38,10 @@ export function ProjectCard({
     >
       <div className={styles.card}>
         <div className={styles.preview} style={{ backgroundImage: gradient }} />
-        <p className={styles.title}>{title}</p>
+        <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
         {ctaLabel ? (
-          <div className={styles.ctaRow}>
-            <p className={styles.ctaText}>{ctaLabel}</p>
-          </div>
+          <p className={styles.ctaText}>{ctaLabel}</p>
         ) : null}
       </div>
     </motion.div>

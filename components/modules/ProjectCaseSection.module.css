@@ -7,7 +7,7 @@
 .hero {
   background-color: var(--bg-surface);
   border-radius: 14px;
-  border: 1px solid #3c3562;
+  border: 1px solid var(--stroke-1);
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -136,6 +136,12 @@
   font-size: 15px;
 }
 
+.linkText {
+  color: var(--accent-cyan);
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+
 @media (max-width: 800px) {
   .hero {
     padding: 16px;
@@ -172,4 +178,3 @@
     flex-direction: column;
   }
 }
-

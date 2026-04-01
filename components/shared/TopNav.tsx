@@ -41,7 +41,13 @@ export function TopNav() {
             MENU
           </button>
 
-          <button type="button" className={styles.pillButton} aria-label="Switch language">
+          <button
+            type="button"
+            className={styles.pillButton}
+            aria-label="Switch language (coming soon)"
+            disabled
+            title="Coming soon"
+          >
             EN / RU
           </button>
         </div>

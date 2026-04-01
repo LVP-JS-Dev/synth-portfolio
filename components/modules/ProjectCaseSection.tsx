@@ -34,6 +34,10 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
     window.open(rawUrl, "_blank", "noopener,noreferrer");
   };
 
+  const scrollToArchitecture = () => {
+    document.getElementById("architecture")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section className={styles.root}>
       <header className={styles.hero}>
@@ -52,7 +56,9 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
               {link.label}
             </ButtonPrimary>
           ))}
-          <ButtonPrimary preset="soft">Architecture</ButtonPrimary>
+          <ButtonPrimary preset="soft" onClick={scrollToArchitecture}>
+            Architecture
+          </ButtonPrimary>
         </div>
       </header>
 
@@ -81,7 +87,7 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
         </div>
       </section>
 
-      <section className={styles.root} aria-label="Architecture">
+      <section className={styles.root} id="architecture" aria-label="Architecture">
         <BlockTitle>Architecture</BlockTitle>
         <div className={styles.archGrid}>
           {[
@@ -124,13 +130,19 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
             link.url.startsWith("https://") ||
             link.url.startsWith("mailto:") ||
             link.url.startsWith("tel:");
-          const safeUrl = isSafe ? link.url : "#";
+          if (!isSafe) {
+            return (
+              <span key={`${link.label}-${idx}`} className={styles.linkText}>
+                {link.label}: {link.url}
+              </span>
+            );
+          }
 
           return (
             <a
               key={`${link.label}-${idx}`}
               className={styles.link}
-              href={safeUrl}
+              href={link.url}
               target="_blank"
               rel="noopener noreferrer"
             >

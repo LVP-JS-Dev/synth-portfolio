@@ -100,7 +100,7 @@ export function ProjectsFilterGrid({ projects }: { projects: ProjectItem[] }) {
             style={{
               gridColumn: "1 / -1",
               padding: 16,
-              border: "1px solid #3C3562",
+              border: "1px solid var(--stroke-1)",
               borderRadius: 10,
               background: "var(--bg-base)",
               color: "var(--text-secondary)",

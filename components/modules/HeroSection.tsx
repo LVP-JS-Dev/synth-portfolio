@@ -12,7 +12,7 @@ export function HeroSection() {
 
         <h1 className={styles.title}>
           Senior Frontend Engineer
-          {"\n"}
+          <br />
           for fintech &amp; B2B product teams
         </h1>
 

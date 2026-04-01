@@ -59,7 +59,7 @@
   gap: 8px;
   padding: 14px 16px;
   border-radius: 999px;
-  border: 1px solid #4a3e88;
+  border: 1px solid var(--stroke-2);
   background-color: var(--bg-surface-2);
   cursor: pointer;
   transition: opacity 160ms ease, border-color 160ms ease;
@@ -73,6 +73,16 @@
 .pillButton:hover {
   opacity: 0.85;
   border-color: var(--accent-cyan);
+}
+
+.pillButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.pillButton:disabled:hover {
+  opacity: 0.55;
+  border-color: var(--stroke-2);
 }
 
 .pillButton:focus-visible {

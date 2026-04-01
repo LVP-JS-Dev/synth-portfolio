@@ -7,7 +7,7 @@
 .hero {
   background-color: var(--bg-surface);
   border-radius: 14px;
-  border: 1px solid #3c3562;
+  border: 1px solid var(--stroke-1);
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
 .block {
   background-color: var(--bg-surface-2);
   border-radius: 12px;
-  border: 1px solid #4a3e88;
+  border: 1px solid var(--stroke-2);
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -57,9 +57,9 @@
 }
 
 .body {
-  background-color: #20183a;
+  background-color: var(--bg-deep);
   border-radius: 10px;
-  border: 1px solid #3c3562;
+  border: 1px solid var(--stroke-1);
   padding: 14px;
 }
 
@@ -88,4 +88,3 @@
     line-height: 22px;
   }
 }
-

@@ -61,7 +61,7 @@
   width: 420px;
   background-color: var(--bg-surface-2);
   border-radius: 12px;
-  border: 1px solid #4a3e88;
+  border: 1px solid var(--stroke-2);
   padding: 18px;
   display: flex;
   flex-direction: column;
@@ -74,6 +74,15 @@
   font-size: 16px;
   font-weight: 700;
   margin: 0;
+}
+
+.focusList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .focusItem {
@@ -107,4 +116,3 @@
     width: 100%;
   }
 }
-

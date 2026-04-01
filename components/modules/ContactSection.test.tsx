@@ -6,9 +6,10 @@ describe("ContactSection", () => {
   test("shows a polite confirmation after submit", () => {
     render(<ContactSection />);
 
-    fireEvent.submit(screen.getByRole("button", { name: /send message/i }).closest("form")!);
+    const form = screen.getByRole("button", { name: /send message/i }).closest("form");
+    expect(form).not.toBeNull();
+    fireEvent.submit(form!);
 
     expect(screen.getByRole("status")).toHaveTextContent(/message sent/i);
   });
 });
-
