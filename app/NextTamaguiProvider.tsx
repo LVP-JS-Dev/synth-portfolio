@@ -10,7 +10,7 @@ import { TamaguiProvider } from 'tamagui'
 import tamaguiConfig from '../tamagui.config'
 
 export const NextTamaguiProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useRootTheme()
+  const [theme, setTheme] = useRootTheme({ fallback: 'dark' })
 
   useServerInsertedHTML(() => {
     // @ts-expect-error StyleSheet.getSheet() is not in RN types but exists in react-native-web
@@ -32,7 +32,6 @@ export const NextTamaguiProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <NextThemeProvider
-      skipNextHead
       onChangeTheme={(next) => {
         setTheme(next as 'light' | 'dark')
       }}
