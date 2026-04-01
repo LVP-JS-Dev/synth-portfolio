@@ -37,7 +37,7 @@ export async function listProjectSlugs(): Promise<string[]> {
     return entries
       .filter((entry) => entry.isFile() && entry.name.endsWith(".yaml"))
       .map((entry) => entry.name.slice(0, -".yaml".length))
-      .filter((slug) => slug.length > 0)
+      .filter((slug) => slug.length > 0 && SAFE_PROJECT_SLUG.test(slug))
       .sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
   } catch {
     return [];
