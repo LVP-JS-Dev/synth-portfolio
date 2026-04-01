@@ -1,0 +1,109 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 32px;
+  background-color: var(--bg-surface);
+  border-radius: 16px;
+  border: 1px solid var(--stroke-1);
+}
+
+.left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.kicker {
+  color: var(--accent-cyan);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.title {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 58px;
+  line-height: 64px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 0 14px rgba(91, 77, 255, 0.3);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.right {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background-color: var(--bg-surface-2);
+  border-radius: 12px;
+  border: 1px solid var(--stroke-2);
+}
+
+.rightTitle {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.focusList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.focusItem {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .card {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .right {
+    width: 100%;
+  }
+}

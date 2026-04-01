@@ -1,6 +1,6 @@
 "use client";
 
-import { Text, XStack, YStack } from "tamagui";
+import styles from "./AboutSection.module.css";
 
 const ABOUT_PARAGRAPHS = [
   "I specialize in React, TypeScript, and Next.js architectures for high‑stakes products where UX stability and performance are non‑negotiable.",
@@ -17,48 +17,36 @@ const FOCUS_AREAS = [
 
 export function AboutSection() {
   return (
-    <YStack gap={16} id="about">
-      <YStack gap={8}>
-        <Text color="$accentCyan" fontFamily="$heading" fontSize={12} fontWeight="700" letterSpacing={1}>
-          02. ABOUT / WHO I AM
-        </Text>
-        <Text color="$textPrimary" fontFamily="$heading" fontSize={36} fontWeight="700" $sm={{ fontSize: 24 }}>
-          I build durable frontend platforms
-        </Text>
-        <Text color="$textSecondary" fontFamily="$body" fontSize={16} lineHeight={26} $sm={{ fontSize: 14 }}>
-          5+ years building web products with measurable outcomes: faster builds, lower latency, and higher verification success.
-        </Text>
-      </YStack>
+    <section className={styles.section} id="about">
+      <div className={styles.header}>
+        <p className={styles.kicker}>02. ABOUT / WHO I AM</p>
+        <h2 className={styles.title}>I build durable frontend platforms</h2>
+        <p className={styles.subtitle}>
+          5+ years building web products with measurable outcomes: faster builds, lower latency, and higher
+          verification success.
+        </p>
+      </div>
 
-      <XStack gap={24} flexWrap="wrap" $sm={{ flexDirection: "column", gap: 16 }}>
-        <YStack flex={1} minWidth={300} gap={12}>
+      <div className={styles.grid}>
+        <div className={styles.copy}>
           {ABOUT_PARAGRAPHS.map((paragraph) => (
-            <Text key={paragraph} color="$textSecondary" fontFamily="$body" fontSize={17} lineHeight={27} $sm={{ fontSize: 15 }}>
+            <p key={paragraph} className={styles.paragraph}>
               {paragraph}
-            </Text>
+            </p>
           ))}
-        </YStack>
+        </div>
 
-        <YStack
-          width={420}
-          $sm={{ width: "100%" }}
-          backgroundColor="$bgSurface2"
-          borderRadius={12}
-          borderWidth={1}
-          borderColor="#4A3E88"
-          padding={18}
-          gap={10}
-        >
-          <Text color="$textPrimary" fontFamily="$heading" fontSize={16} fontWeight="700">
-            Areas of Focus
-          </Text>
-          {FOCUS_AREAS.map((area) => (
-            <Text key={area} color="$accentCyan" fontFamily="$heading" fontSize={14}>
-              {area}
-            </Text>
-          ))}
-        </YStack>
-      </XStack>
-    </YStack>
+        <aside className={styles.focusCard} aria-label="Areas of focus">
+          <h3 className={styles.focusTitle}>Areas of Focus</h3>
+          <ul className={styles.focusList}>
+            {FOCUS_AREAS.map((area) => (
+              <li key={area} className={styles.focusItem}>
+                {area}
+              </li>
+            ))}
+          </ul>
+        </aside>
+      </div>
+    </section>
   );
 }

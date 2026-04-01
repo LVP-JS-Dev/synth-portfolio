@@ -2,8 +2,8 @@
 
 import { ButtonPrimary } from "@/components/primitives/ButtonPrimary";
 import { Mail, User } from "lucide-react";
-import { FormEvent } from "react";
-import { Input, Text, XStack, YStack } from "tamagui";
+import { FormEvent, useEffect, useRef, useState } from "react";
+import styles from "./ContactSection.module.css";
 
 function ContactField({
   label,
@@ -19,39 +19,27 @@ function ContactField({
   icon: "user" | "mail";
 }) {
   const Icon = icon === "user" ? User : Mail;
+  const inputId = `contact-${name}`;
 
   return (
-    <YStack gap={6}>
-      <Text color="$textSecondary" fontFamily="$heading" fontSize={12} fontWeight="500">
+    <div className={styles.field}>
+      <label className={styles.fieldLabel} htmlFor={inputId}>
         {label}
-      </Text>
-      <XStack
-        height={48}
-        backgroundColor="$bgBase"
-        borderRadius={10}
-        borderWidth={1}
-        borderColor="$accentCyan"
-        alignItems="center"
-        gap={8}
-        paddingHorizontal={12}
-        style={{ boxShadow: "0 0 12px var(--color-glowSoft)" }}
-      >
-        <Icon size={14} color="var(--color-textSecondary)" />
-        <Input
+      </label>
+      <div className={styles.fieldRow}>
+        <span className={styles.fieldIcon} aria-hidden="true">
+          <Icon size={14} />
+        </span>
+        <input
+          id={inputId}
+          className={styles.input}
           name={name}
           type={type}
           required
           placeholder={placeholder}
-          color="$textSecondary"
-          fontFamily="$body"
-          fontSize={14}
-          borderWidth={0}
-          backgroundColor="transparent"
-          flexGrow={1}
-          focusStyle={{ borderColor: "$accentCyan" }}
         />
-      </XStack>
-    </YStack>
+      </div>
+    </div>
   );
 }
 
@@ -74,82 +62,68 @@ const CONTACT_LINKS = [
 ] as const;
 
 export function ContactSection() {
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "sent">("idle");
+  const resetTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (resetTimerRef.current !== null) {
+        window.clearTimeout(resetTimerRef.current);
+      }
+    };
+  }, []);
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    console.log("contact form submitted", Object.fromEntries(formData.entries()));
+    event.currentTarget.reset();
+
+    setSubmitStatus("sent");
+    if (resetTimerRef.current !== null) {
+      window.clearTimeout(resetTimerRef.current);
+    }
+
+    resetTimerRef.current = window.setTimeout(() => {
+      setSubmitStatus("idle");
+      resetTimerRef.current = null;
+    }, 3500);
   };
 
   return (
-    <YStack gap={16} id="contact">
-      <YStack gap={8}>
-        <Text color="$accentCyan" fontFamily="$heading" fontSize={12} fontWeight="700" letterSpacing={1}>
-          07. CONTACT / CTA
-        </Text>
-        <Text color="$textPrimary" fontFamily="$heading" fontSize={36} fontWeight="700" $sm={{ fontSize: 24 }}>
-          Let&apos;s work together
-        </Text>
-        <Text color="$textSecondary" fontFamily="$body" fontSize={16} lineHeight={26} $sm={{ fontSize: 14 }}>
+    <section className={styles.section} id="contact">
+      <div className={styles.header}>
+        <p className={styles.kicker}>07. CONTACT / CTA</p>
+        <h2 className={styles.title}>Let&apos;s work together</h2>
+        <p className={styles.subtitle}>
           Tell me about your product and where frontend quality can unlock business impact.
-        </Text>
-      </YStack>
+        </p>
+      </div>
 
-      <XStack gap={24} flexWrap="wrap" $sm={{ flexDirection: "column", gap: 16 }}>
-          <YStack
-            flex={1}
-            minWidth={300}
-            backgroundColor="$bgSurface2"
-            borderRadius={12}
-            borderWidth={1}
-            borderColor="$accentCyan"
-            padding={20}
-            gap={12}
-          >
-          <Text color="$textSecondary" fontFamily="$body" fontSize={18} lineHeight={28}>
+      <div className={styles.grid}>
+        <div className={[styles.card, styles.cardLeft].join(" ")}>
+          <p className={styles.lead}>
             Open for senior frontend roles, platform architecture, and performance audits.
-          </Text>
+          </p>
 
           {CONTACT_LINKS.map((link) => (
-            <Text
+            <a
               key={link.label}
-              color="$accentCyan"
-              fontFamily="$heading"
-              fontSize={13}
-              style={{ textShadow: "0 0 8px rgba(82, 255, 246, 0.53)" }}
+              className={styles.contactLink}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <a
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                {link.label}: {link.display}
-              </a>
-            </Text>
+              {link.label}: {link.display}
+            </a>
           ))}
 
-          <XStack marginTop={4}>
+          <div className={styles.downloadRow}>
             <ButtonPrimary preset="soft">Download CV</ButtonPrimary>
-          </XStack>
-        </YStack>
+          </div>
+        </div>
 
-          <YStack
-            width={520}
-            $sm={{ width: "100%" }}
-            backgroundColor="$bgSurface2"
-            borderRadius={12}
-            borderWidth={1}
-            borderColor="$bgSurface"
-            padding={16}
-            gap={12}
-          >
-          <form
-            onSubmit={handleSubmit}
-            style={{ display: "flex", flexDirection: "column", gap: 12 }}
-          >
-            <Text color="$textPrimary" fontFamily="$heading" fontSize={20} fontWeight="700">
-              Send a Message
-            </Text>
+        <div className={[styles.card, styles.cardRight].join(" ")}>
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <p className={styles.formTitle}>Send a Message</p>
 
             <ContactField label="Your Name" name="name" placeholder="Your name" icon="user" />
             <ContactField
@@ -160,14 +134,18 @@ export function ContactSection() {
               icon="mail"
             />
 
-            <YStack marginTop={4} width="100%">
+            <div className={styles.submitRow}>
               <ButtonPrimary preset="medium" style={{ width: "100%" }} type="submit">
                 Send Message
               </ButtonPrimary>
-            </YStack>
+            </div>
+
+            <p className={styles.submitStatus} role="status" aria-live="polite">
+              {submitStatus === "sent" ? "Message sent. I’ll reply as soon as possible." : ""}
+            </p>
           </form>
-        </YStack>
-      </XStack>
-    </YStack>
+        </div>
+      </div>
+    </section>
   );
 }
