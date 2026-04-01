@@ -1,10 +1,12 @@
-import { createReader } from "@keystatic/core/reader";
 import { cache } from "react";
-import keystaticConfig from "@/keystatic.config";
+import {
+  listProjectSlugs,
+  readAllProjects as readAllProjectsFromStore,
+  readProject as readProjectFromStore,
+  readSingleton,
+} from "@/lib/content-store";
 
 export type Locale = "en" | "ru";
-
-const reader = createReader(process.cwd(), keystaticConfig);
 
 const HOME_FALLBACK = {
   titleEn: "Home",
@@ -59,12 +61,16 @@ const safeBoolean = (value: unknown, fallback = false): boolean =>
   typeof value === "boolean" ? value : fallback;
 
 async function safeSingletonRead<T>(
-  readFn: () => Promise<SingletonEntry<T>>,
+  readFn: () => Promise<unknown | null>,
   normalize: (entry: SingletonEntry<T>) => T
 ): Promise<T> {
   try {
     const entry = await readFn();
-    return normalize(entry);
+    if (!entry || typeof entry !== "object") {
+      return normalize(undefined);
+    }
+
+    return normalize(entry as SingletonEntry<T>);
   } catch {
     return normalize(undefined);
   }
@@ -154,20 +160,20 @@ export async function getProjectBySlug(slug: string) {
 }
 
 const readHomeEntry = cache(async () =>
-  safeSingletonRead(() => reader.singletons.home.read(), normalizeHomeEntry),
+  safeSingletonRead(() => readSingleton("home"), normalizeHomeEntry),
 );
 
 const readProjectsPageEntry = cache(async () =>
-  safeSingletonRead(() => reader.singletons.projectsPage.read(), normalizeProjectsPageEntry),
+  safeSingletonRead(() => readSingleton("projects"), normalizeProjectsPageEntry),
 );
 
 const readLegalEntry = cache(async () =>
-  safeSingletonRead(() => reader.singletons.legal.read(), normalizeLegalEntry),
+  safeSingletonRead(() => readSingleton("legal"), normalizeLegalEntry),
 );
 
 const readAllProjects = cache(async () => {
   try {
-    const projects = await reader.collections.projects.all();
+    const projects = await readAllProjectsFromStore();
     const safeProjects = Array.isArray(projects) ? projects : [];
 
     return safeProjects.map((project) =>
@@ -180,7 +186,7 @@ const readAllProjects = cache(async () => {
 
 const readProjectSlugs = cache(async (): Promise<string[]> => {
   try {
-    return await reader.collections.projects.list();
+    return await listProjectSlugs();
   } catch {
     return [];
   }
@@ -188,7 +194,7 @@ const readProjectSlugs = cache(async (): Promise<string[]> => {
 
 const readProjectBySlug = cache(async (slug: string) => {
   try {
-    const entry = await reader.collections.projects.read(slug);
+    const entry = await readProjectFromStore(slug);
 
     if (!entry) {
       return null;
