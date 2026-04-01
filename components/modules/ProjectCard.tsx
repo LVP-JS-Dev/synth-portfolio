@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Text, XStack, YStack } from "tamagui";
+import styles from "./ProjectCard.module.css";
 
 export interface ProjectCardProps {
   title: string;
@@ -36,48 +36,16 @@ export function ProjectCard({
       whileTap={{ scale: 0.995, transition: { duration: 0.12, ease: "easeOut" } }}
       style={{ width: "100%" }}
     >
-      <YStack
-        backgroundColor="$bgSurface2"
-        borderRadius={12}
-        borderWidth={1}
-        borderColor="#433C69"
-        gap={12}
-        padding={16}
-        style={{ boxShadow: "0 0 14px rgba(82, 255, 246, 0.33)" }}
-      >
-        <YStack
-          height={170}
-          width="100%"
-          borderRadius={8}
-          backgroundColor="$bgBase"
-          style={{
-            backgroundImage: gradient,
-            boxShadow: "0 0 14px rgba(82, 255, 246, 0.33)",
-          }}
-        />
-
-        <Text
-          color="$textPrimary"
-          fontFamily="$heading"
-          fontSize={20}
-          fontWeight="700"
-          style={{ textShadow: "0 0 14px rgba(255, 79, 216, 0.66)" }}
-        >
-          {title}
-        </Text>
-
-        <Text color="$textSecondary" fontFamily="$body" fontSize={14} lineHeight={22}>
-          {description}
-        </Text>
-
+      <div className={styles.card}>
+        <div className={styles.preview} style={{ backgroundImage: gradient }} />
+        <p className={styles.title}>{title}</p>
+        <p className={styles.description}>{description}</p>
         {ctaLabel ? (
-          <XStack marginTop={2}>
-            <Text color="$accentCyan" fontFamily="$heading" fontSize={12} fontWeight="700">
-              {ctaLabel}
-            </Text>
-          </XStack>
+          <div className={styles.ctaRow}>
+            <p className={styles.ctaText}>{ctaLabel}</p>
+          </div>
         ) : null}
-      </YStack>
+      </div>
     </motion.div>
   );
 }

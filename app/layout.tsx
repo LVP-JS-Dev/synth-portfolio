@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import { TopNav } from "@/components/shared/TopNav";
-import { NextTamaguiProvider } from "./NextTamaguiProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,13 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body style={{ backgroundColor: 'var(--bg-base)', color: 'var(--text-primary)', margin: 0, padding: 0 }}>
-        <NextTamaguiProvider>
-          <TopNav />
-          {children}
-          <CookieBanner />
-        </NextTamaguiProvider>
+        <TopNav />
+        {children}
+        <CookieBanner />
       </body>
     </html>
   );

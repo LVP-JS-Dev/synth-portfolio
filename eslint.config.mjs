@@ -25,7 +25,6 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
     "tokens.css",
-    ".tamagui/**",
   ]),
 ]);
 

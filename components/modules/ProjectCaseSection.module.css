@@ -1,0 +1,175 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero {
+  background-color: var(--bg-surface);
+  border-radius: 14px;
+  border: 1px solid #3c3562;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.heroTitle {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255, 79, 216, 0.8);
+}
+
+.heroMeta {
+  color: var(--accent-yellow);
+  font-family: var(--font-display);
+  font-size: 13px;
+  margin: 0;
+}
+
+.heroSummary {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.metricsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.metricWrap {
+  flex: 1;
+  min-width: 220px;
+}
+
+.twoCol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.col {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.blockTitle {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bodyText {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.archGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.archCard {
+  flex: 1;
+  min-width: 220px;
+  background-color: var(--bg-base);
+  border-radius: 10px;
+  border: 1px solid var(--bg-surface-2);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.archName {
+  color: var(--accent-cyan);
+  font-family: var(--font-display);
+  font-size: 12px;
+  margin: 0;
+}
+
+.archDesc {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stackText {
+  color: var(--accent-cyan);
+  font-family: var(--font-display);
+  font-size: 13px;
+  margin: 0;
+}
+
+.link {
+  color: var(--accent-cyan);
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding: 16px;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .heroMeta {
+    font-size: 12px;
+  }
+
+  .heroSummary {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .metricsRow {
+    flex-direction: column;
+  }
+
+  .twoCol {
+    flex-direction: column;
+  }
+
+  .bodyText {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .archGrid {
+    flex-direction: column;
+  }
+}
+

@@ -3,7 +3,7 @@
 import type { LucideIcon } from "lucide-react";
 import { Activity, ShieldCheck, Zap } from "lucide-react";
 import { motion } from "framer-motion";
-import { Text, XStack, YStack } from "tamagui";
+import styles from "./MetricCard.module.css";
 
 export type MetricIconName = "activity" | "zap" | "shield-check";
 
@@ -40,32 +40,15 @@ export function MetricCard({
       }}
       style={{ width: "100%" }}
     >
-      <YStack
-        backgroundColor="$bgSurface2"
-        borderRadius={12}
-        borderWidth={1}
-        borderColor="#433C69"
-        gap={8}
-        padding={16}
-        style={{ boxShadow: "0 0 14px rgba(82, 255, 246, 0.33)" }}
-      >
-        <XStack gap={8} alignItems="center">
+      <div className={styles.card}>
+        <div className={styles.top}>
           <Icon size={20} color={iconColor} />
-          <Text
-            color={valueColor}
-            fontFamily="$heading"
-            fontSize={30}
-            fontWeight="700"
-            style={{ textShadow: "0 0 10px rgba(82, 255, 246, 0.66)" }}
-          >
+          <p className={styles.value} style={{ color: valueColor }}>
             {value}
-          </Text>
-        </XStack>
-
-        <Text color="$textSecondary" fontFamily="$body" fontSize={14}>
-          {label}
-        </Text>
-      </YStack>
+          </p>
+        </div>
+        <p className={styles.label}>{label}</p>
+      </div>
     </motion.div>
   );
 }
