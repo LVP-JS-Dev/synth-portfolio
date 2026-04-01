@@ -15,6 +15,21 @@ CSS tokens: `tokens.css` (root) → imported via `app/tokens.css` → `app/globa
 
 If env vars are not set, metadata generation falls back to `https://example.com` and `https://example.ru` for baseline builds.
 
+### CMS (Decap, local-only)
+
+The Decap CMS admin lives at `http://localhost:3000/admin/` and edits YAML content under `content/`.
+
+Run it locally in two terminals:
+
+```bash
+pnpm cms:server
+pnpm dev
+```
+
+Uploaded media is stored in `public/uploads/` (committed to Git).
+
+`/admin` is intentionally **disabled in production** (returns 404).
+
 ### Agent content ops
 
 The CMS content directory (`content/`) exposes agent-native operations via `app/api/content-ops.*`.

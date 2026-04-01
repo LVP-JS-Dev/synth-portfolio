@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
+    "cms:server": "decap-server",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -13,8 +14,6 @@
     "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
-    "@keystatic/core": "^0.5.48",
-    "@keystatic/next": "^5.0.4",
     "@markdoc/markdoc": "^0.5.6",
     "@tamagui/core": "^2.0.0-rc.26",
     "@tamagui/next-plugin": "^2.0.0-rc.26",
@@ -26,7 +25,8 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-native-web": "^0.21.2",
-    "tamagui": "^2.0.0-rc.26"
+    "tamagui": "^2.0.0-rc.26",
+    "yaml": "^2.8.1"
   },
   "devDependencies": {
     "@tamagui/font-inter": "^2.0.0-rc.26",
@@ -39,6 +39,7 @@
     "@types/react-dom": "^19",
     "@types/react-native": "^0.72.8",
     "@vitejs/plugin-react": "^4",
+    "decap-server": "^3.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.0",
     "jsdom": "^22",

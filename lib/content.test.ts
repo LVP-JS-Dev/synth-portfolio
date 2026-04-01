@@ -1,46 +1,21 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-const createReaderMock = vi.fn();
-
-vi.mock("@/keystatic.config", () => ({
-  __esModule: true,
-  default: {},
+vi.mock("@/lib/content-store", () => ({
+  listProjectSlugs: vi.fn(),
+  readAllProjects: vi.fn(),
+  readProject: vi.fn(),
+  readSingleton: vi.fn(),
 }));
-vi.mock("@keystatic/core/reader", () => ({
-  createReader: createReaderMock,
-}));
-
-type ReaderStub = ReturnType<typeof createReaderMock>;
-
-const createReaderStub = () => {
-  const singletonFactory = () => ({ read: vi.fn() });
-
-  return {
-    singletons: {
-      home: singletonFactory(),
-      projectsPage: singletonFactory(),
-      legal: singletonFactory(),
-    },
-    collections: {
-      projects: {
-        all: vi.fn(),
-        read: vi.fn(),
-      },
-    },
-  };
-};
 
 describe("content reader hardening", () => {
-  let readerStub: ReaderStub;
-
   beforeEach(async () => {
     vi.resetModules();
-    readerStub = createReaderStub() as ReaderStub;
-    createReaderMock.mockReturnValue(readerStub);
+    vi.clearAllMocks();
   });
 
   it("normalizes malformed stack entries", async () => {
-    readerStub.collections.projects.all.mockResolvedValue([
+    const store = await import("@/lib/content-store");
+    vi.mocked(store.readAllProjects).mockResolvedValue([
       {
         slug: "malformed",
         entry: {
@@ -64,7 +39,8 @@ describe("content reader hardening", () => {
   });
 
   it("fills missing singleton fields with fallbacks", async () => {
-    readerStub.singletons.home.read.mockResolvedValue({ titleEn: "Custom" });
+    const store = await import("@/lib/content-store");
+    vi.mocked(store.readSingleton).mockResolvedValue({ titleEn: "Custom" });
 
     const content = await import("./content");
     const result = await content.getHomeContent("en");
@@ -75,7 +51,8 @@ describe("content reader hardening", () => {
   });
 
   it("returns fallback when singleton read throws", async () => {
-    readerStub.singletons.home.read.mockRejectedValue(new Error("boom"));
+    const store = await import("@/lib/content-store");
+    vi.mocked(store.readSingleton).mockRejectedValue(new Error("boom"));
 
     const content = await import("./content");
     const result = await content.getHomeContent("en");
@@ -84,7 +61,8 @@ describe("content reader hardening", () => {
   });
 
   it("returns null when project read throws", async () => {
-    readerStub.collections.projects.read.mockRejectedValue(new Error("boom"));
+    const store = await import("@/lib/content-store");
+    vi.mocked(store.readProject).mockRejectedValue(new Error("boom"));
 
     const content = await import("./content");
     const result = await content.getProjectBySlug("missing");
