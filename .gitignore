@@ -46,4 +46,5 @@ pnpm-debug.log*
 *.seed
 *.pid.lock
 *.local
+.artifacts/
 .tamagui/

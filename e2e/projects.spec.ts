@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { getProjectsPageContent, getAllProjects } from "../lib/content";
+import { getProjectsPageContent, getAllProjects, getProjectBySlug } from "../lib/content";
 
 test.describe("Projects Page", () => {
   test("should load the projects list", async ({ page }) => {
@@ -40,5 +40,13 @@ test.describe("Projects Page", () => {
 
     // Wait for navigation and verify URL contains the expected slug
     await expect(page).toHaveURL(new RegExp(`/projects/${firstProject.slug}$`), { timeout: 30_000 });
+  });
+
+  test("design v2 case route should resolve", async ({ page }) => {
+    const project = await getProjectBySlug("realtime-collaboration-suite");
+    expect(project, "design v2 slug must exist in content/projects").not.toBeNull();
+
+    await page.goto("/projects/realtime-collaboration-suite");
+    await expect(page.getByRole("heading", { level: 1, name: project!.titleEn })).toBeVisible();
   });
 });

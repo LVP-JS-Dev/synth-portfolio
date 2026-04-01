@@ -1,0 +1,13 @@
+slug: realtime-collaboration-suite
+titleEn: Realtime Collaboration Suite
+titleRu: Платформа совместного редактирования в реальном времени
+summaryEn: "Re-architected collaborative editing with strict auditability: WebSocket gateway, conflict resolution workers, and streaming SSR shell; improved weekly active sessions by 21% and reduced incident resolution time by 41%."
+summaryRu: "Перепроектировал совместное редактирование с жёсткой аудитируемостью: WebSocket‑шлюз, воркеры разрешения конфликтов и streaming SSR оболочка; +21% weekly active sessions и −41% время решения инцидентов."
+year: 2026
+stack:
+  - React
+  - TypeScript
+  - Next.js
+  - WebSocket
+  - CRDT
+featured: true
