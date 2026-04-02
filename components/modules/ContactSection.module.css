@@ -136,6 +136,7 @@
   background: transparent;
   outline: none;
   color: var(--text-secondary);
+  caret-color: var(--text-secondary);
   font-family: var(--font-body);
   font-size: 14px;
 }
