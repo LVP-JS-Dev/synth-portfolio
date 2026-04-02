@@ -51,6 +51,40 @@ function waitForUrl(url, { timeoutMs }) {
   });
 }
 
+function waitForServerReady(child, url, { timeoutMs, shutdown }) {
+  return new Promise((resolve, reject) => {
+    let settled = false;
+
+    const onExit = (code, signal) => {
+      if (settled) return;
+      settled = true;
+      shutdown();
+      reject(
+        new Error(
+          `Server process exited before it became ready (${url}). code=${code ?? "null"} signal=${signal ?? "null"}`,
+        ),
+      );
+    };
+
+    child.once("exit", onExit);
+
+    waitForUrl(url, { timeoutMs })
+      .then(() => {
+        if (settled) return;
+        settled = true;
+        child.off("exit", onExit);
+        resolve();
+      })
+      .catch((error) => {
+        if (settled) return;
+        settled = true;
+        child.off("exit", onExit);
+        shutdown();
+        reject(error);
+      });
+  });
+}
+
 async function main() {
   const baseEnv = {
     ...process.env,
@@ -87,8 +121,8 @@ async function main() {
   process.on("SIGTERM", shutdown);
 
   await Promise.all([
-    waitForUrl(`http://localhost:${EN_PORT}`, { timeoutMs: 120_000 }),
-    waitForUrl(`http://localhost:${RU_PORT}`, { timeoutMs: 120_000 }),
+    waitForServerReady(en, `http://localhost:${EN_PORT}`, { timeoutMs: 120_000, shutdown }),
+    waitForServerReady(ru, `http://localhost:${RU_PORT}`, { timeoutMs: 120_000, shutdown }),
   ]);
 
   // Keep the manager process alive while Playwright runs.

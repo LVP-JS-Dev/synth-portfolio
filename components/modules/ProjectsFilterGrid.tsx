@@ -31,7 +31,7 @@ function normalizeTag(tag: string): FilterId {
   if (lower.includes("react")) return "react";
   if (lower.includes("a11y") || lower.includes("access")) return "a11y";
   if (lower.includes("perf") || lower.includes("lighthouse") || lower.includes("cwv")) return "performance";
-  if (lower.includes("design") || lower.includes("system")) return "design_systems";
+  if (lower.includes("design")) return "design_systems";
 
   return "all";
 }

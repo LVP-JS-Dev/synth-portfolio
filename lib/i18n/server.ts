@@ -14,34 +14,13 @@ function getHeader(headersObj: HeadersLike, name: string): string | null {
   return value && value.trim() ? value : null;
 }
 
-export function getLocaleFromHeaders(headersObj: HeadersLike): Locale {
+function resolveI18nFromHeaders(headersObj: HeadersLike) {
   const rawHostHeader = getHeader(headersObj, "host");
   const rawHost = rawHostHeader ? rawHostHeader.trim().toLowerCase() : null;
   const host = parseHostname(rawHostHeader);
-  const origins = getSiteOrigins({
-    requestHost: rawHost,
-    requestProto: getHeader(headersObj, "x-forwarded-proto"),
-  });
-
-  return resolveLocale({
-    host,
-    forceLocale: process.env.FORCE_LOCALE ?? null,
-    originRuHost: getOriginHost(origins.ru),
-    originEnHost: getOriginHost(origins.en),
-  });
-}
-
-export async function getLocaleFromNextHeaders(): Promise<Locale> {
-  return getLocaleFromHeaders(await headers());
-}
-
-export async function getI18nServerContext() {
-  const hdrs = await headers();
-  const rawHostHeader = getHeader(hdrs, "host");
-  const rawHost = rawHostHeader ? rawHostHeader.trim().toLowerCase() : null;
-  const host = parseHostname(rawHostHeader);
-  const proto = getHeader(hdrs, "x-forwarded-proto");
+  const proto = getHeader(headersObj, "x-forwarded-proto");
   const origins = getSiteOrigins({ requestHost: rawHost, requestProto: proto });
+
   const locale = resolveLocale({
     host,
     forceLocale: process.env.FORCE_LOCALE ?? null,
@@ -51,8 +30,26 @@ export async function getI18nServerContext() {
 
   return {
     locale,
-    messages: getMessages(locale),
     origins,
     request: { host: rawHost, proto },
+  };
+}
+
+export function getLocaleFromHeaders(headersObj: HeadersLike): Locale {
+  return resolveI18nFromHeaders(headersObj).locale;
+}
+
+export async function getLocaleFromNextHeaders(): Promise<Locale> {
+  return getLocaleFromHeaders(await headers());
+}
+
+export async function getI18nServerContext() {
+  const resolved = resolveI18nFromHeaders(await headers());
+
+  return {
+    locale: resolved.locale,
+    messages: getMessages(resolved.locale),
+    origins: resolved.origins,
+    request: resolved.request,
   };
 }

@@ -22,6 +22,8 @@ type TimelineRecord = {
 };
 
 export function getHomePageCopy(locale: Locale) {
+  const t = <T,>(ru: T, en: T): T => (locale === "ru" ? ru : en);
+
   const metrics: readonly HomeMetric[] =
     locale === "ru"
       ? [
@@ -186,37 +188,36 @@ export function getHomePageCopy(locale: Locale) {
         ];
 
   const experience = {
-    srOnlyHeading: locale === "ru" ? "Опыт" : "Experience",
-    kicker: locale === "ru" ? "03. ОПЫТ / РАБОТА" : "03. EXPERIENCE / WORK HISTORY",
+    srOnlyHeading: t("Опыт", "Experience"),
+    kicker: t("03. ОПЫТ / РАБОТА", "03. EXPERIENCE / WORK HISTORY"),
     title:
-      locale === "ru"
-        ? "Роли, масштаб задач и измеримые результаты"
-        : "Roles, scope, and measurable outcomes",
+      t("Роли, масштаб задач и измеримые результаты", "Roles, scope, and measurable outcomes"),
     subtitle:
-      locale === "ru"
-        ? "Роли, контекст и результаты из финтеха и B2B команд."
-        : "Roles, scope, and measurable outcomes from fintech and B2B teams.",
+      t(
+        "Роли, контекст и результаты из финтеха и B2B команд.",
+        "Roles, scope, and measurable outcomes from fintech and B2B teams.",
+      ),
   } as const;
 
   const selectedProjects = {
-    kicker: locale === "ru" ? "04. ИЗБРАННЫЕ ПРОЕКТЫ" : "04. SELECTED PROJECTS",
+    kicker: t("04. ИЗБРАННЫЕ ПРОЕКТЫ", "04. SELECTED PROJECTS"),
     title:
-      locale === "ru"
-        ? "Frontend‑инжиниринг на основе кейсов"
-        : "Case-driven frontend engineering",
+      t("Frontend‑инжиниринг на основе кейсов", "Case-driven frontend engineering"),
     subtitle:
-      locale === "ru"
-        ? "Каждый проект связывает продуктовую задачу с архитектурными решениями и измеримым эффектом."
-        : "Each project maps a product problem to architecture decisions and measurable delivery impact.",
+      t(
+        "Каждый проект связывает продуктовую задачу с архитектурными решениями и измеримым эффектом.",
+        "Each project maps a product problem to architecture decisions and measurable delivery impact.",
+      ),
   } as const;
 
   const quality = {
-    kicker: locale === "ru" ? "05. КАЧЕСТВО ИНЖЕНЕРИИ" : "05. ENGINEERING QUALITY",
-    title: locale === "ru" ? "Производительность, доступность, DX" : "Performance, Accessibility, DX",
+    kicker: t("05. КАЧЕСТВО ИНЖЕНЕРИИ", "05. ENGINEERING QUALITY"),
+    title: t("Производительность, доступность, DX", "Performance, Accessibility, DX"),
     subtitle:
-      locale === "ru"
-        ? "Практичная модель качества: измерить, зафиксировать, наблюдать и улучшать."
-        : "A practical quality model: benchmark, enforce, observe, and iterate.",
+      t(
+        "Практичная модель качества: измерить, зафиксировать, наблюдать и улучшать.",
+        "A practical quality model: benchmark, enforce, observe, and iterate.",
+      ),
   } as const;
 
   return {
