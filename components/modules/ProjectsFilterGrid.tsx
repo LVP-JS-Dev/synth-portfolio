@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ButtonPrimary } from "@/components/primitives/ButtonPrimary";
 import { ProjectCard } from "@/components/modules/ProjectCard";
+import { useMessages } from "@/components/i18n/I18nProvider";
 
 type ProjectItem = {
   slug: string;
@@ -12,34 +13,53 @@ type ProjectItem = {
   tags: string[];
 };
 
-const FILTERS = ["All", "React", "Next.js", "Performance", "A11y", "Design Systems"] as const;
+const FILTERS = [
+  "all",
+  "react",
+  "next",
+  "performance",
+  "a11y",
+  "design_systems",
+] as const;
 
-function normalizeTag(tag: string): string {
+type FilterId = (typeof FILTERS)[number];
+
+function normalizeTag(tag: string): FilterId {
   const lower = tag.toLowerCase();
 
-  if (lower.includes("next")) return "Next.js";
-  if (lower.includes("react")) return "React";
-  if (lower.includes("a11y") || lower.includes("access")) return "A11y";
-  if (lower.includes("perf") || lower.includes("lighthouse") || lower.includes("cwv")) return "Performance";
-  if (lower.includes("design") || lower.includes("system")) return "Design Systems";
+  if (lower.includes("next")) return "next";
+  if (lower.includes("react")) return "react";
+  if (lower.includes("a11y") || lower.includes("access")) return "a11y";
+  if (lower.includes("perf") || lower.includes("lighthouse") || lower.includes("cwv")) return "performance";
+  if (lower.includes("design")) return "design_systems";
 
-  return "All";
+  return "all";
 }
 
 export function ProjectsFilterGrid({ projects }: { projects: ProjectItem[] }) {
-  const [activeFilter, setActiveFilter] = useState<(typeof FILTERS)[number]>("All");
+  const messages = useMessages();
+  const [activeFilter, setActiveFilter] = useState<FilterId>("all");
+
+  const filterLabels: Record<FilterId, string> = {
+    all: messages.projects.filters.all,
+    react: messages.projects.filters.react,
+    next: messages.projects.filters.next,
+    performance: messages.projects.filters.performance,
+    a11y: messages.projects.filters.a11y,
+    design_systems: messages.projects.filters.designSystems,
+  };
 
   const prepared = useMemo(
     () =>
       projects.map((project) => ({
         ...project,
-        normalizedTags: Array.from(new Set(project.tags.map(normalizeTag).filter((v) => v !== "All"))),
+        normalizedTags: Array.from(new Set(project.tags.map(normalizeTag).filter((v) => v !== "all"))),
       })),
     [projects],
   );
 
   const filteredProjects = useMemo(() => {
-    if (activeFilter === "All") return prepared;
+    if (activeFilter === "all") return prepared;
     return prepared.filter((project) => project.normalizedTags.includes(activeFilter));
   }, [activeFilter, prepared]);
 
@@ -53,7 +73,7 @@ export function ProjectsFilterGrid({ projects }: { projects: ProjectItem[] }) {
             onClick={() => setActiveFilter(chip)}
             aria-pressed={chip === activeFilter}
           >
-            {chip}
+            {filterLabels[chip]}
           </ButtonPrimary>
         ))}
       </section>
@@ -70,7 +90,7 @@ export function ProjectsFilterGrid({ projects }: { projects: ProjectItem[] }) {
             <ProjectCard
               title={project.title}
               description={project.description}
-              ctaLabel="Case Study →"
+              ctaLabel={messages.projects.caseCta}
               gradientRotation={130 + ((index % 3) * 10)}
               gradientColors={
                 index % 3 === 0
@@ -108,7 +128,7 @@ export function ProjectsFilterGrid({ projects }: { projects: ProjectItem[] }) {
               fontSize: 13,
             }}
           >
-            No projects for the selected filter yet.
+            {messages.projects.empty}
           </div>
         ) : null}
       </section>

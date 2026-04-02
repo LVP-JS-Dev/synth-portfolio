@@ -1,10 +1,11 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { ContactSection } from "./ContactSection";
+import { renderWithI18n } from "@/test-utils/renderWithI18n";
 
 describe("ContactSection", () => {
   test("shows a polite confirmation after submit", () => {
-    render(<ContactSection />);
+    renderWithI18n(<ContactSection />);
 
     const form = screen.getByRole("button", { name: /send message/i }).closest("form");
     expect(form).not.toBeNull();

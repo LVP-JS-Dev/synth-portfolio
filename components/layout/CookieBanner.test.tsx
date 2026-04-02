@@ -1,7 +1,8 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
 import { describe, expect, test, vi, beforeEach } from "vitest";
 import { CookieBanner } from "./CookieBanner";
 import { CONSENT_STORAGE_KEY, getConsentSnapshot } from "./consentService";
+import { renderWithI18n } from "@/test-utils/renderWithI18n";
 
 const CONSENT_KEY = CONSENT_STORAGE_KEY;
 
@@ -14,7 +15,7 @@ describe("CookieBanner", () => {
   test("does not render when consent already exists", () => {
     localStorage.setItem(CONSENT_KEY, "accepted");
 
-    render(<CookieBanner />);
+    renderWithI18n(<CookieBanner />);
 
     expect(screen.queryByRole("region", { name: /cookie consent/i })).toBeNull();
   });
@@ -22,7 +23,7 @@ describe("CookieBanner", () => {
   test("invalid stored consent is self-healed and banner is shown", () => {
     localStorage.setItem(CONSENT_KEY, "invalid-value");
 
-    render(<CookieBanner />);
+    renderWithI18n(<CookieBanner />);
 
     expect(screen.getByRole("region", { name: /cookie consent/i })).toBeInTheDocument();
   });
@@ -30,20 +31,20 @@ describe("CookieBanner", () => {
   test("invalid stored consent is removed before render", () => {
     localStorage.setItem(CONSENT_KEY, "invalid-value");
 
-    render(<CookieBanner />);
+    renderWithI18n(<CookieBanner />);
 
     expect(localStorage.getItem(CONSENT_KEY)).toBeNull();
   });
 
   test("shows banner when consent not stored", () => {
-    render(<CookieBanner />);
+    renderWithI18n(<CookieBanner />);
 
     expect(screen.getByText(/cookies are used/i)).toBeInTheDocument();
   });
 
   test("accept button stores accepted and runs callback", () => {
     const onAccept = vi.fn();
-    render(<CookieBanner onAccept={onAccept} />);
+    renderWithI18n(<CookieBanner onAccept={onAccept} />);
 
     fireEvent.click(screen.getByRole("button", { name: /accept/i }));
 
@@ -54,7 +55,7 @@ describe("CookieBanner", () => {
 
   test("reject button stores dismissed and runs callback", () => {
     const onDismiss = vi.fn();
-    render(<CookieBanner onDismiss={onDismiss} />);
+    renderWithI18n(<CookieBanner onDismiss={onDismiss} />);
 
     fireEvent.click(screen.getByRole("button", { name: /reject/i }));
 

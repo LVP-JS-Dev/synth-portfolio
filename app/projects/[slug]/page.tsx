@@ -1,5 +1,7 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getProjectSlugs, getProjectBySlug } from "@/lib/content";
+import { getI18nServerContext } from "@/lib/i18n/server";
+import { getProjectCasePlaceholder } from "@/lib/i18n/project-case-placeholder";
 import { notFound } from "next/navigation";
 import { ProjectCaseSection } from "@/components/modules/ProjectCaseSection";
 import { PageContainer } from "@/components/layout/PageContainer";
@@ -15,11 +17,31 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
+  const i18n = await getI18nServerContext();
 
-  return buildMetadata(`/projects/${slug}`, "en", {
-    title: project?.titleEn ?? slug,
-    description: project?.summaryEn,
-  });
+  const title =
+    project === null
+      ? slug
+      : i18n.locale === "ru"
+        ? project?.titleRu ?? project?.titleEn ?? slug
+        : project?.titleEn ?? slug;
+
+  const description =
+    project === null
+      ? undefined
+      : i18n.locale === "ru"
+        ? project?.summaryRu ?? project?.summaryEn
+        : project?.summaryEn;
+
+  return buildMetadata(
+    `/projects/${slug}`,
+    i18n.locale,
+    {
+      title,
+      description,
+    },
+    i18n.request,
+  );
 }
 
 export async function generateStaticParams() {
@@ -30,39 +52,26 @@ export async function generateStaticParams() {
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
+  const i18n = await getI18nServerContext();
 
   if (!project) {
     notFound();
   }
 
+  const placeholder = getProjectCasePlaceholder(i18n.locale);
+
   return (
     <main>
       <PageContainer gap={40}>
         <ProjectCaseSection
-          title={project.titleEn}
-          summary={project.summaryEn}
+          title={i18n.locale === "ru" ? project.titleRu : project.titleEn}
+          summary={i18n.locale === "ru" ? project.summaryRu : project.summaryEn}
           year={project.year}
-          stack={project.stack}
-          metrics={[
-            { iconName: "activity", value: "-38%", label: "Editor interaction latency" },
-            { iconName: "shield-check", value: "-63%", label: "Conflict support tickets" },
-            { iconName: "zap", value: "+21%", label: "Weekly active sessions" },
-          ]}
-          links={[
-            { label: "Live Demo", url: "#" },
-            { label: "GitHub", url: "#" },
-          ]}
-          highlights={[
-            "Added operation batching and optimistic mutation rollback.",
-            "Isolated rendering hotspots with memoized state selectors.",
-            "Migrated editor shell to streaming SSR for faster first paint.",
-            "Established release checks: Vitest, Playwright, Lighthouse CI.",
-          ]}
-          results={[
-            "Collaboration sessions grew by 21% after launch.",
-            "Incident resolution time decreased by 41% with observability integration.",
-            "Team learned to codify conflict-handling as reusable design patterns.",
-          ]}
+          stack={[...project.stack]}
+          metrics={placeholder.metrics}
+          links={placeholder.links}
+          highlights={placeholder.highlights}
+          results={placeholder.results}
         />
       </PageContainer>
     </main>

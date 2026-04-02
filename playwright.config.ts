@@ -1,5 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
+process.env.E2E_SERVER_MODE = "prod";
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
@@ -42,9 +44,9 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: "pnpm run dev",
+    command: "node scripts/e2e-servers.mjs",
     port: 3000,
     reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000, // 2 minutes for initial dev server startup and compilation
+    timeout: 180 * 1000,
   },
 });

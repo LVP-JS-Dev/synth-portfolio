@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./LegalSections.module.css";
+import { useMessages } from "@/components/i18n/I18nProvider";
 
 interface LegalSectionsProps {
   title: string;
@@ -8,25 +9,23 @@ interface LegalSectionsProps {
   body?: string;
 }
 
-const LEGAL_BLOCKS = [
-  {
-    title: "Privacy Policy",
-    description:
-      "Describes what personal data is collected, lawful basis, retention period, third-party processors, and user rights under applicable law.",
-  },
-  {
-    title: "Personal Data Processing Consent",
-    description:
-      "Standalone consent text for submitting contact details, with explicit acceptance, processing purpose, and withdrawal instructions.",
-  },
-  {
-    title: "Cookie Policy",
-    description:
-      "Explains cookie categories, analytics usage, consent options, and controls for opting out.",
-  },
-] as const;
-
 export function LegalSections({ title, description, body }: LegalSectionsProps) {
+  const messages = useMessages();
+  const blocks = [
+    {
+      title: messages.legal.block.privacy.title,
+      description: messages.legal.block.privacy.desc,
+    },
+    {
+      title: messages.legal.block.consent.title,
+      description: messages.legal.block.consent.desc,
+    },
+    {
+      title: messages.legal.block.cookies.title,
+      description: messages.legal.block.cookies.desc,
+    },
+  ] as const;
+
   return (
     <section className={styles.root}>
       <header className={styles.hero}>
@@ -34,7 +33,7 @@ export function LegalSections({ title, description, body }: LegalSectionsProps) 
         <p className={styles.description}>{description}</p>
       </header>
 
-      {LEGAL_BLOCKS.map((block) => (
+      {blocks.map((block) => (
         <section key={block.title} className={styles.block} aria-label={block.title}>
           <h2 className={styles.blockTitle}>{block.title}</h2>
           <p className={styles.blockDescription}>{block.description}</p>
@@ -42,13 +41,13 @@ export function LegalSections({ title, description, body }: LegalSectionsProps) 
       ))}
 
       {body ? (
-        <section className={styles.body} aria-label="Legal notice">
+        <section className={styles.body} aria-label={messages.legal.noticeAria}>
           <p className={styles.bodyText}>{body}</p>
         </section>
       ) : null}
 
       <p className={styles.note}>
-        Recommended implementation: visible cookie banner + checkbox consent in contact form.
+        {messages.legal.note}
       </p>
     </section>
   );

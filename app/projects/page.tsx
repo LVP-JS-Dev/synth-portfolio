@@ -1,19 +1,27 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getAllProjects, getProjectsPageContent } from "@/lib/content";
+import { getI18nServerContext } from "@/lib/i18n/server";
 import { ProjectsFilterGrid } from "@/components/modules/ProjectsFilterGrid";
 import { PageContainer } from "@/components/layout/PageContainer";
 
 export async function generateMetadata() {
-  const page = await getProjectsPageContent("en");
+  const i18n = await getI18nServerContext();
+  const page = await getProjectsPageContent(i18n.locale);
 
-  return buildMetadata("/projects", "en", {
-    title: page.title,
-    description: page.description,
-  });
+  return buildMetadata(
+    "/projects",
+    i18n.locale,
+    {
+      title: page.title,
+      description: page.description,
+    },
+    i18n.request,
+  );
 }
 
 export default async function ProjectsPage() {
-  const page = await getProjectsPageContent("en");
+  const i18n = await getI18nServerContext();
+  const page = await getProjectsPageContent(i18n.locale);
   const projects = await getAllProjects();
   const cardsCount = Math.max(projects.length, 1);
   const pagesCount = Math.max(1, Math.ceil(cardsCount / 6));
@@ -58,9 +66,9 @@ export default async function ProjectsPage() {
         <ProjectsFilterGrid
           projects={projects.map((project) => ({
             slug: project.slug,
-            title: project.titleEn,
-            description: project.summaryEn,
-            tags: project.stack,
+            title: i18n.locale === "ru" ? project.titleRu : project.titleEn,
+            description: i18n.locale === "ru" ? project.summaryRu : project.summaryEn,
+            tags: [...project.stack],
           }))}
         />
 

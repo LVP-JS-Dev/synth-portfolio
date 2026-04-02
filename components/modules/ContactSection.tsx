@@ -3,6 +3,7 @@
 import { ButtonPrimary } from "@/components/primitives/ButtonPrimary";
 import { Mail, User } from "lucide-react";
 import { FormEvent, useEffect, useRef, useState } from "react";
+import { useMessages } from "@/components/i18n/I18nProvider";
 import styles from "./ContactSection.module.css";
 
 function ContactField({
@@ -45,23 +46,24 @@ function ContactField({
 
 const CONTACT_LINKS = [
   {
-    label: "Email",
+    id: "email",
     href: "mailto:lvpjsdev@gmail.com",
     display: "lvpjsdev@gmail.com",
   },
   {
-    label: "Telegram",
+    id: "telegram",
     href: "https://t.me/lvpjsdev",
     display: "@lvpjsdev",
   },
   {
-    label: "GitHub",
+    id: "github",
     href: "https://github.com/leonidpetrov",
     display: "github.com/leonidpetrov",
   },
 ] as const;
 
 export function ContactSection() {
+  const messages = useMessages();
   const [submitStatus, setSubmitStatus] = useState<"idle" | "sent">("idle");
   const resetTimerRef = useRef<number | null>(null);
 
@@ -91,57 +93,67 @@ export function ContactSection() {
   return (
     <section className={styles.section} id="contact">
       <div className={styles.header}>
-        <p className={styles.kicker}>07. CONTACT / CTA</p>
-        <h2 className={styles.title}>Let&apos;s work together</h2>
-        <p className={styles.subtitle}>
-          Tell me about your product and where frontend quality can unlock business impact.
-        </p>
+        <p className={styles.kicker}>{messages.contact.kicker}</p>
+        <h2 className={styles.title}>{messages.contact.title}</h2>
+        <p className={styles.subtitle}>{messages.contact.subtitle}</p>
       </div>
 
       <div className={styles.grid}>
         <div className={[styles.card, styles.cardLeft].join(" ")}>
-          <p className={styles.lead}>
-            Open for senior frontend roles, platform architecture, and performance audits.
-          </p>
+          <p className={styles.lead}>{messages.contact.lead}</p>
 
-          {CONTACT_LINKS.map((link) => (
-            <a
-              key={link.label}
-              className={styles.contactLink}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {link.label}: {link.display}
-            </a>
-          ))}
+          {CONTACT_LINKS.map((link) => {
+            const label =
+              link.id === "email"
+                ? messages.contact.link.email
+                : link.id === "telegram"
+                  ? messages.contact.link.telegram
+                  : messages.contact.link.github;
+
+            return (
+              <a
+                key={link.id}
+                className={styles.contactLink}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {label}: {link.display}
+              </a>
+            );
+          })}
 
           <div className={styles.downloadRow}>
-            <ButtonPrimary preset="soft">Download CV</ButtonPrimary>
+            <ButtonPrimary preset="soft">{messages.contact.downloadCv}</ButtonPrimary>
           </div>
         </div>
 
         <div className={[styles.card, styles.cardRight].join(" ")}>
           <form className={styles.form} onSubmit={handleSubmit}>
-            <p className={styles.formTitle}>Send a Message</p>
+            <p className={styles.formTitle}>{messages.contact.formTitle}</p>
 
-            <ContactField label="Your Name" name="name" placeholder="Your name" icon="user" />
             <ContactField
-              label="Your Email"
+              label={messages.contact.nameLabel}
+              name="name"
+              placeholder={messages.contact.namePlaceholder}
+              icon="user"
+            />
+            <ContactField
+              label={messages.contact.emailLabel}
               name="email"
-              placeholder="name@company.com"
+              placeholder={messages.contact.emailPlaceholder}
               type="email"
               icon="mail"
             />
 
             <div className={styles.submitRow}>
               <ButtonPrimary preset="medium" style={{ width: "100%" }} type="submit">
-                Send Message
+                {messages.contact.submit}
               </ButtonPrimary>
             </div>
 
             <p className={styles.submitStatus} role="status" aria-live="polite">
-              {submitStatus === "sent" ? "Message sent. I’ll reply as soon as possible." : ""}
+              {submitStatus === "sent" ? messages.contact.sent : ""}
             </p>
           </form>
         </div>

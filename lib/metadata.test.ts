@@ -15,7 +15,7 @@ describe("buildMetadata", () => {
   });
 
   it("generates EN canonical", () => {
-    const metadata = buildMetadata("/projects");
+    const metadata = buildMetadata("/projects", "en");
     expect(metadata.alternates?.canonical).toBe("https://example.com/projects");
   });
 
@@ -24,13 +24,13 @@ describe("buildMetadata", () => {
     expect(metadata.alternates?.canonical).toBe("https://example.ru/projects");
   });
 
-  it("includes expected hreflang entries without RU", () => {
-    const metadata = buildMetadata("/projects");
+  it("includes expected hreflang entries", () => {
+    const metadata = buildMetadata("/projects", "en");
     expect(metadata.alternates?.languages).toEqual({
       en: "https://example.com/projects",
+      ru: "https://example.ru/projects",
       "x-default": "https://example.com/projects",
     });
-    expect(metadata.alternates?.languages).not.toHaveProperty("ru");
   });
 
   it("applies metadata overrides", () => {
@@ -44,20 +44,26 @@ describe("buildMetadata", () => {
   });
 
   it("omits title and description when overrides are absent", () => {
-    const metadata = buildMetadata("/projects");
+    const metadata = buildMetadata("/projects", "en");
     expect(metadata).not.toHaveProperty("title");
     expect(metadata).not.toHaveProperty("description");
   });
 
   it("falls back when SITE_ORIGIN_EN is missing", () => {
     delete process.env.SITE_ORIGIN_EN;
-    const metadata = buildMetadata("/projects");
-    expect(metadata.alternates?.languages?.en).toBe("https://example.com/projects");
+    const metadata = buildMetadata("/projects", "en", undefined, {
+      host: "localhost:3000",
+      proto: "http",
+    });
+    expect(metadata.alternates?.languages?.en).toBe("http://localhost:3000/projects");
   });
 
   it("falls back when SITE_ORIGIN_RU is missing", () => {
     delete process.env.SITE_ORIGIN_RU;
-    const metadata = buildMetadata("/projects", "ru");
-    expect(metadata.alternates?.canonical).toBe("https://example.ru/projects");
+    const metadata = buildMetadata("/projects", "ru", undefined, {
+      host: "localhost:3000",
+      proto: "http",
+    });
+    expect(metadata.alternates?.canonical).toBe("http://localhost:3000/projects");
   });
 });
