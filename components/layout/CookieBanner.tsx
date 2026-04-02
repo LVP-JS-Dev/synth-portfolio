@@ -4,6 +4,7 @@ import { ReactElement, useCallback, useSyncExternalStore } from "react";
 import { Check } from "lucide-react";
 import styles from "./CookieBanner.module.css";
 import { ButtonPrimary } from "@/components/primitives/ButtonPrimary";
+import { useMessages } from "@/components/i18n/I18nProvider";
 import {
   getConsentSnapshot,
   notifyConsentChange,
@@ -17,6 +18,7 @@ interface CookieBannerProps {
 }
 
 export const CookieBanner = ({ onAccept, onDismiss }: CookieBannerProps): ReactElement | null => {
+  const messages = useMessages();
   const consent = useSyncExternalStore(subscribeToConsent, getConsentSnapshot, getConsentSnapshot);
 
   const visible = consent === null;
@@ -39,16 +41,16 @@ export const CookieBanner = ({ onAccept, onDismiss }: CookieBannerProps): ReactE
   }
 
   return (
-    <div className={styles.banner} role="region" aria-label="Cookie consent">
+    <div className={styles.banner} role="region" aria-label={messages.cookies.regionAria}>
       <p className={styles.message} aria-live="polite">
-        Cookies are used for analytics. You can accept or reject non-essential cookies.
+        {messages.cookies.message}
       </p>
       <div className={styles.actions}>
         <ButtonPrimary preset="soft" onClick={handleDismiss}>
-          Reject
+          {messages.cookies.reject}
         </ButtonPrimary>
         <ButtonPrimary preset="medium" onClick={handleAccept} iconLeft={Check}>
-          Accept
+          {messages.cookies.accept}
         </ButtonPrimary>
       </div>
     </div>

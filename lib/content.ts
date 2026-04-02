@@ -6,7 +6,7 @@ import {
   readSingleton,
 } from "@/lib/content-store";
 
-export type Locale = "en" | "ru";
+import type { Locale } from "@/lib/i18n/locale";
 
 const HOME_FALLBACK = {
   titleEn: "Home",

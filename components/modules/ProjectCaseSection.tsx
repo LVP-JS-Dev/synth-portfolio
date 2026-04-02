@@ -2,6 +2,8 @@
 
 import { ButtonPrimary } from "@/components/primitives/ButtonPrimary";
 import { MetricCard, MetricIconName } from "@/components/modules/MetricCard";
+import { useMessages } from "@/components/i18n/I18nProvider";
+import { formatTemplate } from "@/lib/i18n/format";
 import styles from "./ProjectCaseSection.module.css";
 
 interface ProjectCaseSectionProps {
@@ -20,6 +22,7 @@ function BlockTitle({ children }: { children: string }) {
 }
 
 export function ProjectCaseSection({ title, summary, year, stack, metrics, links, highlights, results }: ProjectCaseSectionProps) {
+  const messages = useMessages();
   const openLinkSafely = (rawUrl: string) => {
     const isSafe =
       rawUrl.startsWith("http://") ||
@@ -43,9 +46,11 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
       <header className={styles.hero}>
         <h1 className={styles.heroTitle}>{title}</h1>
         <p className={styles.heroMeta}>
-          Role: Senior Frontend Engineer · Duration: 8 months · Team: 6 engineers · Year: {year}
+          {formatTemplate(messages.case.heroMeta, { year })}
         </p>
-        <p className={styles.heroSummary}>TL;DR: {summary}</p>
+        <p className={styles.heroSummary}>
+          {messages.case.tldr} {summary}
+        </p>
         <div className={styles.buttonRow}>
           {links.map((link, idx) => (
             <ButtonPrimary
@@ -57,12 +62,12 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
             </ButtonPrimary>
           ))}
           <ButtonPrimary preset="soft" onClick={scrollToArchitecture}>
-            Architecture
+            {messages.case.archBtn}
           </ButtonPrimary>
         </div>
       </header>
 
-      <section className={styles.metricsRow} aria-label="Key metrics">
+      <section className={styles.metricsRow} aria-label={messages.case.aria.metrics}>
         {metrics.map((metric) => (
           <div key={metric.label} className={styles.metricWrap}>
             <MetricCard iconName={metric.iconName} value={metric.value} label={metric.label} />
@@ -70,30 +75,28 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
         ))}
       </section>
 
-      <section className={styles.twoCol} aria-label="Overview and context">
+      <section className={styles.twoCol} aria-label={messages.case.aria.overviewContext}>
         <div className={styles.col}>
-          <BlockTitle>Overview</BlockTitle>
+          <BlockTitle>{messages.case.overview.title}</BlockTitle>
           <p className={styles.bodyText}>
-            The product enabled distributed teams to edit and review complex documents in real time. Existing
-            architecture could not guarantee consistency under unstable network conditions.
+            {messages.case.overview.body}
           </p>
         </div>
         <div className={styles.col}>
-          <BlockTitle>Context &amp; Problem</BlockTitle>
+          <BlockTitle>{messages.case.context.title}</BlockTitle>
           <p className={styles.bodyText}>
-            Business needed enterprise-scale collaboration with strict auditability. Legacy OT approach produced
-            merge conflicts and support load spikes during peak usage.
+            {messages.case.context.body}
           </p>
         </div>
       </section>
 
-      <section className={styles.root} id="architecture" aria-label="Architecture">
-        <BlockTitle>Architecture</BlockTitle>
+      <section className={styles.root} id="architecture" aria-label={messages.case.aria.architecture}>
+        <BlockTitle>{messages.case.archBtn}</BlockTitle>
         <div className={styles.archGrid}>
           {[
-            ["Client", "Next.js App Router + local CRDT store"],
-            ["Sync Layer", "WebSocket gateway + conflict resolution workers"],
-            ["Platform", "Audit stream + analytics + Sentry traces"],
+            [messages.case.archGrid.client.title, messages.case.archGrid.client.desc],
+            [messages.case.archGrid.sync.title, messages.case.archGrid.sync.desc],
+            [messages.case.archGrid.platform.title, messages.case.archGrid.platform.desc],
           ].map(([name, desc]) => (
             <div key={name} className={styles.archCard}>
               <p className={styles.archName}>{name}</p>
@@ -103,8 +106,8 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
         </div>
       </section>
 
-      <section className={styles.list} aria-label="Implementation highlights">
-        <BlockTitle>Implementation Highlights</BlockTitle>
+      <section className={styles.list} aria-label={messages.case.aria.highlights}>
+        <BlockTitle>{messages.case.highlightsTitle}</BlockTitle>
         {highlights.map((line) => (
           <p key={line} className={styles.bodyText}>
             {line}
@@ -112,8 +115,8 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
         ))}
       </section>
 
-      <section className={styles.list} aria-label="Results and lessons">
-        <BlockTitle>Results &amp; Lessons</BlockTitle>
+      <section className={styles.list} aria-label={messages.case.aria.results}>
+        <BlockTitle>{messages.case.resultsTitle}</BlockTitle>
         {results.map((line) => (
           <p key={line} className={styles.bodyText}>
             {line}
@@ -121,8 +124,8 @@ export function ProjectCaseSection({ title, summary, year, stack, metrics, links
         ))}
       </section>
 
-      <section className={styles.list} aria-label="Stack and links">
-        <BlockTitle>Stack &amp; Links</BlockTitle>
+      <section className={styles.list} aria-label={messages.case.aria.stackLinks}>
+        <BlockTitle>{messages.case.stackTitle}</BlockTitle>
         <p className={styles.stackText}>{stack.join(" · ")}</p>
         {links.map((link, idx) => {
           const isSafe =

@@ -1,39 +1,39 @@
 "use client";
 
 import React from "react";
+import { useMessages } from "@/components/i18n/I18nProvider";
 import { ButtonPrimary } from "../primitives/ButtonPrimary";
 import styles from "./HeroSection.module.css";
 
 export function HeroSection() {
+  const messages = useMessages();
+
   return (
     <section className={styles.card}>
       <div className={styles.left}>
-        <p className={styles.kicker}>01. FRONTEND ARCHITECTURE &amp; DELIVERY</p>
+        <p className={styles.kicker}>{messages.hero.kicker}</p>
 
         <h1 className={styles.title}>
-          Senior Frontend Engineer
+          {messages.hero.titleLine1}
           <br />
-          for fintech &amp; B2B product teams
+          {messages.hero.titleLine2}
         </h1>
 
-        <p className={styles.subtitle}>
-          I build React and Next.js platforms that scale: architecture, performance, accessibility, and
-          design systems backed by measurable outcomes.
-        </p>
+        <p className={styles.subtitle}>{messages.hero.subtitle}</p>
 
         <div className={styles.ctaRow}>
-          <ButtonPrimary preset="soft">View Projects</ButtonPrimary>
-          <ButtonPrimary preset="medium">Engineering Quality</ButtonPrimary>
-          <ButtonPrimary preset="hard">Contact</ButtonPrimary>
+          <ButtonPrimary preset="soft">{messages.hero.cta.viewProjects}</ButtonPrimary>
+          <ButtonPrimary preset="medium">{messages.hero.cta.quality}</ButtonPrimary>
+          <ButtonPrimary preset="hard">{messages.hero.cta.contact}</ButtonPrimary>
         </div>
       </div>
 
-      <aside className={styles.right} aria-label="Current focus">
-        <p className={styles.rightTitle}>Current Focus</p>
+      <aside className={styles.right} aria-label={messages.hero.focusAria}>
+        <p className={styles.rightTitle}>{messages.hero.focusTitle}</p>
         <ul className={styles.focusList}>
-          <li className={styles.focusItem}>Product architecture — shared UI platform, DX guardrails</li>
-          <li className={styles.focusItem}>Performance &amp; A11y — Core Web Vitals and inclusive UX</li>
-          <li className={styles.focusItem}>Verification UX — KYC/liveness flows with high success rates</li>
+          <li className={styles.focusItem}>{messages.hero.focus.item1}</li>
+          <li className={styles.focusItem}>{messages.hero.focus.item2}</li>
+          <li className={styles.focusItem}>{messages.hero.focus.item3}</li>
         </ul>
       </aside>
     </section>
