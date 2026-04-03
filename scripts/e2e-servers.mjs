@@ -62,17 +62,27 @@ async function main() {
     SITE_ORIGIN_RU: `http://localhost:${RU_PORT}`,
   };
 
-  const buildEn = run("pnpm", ["run", "build:static:en"], { env: baseEnv });
-  await new Promise((resolve, reject) => {
-    buildEn.on("exit", (code) => (code === 0 ? resolve() : reject(new Error(`build:static:en failed (${code})`))));
-  });
-
-  const buildRu = run("pnpm", ["run", "build:static:ru"], { env: baseEnv });
-  await new Promise((resolve, reject) => {
-    buildRu.on("exit", (code) => (code === 0 ? resolve() : reject(new Error(`build:static:ru failed (${code})`))));
-  });
-
   const repoRoot = path.dirname(fileURLToPath(import.meta.url));
+  const outEnDir = path.join(repoRoot, "..", "out-en");
+  const outRuDir = path.join(repoRoot, "..", "out-ru");
+
+  if (!existsSync(outEnDir)) {
+    const buildEn = run("pnpm", ["run", "build:static:en"], { env: baseEnv });
+    await new Promise((resolve, reject) => {
+      buildEn.on("exit", (code) =>
+        code === 0 ? resolve() : reject(new Error(`build:static:en failed (${code})`)),
+      );
+    });
+  }
+
+  if (!existsSync(outRuDir)) {
+    const buildRu = run("pnpm", ["run", "build:static:ru"], { env: baseEnv });
+    await new Promise((resolve, reject) => {
+      buildRu.on("exit", (code) =>
+        code === 0 ? resolve() : reject(new Error(`build:static:ru failed (${code})`)),
+      );
+    });
+  }
 
   function contentTypeFor(filePath) {
     const ext = path.extname(filePath).toLowerCase();

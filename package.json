@@ -7,7 +7,7 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "postbuild": "node -e \"require('fs').rmSync('out/admin',{recursive:true,force:true})\"",
-    "start": "next start",
+    "start": "node ./scripts/serve-out.mjs",
     "cms:server": "decap-server",
     "lint": "eslint",
     "pretypecheck": "node -e \"require('fs').rmSync('.next/types',{recursive:true,force:true})\"",

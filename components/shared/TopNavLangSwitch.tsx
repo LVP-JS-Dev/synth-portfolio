@@ -28,7 +28,7 @@ export function TopNavLangSwitch() {
       targetLocale,
       origins,
       pathname,
-      search: search ? `?${search}` : "",
+      search,
       hash,
     });
   }, [hash, origins, pathname, searchParams, targetLocale]);
@@ -39,4 +39,3 @@ export function TopNavLangSwitch() {
     </a>
   );
 }
-

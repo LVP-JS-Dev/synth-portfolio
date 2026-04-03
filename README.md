@@ -36,7 +36,7 @@ Uploaded media is stored in `public/uploads/` (committed to Git).
 This repo previously exposed `content/` operations via a Next.js API route. That API route is removed to keep the site compatible with static export.
 
 ### CI
-Runs `typecheck`, `lint`, `test`, `build`, and Playwright E2E tests (`test:e2e`) on every push/PR.
+Runs `typecheck`, `lint`, `test`, `build:static:en`, `build:static:ru`, and Playwright E2E tests (`test:e2e`) on every push/PR.
 
 ## Deploy
 
@@ -48,6 +48,7 @@ Notes:
 - The Decap CMS admin (`/admin`) is intentionally **not deployed** (removed from static artifacts during build/deploy).
 - For Object Storage website hosting, the bucket should be configured with `index.html` as the index document and `404.html` as the error document.
 - The `.ru` deploy workflow clears the bucket before uploading (CI sets `YC_BUCKET_PURGE_OK=true`), so use a dedicated bucket for the site.
+- Yandex Object Storage does not support arbitrary custom response headers on its own; to match the `.com` security headers, put a CDN in front and configure them at the CDN layer.
 
 ### GitHub Actions secrets
 

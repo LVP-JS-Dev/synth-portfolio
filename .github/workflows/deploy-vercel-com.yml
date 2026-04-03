@@ -36,4 +36,5 @@ jobs:
           SITE_ORIGIN_RU: ${{ secrets.SITE_ORIGIN_RU }}
           STATIC_EXPORT: "true"
           FORCE_LOCALE: "en"
+          VERCEL_CLI_VERSION: "42.3.0"
         run: bash ./scripts/deploy/vercel.sh
