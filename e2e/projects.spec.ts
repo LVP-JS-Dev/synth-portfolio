@@ -39,7 +39,7 @@ test.describe("Projects Page", () => {
     await projectLink.click();
 
     // Wait for navigation and verify URL contains the expected slug
-    await expect(page).toHaveURL(new RegExp(`/projects/${firstProject.slug}$`), { timeout: 30_000 });
+    await expect(page).toHaveURL(new RegExp(`/projects/${firstProject.slug}/?$`), { timeout: 30_000 });
   });
 
   test("design v2 case route should resolve", async ({ page }) => {

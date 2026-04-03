@@ -1,11 +1,11 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getAllProjects, getProjectsPageContent } from "@/lib/content";
-import { getI18nServerContext } from "@/lib/i18n/server";
+import { getI18nStaticContext } from "@/lib/i18n/static";
 import { ProjectsFilterGrid } from "@/components/modules/ProjectsFilterGrid";
 import { PageContainer } from "@/components/layout/PageContainer";
 
 export async function generateMetadata() {
-  const i18n = await getI18nServerContext();
+  const i18n = getI18nStaticContext();
   const page = await getProjectsPageContent(i18n.locale);
 
   return buildMetadata(
@@ -15,12 +15,11 @@ export async function generateMetadata() {
       title: page.title,
       description: page.description,
     },
-    i18n.request,
   );
 }
 
 export default async function ProjectsPage() {
-  const i18n = await getI18nServerContext();
+  const i18n = getI18nStaticContext();
   const page = await getProjectsPageContent(i18n.locale);
   const projects = await getAllProjects();
   const cardsCount = Math.max(projects.length, 1);

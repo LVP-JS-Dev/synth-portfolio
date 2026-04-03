@@ -46,7 +46,7 @@ export default defineConfig({
   webServer: {
     command: "node scripts/e2e-servers.mjs",
     port: 3000,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
     timeout: 180 * 1000,
   },
 });

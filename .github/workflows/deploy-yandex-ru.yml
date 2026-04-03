@@ -1,0 +1,46 @@
+name: Deploy (Yandex Cloud Object Storage, .ru)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: deploy-yandex-ru-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production-ru
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.30.3
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Install yc CLI
+        run: |
+          YC_CLI_VERSION="0.204.0"
+          curl -fsSL "https://storage.yandexcloud.net/yandexcloud-yc/install.sh?version=${YC_CLI_VERSION}" | bash || \
+          curl -fsSL "https://storage.yandexcloud.net/yandexcloud-yc/install.sh" | bash
+          echo "$HOME/yandex-cloud/bin" >> "$GITHUB_PATH"
+
+      - name: Build and upload RU static site
+        env:
+          YC_SA_KEY_JSON: ${{ secrets.YC_SA_KEY_JSON }}
+          YC_CLOUD_ID: ${{ secrets.YC_CLOUD_ID }}
+          YC_FOLDER_ID: ${{ secrets.YC_FOLDER_ID }}
+          YC_BUCKET_NAME_RU: ${{ secrets.YC_BUCKET_NAME_RU }}
+          YC_BUCKET_PURGE_OK: "true"
+          SITE_ORIGIN_EN: ${{ secrets.SITE_ORIGIN_EN }}
+          SITE_ORIGIN_RU: ${{ secrets.SITE_ORIGIN_RU }}
+        run: bash ./scripts/deploy/yandex-storage-ru.sh

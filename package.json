@@ -6,12 +6,19 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
+    "postbuild": "node -e \"require('fs').rmSync('out/admin',{recursive:true,force:true})\"",
+    "start": "node ./scripts/serve-out.mjs",
     "cms:server": "decap-server",
     "lint": "eslint",
+    "pretypecheck": "node -e \"require('fs').rmSync('.next/types',{recursive:true,force:true})\"",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e": "node ./scripts/run-e2e.mjs",
+    "test:e2e:ui": "playwright test --ui",
+    "build:static:en": "node ./scripts/build-static.mjs --locale=en --out=out-en",
+    "build:static:ru": "node ./scripts/build-static.mjs --locale=ru --out=out-ru",
+    "deploy:vercel": "bash ./scripts/deploy/vercel.sh",
+    "deploy:yc:ru": "bash ./scripts/deploy/yandex-storage-ru.sh"
   },
   "dependencies": {
     "@markdoc/markdoc": "^0.5.6",
