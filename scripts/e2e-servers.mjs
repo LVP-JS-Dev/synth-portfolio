@@ -56,6 +56,9 @@ function waitForUrl(url, { timeoutMs }) {
 }
 
 async function main() {
+  const shouldRebuild =
+    process.env.CI === "true" || process.env.CI === "1" || process.env.E2E_REBUILD === "true";
+
   const baseEnv = {
     ...process.env,
     SITE_ORIGIN_EN: `http://localhost:${EN_PORT}`,
@@ -66,7 +69,7 @@ async function main() {
   const outEnDir = path.join(repoRoot, "..", "out-en");
   const outRuDir = path.join(repoRoot, "..", "out-ru");
 
-  if (!existsSync(outEnDir)) {
+  if (shouldRebuild || !existsSync(outEnDir)) {
     const buildEn = run("pnpm", ["run", "build:static:en"], { env: baseEnv });
     await new Promise((resolve, reject) => {
       buildEn.on("exit", (code) =>
@@ -75,7 +78,7 @@ async function main() {
     });
   }
 
-  if (!existsSync(outRuDir)) {
+  if (shouldRebuild || !existsSync(outRuDir)) {
     const buildRu = run("pnpm", ["run", "build:static:ru"], { env: baseEnv });
     await new Promise((resolve, reject) => {
       buildRu.on("exit", (code) =>
