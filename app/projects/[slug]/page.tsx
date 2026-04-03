@@ -1,6 +1,6 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getProjectSlugs, getProjectBySlug } from "@/lib/content";
-import { getI18nServerContext } from "@/lib/i18n/server";
+import { getI18nStaticContext } from "@/lib/i18n/static";
 import { getProjectCasePlaceholder } from "@/lib/i18n/project-case-placeholder";
 import { notFound } from "next/navigation";
 import { ProjectCaseSection } from "@/components/modules/ProjectCaseSection";
@@ -17,7 +17,7 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
-  const i18n = await getI18nServerContext();
+  const i18n = getI18nStaticContext();
 
   const title =
     project === null
@@ -40,7 +40,6 @@ export async function generateMetadata({ params }: Props) {
       title,
       description,
     },
-    i18n.request,
   );
 }
 
@@ -49,10 +48,12 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
+export const dynamicParams = false;
+
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
-  const i18n = await getI18nServerContext();
+  const i18n = getI18nStaticContext();
 
   if (!project) {
     notFound();

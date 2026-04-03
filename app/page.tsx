@@ -1,7 +1,7 @@
 import React from "react";
 import { buildMetadata } from "@/lib/metadata";
 import { getHomeContent } from "@/lib/content";
-import { getI18nServerContext } from "@/lib/i18n/server";
+import { getI18nStaticContext } from "@/lib/i18n/static";
 import { getHomePageCopy } from "@/lib/i18n/home-page-copy";
 import { HeroSection } from "@/components/modules/HeroSection";
 import { MetricCard } from "@/components/modules/MetricCard";
@@ -13,7 +13,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
 import { SectionHeader } from "@/components/modules/SectionHeader";
 
 export async function generateMetadata() {
-  const i18n = await getI18nServerContext();
+  const i18n = getI18nStaticContext();
   const home = await getHomeContent(i18n.locale);
 
   return buildMetadata(
@@ -23,12 +23,11 @@ export async function generateMetadata() {
       title: home.title,
       description: home.description,
     },
-    i18n.request,
   );
 }
 
 export default async function Home() {
-  const i18n = await getI18nServerContext();
+  const i18n = getI18nStaticContext();
   const copy = getHomePageCopy(i18n.locale);
 
   return (

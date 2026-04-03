@@ -8,7 +8,7 @@ test.describe("I18n (domain-based)", () => {
     await expect(page.locator("html")).toHaveAttribute("lang", "en");
 
     const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
-    expect(canonical).toBe("http://localhost:3000/projects");
+    expect(canonical).toBe("http://localhost:3000/projects/");
   });
 
   test("RU renders lang=ru and canonical on RU origin", async ({ page }) => {
@@ -16,7 +16,7 @@ test.describe("I18n (domain-based)", () => {
     await expect(page.locator("html")).toHaveAttribute("lang", "ru");
 
     const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
-    expect(canonical).toBe("http://localhost:3001/projects");
+    expect(canonical).toBe("http://localhost:3001/projects/");
   });
 
   test("language switcher preserves path, query, and hash", async ({ page }) => {
@@ -24,6 +24,6 @@ test.describe("I18n (domain-based)", () => {
 
     await page.getByRole("link", { name: /switch language/i }).click();
 
-    await expect(page).toHaveURL("http://localhost:3001/projects?q=1#foo");
+    await expect(page).toHaveURL(/http:\/\/localhost:3001\/projects\/?\?q=1#foo/);
   });
 });

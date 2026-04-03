@@ -1,11 +1,11 @@
 import { buildMetadata } from "@/lib/metadata";
 import { getLegalContent } from "@/lib/content";
-import { getI18nServerContext } from "@/lib/i18n/server";
+import { getI18nStaticContext } from "@/lib/i18n/static";
 import { LegalSections } from "@/components/modules/LegalSections";
 import { PageContainer } from "@/components/layout/PageContainer";
 
 export async function generateMetadata() {
-  const i18n = await getI18nServerContext();
+  const i18n = getI18nStaticContext();
   const legal = await getLegalContent(i18n.locale);
 
   return buildMetadata(
@@ -15,12 +15,11 @@ export async function generateMetadata() {
       title: legal.title,
       description: legal.description,
     },
-    i18n.request,
   );
 }
 
 export default async function LegalPage() {
-  const i18n = await getI18nServerContext();
+  const i18n = getI18nStaticContext();
   const legal = await getLegalContent(i18n.locale);
 
   return (

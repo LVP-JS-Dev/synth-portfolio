@@ -21,10 +21,11 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm audit --audit-level=high --ignore-registry-errors
-      - run: pnpm run build
       - run: pnpm run typecheck
       - run: pnpm run lint
       - run: pnpm test
+      - run: pnpm run build:static:en
+      - run: pnpm run build:static:ru
       - run: pnpm exec playwright install --with-deps
       - run: pnpm run test:e2e
       - uses: actions/upload-artifact@v4
