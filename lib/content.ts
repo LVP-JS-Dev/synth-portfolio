@@ -1,12 +1,12 @@
 import { cache } from "react";
+import type { Locale } from "@/lib/i18n/locale";
 import {
   listProjectSlugs,
   readAllProjects as readAllProjectsFromStore,
   readProject as readProjectFromStore,
   readSingleton,
+  type ProjectEntry,
 } from "@/lib/content-store";
-
-import type { Locale } from "@/lib/i18n/locale";
 
 const HOME_FALLBACK = {
   titleEn: "Home",
