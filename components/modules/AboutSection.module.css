@@ -1,19 +1,19 @@
 .section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-4);
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .kicker {
   color: var(--accent-cyan);
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 1px;
   margin: 0;
@@ -22,7 +22,7 @@
 .title {
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: var(--font-size-4xl);
   font-weight: 700;
   margin: 0;
 }
@@ -30,7 +30,7 @@
 .subtitle {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: var(--font-size-md);
   line-height: 26px;
   margin: 0;
 }
@@ -38,7 +38,7 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: var(--space-6);
 }
 
 .copy {
@@ -46,13 +46,13 @@
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 .paragraph {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: var(--font-size-lg);
   line-height: 27px;
   margin: 0;
 }
@@ -60,18 +60,18 @@
 .focusCard {
   width: 420px;
   background-color: var(--bg-surface-2);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--stroke-2);
-  padding: 18px;
+  padding: var(--space-5);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-3);
 }
 
 .focusTitle {
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: var(--font-size-md);
   font-weight: 700;
   margin: 0;
 }
@@ -79,7 +79,7 @@
 .focusList {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-3);
   padding: 0;
   margin: 0;
   list-style: none;
@@ -88,27 +88,27 @@
 .focusItem {
   color: var(--accent-cyan);
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   margin: 0;
 }
 
 @media (max-width: 800px) {
   .grid {
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-4);
   }
 
   .title {
-    font-size: 24px;
+    font-size: var(--font-size-2xl);
   }
 
   .subtitle {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     line-height: 22px;
   }
 
   .paragraph {
-    font-size: 15px;
+    font-size: var(--font-size-md);
     line-height: 24px;
   }
 

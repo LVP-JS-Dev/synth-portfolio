@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 32px;
-  padding: 32px;
+  gap: var(--space-8);
+  padding: var(--space-8);
   background-color: var(--bg-surface);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--stroke-1);
 }
 
@@ -14,13 +14,13 @@
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: var(--space-4);
 }
 
 .kicker {
   color: var(--accent-cyan);
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 1px;
   margin: 0;
@@ -29,17 +29,17 @@
 .title {
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 58px;
+  font-size: var(--font-size-6xl);
   line-height: 64px;
   font-weight: 700;
   margin: 0;
-  text-shadow: 0 0 14px rgba(91, 77, 255, 0.3);
+  text-shadow: 0 0 var(--glow-md) rgba(91, 77, 255, 0.3);
 }
 
 .subtitle {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   line-height: 28px;
   margin: 0;
 }
@@ -47,25 +47,25 @@
 .ctaRow {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
 }
 
 .right {
   width: 420px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 16px;
+  gap: var(--space-3);
+  padding: var(--space-4);
   background-color: var(--bg-surface-2);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--stroke-2);
 }
 
 .rightTitle {
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: var(--font-size-md);
   font-weight: 700;
   margin: 0;
 }
@@ -73,7 +73,7 @@
 .focusList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--space-2);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -82,7 +82,7 @@
 .focusItem {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   line-height: 21px;
   margin: 0;
 }
@@ -90,17 +90,17 @@
 @media (max-width: 800px) {
   .card {
     flex-direction: column;
-    padding: 24px;
-    gap: 24px;
+    padding: var(--space-6);
+    gap: var(--space-6);
   }
 
   .title {
-    font-size: 34px;
+    font-size: var(--font-size-3xl);
     line-height: 40px;
   }
 
   .subtitle {
-    font-size: 15px;
+    font-size: var(--font-size-md);
   }
 
   .right {

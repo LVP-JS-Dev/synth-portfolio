@@ -1,18 +1,18 @@
 .root {
   width: 100%;
   display: flex;
-  gap: 12px;
-  padding: 12px 0;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
 }
 
 .highlight {
   border-left: 1px solid rgba(82, 255, 246, 0.45);
-  padding-left: 10px;
+  padding-left: var(--space-3);
 }
 
 .dotCol {
   width: 20px;
-  padding-top: 4px;
+  padding-top: var(--space-1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@
 .dot {
   width: 8px;
   height: 8px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background-color: var(--accent-cyan);
 }
 
@@ -29,22 +29,22 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--space-2);
 }
 
 .role {
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   font-weight: 700;
   margin: 0;
-  box-shadow: 0 0 12px rgba(82, 255, 246, 0.35);
+  box-shadow: 0 0 var(--glow-md) rgba(82, 255, 246, 0.35);
 }
 
 .period {
   color: var(--accent-yellow);
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 500;
   margin: 0;
 }
@@ -52,8 +52,7 @@
 .achievement {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   line-height: 21px;
   margin: 0;
 }
-

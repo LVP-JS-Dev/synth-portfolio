@@ -1,54 +1,183 @@
 :root {
-  /* Colors */
-  --bg-base: #1A1630;
-  --bg-surface: #221C3E;
-  --bg-surface-2: #2C2550;
-  --text-primary: #FFF9FF;
-  --text-secondary: #D7CCFF;
-  --accent-cyan: #52FFF6;
-  --accent-pink: #FF4FD8;
-  --accent-yellow: #FFE86F;
-  --state-error: #FF4D6D;
-
-  /* Glow (with opacity) */
-  --glow-soft: #52FFF666;
-  --glow-medium: #52FFF6AA;
-  --glow-hard: #FF4FD8CC;
-  --glow-pink: #FF4FD8AA;
-
-  /* Typography */
-  --font-display: "JetBrains Mono", monospace;
-  --font-body: "Inter", -apple-system, system-ui, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-
-  /* Font sizes */
-  --font-size-sm: 14px;
-
-  /* Spacing */
+  /* ============================================
+     COLOR PALETTE - Enhanced for WCAG AA compliance
+     ============================================ */
+  
+  /* Base backgrounds - improved contrast */
+  --bg-base: #0f0a1e;
+  --bg-base-elevated: #151029;
+  --bg-surface: #1e1836;
+  --bg-surface-2: #2a234a;
+  --bg-surface-3: #352d5a;
+  --bg-deep: #080514;
+  
+  /* Text colors - enhanced readability */
+  --text-primary: #ffffff;
+  --text-primary-dim: #e8e4f5;
+  --text-secondary: #c4bef5;
+  --text-tertiary: #9a92c7;
+  --text-inverse: #0f0a1e;
+  
+  /* Accent colors - vibrant but accessible */
+  --accent-cyan: #00f0ff;
+  --accent-cyan-dim: rgba(0, 240, 255, 0.15);
+  --accent-pink: #ff2ec9;
+  --accent-pink-dim: rgba(255, 46, 201, 0.15);
+  --accent-yellow: #ffd700;
+  --accent-yellow-dim: rgba(255, 215, 0, 0.15);
+  --accent-purple: #b967ff;
+  --accent-purple-dim: rgba(185, 103, 255, 0.15);
+  
+  /* Semantic colors */
+  --state-error: #ff4d6d;
+  --state-error-dim: rgba(255, 77, 109, 0.15);
+  --state-success: #00ffa3;
+  --state-success-dim: rgba(0, 255, 163, 0.15);
+  --state-warning: #ffb800;
+  --state-info: #00d4ff;
+  
+  /* Stroke / Border colors */
+  --stroke-subtle: rgba(255, 255, 255, 0.08);
+  --stroke-default: rgba(255, 255, 255, 0.12);
+  --stroke-emphasis: rgba(255, 255, 255, 0.2);
+  --stroke-accent: rgba(0, 240, 255, 0.4);
+  
+  /* ============================================
+     SHADOWS & GLOWS - Modern subtle effects
+     ============================================ */
+  
+  /* Shadows - layered depth */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.45);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.5);
+  --shadow-2xl: 0 20px 40px rgba(0, 0, 0, 0.55);
+  
+  /* Glows - refined and subtle */
+  --glow-cyan-sm: 0 0 10px rgba(0, 240, 255, 0.3);
+  --glow-cyan-md: 0 0 20px rgba(0, 240, 255, 0.4);
+  --glow-cyan-lg: 0 0 30px rgba(0, 240, 255, 0.5);
+  --glow-pink-sm: 0 0 10px rgba(255, 46, 201, 0.3);
+  --glow-pink-md: 0 0 20px rgba(255, 46, 201, 0.4);
+  --glow-pink-lg: 0 0 30px rgba(255, 46, 201, 0.5);
+  --glow-purple-sm: 0 0 10px rgba(185, 103, 255, 0.3);
+  --glow-purple-md: 0 0 20px rgba(185, 103, 255, 0.4);
+  
+  /* ============================================
+     TYPOGRAPHY - Fluid & Responsive
+     ============================================ */
+  
+  /* Font families */
+  --font-display: "JetBrains Mono", "Fira Code", monospace;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  
+  /* Fluid font sizes using clamp() for responsive scaling */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);    /* 12-14px */
+  --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);      /* 14-16px */
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);      /* 16-18px */
+  --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);     /* 18-20px */
+  --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);      /* 20-24px */
+  --text-2xl: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);       /* 24-32px */
+  --text-3xl: clamp(1.75rem, 1.5rem + 1.25vw, 2.5rem);     /* 28-40px */
+  --text-4xl: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);         /* 32-56px */
+  --text-5xl: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);         /* 40-72px */
+  
+  /* Line heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Font weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  
+  /* Letter spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  
+  /* ============================================
+     SPACING SYSTEM - Consistent scale
+     ============================================ */
+  
+  --space-0: 0;
+  --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
-  --space-5: 24px;
-  --space-6: 32px;
-  --space-8: 48px;
-  --space-10: 64px;
-
-  /* Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-
-  /* Glow blur */
-  --glow-blur-soft: 8px;
-  --glow-blur-medium: 14px;
-  --glow-blur-hard: 24px;
-
-  /* Strokes / surfaces (UI-specific) */
-  --stroke-1: #3C3562;
-  --stroke-2: #4A3E88;
-  --stroke-3: #433C69;
-  --bg-deep: #20183A;
-
-  /* Back-compat aliases used by some inline styles */
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+  
+  /* ============================================
+     BORDER RADIUS - Consistent scale
+     ============================================ */
+  
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+  
+  /* ============================================
+     TRANSITIONS & ANIMATION
+     ============================================ */
+  
+  /* Timing functions */
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-spring: cubic-bezier(0.43, 0.02, 0.35, 1.26);
+  
+  /* Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 350ms;
+  --duration-slower: 500ms;
+  
+  /* Transition presets */
+  --transition-fast: var(--duration-fast) var(--ease-out);
+  --transition-normal: var(--duration-normal) var(--ease-out);
+  --transition-slow: var(--duration-slow) var(--ease-out);
+  
+  /* ============================================
+     LAYOUT & CONTAINERS
+     ============================================ */
+  
+  /* Container max widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+  
+  /* Page layout */
+  --page-padding-x: clamp(16px, 4vw, 80px);
+  --page-padding-y: clamp(24px, 6vw, 64px);
+  
+  /* ============================================
+     BACK-COMPATIBILITY ALIASES
+     ============================================ */
+  
   --color-bgBase: var(--bg-base);
   --color-bgSurface: var(--bg-surface);
   --color-bgSurface2: var(--bg-surface-2);
@@ -57,7 +186,66 @@
   --color-accentCyan: var(--accent-cyan);
   --color-accentPink: var(--accent-pink);
   --color-accentYellow: var(--accent-yellow);
-  --color-glowSoft: var(--glow-soft);
-  --color-glowMedium: var(--glow-medium);
-  --color-glowHard: var(--glow-hard);
+  --color-glowSoft: var(--glow-cyan-sm);
+  --color-glowMedium: var(--glow-cyan-md);
+  --color-glowHard: var(--glow-cyan-lg);
+  
+  /* Legacy stroke aliases */
+  --stroke-1: var(--stroke-default);
+  --stroke-2: var(--stroke-emphasis);
+  --stroke-3: var(--stroke-subtle);
+}
+
+/* ============================================
+   LIGHT THEME SUPPORT (prefers-color-scheme)
+   ============================================ */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-base: #faf8ff;
+    --bg-base-elevated: #ffffff;
+    --bg-surface: #f5f2fc;
+    --bg-surface-2: #ede9f7;
+    --bg-surface-3: #e5dff5;
+    --bg-deep: #f0ecf9;
+    
+    --text-primary: #1a1630;
+    --text-primary-dim: #2d2845;
+    --text-secondary: #5c5575;
+    --text-tertiary: #7d7599;
+    --text-inverse: #ffffff;
+    
+    --stroke-subtle: rgba(0, 0, 0, 0.08);
+    --stroke-default: rgba(0, 0, 0, 0.12);
+    --stroke-emphasis: rgba(0, 0, 0, 0.2);
+    --stroke-accent: rgba(0, 240, 255, 0.6);
+    
+    --shadow-xs: 0 1px 2px rgba(15, 10, 30, 0.08);
+    --shadow-sm: 0 2px 4px rgba(15, 10, 30, 0.1);
+    --shadow-md: 0 4px 8px rgba(15, 10, 30, 0.12);
+    --shadow-lg: 0 8px 16px rgba(15, 10, 30, 0.15);
+    --shadow-xl: 0 12px 24px rgba(15, 10, 30, 0.18);
+    --shadow-2xl: 0 20px 40px rgba(15, 10, 30, 0.2);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION PREFERENCE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0.01ms;
+    --duration-normal: 0.01ms;
+    --duration-slow: 0.01ms;
+    --duration-slower: 0.01ms;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

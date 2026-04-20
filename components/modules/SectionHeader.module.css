@@ -1,13 +1,13 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .kicker {
   color: var(--accent-cyan);
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 1px;
   margin: 0;
@@ -16,7 +16,7 @@
 .title {
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: var(--font-size-4xl);
   font-weight: 700;
   margin: 0;
 }
@@ -24,18 +24,17 @@
 .subtitle {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: var(--font-size-md);
   line-height: 26px;
   margin: 0;
 }
 
 @media (max-width: 800px) {
   .title {
-    font-size: 24px;
+    font-size: var(--font-size-2xl);
   }
 
   .subtitle {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
   }
 }
-

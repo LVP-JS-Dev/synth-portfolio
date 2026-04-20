@@ -1,19 +1,19 @@
 .section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-4);
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .kicker {
   color: var(--accent-cyan);
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 1px;
   margin: 0;
@@ -22,7 +22,7 @@
 .title {
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: var(--font-size-4xl);
   font-weight: 700;
   margin: 0;
 }
@@ -30,7 +30,7 @@
 .subtitle {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: var(--font-size-md);
   line-height: 26px;
   margin: 0;
 }
@@ -38,17 +38,17 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: var(--space-6);
 }
 
 .card {
   background-color: var(--bg-surface-2);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--accent-cyan);
-  padding: 20px;
+  padding: var(--space-5);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 .cardLeft {
@@ -58,14 +58,14 @@
 
 .cardRight {
   width: 520px;
-  padding: 16px;
+  padding: var(--space-4);
   border-color: var(--bg-surface);
 }
 
 .lead {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   line-height: 28px;
   margin: 0;
 }
@@ -73,25 +73,25 @@
 .contactLink {
   color: var(--accent-cyan);
   font-family: var(--font-display);
-  font-size: 13px;
-  text-shadow: 0 0 8px rgba(82, 255, 246, 0.53);
+  font-size: var(--font-size-xs);
+  text-shadow: 0 0 var(--glow-sm) rgba(82, 255, 246, 0.53);
   text-decoration: none;
 }
 
 .downloadRow {
-  margin-top: 4px;
+  margin-top: var(--space-1);
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 .formTitle {
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: var(--font-size-xl);
   font-weight: 700;
   margin: 0;
 }
@@ -99,13 +99,13 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--space-2);
 }
 
 .fieldLabel {
   color: var(--text-secondary);
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 500;
   margin: 0;
 }
@@ -113,13 +113,13 @@
 .fieldRow {
   height: 48px;
   background-color: var(--bg-base);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--accent-cyan);
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 12px;
-  box-shadow: 0 0 12px var(--color-glowSoft);
+  gap: var(--space-2);
+  padding: 0 var(--space-3);
+  box-shadow: 0 0 var(--glow-sm) var(--color-glowSoft);
 }
 
 .fieldIcon {
@@ -138,40 +138,40 @@
   color: var(--text-secondary);
   caret-color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
 }
 
 .fieldRow:focus-within {
-  box-shadow: 0 0 0 2px var(--accent-yellow), 0 0 18px rgba(82, 255, 246, 0.5);
+  box-shadow: 0 0 0 2px var(--accent-yellow), 0 0 var(--glow-md) rgba(82, 255, 246, 0.5);
 }
 
 .submitRow {
-  margin-top: 4px;
+  margin-top: var(--space-1);
   width: 100%;
 }
 
 .submitStatus {
-  margin-top: 10px;
+  margin-top: var(--space-3);
   color: var(--accent-cyan);
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: var(--font-size-xs);
   line-height: 18px;
   min-height: 18px;
-  text-shadow: 0 0 8px rgba(82, 255, 246, 0.35);
+  text-shadow: 0 0 var(--glow-sm) rgba(82, 255, 246, 0.35);
 }
 
 @media (max-width: 800px) {
   .grid {
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-4);
   }
 
   .title {
-    font-size: 24px;
+    font-size: var(--font-size-2xl);
   }
 
   .subtitle {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
   }
 
   .cardRight {

@@ -1,39 +1,39 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: var(--space-4);
 }
 
 .hero {
   background-color: var(--bg-surface);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--stroke-1);
-  padding: 28px;
+  padding: var(--space-8);
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: var(--space-4);
 }
 
 .heroTitle {
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 50px;
+  font-size: var(--font-size-5xl);
   font-weight: 700;
   margin: 0;
-  text-shadow: 0 0 10px rgba(255, 79, 216, 0.8);
+  text-shadow: 0 0 var(--glow-sm) rgba(255, 79, 216, 0.8);
 }
 
 .heroMeta {
   color: var(--accent-yellow);
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: var(--font-size-xs);
   margin: 0;
 }
 
 .heroSummary {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   line-height: 28px;
   margin: 0;
 }
@@ -41,13 +41,13 @@
 .buttonRow {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .metricsRow {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 .metricWrap {
@@ -58,7 +58,7 @@
 .twoCol {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 .col {
@@ -66,13 +66,13 @@
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: var(--space-4);
 }
 
 .blockTitle {
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: var(--font-size-xl);
   font-weight: 700;
   margin: 0;
 }
@@ -80,7 +80,7 @@
 .bodyText {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: var(--font-size-md);
   line-height: 24px;
   margin: 0;
 }
@@ -88,76 +88,76 @@
 .archGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 .archCard {
   flex: 1;
   min-width: 220px;
   background-color: var(--bg-base);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--bg-surface-2);
-  padding: 14px;
+  padding: var(--space-4);
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--space-2);
 }
 
 .archName {
   color: var(--accent-cyan);
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   margin: 0;
 }
 
 .archDesc {
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   margin: 0;
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-3);
 }
 
 .stackText {
   color: var(--accent-cyan);
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: var(--font-size-xs);
   margin: 0;
 }
 
 .link {
   color: var(--accent-cyan);
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: var(--font-size-md);
 }
 
 .linkText {
   color: var(--accent-cyan);
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: var(--font-size-md);
 }
 
 @media (max-width: 800px) {
   .hero {
-    padding: 16px;
+    padding: var(--space-4);
   }
 
   .heroTitle {
-    font-size: 30px;
+    font-size: var(--font-size-3xl);
     line-height: 34px;
   }
 
   .heroMeta {
-    font-size: 12px;
+    font-size: var(--font-size-xs);
   }
 
   .heroSummary {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     line-height: 22px;
   }
 
@@ -170,7 +170,7 @@
   }
 
   .bodyText {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     line-height: 22px;
   }
 
