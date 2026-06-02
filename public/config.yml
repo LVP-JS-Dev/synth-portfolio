@@ -1,0 +1,62 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: develop
+
+media_folder: public/uploads
+public_folder: /uploads
+
+editor:
+  preview: false
+
+collections:
+  - name: projects
+    label: Projects
+    folder: content/projects
+    create: true
+    extension: yaml
+    format: yaml
+    identifier_field: slug
+    slug: "{{fields.slug}}"
+    fields:
+      - { name: slug, label: Slug, widget: string }
+      - { name: titleEn, label: "Title (EN)", widget: string }
+      - { name: titleRu, label: "Title (RU)", widget: string }
+      - { name: summaryEn, label: "Summary (EN)", widget: text }
+      - { name: summaryRu, label: "Summary (RU)", widget: text }
+      - { name: year, label: Year, widget: number, value_type: int }
+      - { name: stack, label: Stack, widget: list, field: { name: tech, label: Technology, widget: string } }
+      - { name: featured, label: Featured, widget: boolean, default: false }
+
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home
+        file: content/pages/home.yaml
+        fields:
+          - { name: titleEn, label: "Title (EN)", widget: string }
+          - { name: titleRu, label: "Title (RU)", widget: string }
+          - { name: descriptionEn, label: "Description (EN)", widget: text }
+          - { name: descriptionRu, label: "Description (RU)", widget: text }
+          - { name: introEn, label: "Intro (EN)", widget: text }
+          - { name: introRu, label: "Intro (RU)", widget: text }
+      - name: projects
+        label: Projects Page
+        file: content/pages/projects.yaml
+        fields:
+          - { name: titleEn, label: "Title (EN)", widget: string }
+          - { name: titleRu, label: "Title (RU)", widget: string }
+          - { name: descriptionEn, label: "Description (EN)", widget: text }
+          - { name: descriptionRu, label: "Description (RU)", widget: text }
+      - name: legal
+        label: Legal
+        file: content/pages/legal.yaml
+        fields:
+          - { name: titleEn, label: "Title (EN)", widget: string }
+          - { name: titleRu, label: "Title (RU)", widget: string }
+          - { name: descriptionEn, label: "Description (EN)", widget: text }
+          - { name: descriptionRu, label: "Description (RU)", widget: text }
+          - { name: bodyEn, label: "Body (EN)", widget: text }
+          - { name: bodyRu, label: "Body (RU)", widget: text }
